@@ -162,9 +162,17 @@ h1.heading {
   text-transform: uppercase
 }
 
-
-
 #aboutMeText{
   margin-top:2em;
+  margin-bottom:10em;
   width:75%;
+  font-size:16px;
+}
+
+#designWork{
+  margin-bottom:5em;
+}
+
+#developmentWork{
+  margin-bottom:5em;
 }
