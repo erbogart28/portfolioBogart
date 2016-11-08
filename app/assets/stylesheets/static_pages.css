@@ -110,7 +110,7 @@ h1.heading {
   h1.heading {
     font-size: 3.25em;
     margin: 0 0 0.3em;
-    margin-top:-6em;
+    margin-top:auto;
   }
 } 
 .card {
@@ -162,9 +162,7 @@ h1.heading {
   text-transform: uppercase
 }
 
-#developWrapper{
-  margin-top:10em;
-}
+
 
 #aboutMeText{
   margin-top:2em;
