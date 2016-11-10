@@ -13,33 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ /*
+ *= require font-awesome
+ */
 
 
-body{
-	background-color:beige;
-}
-
-
-
-h1{
-    margin-bottom:.8em;
-    text-indent:1em;
-}
-
-h2{
-    margin-left:.4em;
-}
-
-
-
-h3{
-    text-indent:.5em;
-}
-
-
-
-p{
-    padding:.5em;
-    margin-left:.2em;
-}
 

@@ -3626,12 +3626,14 @@ tbody.collapse.in {
   right: 0;
   left: auto;
 }
+
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
   border-bottom: 4px dashed;
   border-bottom: 4px solid \9;
   content: "";
+  padding-top: 60px;
 }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -4544,7 +4546,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #393a35;
+   background-color: white;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #98978b;
@@ -4601,15 +4603,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #93c54b;
-  border-color: #93c54b;
+  background-color: #393a35;
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
@@ -4627,32 +4627,31 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #89be3d;
+  background-color: #393a35;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
 .navbar-inverse .navbar-nav > .disabled > a:focus {
-  color: #444444;
-  background-color: transparent;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-toggle {
   border-color: transparent;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #89be3d;
+  background-color: white;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #6b9430;
+  background-color: #98978b;
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #81b33a;
+  border-color: #3e3f3a;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #89be3d;
+  background-color: #393a35;
   color: #ffffff;
 }
 @media (max-width: 767px) {
@@ -6434,7 +6433,9 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background-color:gray;
-  opacity:.9;
+  opacity:.8;
+  width:50%;
+  margin:auto;
 }
 .carousel-caption .btn {
   text-shadow: none;

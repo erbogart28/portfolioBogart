@@ -8,6 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3'
