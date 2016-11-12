@@ -59,6 +59,10 @@ p{
   width:50%;
 }
 
+#wireText{
+  text-align:left;
+  margin-top:2em;
+}
 
 
 .carousel-fade {
@@ -211,48 +215,37 @@ a {
 }
 
 .accordion-panel {
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    -webkit-transition: background-color 0.8s ease-in-out;
-    -moz-transition: background-color 0.8s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
-    border-left: none!important;
-    border-right: none!important;
-    border-top: none!important;
-    box-shadow: none;
-    border-radius: 10px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  -webkit-transition: background-color 0.8s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  border-left: none!important;
+  border-right: none!important;
+  border-top: none!important;
+  box-shadow: none;
+  border-radius: 10px;
 }
-
-.accordion-title  {
-    text-transform: uppercase;
-    font-weight: 100!important;
-    padding: .75em!important;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 0!important;
+.accordion-title {
+  text-transform: uppercase;
+  font-weight: 100!important;
+  padding: .75em!important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 0!important;
 }
-
 .accordion-title>a:hover {
-    text-decoration: none!important;
+  text-decoration: none!important;
 }
-
 .accordion-content {
-    margin: 0em 3em 3em 3em;
+  margin: 0em 3em 3em 3em;
 }
-
 .divider {
-    height: 3px;
-    border-radius: 3px;
-    margin: 0em 3em 3em 3em;
+  height: 3px;
+  border-radius: 3px;
+  margin: 0em 3em 3em 3em;
 }
-
-@media (min-width: 900px) {
-  #pageHeader {
-  margin-left:10%;
-  }
-} 
-
 @media (min-width: 450px) {
   h1.heading {
     font-size: 3.55em;
@@ -267,7 +260,13 @@ a {
   h1.heading {
     font-size: 3.25em;
     margin: 0 0 0.3em;
-    margin-top:auto;
+    margin-top: auto;
+  }
+}
+@media (min-width: 900px) {
+  #pageHeader {
+  margin-left:10%;
   }
 } 
-  
+
+

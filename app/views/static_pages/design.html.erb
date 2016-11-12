@@ -29,7 +29,7 @@
                         <div class="card">
                             
                             <a class="img-card" href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_" >
-                            <%= image_tag "fireflyLogo.png" %>
+                            <%= image_tag "fireflyLogo.png", :style => "object-fit:contain"%>
                             </a>
                             
                             <div class="card-content">
@@ -51,23 +51,24 @@
                     
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
-                            <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
+                            <a class="img-card"><%= image_tag "bulldoghead.png" %></a>
+                           
                             </a>
                             
                             <div class="card-content">
                                 <h4 class="card-title">
-                                    <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">Athens Bulldogs Redesign</a>
+                                    <link_to image_tag("/assets/images/bulldogProtos.jpg")>Athens Bulldogs Redesign</a>
                                 </h4>
-                                <p class="">
-                                   asdfasdfasdfasfasf
+                                <p class="bulldogsText">
+                                   This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.
+                                </p> 
+                                <p>
+                                    Luckily I was able to find my protoype iterations I created in Photoshop for this project. I was in task of the homepage design. I had multiple iterations with different designs and colors for each page. I decided a clean homepage with useful links was the best approach, as opposed to having a homepage with an overwhelming amount of information like I had in my first designs. This project was from my first web design class, and that class is what made me realize I wanted to web design and develop websites for a living one day.
                                 </p>
                             </div>
                             
                             <div class="card-read-more">
-                                <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
+                                <%= link_to "View Prototypes", image_path("bulldogProtos.jpg"), :target => "_blank", :class => "btn btn-link btn-block" %>
                             </div>
                         </div>
                     </div>
@@ -79,12 +80,12 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
-                            <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                            <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                            <a class="img-card" href="">
+                            <img src="" />
                           </a>
                             <div class="card-content">
                                 <h4 class="card-title">
-                                    <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Example
+                                    <a href=""> Example
                                   </a>
                                 </h4>
                                 <p class="">
@@ -92,7 +93,7 @@
                                 </p>
                             </div>
                             <div class="card-read-more">
-                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                <a href="" class="btn btn-link btn-block">
                                     Read More
                                 </a>
                             </div>
@@ -100,12 +101,12 @@
                     </div>
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
-                            <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
+                            <a class="img-card" href="">
+                            <img src="" />
                           </a>
                             <div class="card-content">
                                 <h4 class="card-title">
-                                    <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html">Example
+                                    <a href="">Example
                                   </a>
                                 </h4>
                                 <p class="">
@@ -113,7 +114,7 @@
                                 </p>
                             </div>
                             <div class="card-read-more">
-                                <a href="http://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                <a href="" class="btn btn-link btn-block">
                                     Read More
                                 </a>
                             </div>
@@ -121,12 +122,12 @@
                     </div>
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
-                            <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
+                            <a class="img-card" href="">
+                            <img src="" />
                           </a>
                             <div class="card-content">
                                 <h4 class="card-title">
-                                    <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">Example
+                                    <a href="">Example
                                   </a>
                                 </h4>
                                 <p class="">
@@ -134,7 +135,7 @@
                                 </p>
                             </div>
                             <div class="card-read-more">
-                                <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
+                                <a href="" class="btn btn-link btn-block">
                                     Read More
                                 </a>
                             </div>
