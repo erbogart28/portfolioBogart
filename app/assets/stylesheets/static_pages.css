@@ -250,7 +250,7 @@ a {
 @media (min-width: 450px) {
   h1.heading {
     font-size: 3.55em;
-  }
+
 }
 @media (min-width: 760px) {
   h1.heading {
@@ -269,5 +269,12 @@ a {
   margin-left:10%;
   }
 } 
+
+@media (max-width: 767px){
+  .carousel{
+    margin-right:100em;
+    margin-bottom:-33em;
+  }
+}
 
 
