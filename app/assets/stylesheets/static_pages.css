@@ -272,7 +272,7 @@ a {
 
 @media (max-width: 767px){
   .carousel{
-    margin-right:100em;
+    margin-left:1000em;
     margin-bottom:-33em;
   }
 }
