@@ -19,3 +19,10 @@
 
 
 
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}

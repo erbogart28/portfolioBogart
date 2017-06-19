@@ -153,7 +153,7 @@ h1.heading {
   color: #fff;
   font-size: 1.15em;
   font-weight: 900;
-  margin: 0 0 0.5em;
+
   color: #505050;
 }
 
@@ -277,4 +277,6 @@ a {
   }
 }
 
-
+#pageheader{
+  margin-top:2em;
+}
