@@ -1128,6 +1128,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  border:black;
+  border-style:solid;
 }
 .img-rounded {
   border-radius: 6px;
@@ -4340,7 +4342,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 20px;
+  line-height: auto;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4507,7 +4509,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #3e3f3a;
+ background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-color: #3e3f3a;
 }
 .navbar-default .navbar-brand {
@@ -4532,8 +4536,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #393a35;
+  color: #505050;
+  background-color:#eeeeee;
+  
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4553,7 +4558,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #3e3f3a;
+  border-color: #eeeeee;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -6805,10 +6810,9 @@ input:focus,
   box-shadow: none;
 }
 .nav {
-  font-size: 11px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 24px;
   font-weight: 500;
-  text-transform: uppercase;
 }
 .nav .open > a,
 .nav .open > a:hover,

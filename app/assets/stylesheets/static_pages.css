@@ -12,7 +12,7 @@
 }
 
 body{
-	background-color:beige;
+	background-color:#eeeeee;
 }
 
 h2{
@@ -32,11 +32,14 @@ p{
 
 #aboutMe{
   margin-bottom:5em;
+  background-color:white;
+  width:100%;
+  padding:1em;
 }
 #aboutMeText{
   width:85%;
   font-size:18px;
-  margin-top:4em;
+  margin-top:8%;
 }
 
 #designWork{
@@ -149,12 +152,18 @@ body {
   width: 100px;
   margin-bottom:15px;
 }
+
 h1.heading {
-  color: #fff;
+  color: #000000;
   font-size: 1.15em;
   font-weight: 900;
-
+  margin-bottom:1em;
   color: #505050;
+}
+
+#headshot{
+  border-color:#393a35;
+  margin-bottom:.25em;
 }
 
 .card {
@@ -260,8 +269,6 @@ a {
 @media (min-width: 900px) {
   h1.heading {
     font-size: 3.25em;
-    margin: 0 0 0.3em;
-    margin-top: auto;
   }
 }
 @media (min-width: 900px) {
