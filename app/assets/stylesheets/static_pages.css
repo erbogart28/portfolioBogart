@@ -287,3 +287,14 @@ a {
 #pageheader{
   margin-top:2em;
 }
+
+#back{
+  margin-top:-3.5%;
+  font-size:18px;
+  text-indent:.5%;
+  line-height: 2em;
+}
+
+.fa-arrow-left{
+  margin-right:1%;
+}

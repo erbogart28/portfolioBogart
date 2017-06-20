@@ -1,4 +1,3 @@
-
 <div class="container" id="pageheader">
     <h1 class="heading">Design Work</h1>
 </div>
@@ -56,7 +55,7 @@
                             
                             <div class="card-content">
                                 <h4 class="card-title">
-                                    <link_to image_tag("/assets/images/bulldogProtos.jpg")>Athens Bulldogs Redesign</a>
+                                    <!--<link_to image_tag("app/assets/images/bulldogProtos.jpg")>Athens Bulldogs Redesign</a>-->
                                 </h4>
                                 <p class="bulldogsText">
                                    This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.
@@ -67,7 +66,10 @@
                             </div>
                             
                             <div class="card-read-more">
-                                <%= link_to "View Prototypes", image_path("bulldogProtos.jpg"), :class => "btn btn-link btn-block" %>
+                                <a class="btn btn-link btn-block" href="<%= asset_path 'athensTabletProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]">Athens Bulldogs Redesign</a>
+                                <a href="<%= asset_path 'athensDesktopProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>
+                                <a href="<%= asset_path 'athensTablet1.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>
+                                <%# link_to "View Prototypes", image_path("bulldogProtos.jpg"), :class => "btn btn-link btn-block" %>
                             </div>
                         </div>
                     </div>
@@ -142,6 +144,6 @@
                 </div>
             </div>
      </div>
-
+<%= javascript_include_tag 'lightbox.js' %>
  
  
