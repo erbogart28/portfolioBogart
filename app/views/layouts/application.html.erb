@@ -5,12 +5,33 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+<script>
+    $(function () {
+      var w = $(window);
+      w.scroll(function () {
+      if (w.scrollTop() !== 0) {
+        $(".scroll-down").removeClass("visible");
+        return;
+      }
+      $(".scroll-down").addClass("visible");
+      });
+      $(".scroll-down").addClass("visible");
+    });
+
+  $(function() {
+      $('.scroll-down').click (function() {
+        $('html, body').animate({scrollTop: $('section.section2').offset().top }, 'slow');
+        return false;
+      });
+  });
+</script>
+</head>
+
 <body>
-  
 <header>
     <nav class="navbar-default">   <!--Nav bar default -->
-      
       <div class = "navbar-header col-lg-1">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
