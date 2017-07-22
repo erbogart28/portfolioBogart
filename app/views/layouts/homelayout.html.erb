@@ -6,22 +6,28 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <script>
-        $(function () {
-          var w = $(window);
-          w.scroll(function () {
-          if (w.scrollTop() !== 0) {
-            $(".scroll-down").removeClass("visible");
-            return;
-          }
-          $(".scroll-down").addClass("visible");
-          });
-          $(".scroll-down").addClass("visible");
-        });
+    $(function () {
+      var w = $(window);
+      w.scroll(function () {
+      if (w.scrollTop() !== 0) {
+        $(".scroll-down").removeClass("visible");
+        return;}
+      $(".scroll-down").addClass("visible");
+      });
+      $(".scroll-down").addClass("visible");
+    });
     
       $(function() {
           $('.scroll-down').click (function() {
-            $('html, body').animate({scrollTop: $('section.section2').offset().top }, 'slow');
+            $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+            return false;
+          });
+      });
+      $(function() {
+          $('.scroll-button').click (function() {
+            $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
             return false;
           });
       });

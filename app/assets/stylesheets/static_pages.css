@@ -33,9 +33,10 @@ p{
 a {
     text-decoration: none!important;
 }
-.animatedtext{
-  display: flex !important;
-	justify-content: center !important;
+#animatedtext{
+  display: flex;
+	justify-content: center;
+	margin-bottom:42vh
 }
 .hero p {
 	text-transform: uppercase;
@@ -49,10 +50,7 @@ a {
   margin: 0 0 0 -51.5%;
 
 /* Clip Background Image */
-
-
 	background: url(http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg);
-
 	-webkit-background-clip: text;
 
 /* Animate Background Image */
@@ -71,7 +69,6 @@ a {
 	letter-spacing: 50;
 	padding: .25em 0 .325em;
 	display: block;
-  margin: 0 2em;
 	text-shadow: 0 0 80px rgba(255,255,255,.5);
 
 /* Clip Background Image */
@@ -103,9 +100,12 @@ a {
   height: 100vh;
   width: 100%;
   font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0;
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000428;
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(#000428), to(#004e92));
+  background: -webkit-linear-gradient(to top, #000428, #004e92);
+  background: -moz-linear-gradient(to top, #000428, #004e92);
+  background: -o-linear-gradient(to top, #000428, #004e92);
+  background: linear-gradient(to top, #000428, #004e92);
 }
 /*  .hero_inner {*/
 /*    position: absolute;*/
@@ -151,9 +151,7 @@ a {
 
 
 section {
-  height: 100%;
   overflow: hidden;
-  position: relative;
 }
 .scroll-down.visible {
   bottom: 10px;
@@ -188,6 +186,7 @@ section {
 .scroll-down:hover {
    background-color:#325d88; 
    background-color: #244363;
+   opacity:1;
 }
 .a {
   border-right: 2px solid #eee;
@@ -288,14 +287,12 @@ section {
 .item:nth-child(3) {
     background: #E46653;
 }
-
 /*wrapper for cards*/
 .wrapper { 
   display: table;
   height: 100%;
   width: 100%;
 }
-
 .container-fostrap {
   display: table-cell;
   padding: 1em;
@@ -443,21 +440,22 @@ h1.heading {
 .fa-arrow-left{
   margin-right:1%;
 }
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 90px;
-  font-size: 24px;
-  line-height: 1.33;
-   border-radius: 100px;
-  margin-top:25%;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
-  transition: box-shadow .25s; 
-  flex-shrink:100;
+
+/*###############################
+   Nav-circles | Homepage
+#################################*/
+#navcircles{
+    display: flex;
+    justify-content: center;
 }
-.navcircles{
-  margin:10% 10em;
+.navcircle-text{
+  display:flex;
+  color:black;
+  justify-content:center;
+  font-size:18px;
+  font-family:roboto;
 }
+
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -477,7 +475,19 @@ h1.heading {
   -moz-animation-duration:1s;
   animation-duration:1s;
 }
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 125px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 125px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+  transition: box-shadow .25s; 
+  background-color: #EEEEE8;
+  margin-bottom:1em;
 
+}
 .btn-circle.btn-xl {
   opacity:0;  /* make things invisible upon start */
   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -492,5 +502,3 @@ h1.heading {
   -moz-animation-duration:1s;
   animation-duration:1s;
 }
-
-
