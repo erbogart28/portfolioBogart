@@ -1,34 +1,45 @@
 
-<section class="hero">
+<section class="landing">
     <article class="container-fluid" id="animatedtext">
         <div class= "row">
-            <p class="col-xs-12 col-sm-12 col-md-12 col-md-offset-4 col-lg-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
+            <p id="animatedtext-cols" class="col-xs-12 col-sm-12 col-md-12 col-md-offset-4 col-lg-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
         </div>
     </article>
     
-    <article class="container-fluid" id="navcircles">
-        <div class="row row-flex">
-            <a href="/static_pages/development"><div role="button" class=" btn btn-primary btn-circle btn-xl col-xs-12 col-sm-4 col-md-3 col-md-pull-1 col-lg-3 col-lg-pull-2"><span class="navcircle-text">Development</span></div></a>
-            <a href="/static_pages/design"><div role="button" class=" btn btn-primary btn-circle btn-xl col-xs-12 col-sm-4 col-md-4 col-lg-2"><span class="navcircle-text">Design</span></div></a>
-            <a href="#" class=""  address="true"><div role="button" class=" btn btn-primary btn-circle btn-xl col-xs-12 col-sm-4 col-md-3 col-md-push-1 col-lg-3 col-lg-push-2 scroll-button"><span class="navcircle-text">About Me</span></div></a>
+    <article class="container-fluid " id="navcircles">
+        <div class="row">      
+            <a id="circle-dev" href="/static_pages/development" role="button" class=" btn btn-primary btn-circle btn-xl col-sm-3 col-sm-pull-1 col-md-3 col-md-pull-1 col-lg-3 col-lg-pull-2 vcenter"><span class="navcircle-text">Development</span></a>
+            <a id="circle-design" href="/static_pages/design" role="button" class="btn btn-primary btn-circle btn-xl col-sm-4 col-md-4 col-lg-2 vcenter"><span class="navcircle-text">Design</span></a>
+            <div id="circle-active" role="button" class="scroll-button btn btn-primary btn-circle btn-xl col-sm-3 col-sm-push-1 col-md-3 col-md-push-1 col-lg-3 col-lg-push-2 vcenter"><span id="original-text" class="navcircle-text hidden-xs <%=is_active('#')%>"><a href="#" address="true">About Me</span><span id="hidden-mobile-text" class="hidden-sm hidden-md hidden-lg">Click to<br>Scroll</span></span></a>       
+            <a class="scroll-down container-fluid hidden-lg hidden-md hidden-sm <%=is_active('#')%>" href="#" address="true"><span id="mobile-indicator" class="navcircle-text <%=is_active('#')%>">About Me</span>
+            <div id="mobile-scroll-btn" class="arrow-scroll-btn"></div>
+        </a></div>
         </div>
     </article>
     
-    <article class="row">
-        <a class="scroll-down container-fluid" href="#" address="true">
-            <div class="a"></div>
+    <article class="row  hidden-xs">
+        <a class="scroll-down container-fluid  hidden-xs" href="#" address="true">
+            <div class="arrow-scroll-btn hidden-xs"></div>
         </a>
     </article>
 </section>
 
 <section class="aboutme-content">
-    <div class="container clearfix" id="pageheader">
+    <div class="container" id="pageheader">
         <h1 class="heading">About Me</h1>
     </div>
 
-<article id="aboutMe" class="container">
-    <div class="col-lg-push-3 col-lg-6 col-md-6 col-md-push-1 col-sm-6 col-xs-12"> <%= image_tag("headshot1.jpg", class: "img-responsive", :id => "headshot" )%></div>
-    <p id="aboutMeText" class="col-lg-pull-1 col-md-push-4">My name is Evan Bogart, I’m a senior at DePaul University, majoring in Interactive and Social Media with a Concentration in Development. I’m a fun loving coder who truly enjoys design and the web development. I hope to pursue a career front-end development, and don’t mind working with back-end languages as well. I excel in using the bootstrap framework, and am proficient in HTML, CSS, JavaScript, and jQuery. I am a computer junkie, a hard worker, a believer in blockchain technology, and I think we can change the world for the better with well written code!
+<article id="aboutMe" class="row-fluid">
+    <div class="container-fluid"> 
+        <section class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
+            <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
+        </section>
+        <section class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
+            <p>Hello there! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
+            <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM mostly taught me about modern UI/UX design principles and heuristics, which can be very useful to know when evaulating, designing, or developing a site/application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, and JavaScript/jQuery. I have extensive use with Bootstrap, and I'll tend to heavily utilize utility classes to setup a quick and easy grid system.</p> 
+            <p>I love Ruby-on-Rails! It's the first MVC framework I learned for web development, and I feel fully confident in coding the front-end for a Ruby-on-Rails web application. I know my way around the Ruby-on-Rails MVC framework, and I'm not scared to utilize the whole spectrum of the framework to correctly implement partials, views, and layouts. Though, when it comes down to it all, I fell in love with this framework because it allows me to work with ".erb" files - my exact initials. &#128516;</p>   
+        </section>
+    </div>
 </article>
 
    <article class="container"  id="homepageCards">

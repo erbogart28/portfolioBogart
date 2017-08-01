@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ERB Portfolio</title>
+    <title>.ERB Portfolio</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <script>
+<script>
+  $(document).on("turbolinks:load", function() {
+    // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
     $(function () {
       var w = $(window);
       w.scroll(function () {
-      if (w.scrollTop() !== 0) {
-        $(".scroll-down").removeClass("visible");
+        if (w.scrollTop() !== 0) {
+          $(".scroll-down").removeClass("visible");
         return;}
-      $(".scroll-down").addClass("visible");
-      });
-      $(".scroll-down").addClass("visible");
-    });
+        $(".scroll-down").addClass("visible"), $(".scroll-down").css('opacity', '1');
+        });
+        $(".scroll-down").addClass("visible");
+    }); // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
     
-      $(function() {
-          $('.scroll-down').click (function() {
-            $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
-            return false;
-          });
+
+    $(function() {
+      $('.scroll-down').on ('click', function() {
+        $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+          return false;
+        });
+    }); // end scroll-down arrow click
+    $(function() {
+      $('.scroll-button').on('click', function() {
+        $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+        return false;
       });
-      $(function() {
-          $('.scroll-button').click (function() {
-            $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
-            return false;
-          });
-      });
-    </script>
+    }); //end scroll button click func
+  }); //end .on turobolinks load
+</script>
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <%= yield %>
 </body>
 </html>
