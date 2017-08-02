@@ -13,252 +13,466 @@
 }
 html,
 body {
+  font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
        background-color:#eeeeee;
-
 }
-
 h2{
-    margin-left:.4em;
+  margin-left:.4em;
 }
 h3{
-    text-indent:.5em;
+  text-indent:.5em;
 }
 p{
-    padding:.5em;
-    margin-left:.2em;
+  padding:.5em;
+  margin-left:.2em;
 }
-a {
-    text-decoration: none!important;
-}
-.orbits-btn {                              
-    border-right: 2px solid #eee !important;
-    border-bottom: 2px solid #eee !important;
-    border-radius: 2px !important;
-    color: #eee !important;
-    display: inline-block !important;
-    font-size: 0 !important;
-    height: 50px !important;
-    line-height: 0 !important;
-    margin-top: -25px !important;
-    text-align: center !important;
-    vertical-align: middle !important;
-    width: 136% !important;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(45deg);
-}
-.orbits.visible {
-    bottom: 10px;
-    padding: inherit;
-}
-
-
-.landing {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0;
-  background: #000428;
-  background: -webkit-gradient(linear, 100% 0, 0 0, from(#000428), to(#004e92));
-  background: -webkit-linear-gradient(to top, #000428, #004e92);
-  background: -moz-linear-gradient(to top, #000428, #004e92);
-  background: -o-linear-gradient(to top, #000428, #004e92);
-  background: linear-gradient(to top, #000428, #004e92);
-}
-@keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 600px 0; }
-}
-.landing p {
-	text-transform: uppercase;
-	letter-spacing: .5em;
-	border: 4px double rgba(255,255,255,.25);
-	border-width: 4px 0;
-	padding: 1.5em 0em;
-	position: absolute;
-	top: 5%;
-	width: 102%;
-  margin: 0 0 0 -50%;
-
-/* Clip Background Image */
-	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg");
-	-webkit-background-clip: text;
-/* Animate Background Image */
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: aitf 120s linear infinite;
-/* Activate hardware acceleration for smoother animations */
-	-webkit-transform: translate3d(0,0,0);
-	-webkit-backface-visibility: hidden;
-
-}
-.landing p span {
-
-	font: 700 5em/1 "Oswald", sans-serif;
-	letter-spacing: 50;
-	padding: .25em 0 .325em;
-	display:block !important;
-  max-height:110px !important;
-	text-shadow: 0 0 80px rgba(255,255,255,.5);
-
-/* Clip Background Image */
-	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); /* fix for firefox to repeat my an overflow with the the text - does not background-clip text thrre */
-	-webkit-background-clip: text;
-/* Animate Background Image */
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: aitf 180s linear infinite;
-/* Activate hardware acceleration for smoother animations */
-	-webkit-transform: translate3d(0,0,0);
-	-webkit-backface-visibility: hidden;
-}
-/* Animate Background Image */
-@-webkit-keyframes aitf {
-	0% { background-position: -200% 50%; }
-	100% { background-position: 250% 50%; }
-  0% { background-position: -100% 50%; }
-}
-/*animated text container on landing page */
-.landing #animatedtext{
-  display: flex;
-	justify-content: center;
-	height:30vh !important;
-	width:100vw;
-	margin-bottom: 15vh;
-
-}
-/* animated text columns, boundraies where the border ends */
-#animatedtext-cols {
-  padding: 10px 0 !important;
-  border-width: thin;
-  border-left:none; 
+a{
+  text-decoration: none!important;
 }
 section {
   overflow: hidden;
 }
-#aboutmepagecontent{
-  margin-top:2em;
+article{
+  overflow:hidden;
 }
-#aboutMe{
-  margin-bottom:2em;
-  background-color:white;
-  width:100vw;
+h1.heading {
+  color: #000000;
+  font-size: 3.25em;
+  font-weight: 800;
   height:auto;
 }
+
+/************ back arrow **********/
+#back{
+  margin-top:-3.5%;
+  font-size:18px;
+  text-indent:.5%;
+  line-height: 2em;
+}
+/************back arrow icon ***********/
+.fa-arrow-left{
+  margin-right:1%;
+}
+
+/*###############################
+   Nav-circles | Landing / Homepage
+#################################*/
+/* ID for nav circles CONTAINER */
+#navcircles{
+    display: flex;
+    justify-content: center;
+    min-height: 10em !important;
+    overflow:hidden !important;
+    background-color:none;
+    background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
+    max-height:50vh !important;
+    min-width:100vw !important;
+    	/*-webkit-animation: aitf 180s linear infinite;*/
+}
+#circles-row{
+      min-height: 10em !important;
+      width:100vw !important;
+      margin-bottom:0 !important;
+      padding: 8em 0;
+}
+#circle-dev{
+    background-image: -webkit-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
+    background-image: -moz-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
+    background-image: -o-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
+    background-image: linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
+}
+/* design circle btn */
+#circle-design{
+      background-image: -webkit-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
+    background-image: -moz-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
+    background-image: -o-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
+    background-image: linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
+}
+/* active circle -- About Me circle */
+#circle-active{
+    background-image: -webkit-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
+    background-image: -moz-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
+    background-image: -o-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
+    background-image: linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
+}
+.btn-circle.btn-xl#circle-active:hover{
+    background-image: -webkit-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: -moz-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: -o-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+       /* -webkit-transform: rotateZ(180deg); /* Safari */
+    /*transform: rotateZ(180deg);*/
+}
+.btn-circle.btn-xl#circle-design:hover{
+    background-image: -webkit-linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
+    background-image: -moz-linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
+    background-image: -o-linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
+    background-image: linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
+}
+.btn-circle.btn-xl#circle-dev:hover{
+    background-image: -webkit-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
+    background-image: -moz-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
+    background-image: -o-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
+    background-image: linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
+}
+#circle-active #original-text.navcircle-text a{
+    color: rgba(77, 255, 77,.8);
+}
+#circle-active > span.navcircle-text{
+    display:flex;
+    justify-content:center;
+    font-size:24px;
+    font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+/* text in nav circles */
+.navcircle-text{
+    display:flex;
+    color:black;
+    justify-content:center;
+    font-size: 24px;
+    font-family: roboto;
+    letter-spacing: 1px;
+    line-height: 1em;
+    text-align:left;
+}
+/* utility clsses used for circle buttons */
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 95px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 125px;
+    box-shadow: 0 9px 5px 0px rgba(0,0,0,3.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
+    transition: box-shadow .25s; 
+    background-color: #EEEEE8;
+    text-align: center;
+}
+.btn-circle.btn-xl {
+    opacity:0;  /* make elements invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+.btn {
+    border: none;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: initial !important;
+}
+/*#######################################
+#   scroll down button and elements / landing paage 
+########################################*/
+/* visible scroll down btn positioning */
+#scrolldown-button-row{
+  max-height:25vh;
+}
+.scroll-down.visible {
+    bottom: 10px;
+}
+/*scroll down btn animations and further positioning to hid offscreen */
+.scroll-down {
+    border: 1px solid #eee;
+    border-radius: 50%;
+    color: #eee;
+    text-align: center;
+    background-image: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.04, #f83600), color-stop(0.8, #f9d423));
+    background-image: -webkit-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: -moz-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: -o-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    display: block;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    bottom:-140px;
+    height: 100px;
+    line-height: 100px;
+    width: 100px;
+  /*button animations */
+    -webkit-animation: a 2s 3 !important;
+    -moz-animation: a 2s 3 !important; 
+    -o-animation: a 2s 3 !important; 
+    animation: a 2s 3 !important;
+    
+    -webkit-transition: bottom 1s ease-in !important;
+    -moz-transition: bottom 1s ease-in !important;
+    -o-transition: bottom 1s ease-in !important;
+    transition: bottom 1s ease-in !important; 
+    
+    -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: initial;
+}
+.scroll-down a:hover{
+    background-color: #808080;
+    opacity:.8;
+}
+/* arrow used inside button to indicate there is more info below */
+.arrow-scroll-btn {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    color: #eee;
+    display: inline-block;
+    font-size: 0;
+    height: 50px;
+    line-height: 0;
+    margin-top: -25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(45deg);
+}
+/*scrolldown button keyframes defined */
+@-webkit-keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+@-moz-keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+@-o-keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+@keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+  0%   { border-color: #eee; }
+  50%   { border-color: #555; }
+  100% { border-color: #eee; }
+}
+/*  start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+ /*fade in landing page elements */
+.fade-in {
+    opacity:0;  
+    -webkit-animation:fadeIn ease-in 1; 
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+/*#######################################
+#  Landing page and elements definied 
+########################################*/
+.landing {
+    position: relative;
+    min-height: 100vh !important;
+    width: 100%;
+    font: 400 1em/1.5 "Neuton"; background: #090d00; 
+    /*color: rgba(255,255,255,.25); */
+    text-align: center; 
+    margin: 0;
+    background: white;
+}
+/* article ID for animated text CONTAINER */
+#animatedtext{
+    display: flex;
+    justify-content: center;
+    max-height:25vh !important;
+    min-width:auto;
+    width:100vw !important;
+    margin-bottom:5%;
+}
+/* div id for the start of the ROW and the start of columns within the div for animated text  */
+#animatedtext-cols {
+    border:1px solid black;
+    background-color:#FFFFFF !important;
+    border: 4px double rgba(255,255,255,.25);
+    border-left:none; 
+    border-right:none;
+    right:0px;
+    max-height:25em !important;
+    border-width: 4px 0;
+    padding: 2em 0em 2em 0;
+}
+/* ID for the P tag which utilizes the animated text itself | first header seen on page */
+#landing-header {
+  	text-transform: uppercase;
+  	letter-spacing: .5em;
+  	display:block;
+  	justify-content:center;
+  	width: 100vw !important;
+  	max-height:25em !important;
+    /* Clip Background Image */
+  	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg");
+  	-webkit-background-clip: text;
+  	
+      /* Animate Background Image */
+    	-webkit-text-fill-color: transparent;
+    	-webkit-animation: aitf 120s linear infinite;
+    	-webkit-transform: translate3d(10px,0,0);
+    	-webkit-backface-visibility: hidden;
+}
+#landing-header span {
+  	font: 700 5em/1 "Oswald", sans-serif;
+  	letter-spacing: 50;
+  	padding: .25em 0 .325em;
+  	display:block !important;
+  	justify-content:center;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+  	
+      /* Clip Background Image */
+  	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); 
+  	-webkit-background-clip: text;
+      /* Animate Background Image */
+  	-webkit-text-fill-color: transparent;
+  	-webkit-animation: aitf 180s linear infinite;
+      /* Activate hardware acceleration for smoother animations */
+  	-webkit-transform: translate3d(0,0,0);
+  	-webkit-backface-visibility: hidden;
+}
+/************** card definitions **********/
+.card {
+    display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+    width: 100%;
+    height:200px;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    display:block;
+    overflow: hidden;
+}
+.img-card img{
+    width: 100%;
+    height: 200px;
+    object-fit:cover; 
+    transition: all .25s ease;
+} 
+.card-content {
+    padding:15px;
+    text-align:left;
+}
+.card-title {
+    margin-top:0px;
+    font-weight: 700;
+    font-size: 1.65em;
+}
+.card-title a {
+    color: #000;
+    text-decoration: none !important;
+}
+.card-read-more {
+    border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+    text-decoration: none !important;
+    padding:10px;
+    font-weight:600;
+    text-transform: uppercase
+}
+.card {
+    border-radius: 10px!important;
+    border-bottom: 5px solid #eee!important;
+}
+/*utility class for centering verticaclly in a row without flex */
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
 }
+@keyframes animatedBackground {
+    from { background-position: 0 0 !important }
+    to { background-position: 600px 0 !important;}
+}
+/********************************************/
+/**** homepage content | Beneath landing page *****/
+/********************************************/
+#aboutmepagecontent{
+    margin-top:2em;
+}
+#aboutMe{
+    margin-bottom:2em;
+    background-color:white;
+    width:100vw;
+    height:auto;
+}
 #aboutMeText{
-  font-size:16px;
-  margin:4em .25em;
+    font-size:16px;
+    margin:4em .25em;
 }
-
-#designWork{
-  margin-bottom:5em;
-}
-
-#homepageCards{
-  margin-bottom:5em;
-}
-
-#developmentWork{
-  margin-bottom:5em;
-}
-
-#wireframeWalk{
-  width:80%;
-}
-
-#wireframePics{
-  margin:auto;
-  width:50%;
-}
-
-#wireText{
-  text-align:left;
-  margin-top:2em;
-}
-
-.item:nth-child(1) {
-    background: #74C390;
-}
-
-.item:nth-child(2) {
-    background: #51BCE8;
-}
-
-.item:nth-child(3) {
-    background: #E46653;
-}
-
-h1.heading {
-  color: #000000;
-  font-size: 3.25em;
-  font-weight: 900;
-  margin-bottom:.5em;
-}
+/* headhshot image */
 #headshot{
-  border:none;
-  margin:3em 0;
+    border:none;
+    margin:3em 0;
 }
-.card {
-  display: block; 
-  margin-bottom: 20px;
-  line-height: 1.42857143;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
-  transition: box-shadow .25s; 
+#homepageCards{
+    margin-bottom:5em;
 }
-.card:hover {
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+/********************************************/
+/************  Dev Page *********************/
+/********************************************/
+#developmentWork{
+    margin-bottom:5em;
 }
-.img-card {
-  width: 100%;
-  height:200px;
-  border-top-left-radius:2px;
-  border-top-right-radius:2px;
-  display:block;
-  overflow: hidden;
+/********************************************/
+/****************   Design Page  ************/
+/********************************************/
+#designWork{
+    margin-bottom:5em;
 }
-.img-card img{
-  width: 100%;
-  height: 200px;
-  object-fit:cover; 
-  transition: all .25s ease;
-} 
-.card-content {
-  padding:15px;
-  text-align:left;
+#wireframeWalk{
+    width:80%;
 }
-.card-title {
-  margin-top:0px;
-  font-weight: 700;
-  font-size: 1.65em;
+#wireframePics{
+    margin:auto;
+    width:50%;
 }
-.card-title a {
-  color: #000;
-  text-decoration: none !important;
-}
-.card-read-more {
-  border-top: 1px solid #D4D4D4;
-}
-.card-read-more a {
-  text-decoration: none !important;
-  padding:10px;
-  font-weight:600;
-  text-transform: uppercase
+#wireText{
+    text-align:left;
+    margin-top:2em;
 }
 
-
-.card {
-    border-radius: 10px!important;
-    border-bottom: 5px solid #eee!important;
-}
+/********************************************/
+/*accordion definitions */
+/********************************************/
 .accordion-panel {
   text-align: center;
   display: block;
@@ -291,32 +505,19 @@ h1.heading {
   border-radius: 3px;
   margin: 0em 3em 3em 3em;
 }
-#pageheader{
-  margin-top:.5em;
-}
-/*back arrow */
-#back{
-  margin-top:-3.5%;
-  font-size:18px;
-  text-indent:.5%;
-  line-height: 2em;
-}
-/*back arrow */
-.fa-arrow-left{
-  margin-right:1%;
-}
 
-
+/*********************************************************/
+/*    Definied media queries for improved responsiveness 
+***************************************************************/
 @media(max-width:2800px) and (min-width: 1200px){
   #aboutMeText{
     font-size:16px;
     margin:4em .25em;
     padding-left:4em !important;
   }
-    #navcircles{
-    margin-top: -9em;
+  #navcircles{
   }
-.btn-circle.btn-xl {
+  .btn-circle.btn-xl {
     width: 150px !important;
     height: 150px !important;
     padding: 125px !important;
@@ -326,18 +527,18 @@ h1.heading {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
     transition: box-shadow .25s !important;
     /* background-color: #EEEEE8 !important; */
-    text-align: center !important;
-}
-  .navcircle-text{
-  display:flex;
-  color:black;
-  justify-content:center;
-  font-size:24px !important;
-  font-family:roboto;
   }
-}
+  .navcircle-text{
+    display:flex;
+    color:black;
+    justify-content:center;
+    font-size:24px !important;
+    font-family:'Roboto', 'Helvetica', 'sans-seriff';
+  }
+} /*end max 2800 min 1200px */
+
 @media (max-width: 1200px) and (min-width: 900px) {
-    h1.heading {
+  h1.heading {
     font-size: 3.25em;
   }
   #aboutMeText{
@@ -362,7 +563,7 @@ h1.heading {
     color: black;
     justify-content: center;
     font-size: 24px;
-    font-family: roboto;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     line-height: .5em !important;
   }
@@ -374,7 +575,8 @@ h1.heading {
     letter-spacing: 1px;
     line-height: .5em !important;
   }
-}
+} /*end max 1200 min 900px */
+
 @media (max-width: 900px) and (min-width: 768px) {
   h1.heading {
     font-size: 3.25em;
@@ -385,9 +587,8 @@ h1.heading {
     line-height:1.6;
     margin:1em 0;
   }
-  #navcircles{
-    
-  }
+  /*#navcircles{*/
+  /*}*/
   .btn-circle.btn-xl {
     width: 25px !important;
     height: 25px !important;
@@ -421,14 +622,29 @@ h1.heading {
   .scroll-down.visible {
     bottom: 75px !important;
   }
-}
-
-@media(min-width: 620px) and (max-width: 768px){
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin-bottom:2em;
+} /* end max 900 and min 768 px */
+/* tablet focus */
+@media(max-width: 768px) and (min-width: 620px){ 
+  #animatedtext {
+    display: flex;
+    justify-content: center;
+    max-height: 20vh !important;
+    min-width: auto;
+    width: 100vw !important;
+    margin-bottom:0 !important;
+  }
+  #landing-header span {
+    font: 700 5em/1 "Oswald", sans-serif;
+    letter-spacing: 40 !important;
+    padding: .15em 0 .15em !important;
+  }
+  #landing-header{    
+    font: 800 1em/1 "Roboto", sans-serif;
+    letter-spacing: 30;
+    padding: .15em 0 .15em !important;
+  }
+  #navcircles{
+    min-height:80vh !important;
   }
   .navcircle-text {
     display: flex;
@@ -446,11 +662,6 @@ h1.heading {
     font-family: roboto;
     letter-spacing: 1px;
     line-height: .5em !important;
-  }
-  .landing p{
-    padding:5px !important;
-    top:5% !important;
-    margin-bottom:0 !important;
   }
   .btn-circle.btn-xl {
     width: 25px !important;
@@ -476,71 +687,119 @@ h1.heading {
   #original-text{
     display: flex !important;
   }
-  .scroll-down.visible {
-    display:initial !important;
+   .scroll-down.visible {
+    margin-bottom: 230px !important;
   }
   .scroll-down {
-  border: 1px solid #eee;
-  border-radius: 50%;
-  color: #eee;
-  text-align: center;
-  display: block;
-  left: -55% !important;
-  margin-left: -50px;
-  position: absolute;
-  bottom: -260px !important;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    color: #eee;
+    text-align: center;
+    display: block;
+    left: -55% !important;
+    margin-left: -50px;
+    position: absolute;
+    bottom: -600px !important;
+    
+    height: 100px;
+    line-height: 100px;
+    width: 100px;
   
-  height: 100px;
-  line-height: 100px;
-  width: 100px;
-
-  -webkit-animation: a 4s infinite;
-  -moz-animation: a 4s infinite; 
-  -o-animation: a 4s infinite; 
-  animation: a 4s infinite;
-  
-  -webkit-transition: bottom 2s ease;
-  -moz-transition: bottom 4s ease;
-  -o-transition: bottom 4s ease;
-  transition: bottom 2s ease;  
+      -webkit-animation: a 4s infinite;
+      -moz-animation: a 4s infinite; 
+      -o-animation: a 4s infinite; 
+      animation: a 4s infinite;
   }
-  .scroll-down:hover{
-  background-color: #808080;
-  opacity:.5;
+  #mobile-scroll-btn.scroll-down a:hover{
+    background-color: #808080;
+    opacity:.8;
   }
-  .arrow-scroll-btn {
-  border-right: 2px solid #eee;
-  border-bottom: 2px solid #eee;
-  border-radius: 2px;
-  color: #eee;
-  display: inline-block;
-  font-size: 0;
-  height: 50px;
-  line-height: 0;
-  margin-top: -25px;
-  text-align: center;
-  vertical-align: middle;
-  width: 50px;
+   #mobile-scroll-btn .arrow-scroll-btn {
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    border-radius: 2px;
+    color: #eee;
+    display: inline-block;
+    font-size: 0;
+    height: 50px;
+    line-height: 0;
+    margin-top: -25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
   
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(45deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(45deg);
   }
-}
-  
-@media (min-width: 200px) and (max-width: 620px){
+  #headshot{
+    border:none;
+    margin:1em 0;
+  }
   #aboutMeText{
     font-size:16px;
     margin:0;
     line-height:1.6;
     margin-bottom:2em;
   }
+  h1.heading {
+    color: #000000;
+    font-size: 3.25em;
+    font-weight: 800;
+    height:auto;
+    text-indent:.25em;
+  }
+  #aboutMeText{
+    font-size:16px;
+    margin:0;
+    line-height:1.6;
+    margin-bottom:2em;
+  }
+    #scrolldown-button-row{
+    visibility:visible;
+  }
+    #arrow-scroll-btn{
+    visibility:visible;
+  }
+} /* end min-width: 620 and max-width: 768px */
+/* mobile focus */
+@media(max-width: 620px) and (min-width: 200px){
+  .landing {
+    background-color:white;
+  }
   #navcircles{
-    margin-top: -10em !important;
-    padding-top: 3em !important;
-    height: 75vh !important;
+    min-height:80vh !important;
+  }
+  #circles-row {
+    padding: 2em 0;
+  }
+  /*cuts off on small views on PC, but looks fine on an actual phone and in chrome responsive testing views */
+  #animatedtext {
+    max-height: 20vh !important;
+  }
+  #animatedtext-cols{
+    margin:0 !important;
+    padding:1em 0 0 0 !important;
+  }
+  /* landing page and large header redifined */
+  #landing-header{
+    font: 500 1em/1 "Roboto", sans-serif;
+    letter-spacing: 4px !important;
+    padding: .15em 0 .325em;
+    display: block;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+    border-top-width: thin;
+  }
+  #landing-header span {
+    font: 700 3em/1 "Oswald", sans-serif;
+    letter-spacing:70;
+    padding: .25em 0 .325em;
+    display: block;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+    padding: .2em 0.3em .2em 0;
+    line-height:44px;
   }
   .btn-circle.btn-xl {
     width: 25px !important;
@@ -548,49 +807,43 @@ h1.heading {
     padding: 70px !important;
     border-radius: 136px !important;
     transition: box-shadow .25s;
-    background-color: #EEEEE8;
-    margin:5px 5px;
     box-shadow: 0 9px 5px 0px rgba(0,0,0,3.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
   }  
+  /*adjusting buttons based on design as it is in the middle, and allows for easy top and bottom spacing */
   #circle-design{
-    margin: 1em 0 1em 2px;
+    margin: .5em 0 .5em 0;
   }
-  #circle-active > span.navcircle-text{
-    display:flex;
-    color:black;
-    justify-content:center;
-    font-size:20px !important;
-    font-family:roboto;
-  }
+  /* text within nav circles */
   .navcircle-text {
     display: flex;
     color: black;
     justify-content: center;
     font-size: 20px !important;
     line-height: 0em !important;
-    font-family: roboto;
+    font-family: "Roboto";
     border-radius: 5px;
     z-index:10 !important;
   }
-    #circle-design > span.navcircle-text{
+  #circle-active > span.navcircle-text{
+    display:flex;
+    color:black;
+    justify-content:center;
+    font-size:20px !important;
+    font-family:"Roboto";
+  }
+  #circle-design > span.navcircle-text{
     display:flex;
     color:black;
     justify-content:center;
     font-size:22px !important;
-    font-family:roboto;
+    font-family:"Roboto";
   }
-  #animatedtext-cols {
-    padding: 10px 0 !important;
-    border-width: thin;
-    border-left:none; 
-  }
+  /* scroll-down button replaces the about me nav circle for space efficiency - user is alerted accordingly */
   #mobile-indicator.navcircle-text{
     color: #ffffff	!important;
     font-size: 22px !important;
     font-weight: 500 !important; 
     font-family: roboto !important;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: darkslategrey;
     box-shadow: 13px 16px 32px 0px rgba(0,0,0,0.26), 0 50px 80px 0 rgba(0,0,0,0.12);
     font-weight: 500;
     font-size: 22px !important;
@@ -602,57 +855,39 @@ h1.heading {
     color: rgba(77, 255, 77,1) !important;
     font-size: 22px !important;
     font-weight: 500 !important; 
-    font-family: roboto !important;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: darkslategrey;
+    font-family: "Roboto" !important;
     box-shadow: 0 19px 2px 0 rgba(0,0,0,0.16), 0 5px 1px 0 rgba(0,0,0,0.12);;
     font-size: 22px !important;
   }
-  /* the text "click to scroll" | only showed for mobile users */
-  #hidden-mobile-text{
+  .click-to-scroll:hover{
+    color: rgba(77, 255, 77,1) !important;
+    font-size: 22px !important;
+    font-weight: 500 !important; 
+    font-family: "Roboto" !important;
+    font-size: 22px !important;
+    z-index:auto !important;
+  }
+  .scroll-down .click-to-scroll {
+    color: black;
+    font-size: 14px !important;
     line-height: 1em !important;
-    display: flex;
-    justify-content: center;
-    letter-spacing: .5px !important;
-    margin-top: -1.5em;
-    font-size:20px;
+    font-family: "Roboto";
+    padding-top: 25px;
+    position: absolute;
+    right: 30px !important;
+    text-align:center;
   }
-  .landing p {
-    font: 500 1em/1 "Roboto", sans-serif;
-    letter-spacing: 4px !important;
-    padding: .15em 0 .325em;
-    display: block;
-    top: 2% !important;
-    text-shadow: 0 0 80px rgba(255,255,255,.5);
-    border-top-width: thin;
-  /* Clip Background Image */
-    background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg");
-    -webkit-background-clip: text;
-  /* Animate Background Image */
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 60s linear infinite;
-  
-    /* Activate hardware acceleration for smoother animations */
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-backface-visibility: hidden;
-  }
-  .landing p span {
-    font: 700 3em/1 "Oswald", sans-serif;
-    letter-spacing:70;
-    padding: .25em 0 .325em;
-    display: block;
-    text-shadow: 0 0 80px rgba(255,255,255,.5);
-    /* Clip Background Image */
-    background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg");
-    -webkit-background-clip: text;
-    /* Animate Background Image */
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 60s linear infinite;
-    /* Activate hardware acceleration for smoother animations */
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-backface-visibility: hidden;
-  }
-  
+  /* the text "click to scroll" | visible for mobile users when the scroll-down btn is transparent */
+  /*#hidden-mobile-text {*/
+  /*  line-height: 1em !important;*/
+  /*  display: flex;*/
+  /*  justify-content: center;*/
+  /*  letter-spacing: 1.5px !important;*/
+  /*  margin-top: -1.5em;*/
+    /* font-size: 20px; */
+  /*  font-weight: bolder;*/
+  /*}*/
+  /* scroll-down redfinied to animate and fit inside the "about me" circle */
   .scroll-down.visible {
     bottom: 12px !important;
   }
@@ -665,255 +900,214 @@ h1.heading {
     left: 45% !important; 
     margin-left: -50px !important;
     position: absolute !important;
-    bottom: -500px !important;
+    bottom: -580px !important;
     height: 115px !important;
     line-height: 100px !important;
     width: 115px !important;
     background-color: #808080 !important;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .9), 0 2px 0px 0 rgba(0,0,0,0.12) !important;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px 1px rgba(0,0,0,1.02) !important;
     
-    -webkit-animation: a 2s 3 !important;
-    -moz-animation: a 2s 3 !important; 
-    -o-animation: a 2s 3 !important; 
-    animation: a 2s 3 !important;
-    
-    -webkit-transition: bottom 1s ease-in !important;
-    -moz-transition: bottom 1s ease-in !important;
-    -o-transition: bottom 1s ease-in !important;
-    transition: bottom 1s ease-in !important; 
-    
-    -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: initial;
+      -webkit-animation: a 2s 2 !important;
+      -moz-animation: a 2s 2 !important; 
+      -o-animation: a 2s 2 !important; 
+      animation: a 2s 2 !important;
+      
+      -webkit-transition: bottom .5s ease-in !important;
+      -moz-transition: bottom .5s ease-in !important;
+      -o-transition: bottom .5s ease-in !important;
+      transition: bottom .5s ease-in !important; 
+      
+      -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
+      animation-fill-mode: initial;  /*fill in the "about me" circle with scroll-down button and have it remain fit inside according to the nav circles definitions */    
+      border: 1px solid black !important;
   }
   .arrow-scroll-btn {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 2px;
-    color: black;
+    color: #eee;
     display: inline-block;
     font-size: 0;
-    height: 50px;
+    height: 60px;
     line-height: 0;
-    margin-top: 10px;
+    margin-top: -5px;
     text-align: center;
     vertical-align: middle;
-    width: 50px;
-    
-    
+    width: 60px;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(45deg);
   }
+  #circle-active #mobile-scroll-btn.arrow-scroll-btn:hover{
+    border-right: 2px solid rgba(77, 255, 77,1);
+    border-bottom: 2px solid rgba(77, 255, 77,1);
+  }
+  .scroll-down:hover{
+    opacity:.9 !important;
+    box-shadow: 60px 0px 1px 5px rgba(0, 0, 0, 10), -5px 0px -5px -5px rgba(0,0,0,1.02) !important;
+  }
+  #headshot{
+    border:none;
+    margin:1em 0;
+    z-index:20;
+  }
+  #aboutMeText{
+    font-size:16px;
+    margin:0;
+    line-height:1.6;
+    margin-bottom:2em;
+  }
+  #page-title {
+    color: #000000;
+    font-weight: 800;
+    height:auto;
+    text-indent:.25em;
+    border: 1px solid black;
+    border-right:none; 
+    border-left:none;
+    z-index: 20;
+    padding-bottom:5px;
+  }
+  #scrolldown-button-row{
+    display:none;
+  }
+  #arrow-scroll-btn{
+    display:none;
+  }
 }
-/*###############################
-   Nav-circles | Homepage
-#################################*/
-#navcircles{
-  display: flex;
-  justify-content: center;
-  background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
-  margin-top: -6em;
-  min-height: 25em !important;
-  padding-top: 2em;
-  overflow:hidden !important;
-}
-/*#design-circle:hover{*/
-/*  background-color: #D5544F;*/
-/*}  */
-#circle-dev{
-background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    /*-ms-transform: rotate(-5deg);*/
+    /*transform: rotate(-5deg);
+  }*/
+/*UFO with ray work in progress */  
+/*#ray{*/
+/*    width: 75px  !important;*/
+/*    height: 100px  !important;*/
+/*    position: block  !important;*/
+/*    -webkit-animation: ray 5s infinite  !important; */
+/*    -webkit-animation-direction: alternate  !important; */
+/*    animation: ray 5s infinite  !important;*/
+/*    animation-direction: alternate  !important;*/
+/*        	-webkit-transform: translate3d(10px,5px,11px)  !important;*/
 
-}
-#circle-design{
-background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
-  
-}
-#circle-active{
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-}
-#circle-active:active, #circle-active:hover,  #circle-active:hover > span.navcircle-text{
-  background-color: #325d88;
-  color:black !important;
-}
-#circle-active > span.navcircle-text{
-  display:flex;
-  justify-content:center;
-  font-size:24px;
-  font-family:roboto;
-  letter-spacing: 1px;
-  line-height: 1em;
-}
+/*}*/
+/*@-webkit-keyframes orbit {*/
+/*    0%   {left: 0px; background-color:green !important;}*/
+/*    25%  {bottom: 200px; background-color:green;}*/
+/*    75%  {right: 600px;}*/
+/*    100% {right: 1200px;}*/
+/*}*/
+/*@-moz-keyframes orbit {*/
+/*    0%   {left: 0px; background-color:green;}*/
+/*    25%  {bottom: 100px; background-color:green;}*/
+/*    75%  {right: 600px;}*/
+/*    100% {right: 1200px;}*/
+/*}*/
+/*@keyframes ray {*/
+/*    0%   {left: 0px; background: transparent;}*/
+/*    25%  {bottom: 100px; background-color: green;}*/
+/*    50%  {background-color: green;}*/
+/*    75%  {background-color: green;}*/
+/*    100% {background: transparent;}*/
+/*}*/
 
-.navcircle-text{
-  display:flex;
-  color:black;
-  justify-content:center;
-  font-size: 24px;
-  font-family: roboto;
-  letter-spacing: 1px;
-  line-height: 1em;
-  text-align:left;
-}
+/*@keyframes fadeIn{from {right: 100%;} to {left:0%;} }*/
+/*@keyframes fadeIn{from {left: 0%;} to {right:100%;} }*/
+/*@-webkit-keyframes fadeIn{from {left: 0%;} to {right:100%;} }*/
+/*@-moz-keyframes fadeIn{from {left: 0%;} to {right:100%;} }*/
 
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 95px;
-  font-size: 24px;
-  line-height: 1.33;
-  border-radius: 125px;
-  box-shadow: 0 9px 5px 0px rgba(0,0,0,3.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
-  transition: box-shadow .25s; 
-  background-color: #EEEEE8;
-  text-align: center;
-}
-.btn-circle.btn-xl {
-  opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
 
-.btn {
-    border: none;
-    font-size: 11px;
-    line-height: 22px;
-    font-weight: 500;
-    text-transform: initial !important;
-}
+/* mess around */
+/*.orbits-btn {                              */
+/*    border-right: 2px solid #eee !important;*/
+/*    border-bottom: 2px solid #eee !important;*/
+/*    border-radius: 2px !important;*/
+/*    color: #eee !important;*/
+/*    display: inline-block !important;*/
+/*    font-size: 0 !important;*/
+/*    height: 50px !important;*/
+/*    line-height: 0 !important;*/
+/*    margin-top: -25px !important;*/
+/*    text-align: center !important;*/
+/*    vertical-align: middle !important;*/
+/*    width: 136% !important;*/
+    /*-webkit-transform: rotate(90deg);*/
+    /*-moz-transform: rotate(0deg);*/
+    /*-o-transform: rotate(0deg);*/
+    /*-ms-transform: rotate(0deg);*/
+    /*transform: rotate(45deg);*/
+    
+      
+/*      -webkit-animation: orbit 2s 3 !important;*/
+/*      -moz-animation: orbit 2s 3 !important; */
+/*      -o-animation: orbit 2s 3 !important; */
+/*      animation: orbit 2s 3 !important;*/
+      
+/*      -webkit-transition: bottom 1s linear !important;*/
+/*      -moz-transition: bottom 1s linear !important;*/
+/*      -o-transition: bottom 1s linear !important;*/
+/*      transition: bottom 1s linear !important; */
+/*}*/
+/*.orbits.visible {*/
+/*    bottom: 10px;*/
+/*    padding: inherit;*/
+/*}*/
 
-.scroll-down.visible {
-  bottom: 10px;
-}
-.scroll-down {
-  border: 1px solid #eee;
-  border-radius: 50%;
-  color: #eee;
-  text-align: center;
-  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-  display: block;
-  left: 50%;
-  margin-left: -50px;
-  position: absolute;
-  bottom:-140px;
-  height: 100px;
-  line-height: 100px;
-  width: 100px;
 
-  -webkit-animation: a 2s 3 !important;
-  -moz-animation: a 2s 3 !important; 
-  -o-animation: a 2s 3 !important; 
-  animation: a 2s 3 !important;
-  
-  -webkit-transition: bottom 1s ease-in !important;
-  -moz-transition: bottom 1s ease-in !important;
-  -o-transition: bottom 1s ease-in !important;
-  transition: bottom 1s ease-in !important; 
-  
-  -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
-  animation-fill-mode: initial;
-}
-.scroll-down:hover{
-    background-color: #808080;
-    opacity:.8;
-}
-.arrow-scroll-btn {
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-radius: 2px;
-  color: #eee;
-  display: inline-block;
-  font-size: 0;
-  height: 50px;
-  line-height: 0;
-  margin-top: -25px;
-  text-align: center;
-  vertical-align: middle;
-  width: 50px;
-  
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(45deg);
-}
+/*@-o-keyframes orbit {*/
+/*  0%   { opacity: .3; }*/
+/*  50%   { opacity: 1; }*/
+/*  100% { opacity: .3; }*/
+/*}*/
 
-@-webkit-keyframes a {
-  0%   { opacity: .3; }
-  50%   { opacity: 1; }
-  100% { opacity: .3; }
-}
+/*@keyframes orbit {*/
+/*  0%   { opacity: .3; }*/
+/*  50%   { opacity: 1; }*/
+/*  100% { opacity: .3; }*/
+/*  0%   { border-color: #eee; }*/
+/*  50%   { border-color: #555; }*/
+/*  100% { border-color: #eee; }*/
+/*}*/
+  /*start state and the end state of our object */
 
-@-moz-keyframes a {
-  0%   { opacity: .3; }
-  50%   { opacity: 1; }
-  100% { opacity: .3; }
-}
 
-@-o-keyframes a {
-  0%   { opacity: .3; }
-  50%   { opacity: 1; }
-  100% { opacity: .3; }
-}
 
-@keyframes a {
-  0%   { opacity: .3; }
-  50%   { opacity: 1; }
-  100% { opacity: .3; }
-  0%   { border-color: #eee; }
-  50%   { border-color: #555; }
-  100% { border-color: #eee; }
-}
-/*  start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-.fade-in {
-  opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1; 
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards; 
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
-
-/*.scroll-down {     Flying saucer */
-/*    border: 1px solid #eee;*/
-/*    border-radius: 50%;*/
-/*    color: #eee;*/
-/*    text-align: center;*/
-/*    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);*/
-/*    display: block;*/
-/*    left: 50%;*/
-/*    margin-left: -50px;*/
-/*    position: absolute;*/
-/*    bottom: -140px;*/
-/*    height: 30px;*/
-/*    line-height: 100px;*/
-/*    width: 100px;*/
-/*    -webkit-animation: a 4s infinite;*/
-/*    -moz-animation: a 4s infinite;*/
-/*    -o-animation: a 4s infinite;*/
-/*    animation: a 4s infinite;*/
-/*    -webkit-transition: bottom 2s ease;*/
-/*    -moz-transition: bottom 4s ease;*/
-/*    -o-transition: bottom 4s ease;*/
-/*    transition: bottom 2s ease;*/
+/*.orbits-btn {                              */
+/*    border-right: 2px solid #eee !important;*/
+/*    border-bottom: 2px solid #eee !important;*/
+/*    border-radius: 2px !important;*/
+/*    color: #eee !important;*/
+/*    display: inline-block !important;*/
+/*    font-size: 0 !important;*/
+/*    height: 50px !important;*/
+/*    line-height: 0 !important;*/
+/*    margin-top: -25px !important;*/
+/*    text-align: center !important;*/
+/*    vertical-align: middle !important;*/
+/*    width: 136% !important;*/
+    /*-webkit-transform: rotate(90deg);*/
+    /*-moz-transform: rotate(0deg);*/
+    /*-o-transform: rotate(0deg);*/
+    /*-ms-transform: rotate(0deg);*/
+    /*transform: rotate(45deg);*/
+    
+      
+/*      -webkit-animation: orbit 2s 3 !important;*/
+/*      -moz-animation: orbit 2s 3 !important; */
+/*      -o-animation: orbit 2s 3 !important; */
+/*      animation: orbit 2s 3 !important;*/
+      
+/*      -webkit-transition: bottom 1s linear !important;*/
+/*      -moz-transition: bottom 1s linear !important;*/
+/*      -o-transition: bottom 1s linear !important;*/
+/*      transition: bottom 1s linear !important; */
+/*}*/
+/*.orbits.visible {*/
+/*    bottom: 10px;*/
+/*    padding: inherit;*/
 /*}*/
