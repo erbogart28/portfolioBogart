@@ -43,7 +43,6 @@ h1.heading {
   font-weight: 800;
   height:auto;
 }
-
 /************ back arrow **********/
 #back{
   margin-top:-3.5%;
@@ -56,26 +55,81 @@ h1.heading {
   margin-right:1%;
 }
 
+/*#######################################
+#  Landing page and elements definied 
+########################################*/
+.landing {
+    position: relative;
+    min-height: 100vh !important;
+    width: 100%;
+    font: 400 1em/1.5 "Neuton"; background: #090d00; 
+    /*color: rgba(255,255,255,.25); */
+    text-align: center; 
+    margin: 0;
+    background: white;
+}
+/* article ID for animated text CONTAINER */
+#animatedtext{
+    display: flex;
+    justify-content: center;
+    max-height:30vh !important;
+    min-height:5vh !important;
+    width:100vw !important;
+    margin-bottom:0!important;
+}
+ /*div id for the start of the ROW and the start of columns within the div for animated text  */
+#animatedtext-cols {
+    right:0px;
+    padding: 2em 0 0 0;
+}
+ /*ID for the P tag which utilizes the animated text itself | first header seen on page */
+#landing-header {
+  	font: 700 1em/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	text-transform:uppercase;
+  	letter-spacing: 1px;
+  	padding:0;
+  	display:block !important;
+  	justify-content:center;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+     /*Clip Background Image */
+    color:black;
+}
+#landing-header span {
+  	font: 700 2em/1 "Oswald", sans-serif;
+  	letter-spacing: 50;
+  	padding: .2em 0 ;
+  	display:block !important;
+  	justify-content:center;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+  	
+      /* Clip Background Image */
+  	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); 
+  	-webkit-background-clip: text;
+      /* Animate Background Image */
+      /* Animate Background Image */
+    	-webkit-text-fill-color: transparent;
+    	-webkit-animation: aitf 1200s linear infinite;
+    	-webkit-transform: translate3d(0px,0px,0px);
+    	/*-webkit-backface-visibility: hidden;*/
+}
 /*###############################
-   Nav-circles | Landing / Homepage
+   Nav-circles | Landing / Homepage only
 #################################*/
 /* ID for nav circles CONTAINER */
 #navcircles{
     display: flex;
     justify-content: center;
-    min-height: 10em !important;
     overflow:hidden !important;
     background-color:none;
-    background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
     max-height:50vh !important;
     min-width:100vw !important;
-    	/*-webkit-animation: aitf 180s linear infinite;*/
+    background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
 }
 #circles-row{
-      min-height: 10em !important;
-      width:100vw !important;
-      margin-bottom:0 !important;
-      padding: 8em 0;
+    min-height: 10em !important;
+    width:100vw !important;
+    margin-bottom:0 !important;
+    padding: 6em 0;
 }
 #circle-dev{
     background-image: -webkit-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
@@ -85,7 +139,7 @@ h1.heading {
 }
 /* design circle btn */
 #circle-design{
-      background-image: -webkit-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
+    background-image: -webkit-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
     background-image: -moz-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
     background-image: -o-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
     background-image: linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
@@ -98,46 +152,24 @@ h1.heading {
     background-image: linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
 }
 .btn-circle.btn-xl#circle-active:hover{
-    background-image: -webkit-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    background-image: -moz-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    background-image: -o-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    background-image: linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: -webkit-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
+    background-image: -moz-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
+    background-image: -o-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
+    background-image: linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
        /* -webkit-transform: rotateZ(180deg); /* Safari */
     /*transform: rotateZ(180deg);*/
 }
 .btn-circle.btn-xl#circle-design:hover{
-    background-image: -webkit-linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
-    background-image: -moz-linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
-    background-image: -o-linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
-    background-image: linear-gradient(24deg, #616161 18%, #9bc5c3 75%);
-}
+    background-image: -webkit-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: -moz-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: -o-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    background-image: linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
+    }
 .btn-circle.btn-xl#circle-dev:hover{
     background-image: -webkit-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
     background-image: -moz-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
     background-image: -o-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
     background-image: linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
-}
-#circle-active #original-text.navcircle-text a{
-    color: rgba(77, 255, 77,.8);
-}
-#circle-active > span.navcircle-text{
-    display:flex;
-    justify-content:center;
-    font-size:24px;
-    font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    letter-spacing: 1px;
-    line-height: 1em;
-}
-/* text in nav circles */
-.navcircle-text{
-    display:flex;
-    color:black;
-    justify-content:center;
-    font-size: 24px;
-    font-family: roboto;
-    letter-spacing: 1px;
-    line-height: 1em;
-    text-align:left;
 }
 /* utility clsses used for circle buttons */
 .btn-circle.btn-xl {
@@ -173,6 +205,10 @@ h1.heading {
     font-weight: 500;
     text-transform: initial !important;
 }
+#circle-active #original-text.navcircle-text a{
+    color: black !important;
+}
+
 /*#######################################
 #   scroll down button and elements / landing paage 
 ########################################*/
@@ -203,10 +239,10 @@ h1.heading {
     line-height: 100px;
     width: 100px;
   /*button animations */
-    -webkit-animation: a 2s 3 !important;
-    -moz-animation: a 2s 3 !important; 
-    -o-animation: a 2s 3 !important; 
-    animation: a 2s 3 !important;
+    -webkit-animation: a 2s 4 !important;
+    -moz-animation: a 2s 4 !important; 
+    -o-animation: a 2s 4 !important; 
+    animation: a 2s 4 !important;
     
     -webkit-transition: bottom 1s ease-in !important;
     -moz-transition: bottom 1s ease-in !important;
@@ -216,42 +252,17 @@ h1.heading {
     -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
     animation-fill-mode: initial;
 }
-.scroll-down a:hover{
-    background-color: #808080;
-    opacity:.8;
-}
-/* arrow used inside button to indicate there is more info below */
-.arrow-scroll-btn {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 2px;
-    color: #eee;
-    display: inline-block;
-    font-size: 0;
-    height: 50px;
-    line-height: 0;
-    margin-top: -25px;
-    text-align: center;
-    vertical-align: middle;
-    width: 50px;
-    
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(45deg);
-}
 /*scrolldown button keyframes defined */
 @-webkit-keyframes a {
-  0%   { opacity: .3; }
+  0%   { opacity: .8; }
   50%   { opacity: 1; }
-  100% { opacity: .3; }
+  100% { opacity: .8; }
 }
 
 @-moz-keyframes a {
-  0%   { opacity: .3; }
+  0%   { opacity: .8; }
   50%   { opacity: 1; }
-  100% { opacity: .3; }
+  100% { opacity: .8; }
 }
 
 @-o-keyframes a {
@@ -261,9 +272,9 @@ h1.heading {
 }
 
 @keyframes a {
-  0%   { opacity: .3; }
+  0%   { opacity: .8; }
   50%   { opacity: 1; }
-  100% { opacity: .3; }
+  100% { opacity: .8; }
   0%   { border-color: #eee; }
   50%   { border-color: #555; }
   100% { border-color: #eee; }
@@ -288,76 +299,29 @@ h1.heading {
     -moz-animation-duration:1s;
     animation-duration:1s;
 }
-
-/*#######################################
-#  Landing page and elements definied 
-########################################*/
-.landing {
-    position: relative;
-    min-height: 100vh !important;
-    width: 100%;
-    font: 400 1em/1.5 "Neuton"; background: #090d00; 
-    /*color: rgba(255,255,255,.25); */
-    text-align: center; 
-    margin: 0;
-    background: white;
+.scroll-down:hover{
+    background-color: #808080;
+    opacity:.8 !important;
 }
-/* article ID for animated text CONTAINER */
-#animatedtext{
-    display: flex;
-    justify-content: center;
-    max-height:25vh !important;
-    min-width:auto;
-    width:100vw !important;
-    margin-bottom:5%;
-}
-/* div id for the start of the ROW and the start of columns within the div for animated text  */
-#animatedtext-cols {
-    border:1px solid black;
-    background-color:#FFFFFF !important;
-    border: 4px double rgba(255,255,255,.25);
-    border-left:none; 
-    border-right:none;
-    right:0px;
-    max-height:25em !important;
-    border-width: 4px 0;
-    padding: 2em 0em 2em 0;
-}
-/* ID for the P tag which utilizes the animated text itself | first header seen on page */
-#landing-header {
-  	text-transform: uppercase;
-  	letter-spacing: .5em;
-  	display:block;
-  	justify-content:center;
-  	width: 100vw !important;
-  	max-height:25em !important;
-    /* Clip Background Image */
-  	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg");
-  	-webkit-background-clip: text;
-  	
-      /* Animate Background Image */
-    	-webkit-text-fill-color: transparent;
-    	-webkit-animation: aitf 120s linear infinite;
-    	-webkit-transform: translate3d(10px,0,0);
-    	-webkit-backface-visibility: hidden;
-}
-#landing-header span {
-  	font: 700 5em/1 "Oswald", sans-serif;
-  	letter-spacing: 50;
-  	padding: .25em 0 .325em;
-  	display:block !important;
-  	justify-content:center;
-  	text-shadow: 0 0 80px rgba(255,255,255,.5);
-  	
-      /* Clip Background Image */
-  	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); 
-  	-webkit-background-clip: text;
-      /* Animate Background Image */
-  	-webkit-text-fill-color: transparent;
-  	-webkit-animation: aitf 180s linear infinite;
-      /* Activate hardware acceleration for smoother animations */
-  	-webkit-transform: translate3d(0,0,0);
-  	-webkit-backface-visibility: hidden;
+/* arrow used inside button to indicate there is more info below */
+.arrow-scroll-btn {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    color: #eee;
+    display: inline-block;
+    font-size: 0;
+    height: 50px;
+    line-height: 0;
+    margin-top: -25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(45deg);
 }
 /************** card definitions **********/
 .card {
@@ -469,7 +433,6 @@ h1.heading {
     text-align:left;
     margin-top:2em;
 }
-
 /********************************************/
 /*accordion definitions */
 /********************************************/
@@ -505,17 +468,19 @@ h1.heading {
   border-radius: 3px;
   margin: 0em 3em 3em 3em;
 }
-
 /*********************************************************/
 /*    Definied media queries for improved responsiveness 
 ***************************************************************/
 @media(max-width:2800px) and (min-width: 1200px){
-  #aboutMeText{
-    font-size:16px;
-    margin:4em .25em;
-    padding-left:4em !important;
+  #animatedtext{
+    margin-bottom:0 !important;
   }
   #navcircles{
+    margin:0;
+  }
+  #landing-header {
+  	letter-spacing: .4em;
+  	font-size:36px;
   }
   .btn-circle.btn-xl {
     width: 150px !important;
@@ -528,12 +493,31 @@ h1.heading {
     transition: box-shadow .25s !important;
     /* background-color: #EEEEE8 !important; */
   }
+  #circle-active #original-text.navcircle-text a{
+      color: black !important;
+      /*rgba(77, 255, 77,.8);*/
+  }
+  #circle-active > span.navcircle-text{
+      display:flex;
+      justify-content:center;
+      font-size:26px;
+      letter-spacing: 1px;
+      line-height: 0em;
+  }
+  /* text in nav circles */
   .navcircle-text{
-    display:flex;
-    color:black;
-    justify-content:center;
-    font-size:24px !important;
-    font-family:'Roboto', 'Helvetica', 'sans-seriff';
+      display:flex;
+      color:black;
+      justify-content:center;
+      font-size: 26px;
+      letter-spacing: 1px;
+      line-height: 0em;
+      font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+    #aboutMeText{
+    font-size:16px;
+    margin:4em .25em;
+    padding-left:4em !important;
   }
 } /*end max 2800 min 1200px */
 
@@ -574,6 +558,10 @@ h1.heading {
     font-family: roboto;
     letter-spacing: 1px;
     line-height: .5em !important;
+  }
+  .scroll-down.visible{
+    bottom:3em;
+    margin-top:0 !important;
   }
 } /*end max 1200 min 900px */
 
@@ -621,6 +609,9 @@ h1.heading {
   }
   .scroll-down.visible {
     bottom: 75px !important;
+  }
+    #mobile-scroll-btn:hover{
+    opacity:.8;
   }
 } /* end max 900 and min 768 px */
 /* tablet focus */
@@ -675,7 +666,6 @@ h1.heading {
   }  
   #mobile-scroll-btn.scroll-down{
     display:none;
-    border:0 solid transparent;
   }
   #hidden-mobile-text{
     display:none;
@@ -687,6 +677,7 @@ h1.heading {
   #original-text{
     display: flex !important;
   }
+
    .scroll-down.visible {
     margin-bottom: 230px !important;
   }
@@ -705,10 +696,10 @@ h1.heading {
     line-height: 100px;
     width: 100px;
   
-      -webkit-animation: a 4s infinite;
-      -moz-animation: a 4s infinite; 
-      -o-animation: a 4s infinite; 
-      animation: a 4s infinite;
+      -webkit-animation: a 2s infinite;
+      -moz-animation: a 2s infinite; 
+      -o-animation: a 2s infinite; 
+      animation: a 2s infinite;
   }
   #mobile-scroll-btn.scroll-down a:hover{
     background-color: #808080;
@@ -770,36 +761,32 @@ h1.heading {
     background-color:white;
   }
   #navcircles{
-    min-height:80vh !important;
+    min-height:70vh !important;
   }
   #circles-row {
     padding: 2em 0;
   }
   /*cuts off on small views on PC, but looks fine on an actual phone and in chrome responsive testing views */
   #animatedtext {
-    max-height: 20vh !important;
+    max-height: 30vh !important;
   }
   #animatedtext-cols{
     margin:0 !important;
-    padding:1em 0 0 0 !important;
+    padding:1em 1em 0 0 !important;
   }
-  /* landing page and large header redifined */
+   /*landing page and large header redifined */
   #landing-header{
-    font: 500 1em/1 "Roboto", sans-serif;
-    letter-spacing: 4px !important;
-    padding: .15em 0 .325em;
-    display: block;
-    text-shadow: 0 0 80px rgba(255,255,255,.5);
-    border-top-width: thin;
+    font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px !important;
+    max-height:30vh !important;
   }
   #landing-header span {
-    font: 700 3em/1 "Oswald", sans-serif;
-    letter-spacing:70;
+    font: 700 2em/1 "Oswald", sans-serif;;
     padding: .25em 0 .325em;
     display: block;
-    text-shadow: 0 0 80px rgba(255,255,255,.5);
-    padding: .2em 0.3em .2em 0;
+    padding: 0;
     line-height:44px;
+    letter-spacing:4px;
   }
   .btn-circle.btn-xl {
     width: 25px !important;
@@ -818,7 +805,7 @@ h1.heading {
     display: flex;
     color: black;
     justify-content: center;
-    font-size: 20px !important;
+    font-size: 22px !important;
     line-height: 0em !important;
     font-family: "Roboto";
     border-radius: 5px;
@@ -828,7 +815,7 @@ h1.heading {
     display:flex;
     color:black;
     justify-content:center;
-    font-size:20px !important;
+    font-size:22px !important;
     font-family:"Roboto";
   }
   #circle-design > span.navcircle-text{
@@ -868,13 +855,13 @@ h1.heading {
     z-index:auto !important;
   }
   .scroll-down .click-to-scroll {
-    color: black;
+    color: white !important;
     font-size: 14px !important;
     line-height: 1em !important;
     font-family: "Roboto";
     padding-top: 25px;
     position: absolute;
-    right: 30px !important;
+    right: 32px !important;
     text-align:center;
   }
   /* the text "click to scroll" | visible for mobile users when the scroll-down btn is transparent */
@@ -904,14 +891,8 @@ h1.heading {
     height: 115px !important;
     line-height: 100px !important;
     width: 115px !important;
-    background-color: #808080 !important;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px 1px rgba(0,0,0,1.02) !important;
     
-      -webkit-animation: a 2s 2 !important;
-      -moz-animation: a 2s 2 !important; 
-      -o-animation: a 2s 2 !important; 
-      animation: a 2s 2 !important;
-      
+
       -webkit-transition: bottom .5s ease-in !important;
       -moz-transition: bottom .5s ease-in !important;
       -o-transition: bottom .5s ease-in !important;
@@ -920,6 +901,9 @@ h1.heading {
       -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
       animation-fill-mode: initial;  /*fill in the "about me" circle with scroll-down button and have it remain fit inside according to the nav circles definitions */    
       border: 1px solid black !important;
+  }
+  a.scroll-down.mobile-scroll-btn.arrow-scroll-btn:hover{
+      opacity:.5;
   }
   .arrow-scroll-btn {
     border-right: 2px solid black;
