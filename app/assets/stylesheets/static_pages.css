@@ -1,9 +1,9 @@
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
 * { margin:0; padding:0; } /* to remove the top and left whitespace */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;
@@ -478,9 +478,27 @@ h1.heading {
   #navcircles{
     margin:0;
   }
-  #landing-header {
+  #landing-header span {
+    	font: 700 3em/1 "Oswald", sans-serif;
+    	letter-spacing: 50;
+    	padding: .2em 0 ;
+    	display:block !important;
+    	justify-content:center;
+    	text-shadow: 0 0 80px rgba(255,255,255,.5);
+    	
+        /* Clip Background Image */
+    	background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); 
+    	-webkit-background-clip: text;
+        /* Animate Background Image */
+        /* Animate Background Image */
+      	-webkit-text-fill-color: transparent;
+      	-webkit-animation: aitf 1200s linear infinite;
+      	-webkit-transform: translate3d(0px,0px,0px);
+      	/*-webkit-backface-visibility: hidden;*/
+  }
+  #landing-header{
+    font: 700 24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   	letter-spacing: .4em;
-  	font-size:36px;
   }
   .btn-circle.btn-xl {
     width: 150px !important;
@@ -525,15 +543,25 @@ h1.heading {
   h1.heading {
     font-size: 3.25em;
   }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin:1em 0;
+  #landing-header > span {
+  	font: 700 4em/1 "Oswald", sans-serif !important;
+  	letter-spacing: 50;
+  	padding:.1em 0 !important;
+  }
+  #landing-header{
+    font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  	letter-spacing: .4em;
+  	padding-top:2em;
+  	padding-bottom:0 !important;
+  }
+  #navcircles{
+    margin-top:1vh;
+  }
+  #circles-row {
+    width: 100vw !important;
   }
   .btn-circle.btn-xl {
     width: 25px !important;
-    height: 25px !important;
     padding: 100px !important;
     font-size: 24px !important;
     line-height: 1.33;
@@ -560,8 +588,9 @@ h1.heading {
     line-height: .5em !important;
   }
   .scroll-down.visible{
-    bottom:3em;
+    bottom:4em;
     margin-top:0 !important;
+    margin-left: -3em;
   }
 } /*end max 1200 min 900px */
 
@@ -569,11 +598,20 @@ h1.heading {
   h1.heading {
     font-size: 3.25em;
   }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin:1em 0;
+  #landing-header > span {
+  	font: 700 3em/1 "Oswald", sans-serif !important;
+  	letter-spacing: 50;
+  	padding:.1em 0 !important;
+  }
+  #landing-header{
+    font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  	letter-spacing: .4em;
+  	padding-top: 1em !important;
+    margin-bottom: 0 !important;
+  }
+  #circles-row {
+    width: 100vw !important;
+    padding: 4em 0;
   }
   /*#navcircles{*/
   /*}*/
@@ -593,17 +631,16 @@ h1.heading {
     color: black;
     justify-content: center;
     font-size: 24px;
-    font-family: roboto;
+    font-family: "Roboto";
     letter-spacing: 1px;
     line-height: .5em !important;
     text-align:center;
-    object-fit: contain;
   }
   #circle-active > span.navcircle-text {
     display: flex;
     justify-content: center;
     font-size: 24px;
-    font-family: roboto;
+    font-family: "Roboto";
     letter-spacing: 1px;
     line-height: .5em !important;
   }
@@ -612,6 +649,12 @@ h1.heading {
   }
     #mobile-scroll-btn:hover{
     opacity:.8;
+  }
+  #aboutMeText{
+    font-size:16px;
+    margin:0;
+    line-height:1.6;
+    margin:1em 0;
   }
 } /* end max 900 and min 768 px */
 /* tablet focus */
