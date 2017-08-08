@@ -472,6 +472,76 @@ h1.heading {
   display:flex;
   line-height: 3.25em;
 }
+.modal.and.carousel {
+  position: fixed; /* Needed because the carousel overrides the position property */
+}
+.left.carousel-control,
+.right.carousel-control{
+  background:none;
+  padding-top: 35px;  
+  margin: 15px 2.6% 70px 2.3%;
+  font-size:32px;
+  opacity: 1;
+  min-height:max-content;
+
+  color: #000428; /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow:hidden;
+}
+
+.left.carousel-control:hover,
+.right.carousel-control:hover{
+    opacity:1;
+    color:white;
+
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 50%);
+}
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: black;
+    border-style: double;
+}
+.carousel-indicators .active {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #000428;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    bottom:0;
+}
+
+/*close "x" button for mods */
+.close {
+    margin-top: -2px;
+    color:#990000;
+    opacity: .7;
+}
+.close:hover, 
+.close:focus {
+    color: #990000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+    /*filter: alpha(opacity=50);*/
+}
 /*********************************************************/
 /*    Definied media queries for improved responsiveness 
 ***************************************************************/
@@ -613,10 +683,7 @@ h1.heading {
     letter-spacing: 1px;
     line-height: .5em !important;
   }
-  .scroll-down.visible {
-    bottom: 75px !important;
-  }
-    #mobile-scroll-btn:hover{
+  #mobile-scroll-btn:hover{
     opacity:.8;
   }
   #aboutMeText{

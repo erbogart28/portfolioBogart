@@ -3,8 +3,7 @@
   <head>
     <title>.ERB Portfolio</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload'%>
-    <%= javascript_include_tag 'lightbox.js' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -25,7 +24,7 @@
           <li class="<%= 'active' if current_page?(static_pages_design_path) || current_page?(static_pages_sharkoWires_path) %>"><%= link_to "Design Work", static_pages_design_path %></li>
           <li class="<%= 'active' if current_page?(static_pages_development_path) %>"><%= link_to "Development Work", static_pages_development_path %></li>
         </ul>
-        <div class=" navbar-right col-lg-2" id=social>
+        <div class=" navbar-right col-lg-2" id="social">
           <ul class ="nav navbar-nav">
               <li><a type="button" class="btn btn-block btn-sm btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></li><br>
               <li><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-sm btn-github" target="blank_"><i class="fa fa-github"></i></a></li>

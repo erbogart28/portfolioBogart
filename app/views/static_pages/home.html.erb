@@ -7,9 +7,11 @@
     
     <article class="container" id="navcircles">
         <div class="row" id="circles-row">      
-            <a id="circle-dev" href="/static_pages/development" role="button" class=" btn btn-primary btn-circle btn-xl col-sm-3 col-sm-pull-1 col-md-3 col-md-pull-1 col-lg-3 col-lg-pull-2 vcenter"><span class="navcircle-text">Development</span></a>
-            <a id="circle-design" href="/static_pages/design" role="button" class="btn btn-primary btn-circle btn-xl col-sm-4 col-md-4 col-lg-2 vcenter"><span class="navcircle-text">Design</span></a>
-            <div id="circle-active" role="button" class="scroll-button btn btn-primary btn-circle btn-xl col-sm-3 col-sm-push-1 col-md-3 col-md-push-1 col-lg-3 col-lg-push-2 vcenter"><span id="original-text" class="navcircle-text hidden-xs <%=is_active('#')%>"><a href="#" address="true">About Me</span></a>       
+            <a id="circle-dev" href="/static_pages/development" role="button" class=" btn btn-primary btn-circle btn-xl col-md-3 col-md-offset-0 vcenter"><span class="navcircle-text">Development</span></a>
+            <a id="circle-design" href="/static_pages/design" role="button" class="btn btn-primary btn-circle btn-xl col-md-offset-1 col-md-3 vcenter"><span class="navcircle-text">Design</span></a>
+            <div id="circle-active" role="button" data-toggle="tooltip" title="Click to Scroll Down" class="scroll-button btn btn-primary btn-circle btn-xl col-md-3 col-md-offset-1 vcenter"><span id="original-text" class="navcircle-text hidden-xs <%=is_active('#')%>"><a href="#" address="true">About Me</span></a>       
+            
+            <!-- mobile layout -->
             <a class="scroll-down container-fluid hidden-lg hidden-md hidden-sm <%=is_active('#')%>" href="#" address="true"><span id="mobile-indicator" class="navcircle-text hidden-lg hidden-md hidden-sm <%=is_active('#')%>">About Me<span class="click-to-scroll">Click to<br>Scroll</span></span>
             <div id="mobile-scroll-btn" class="arrow-scroll-btn"></div>
         </a></div>
@@ -19,9 +21,11 @@
     </article>
     
     <article id="scrolldown-button-row" class="row">
-        <a class="scroll-down container-fluid hidden-xs clearfix vcenter" href="#" address="true">
+        <div class="container">
+        <a class="scroll-down hidden-xs" href="#" address="true" data-toggle="tooltip" title="About Me">
             <div class="arrow-scroll-btn hidden-xs"></div>
         </a>
+        </div>
     </article>
 </section>
 

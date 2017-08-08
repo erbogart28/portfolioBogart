@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
 <script>
-  $(document).ready(function() {
+  $(document).on("turbolinks:load", function() {
     // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
     $(function () {
       var w = $(window);
@@ -34,9 +34,14 @@
     }); //end scroll button click func
   }); //end .on turobolinks load
 </script>
-
-  
+<!-- hover tool tip text -->
+<script>
+    $(function (){
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+</script>
 </head>
+
 <body>
 <%= yield %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
