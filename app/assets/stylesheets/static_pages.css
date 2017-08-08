@@ -43,18 +43,6 @@ h1.heading {
   font-weight: 800;
   height:auto;
 }
-/************ back arrow **********/
-#back{
-  margin-top:-3.5%;
-  font-size:18px;
-  text-indent:.5%;
-  line-height: 2em;
-}
-/************back arrow icon ***********/
-.fa-arrow-left{
-  margin-right:1%;
-}
-
 /*#######################################
 #  Landing page and elements definied 
 ########################################*/
@@ -73,8 +61,7 @@ h1.heading {
     display: flex;
     justify-content: center;
     width:100vw !important;
-    margin-bottom:0!important;
-
+    padding-top:1em;
 }
  /*div id for the start of the ROW and the start of columns within the div for animated text  */
 /*#animatedtext-cols {*/
@@ -82,21 +69,20 @@ h1.heading {
 /*}*/
  /*ID for the P tag which utilizes the animated text itself | first header seen on page */
 #landing-header {
-  	font: 700 1em/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font: 500 22px/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   	text-transform:uppercase;
-  	letter-spacing: 1px;
-  	padding:0;
-  	display:block !important;
+  	padding-bottom:0;
+    letter-spacing: 2.5px;  	
+    display:block !important;
   	justify-content:center;
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
      /*Clip Background Image */
     color:black;
 }
 #landing-header span {
-  	font: 700 2em/1 "Oswald", sans-serif;
-  	letter-spacing: 50;
-  	padding: .2em 0 ;
-  	display:block !important;
+  	font: 700 60px/1.2 "Oswald", sans-serif;
+    letter-spacing: 8px;  	
+    display:block !important;
   	justify-content:center;
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
   	
@@ -121,7 +107,7 @@ h1.heading {
     overflow:hidden !important;
     background-color:none;
     min-width:100vw !important;
-    margin-top:-3em;
+    margin-top:1em;
     background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
 }
 #circles-row{
@@ -215,7 +201,7 @@ h1.heading {
   /*max-height:25vh;*/
 }
 .scroll-down.visible {
-    bottom: 10px;
+    bottom: 1vh;
 }
 /*scroll down btn animations and further positioning to hid offscreen */
 .scroll-down {
@@ -466,39 +452,30 @@ h1.heading {
   border-radius: 3px;
   margin: 0em 3em 3em 3em;
 }
+#accordion-container{
+  margin-top:1em;
+}
+/************ back arrow **********/
+#back{
+  display:flex;
+}
+.fa-2x {
+  display:flex;
+    font-size: 3em;
+}
+/************back arrow icon ***********/
+.fa-arrow-left{
+  margin-right:1%;
+  padding-bottom: .75em;
+}
+#back-text{
+  display:flex;
+  line-height: 3.25em;
+}
 /*********************************************************/
 /*    Definied media queries for improved responsiveness 
 ***************************************************************/
 @media(max-width:2800px) and (min-width: 1200px){
-  #animatedtext{
-    margin-bottom:0 !important;
-  }
-  #navcircles{
-    margin:0;
-  }
-  #landing-header span {
-    	font: 700 3em/1 "Oswald", sans-serif;
-    	letter-spacing: 50;
-    	padding: .2em 0 ;
-    	display:block !important;
-    	justify-content:center;
-    	text-shadow: 0 0 80px rgba(255,255,255,.5);
-    	
-        /* Clip Background Image */
-    	/*background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); */
-    	 background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
-    	-webkit-background-clip: text;
-        /* Animate Background Image */
-        /* Animate Background Image */
-      	-webkit-text-fill-color: transparent;
-      	-webkit-animation: aitf 1200s linear infinite;
-      	-webkit-transform: translate3d(0px,0px,0px);
-      	/*-webkit-backface-visibility: hidden;*/
-  }
-  #landing-header{
-    font: 700 24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  	letter-spacing: .4em;
-  }
   .btn-circle.btn-xl {
     width: 150px !important;
     height: 150px !important;
@@ -550,10 +527,8 @@ h1.heading {
   #landing-header{
     font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   	letter-spacing: .4em;
-  	padding-top:2em;
+  	padding-top:1em;
   	padding-bottom:0 !important;
-  }
-  #navcircles{
   }
   #circles-row {
     width: 100vw !important;
@@ -603,11 +578,9 @@ h1.heading {
     font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   	letter-spacing: .4em;
   	padding-top: 1em !important;
-    margin-bottom: 0 !important;
   }
   #circles-row {
     width: 100vw !important;
-    padding: 4em 0;
   }
   /*#navcircles{*/
   /*}*/
@@ -655,15 +628,17 @@ h1.heading {
 } /* end max 900 and min 768 px */
 /* tablet focus */
 @media(max-width: 768px) and (min-width: 620px){ 
+  #animatedtext {
+  padding-top:1em;
+  }
   #landing-header span {
-    font: 700 5em/1 "Oswald", sans-serif;
-    letter-spacing: 40 !important;
+    font: 700 48px/1 "Oswald", sans-serif;
+    letter-spacing: 9px !important;
     padding: .15em 0 .15em !important;
   }
-  #landing-header{    
-    font: 800 1em/1 "Roboto", sans-serif;
-    letter-spacing: 30;
-    padding: .15em 0 .15em !important;
+  #landing-header{
+    font: 600 16px/1 "Roboto", sans-serif;
+    letter-spacing: 5px;
   }
   .navcircle-text {
     display: flex;
@@ -782,11 +757,8 @@ h1.heading {
   .landing {
     background-color:white;
   }
-  #animatedtext{
-    padding:1.75em 0 0 0;
-  }
-  #circles-row {
-    padding: 2em 0;
+  #animatedtext {
+    padding-top:1em;
   }
    /*landing page and large header redifined */
   #landing-header{
@@ -796,11 +768,12 @@ h1.heading {
   }
   #landing-header span {
     font: 700 2em/1 "Oswald", sans-serif;;
-    padding: .25em 0 .325em;
     display: block;
-    padding: 0;
     line-height:44px;
-    letter-spacing:4px;
+    letter-spacing:6px;
+  }
+  #navcircles{
+    margin-top:-3em;
   }
   .btn-circle.btn-xl {
     width: 25px !important;
