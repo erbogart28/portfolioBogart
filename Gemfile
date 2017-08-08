@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem "font-awesome-rails"
 gem 'lightbox2-rails'
+gem 'jquery-turbolinks'
+
 
 
 group :development, :test do

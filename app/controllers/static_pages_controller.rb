@@ -1,13 +1,12 @@
 class StaticPagesController < ApplicationController
+    layout "application", except: [:home]
     def home
         render layout: "homelayout"
     end
 
     def development
-        render layout: "application"
     end
     
     def design
-        render layout: "application"
     end
 end
