@@ -72,11 +72,8 @@ h1.heading {
 #animatedtext{
     display: flex;
     justify-content: center;
-    /*max-height:30vh !important;*/
-    /*min-height:5vh !important;*/
     width:100vw !important;
     margin-bottom:0!important;
-    padding: 1em 0 0 0;
 
 }
  /*div id for the start of the ROW and the start of columns within the div for animated text  */
@@ -124,6 +121,7 @@ h1.heading {
     overflow:hidden !important;
     background-color:none;
     min-width:100vw !important;
+    margin-top:-3em;
     background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
 }
 #circles-row{
@@ -588,9 +586,7 @@ h1.heading {
     line-height: .5em !important;
   }
   .scroll-down.visible{
-    bottom:4em;
-    margin-top:0 !important;
-    margin-left: -3em;
+    bottom:.5em;
   }
 } /*end max 1200 min 900px */
 
@@ -761,12 +757,6 @@ h1.heading {
     border:none;
     margin:1em 0;
   }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin-bottom:2em;
-  }
   h1.heading {
     color: #000000;
     font-size: 3.25em;
@@ -792,19 +782,11 @@ h1.heading {
   .landing {
     background-color:white;
   }
-  #navcircles{
-    /*min-height:70vh !important;*/
+  #animatedtext{
+    padding:1.75em 0 0 0;
   }
   #circles-row {
     padding: 2em 0;
-  }
-  /*cuts off on small views on PC, but looks fine on an actual phone and in chrome responsive testing views */
-  #animatedtext {
-    /*max-height: 30vh !important;*/
-  }
-  #animatedtext-cols{
-    margin:0 !important;
-    padding:1em 1em 0 0 !important;
   }
    /*landing page and large header redifined */
   #landing-header{
