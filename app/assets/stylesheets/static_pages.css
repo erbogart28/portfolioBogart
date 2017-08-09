@@ -54,14 +54,18 @@ h1.heading {
     /*color: rgba(255,255,255,.25); */
     text-align: center; 
     margin: 0;
-    background: white;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom: .01px solid black;
 }
 /* article ID for animated text CONTAINER */
 #animatedtext{
     display: flex;
     justify-content: center;
     width:100vw !important;
-    padding-top:1em;
+    margin-top:2em;
+    margin-bottom:-1.5em;
 }
  /*div id for the start of the ROW and the start of columns within the div for animated text  */
 /*#animatedtext-cols {*/
@@ -71,7 +75,6 @@ h1.heading {
 #landing-header {
   	font: 500 22px/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   	text-transform:uppercase;
-  	padding-bottom:0;
     letter-spacing: 2.5px;  	
     display:block !important;
   	justify-content:center;
@@ -107,66 +110,12 @@ h1.heading {
     overflow:hidden !important;
     background-color:none;
     min-width:100vw !important;
-    margin-top:1em;
     background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
 }
 #circles-row{
     width:100vw !important;
-    margin:1em 0!important;
-    padding: 4em 0;
-}
-#circle-dev{
-    background-image: -webkit-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
-    background-image: -moz-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
-    background-image: -o-linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
-    background-image: linear-gradient(107deg, #f5f7fa 23%, #c3cfe2 40%);
-}
-/* design circle btn */
-#circle-design{
-    background-image: -webkit-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
-    background-image: -moz-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
-    background-image: -o-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
-    background-image: linear-gradient(37deg, #616161 21%, #9bc5c3 72%);
-}
-/* active circle -- About Me circle */
-#circle-active{
-    background-image: -webkit-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
-    background-image: -moz-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
-    background-image: -o-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
-    background-image: linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);
-}
-.btn-circle.btn-xl#circle-active:hover{
-    background-image: -webkit-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
-    background-image: -moz-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
-    background-image: -o-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
-    background-image: linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);
-       /* -webkit-transform: rotateZ(180deg); /* Safari */
-    /*transform: rotateZ(180deg);*/
-}
-.btn-circle.btn-xl#circle-design:hover{
-    background-image: -webkit-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    background-image: -moz-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    background-image: -o-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    background-image: linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);
-    }
-.btn-circle.btn-xl#circle-dev:hover{
-    background-image: -webkit-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
-    background-image: -moz-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
-    background-image: -o-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
-    background-image: linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);
-}
-/* utility clsses used for circle buttons */
-.btn-circle.btn-xl {
-    width: 70px;
-    height: 70px;
-    padding: 95px;
-    font-size: 24px;
-    line-height: 1.33;
-    border-radius: 125px;
-    box-shadow: 0 9px 5px 0px rgba(0,0,0,3.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
-    transition: box-shadow .25s; 
-    background-color: #EEEEE8;
-    text-align: center;
+    margin:2em 0!important;
+    /*padding: 4em 0;*/
 }
 .btn-circle.btn-xl {
     opacity:0;  /* make elements invisible upon start */
@@ -181,6 +130,19 @@ h1.heading {
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
+    font-size:28px;
+}
+#circle-active > .btn-circle.btn-xl{
+    background-image: -webkit-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);
+    background-image: -moz-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);
+    background-image: -o-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);
+    background-image: linear-gradient(233deg, #48C6EF 14%, #6f86d6 15%);
+      border-color: rgba(0, 0, 0, 0);
+      color: #ffffff;
+}
+#circle-dev{
+    display:inline-block;
+    border-color: rgba(0, 0, 0, 0);
 }
 .btn {
     border: none;
@@ -189,9 +151,223 @@ h1.heading {
     font-weight: 500;
     text-transform: initial !important;
 }
-#circle-active #original-text.navcircle-text a{
+.navcircle-text{
     color: black !important;
+    display: flex  !important;
+    color: white  !important;
+    justify-content: center  !important;
+    font-size: 28px  !important;
+    letter-spacing: 1px  !important;
+    line-height: 0em !important;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+.overlay {
+     /*width: 10vw;*/
+     /*height: 10vw;*/
+     /*border-radius: 50%;*/
+     /*display:inherit;*/
+     /*position: relative;*/
+     /*background: #303030 url('http://rojo2.com/img/texture-01.png') repeat-x;*/
+     /*background-size: cover;*/
+     /*    padding: 125px !important;*/
+     /*-webkit-animation: planet-rotation 30s linear infinite;*/
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    display: inherit;
+    position: relative;
+    background: #303030 url(http://rojo2.com/img/texture-01.png) repeat-y;
+    background-size: cover;
+    padding: 125px !important;
+    -webkit-animation: planet-rotation 30s linear infinite;
+}
+#circle-design > .overlay:after {
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    
+    height: 100%;
+    border-radius: 50%;
+    background-image:
+    -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,.6), transparent),         
+    linear-gradient(to bottom right, rgba(255,240,220,0.5) 5%, rgba(255,240,220,0) 35%, rgba(0,0,0,0.64) 80%, rgba(0,0,0,1) 95%);
+    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
+}
+#circle-active > .overlay:after {
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    height: 100%;
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(-8% 50%, 0% 50%, rgba(255,240,230,.6), transparent), linear-gradient(to left, rgba(255,240,220,0.5) 30%, rgba(255,240,220,0) 64%, rgba(0,0,0,0.64) 98%, rgba(0,0,0,1) 100%);
+    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
+}
+#circle-dev > .overlay:after {
+    position: absolute;
+    content: 'Development';
+    padding-top: 50% !important;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background:  url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -webkit-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -moz-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -o-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), linear-gradient(to top right, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
+}
+#circle-dev > .overlay:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background-size: cover;
+    background: transparent url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
+    -webkit-animation: planet-rotation 180s linear infinite;
+}
+.overlay:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
+    background-size: cover;
+    -webkit-animation: planet-rotation 12s linear infinite;
+}
+
+/*.container1{*/
+/*    padding: 64px;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+/* design circle btn */
+
+#circle-design{
+    /*background-image: -webkit-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);*/
+    /*background-image: -moz-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);*/
+    /*background-image: -o-linear-gradient(37deg, #616161 21%, #9bc5c3 72%);*/
+    /*background-image: linear-gradient(37deg, #616161 21%, #9bc5c3 72%);*/
+    
+    display:inline-block;
+}
+/* active circle -- About Me circle */
+#circle-active{
+    /*background-image: -webkit-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);*/
+    /*background-image: -moz-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);*/
+    /*background-image: -o-linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);*/
+    /*background-image: linear-gradient(-233deg, #48C6EF 19%, #6f86d6 81%);*/
+    display:inline-block;
+}
+#circle-active:hover{
+    /*background-image: -webkit-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);*/
+    /*background-image: -moz-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);*/
+    /*background-image: -o-linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);*/
+    /*background-image: linear-gradient(-409deg, #48C6EF 20%, #6f86d6 80%);*/
+
+}
+#circle-design:hover{
+    /*background-image: -webkit-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);*/
+    /*background-image: -moz-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);*/
+    /*background-image: -o-linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);*/
+    /*background-image: linear-gradient(-16deg, #616161 15%, #9bc5c3 81%);*/
+
+}
+#circle-dev:hover:not(span){
+    /*background-image: -webkit-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
+    /*background-image: -moz-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
+    /*background-image: -o-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
+    /*background-image: linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
+    /* -webkit-animation: planet-rotation 30s linear infinite;*/
+}
+
+@-webkit-keyframes planet-rotation {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: -200% 0%;
+    }
+}
+@keyframes planet-rotation {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: -200% 0%;
+    }
+}
+
+
+
+/*.planet-image {*/
+/*     width: 10vw;*/
+/*     height: 10vw;*/
+/*     max-width: 512px;*/
+/*     max-height: 512px;*/
+/*     border-radius: 50%;*/
+/*     position: relative;*/
+/*     background: #303030 url('http://rojo2.com/img/texture-01.png') repeat-x;*/
+/*     background-size: cover;*/
+/*     -webkit-animation: planet-rotation 30s linear infinite;*/
+/*}*/
+
+/*.planet-image:after {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    top: -2px;*/
+/*    left: -2px;*/
+/*    right: -2px;*/
+/*    bottom: -2px;*/
+    
+/*    height: 100%;*/
+/*    border-radius: 50%;*/
+/*    background-image:*/
+/*        -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,.6), transparent),*/
+/*        linear-gradient(to right, rgba(255,240,220,0.5) 12%, rgba(255,240,220,0) 40%, rgba(0,0,0,0.64) 60%, rgba(0,0,0,1) 100%);*/
+/*    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);*/
+/*}*/
+
+/*.planet-image:before {*/
+/*                content: '';*/
+/*                position: absolute;*/
+/*  top: -4px;*/
+/*  left: -4px;*/
+/*  right: -4px;*/
+/*  bottom: -4px;*/
+/*  border-radius: 50%;*/
+/*  background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;*/
+/*  background-size: cover;*/
+/*  -webkit-animation: planet-rotation 18s linear infinite;*/
+/*}*/
+/* utility clsses used for circle buttons */
+/*.btn-circle.btn-xl {*/
+/*    width: 70px;*/
+/*    height: 70px;*/
+/*    padding: 95px;*/
+/*    font-size: 24px;*/
+/*    line-height: 1.33;*/
+/*    border-radius: 125px;*/
+/*    box-shadow: 0 9px 5px 0px rgba(0,0,0,3.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;*/
+    /*transition: box-shadow .25s; */
+/*    background-color: #EEEEE8;*/
+/*    text-align: center;*/
+/*}*/
+
 
 /*#######################################
 #   scroll down button and elements / landing paage 
@@ -223,18 +399,15 @@ h1.heading {
     line-height: 100px;
     width: 100px;
   /*button animations */
-    -webkit-animation: a 2s 4 !important;
-    -moz-animation: a 2s 4 !important; 
-    -o-animation: a 2s 4 !important; 
-    animation: a 2s 4 !important;
+    -webkit-animation: a 2s 2 !important;
+    -moz-animation: a 2s 2 !important; 
+    -o-animation: a 2s 2 !important; 
+    animation: a 2s 2 !important;
     
     -webkit-transition: bottom 1s ease-in !important;
     -moz-transition: bottom 1s ease-in !important;
     -o-transition: bottom 1s ease-in !important;
     transition: bottom 1s ease-in !important; 
-    
-    -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: initial;
 }
 /*scrolldown button keyframes defined */
 @-webkit-keyframes a {
@@ -366,6 +539,10 @@ h1.heading {
     vertical-align: middle;
     float: none;
 }
+.tooltip-inner {
+  width:200px;
+    box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);
+  }
 @keyframes animatedBackground {
     from { background-position: 0 0 !important }
     to { background-position: 600px 0 !important;}
@@ -542,31 +719,57 @@ h1.heading {
     opacity: 1;
     /*filter: alpha(opacity=50);*/
 }
+/* tooltip elements -- popup message for scroll-down */
+.visible.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: flex;
+  justify-content:center;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  left:-20px;
+  line-break: auto;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: nowrap !important;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 14px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip {
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.tooltip-inner {
+    max-width: 280px;
+    padding: 3px 8px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #3e3f3a;
+    border-radius: 4px;
+}
+
 /*********************************************************/
 /*    Definied media queries for improved responsiveness 
 ***************************************************************/
 @media(max-width:2800px) and (min-width: 1200px){
-  .btn-circle.btn-xl {
-    width: 150px !important;
-    height: 150px !important;
-    padding: 125px !important;
-    font-size: 24px !important;
-    line-height: 1.33;
-    border-radius: 150px !important;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
-    transition: box-shadow .25s !important;
-    /* background-color: #EEEEE8 !important; */
+  #nav-circles{
+    margin:25vh auto;
+    height: 45vh;
   }
-  #circle-active #original-text.navcircle-text a{
-      color: black !important;
-      /*rgba(77, 255, 77,.8);*/
-  }
-  #circle-active > span.navcircle-text{
-      display:flex;
-      justify-content:center;
-      font-size:26px;
-      letter-spacing: 1px;
-      line-height: 0em;
+  #circles-row{
+    padding-top:5vh;
   }
   /* text in nav circles */
   .navcircle-text{
@@ -577,6 +780,7 @@ h1.heading {
       letter-spacing: 1px;
       line-height: 0em;
       font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      transform:rotate(-360deg);
   }
     #aboutMeText{
     font-size:16px;
@@ -631,7 +835,7 @@ h1.heading {
     line-height: .5em !important;
   }
   .scroll-down.visible{
-    bottom:.5em;
+    bottom: 3vh;  
   }
 } /*end max 1200 min 900px */
 
@@ -734,66 +938,8 @@ h1.heading {
     background-color: #EEEEE8;
     margin:auto .25em;
   }  
-  #mobile-scroll-btn.scroll-down{
-    display:none;
-  }
-  #hidden-mobile-text{
-    display:none;
-  }
-  /*"about me" text overlay that indicates to mobile users to click on the button to scroll down */
-  #mobile-indicator{
-    display:none;
-  }
-  #original-text{
-    display: flex !important;
-  }
-
-   .scroll-down.visible {
-    margin-bottom: 230px !important;
-  }
-  .scroll-down {
-    border: 1px solid #eee;
-    border-radius: 50%;
-    color: #eee;
-    text-align: center;
-    display: block;
-    left: -55% !important;
-    margin-left: -50px;
-    position: absolute;
-    bottom: -600px !important;
-    
-    height: 100px;
-    line-height: 100px;
-    width: 100px;
-  
-      -webkit-animation: a 2s infinite;
-      -moz-animation: a 2s infinite; 
-      -o-animation: a 2s infinite; 
-      animation: a 2s infinite;
-  }
-  #mobile-scroll-btn.scroll-down a:hover{
-    background-color: #808080;
-    opacity:.8;
-  }
-   #mobile-scroll-btn .arrow-scroll-btn {
-    border-right: 2px solid #eee;
-    border-bottom: 2px solid #eee;
-    border-radius: 2px;
-    color: #eee;
-    display: inline-block;
-    font-size: 0;
-    height: 50px;
-    line-height: 0;
-    margin-top: -25px;
-    text-align: center;
-    vertical-align: middle;
-    width: 50px;
-  
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(45deg);
+  .scroll-down.visible {
+    bottom: 4em !important;
   }
   #headshot{
     border:none;
@@ -812,15 +958,9 @@ h1.heading {
     line-height:1.6;
     margin-bottom:2em;
   }
-    #scrolldown-button-row{
-    visibility:visible;
-  }
-    #arrow-scroll-btn{
-    visibility:visible;
-  }
 } /* end min-width: 620 and max-width: 768px */
 /* mobile focus */
-@media(max-width: 620px) and (min-width: 5px){
+@media(max-width: 620px) and (min-width: 320px){
   .landing {
     background-color:white;
   }
@@ -841,6 +981,8 @@ h1.heading {
   }
   #navcircles{
     margin-top:-3em;
+    padding-bottom: 19vh;  
+    
   }
   .btn-circle.btn-xl {
     width: 25px !important;
@@ -852,7 +994,7 @@ h1.heading {
   }  
   /*adjusting buttons based on design as it is in the middle, and allows for easy top and bottom spacing */
   #circle-design{
-    margin: .5em 0 .5em 0;
+    margin: 0 20px;
   }
   /* text within nav circles */
   .navcircle-text {
@@ -865,127 +1007,49 @@ h1.heading {
     border-radius: 5px;
     z-index:10 !important;
   }
-  #circle-active > span.navcircle-text{
-    display:flex;
-    color:black;
-    justify-content:center;
-    font-size:22px !important;
-    font-family:"Roboto";
-  }
-  #circle-design > span.navcircle-text{
-    display:flex;
-    color:black;
-    justify-content:center;
-    font-size:22px !important;
-    font-family:"Roboto";
-  }
-  /* scroll-down button replaces the about me nav circle for space efficiency - user is alerted accordingly */
-  #mobile-indicator.navcircle-text{
-    color: #ffffff	!important;
-    font-size: 22px !important;
-    font-weight: 500 !important; 
-    font-family: roboto !important;
-    box-shadow: 13px 16px 32px 0px rgba(0,0,0,0.26), 0 50px 80px 0 rgba(0,0,0,0.12);
-    font-weight: 500;
-    font-size: 22px !important;
-    z-index: 25 !important;
-    padding-top: 10px !important;
-    word-spacing: -1px;
-  }
-  #mobile-indicator.navcircle-text:hover{
-    color: rgba(77, 255, 77,1) !important;
-    font-size: 22px !important;
-    font-weight: 500 !important; 
-    font-family: "Roboto" !important;
-    box-shadow: 0 19px 2px 0 rgba(0,0,0,0.16), 0 5px 1px 0 rgba(0,0,0,0.12);;
-    font-size: 22px !important;
-  }
-  .click-to-scroll:hover{
-    color: rgba(77, 255, 77,1) !important;
-    font-size: 22px !important;
-    font-weight: 500 !important; 
-    font-family: "Roboto" !important;
-    font-size: 22px !important;
-    z-index:auto !important;
-  }
-  .scroll-down .click-to-scroll {
-    color: white !important;
-    font-size: 14px !important;
-    line-height: 1em !important;
-    font-family: "Roboto";
-    padding-top: 25px;
-    position: absolute;
-    right: 32px !important;
-    text-align:center;
-  }
-  /* the text "click to scroll" | visible for mobile users when the scroll-down btn is transparent */
-  /*#hidden-mobile-text {*/
-  /*  line-height: 1em !important;*/
-  /*  display: flex;*/
-  /*  justify-content: center;*/
-  /*  letter-spacing: 1.5px !important;*/
-  /*  margin-top: -1.5em;*/
-    /* font-size: 20px; */
-  /*  font-weight: bolder;*/
-  /*}*/
-  /* scroll-down redfinied to animate and fit inside the "about me" circle */
   .scroll-down.visible {
-    bottom: 12px !important;
+    bottom: 7em !important;
   }
   .scroll-down {
-    border: 1px solid black !important;
-    border-radius: 50% !important;
-    color: #eee !important;
-    text-align: center !important;
-    display: block !important;
-    left: 45% !important; 
-    margin-left: -50px !important;
-    position: absolute !important;
-    bottom: -580px !important;
-    height: 115px !important;
-    line-height: 100px !important;
-    width: 115px !important;
-    
-
-      -webkit-transition: bottom .5s ease-in !important;
-      -moz-transition: bottom .5s ease-in !important;
-      -o-transition: bottom .5s ease-in !important;
-      transition: bottom .5s ease-in !important; 
-      
-      -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
-      animation-fill-mode: initial;  /*fill in the "about me" circle with scroll-down button and have it remain fit inside according to the nav circles definitions */    
-      border: 1px solid black !important;
-  }
-  a.scroll-down.mobile-scroll-btn.arrow-scroll-btn:hover{
-      opacity:.5;
-  }
-  .arrow-scroll-btn {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: -25px;
+    color: #eee;
+    text-align: center;
+    background-image: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.04, #f83600), color-stop(0.8, #f9d423));
+    background-image: -webkit-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: -moz-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: -o-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    display: block;
+    left: 50%;
+    margin-left: -30px;
+    position: absolute;
+    bottom: -140px;
+    height: 75px;
+    line-height: 30px;
+    width: 75px;
+    opacity:.9;
+}
+.arrow-scroll-btn {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    border-radius: 2px;
+    border-radius: 3px;
     color: #eee;
     display: inline-block;
     font-size: 0;
-    height: 60px;
+    height: 29px;
     line-height: 0;
-    margin-top: -5px;
-    text-align: center;
-    vertical-align: middle;
-    width: 60px;
+    margin-top: 15px;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    width: 30px;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(45deg);
-  }
-  #circle-active #mobile-scroll-btn.arrow-scroll-btn:hover{
-    border-right: 2px solid rgba(77, 255, 77,1);
-    border-bottom: 2px solid rgba(77, 255, 77,1);
-  }
-  .scroll-down:hover{
-    opacity:.9 !important;
-    box-shadow: 60px 0px 1px 5px rgba(0, 0, 0, 10), -5px 0px -5px -5px rgba(0,0,0,1.02) !important;
-  }
+}
   #headshot{
     border:none;
     margin:1em 0;
@@ -1008,11 +1072,130 @@ h1.heading {
     z-index: 20;
     padding-bottom:5px;
   }
-  #scrolldown-button-row{
-    display:none;
+  .tooltip-inner {
+    width: 200px;
+    padding: 2px 10px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #3e3f3a;
+    border-radius: 4px;
+    letter-spacing:1px;
+    box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12) !impo
   }
-  #arrow-scroll-btn{
-    display:none;
+  .tooltip.top {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+}
+@media(max-width: 320px) and (min-width: 2px){
+
+  #animatedtext {
+    padding:0;
+  }
+   /*landing page and large header redifined */
+  #landing-header{
+    font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px !important;
+    /*max-height:30vh !important;*/
+  }
+  #landing-header span {
+    font: 700 2em/1 "Oswald", sans-serif;;
+    display: block;
+    line-height:44px;
+    letter-spacing:6px;
+  }
+  #navcircles{
+    margin-top:-3em;
+    padding-bottom: 19vh;  
+    
+  }
+  .btn-circle.btn-xl {
+    width: 25px !important;
+    height: 25px !important;
+    padding: 50px !important;
+    border-radius: 136px !important;
+    transition: box-shadow .25s;
+    font-size: 15px !important;
+    box-shadow: 0 9px 5px 0px rgba(0,0,0,3.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
+  }  
+  /* text within nav circles */
+  .navcircle-text {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 22px !important;
+    line-height: 0em !important;
+    font-family: "Roboto";
+    border-radius: 5px;
+    z-index:10 !important;
+  }
+  .scroll-down.visible {
+    bottom: 7em !important;
+  }
+  .scroll-down {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: -25px;
+    color: #eee;
+    text-align: center;
+    background-image: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.04, #f83600), color-stop(0.8, #f9d423));
+    background-image: -webkit-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: -moz-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: -o-linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    background-image: linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    display: block;
+    left: 50%;
+    margin-left: -30px;
+    position: absolute;
+    bottom: -140px;
+    height: 75px;
+    line-height: 30px;
+    width: 75px;
+    opacity:.9;
+  }
+  .arrow-scroll-btn {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+    color: #eee;
+    display: inline-block;
+    font-size: 0;
+    height: 29px;
+    line-height: 0;
+    margin-top: 15px;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    width: 30px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(45deg);
+  }
+  .tooltip-inner{
+    padding: 2px 6px;
+  }
+  #headshot{
+    border:none;
+    margin:1em 0;
+    z-index:20;
+  }
+  #aboutMeText{
+    font-size:16px;
+    margin:0;
+    line-height:1.6;
+    margin-bottom:2em;
+  }
+  #page-title {
+    color: #000000;
+    font-weight: 800;
+    height:auto;
+    text-indent:.25em;
+    border: 1px solid black;
+    border-right:none; 
+    border-left:none;
+    z-index: 20;
+    padding-bottom:5px;
   }
 }
     /*-ms-transform: rotate(-5deg);*/

@@ -6,25 +6,21 @@
     </article>
     
     <article class="container" id="navcircles">
-        <div class="row" id="circles-row">      
-            <a id="circle-dev" href="/static_pages/development" role="button" class=" btn btn-primary btn-circle btn-xl col-md-3 col-md-offset-0 vcenter"><span class="navcircle-text">Development</span></a>
-            <a id="circle-design" href="/static_pages/design" role="button" class="btn btn-primary btn-circle btn-xl col-md-offset-1 col-md-3 vcenter"><span class="navcircle-text">Design</span></a>
-            <div id="circle-active" role="button" data-toggle="tooltip" title="Click to Scroll Down" class="scroll-button btn btn-primary btn-circle btn-xl col-md-3 col-md-offset-1 vcenter"><span id="original-text" class="navcircle-text hidden-xs <%=is_active('#')%>"><a href="#" address="true">About Me</span></a>       
-            
-            <!-- mobile layout -->
-            <a class="scroll-down container-fluid hidden-lg hidden-md hidden-sm <%=is_active('#')%>" href="#" address="true"><span id="mobile-indicator" class="navcircle-text hidden-lg hidden-md hidden-sm <%=is_active('#')%>">About Me<span class="click-to-scroll">Click to<br>Scroll</span></span>
-            <div id="mobile-scroll-btn" class="arrow-scroll-btn"></div>
-        </a></div>
+        <div class="row">  
+            <ol id="circles-row">
+                <li id="circle-dev"><%= link_to "Development", static_pages_development_path, :class => "overlay col-xs-12 col-xs-offset-0 col-sm-3 col-sm-pull-1 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
+                <li id="circle-design"><%= link_to "Design Work", static_pages_design_path, :class => "overlay col-xs-offset-1 col-sm-3 col-sm-offset-0 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
+                <li id="circle-active" class="hidden-xs"><%= link_to "About Me", root_path, :class => "overlay scroll-button col-sm-3 col-sm-offset-1 navcircle-text btn btn-primary btn-circle btn-xl hidden-xs" %></li>
+            </ol>
         </div>
-    
         <!--<div id="ufo" class="scroll-down orbits container-fluid"> <span id="ray" style=""></span></div> <!-- UFO -->
     </article>
     
     <article id="scrolldown-button-row" class="row">
         <div class="container">
-        <a class="scroll-down hidden-xs" href="#" address="true" data-toggle="tooltip" title="About Me">
-            <div class="arrow-scroll-btn hidden-xs"></div>
-        </a>
+            <a class="scroll-down" href="#" address="true">
+                <div class="arrow-scroll-btn"  data-toggle="tooltip" title="About Me Section" ></div>
+            </a>
         </div>
     </article>
 </section>

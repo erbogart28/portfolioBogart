@@ -32,13 +32,14 @@
         return false;
       });
     }); //end scroll button click func
-  }); //end .on turobolinks load
-</script>
-<!-- hover tool tip text -->
-<script>
     $(function (){
       $('[data-toggle="tooltip"]').tooltip()
-    });
+    }); 
+    $(function () {                               // show tool tip for scroll-down upon load
+      $('.arrow-scroll-btn[data-toggle="tooltip"]').tooltip("show");
+      $('[data-toggle="tooltip"]').find(".arrow-scroll-btn").removeClass("in");
+   });
+  }); //end .on turobolinks load
 </script>
 </head>
 
