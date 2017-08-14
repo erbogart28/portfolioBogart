@@ -1,6 +1,6 @@
 <div class="container" id="pageheader">
     <h1 class="heading">Design Work</h1>
-</div>
+</div><!-- /.container -->
 
     <div class="container">
                 <div class="row">
@@ -55,7 +55,7 @@
                             
                             <div class="card-content">
                                 <h4 class="card-title">
-                                    <!--<link_to image_tag("app/assets/images/bulldogProtos.jpg")>Athens Bulldogs Redesign</a>-->
+                                    Athens Bulldogs Redesign
                                 </h4>
                                 <p class="bulldogsText">
                                    This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.
@@ -66,15 +66,61 @@
                             </div>
                             
                             <div class="card-read-more">
-                                <a class="btn btn-link btn-block" href="<%= asset_path 'athensTabletProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]">Athens Bulldogs Redesign</a>
-                                <a href="<%= asset_path 'athensDesktopProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>
-                                <a href="<%= asset_path 'athensTablet1.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>
+                                <!--<a class="btn btn-link btn-block" href="<%# asset_path 'athensTabletProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]">Athens Bulldogs Redesign</a>-->
+                                <!--<a href="<%# asset_path 'athensDesktopProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>-->
+                                <!--<a href="<%# asset_path 'athensTablet1.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>-->
                                 <%# link_to "View Prototypes", image_path("bulldogProtos.jpg"), :class => "btn btn-link btn-block" %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                <!-- popup modal images preview -->
+                                <a href="#lightbox" data-toggle="modal">View Prototype Designs</a>
+                                    <div class="modal fade and carousel slide" id="lightbox">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                
+                                                <div class="modal-header">
+                                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                                    <h4 class="modal-title" id="modal-label">Athens Bulldogs Redesigns</h4>
+                                                </div> <!--end modal header -->
+                                                
+                                                <div class="modal-body">
+                                                    <ol class="carousel-indicators">
+                                                    <li id="img1" data-target="#lightbox" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#lightbox" data-slide-to="1"></li>
+                                                    <li data-target="#lightbox" data-slide-to="2"></li>
+                                                    </ol>
+                                                    <!-- images -->
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <%= image_tag 'athensTabletProtos.png' %>
+                                                            <div class="carousel-caption" style="color:black"><p>Multiple Tablet Iterations.</p></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <%= image_tag 'athensTablet1.png' %>
+                                                            <div class="carousel-caption" style="color:black"><p>Final Tablet Design</p></div>
+                                                        </div>
+                                                        
+                                                        <div class="item">
+                                                            <%= image_tag 'athensDesktopProtos.png' %>
+                                                             <div class="carousel-caption" style="color:black"><p>Desktop Prototypes</p></div>
+                                                        </div>
+                                                    </div><!-- end carousel-inner -->
+                                                    <div class="row">
+                                                    <!-- /.carousel-contorols -->
+                                                    <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                                                        <span class="fa fa-chevron-left"></span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                                                        <span class="fa fa-chevron-right"></span>
+                                                    </div>
+                                                    </a>
+                                                </div><!-- /.modal-body -->
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+                                </div> <!-- end read more -->
+                        </div><!-- end card -->
+                    </div><!-- end column utilities -->
+                </div><!-- end row -->
+            </div><!-- end container -->
  
  
    <div class="container"  id="designWork">
@@ -142,8 +188,7 @@
                             </div>
                         </div>
                 </div>
-            </div>
-     </div>
-<%= javascript_include_tag 'lightbox.js' %>
- 
+            </div><!-- end row -->
+     </div><!-- end container -->
+
  

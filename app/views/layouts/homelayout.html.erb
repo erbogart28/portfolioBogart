@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>.ERB Portfolio</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+<script>
+  $(document).on("turbolinks:load", function() {
+    // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
+    $(function () {
+      var w = $(window);
+      w.scroll(function () {
+        if (w.scrollTop() !== 0) {
+          $(".scroll-down").removeClass("visible");
+        return;}
+        $(".scroll-down").addClass("visible"), $(".scroll-down").css('opacity', '1');
+        });
+        $(".scroll-down").addClass("visible");
+    }); // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
+    $(function() {
+      $('.scroll-down').on ('click', function() {
+        $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+          return false;
+        });
+    }); // end scroll-down arrow click
+    $(function() {
+      $('.scroll-button').on('click', function() {
+        $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+        return false;
+      });
+    }); //end scroll button click func
+    $(function (){
+      $('[data-toggle="tooltip"]').tooltip()
+    }); 
+    $(function () {                               // show tool tip for scroll-down upon load
+      $('.arrow-scroll-btn[data-toggle="tooltip"]').tooltip("show");
+      $('[data-toggle="tooltip"]').find(".arrow-scroll-btn").removeClass("in");
+   });
+  }); //end .on turobolinks load
+</script>
+</head>
+
+<body>
+<%= yield %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

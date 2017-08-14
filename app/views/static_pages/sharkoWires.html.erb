@@ -1,18 +1,18 @@
-
-
-
 <div class="container" id="pageheader">
     <h1 class="heading">Sharko Wireframes Walkthrough</h1>
-   <p id="back"> <!--<h5>--><a href="/static_pages/design"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></a></i>&#09;Back to Designs</p>
 </div>
 
-    <div class="container">
+    <div class="container" id="accordion-container">
         <div id="accordion" role="tablist" aria-multiselectable="true">
+            <a href="/static_pages/design" id="back"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>&#09;<span id="back-text">Back to Designs</span></a>
+
             <div class="card accordion-panel">
                 <div class="card-block accordion-heading" role="tab" id="headingOne">
                   <h3 class="card-title accordion-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Homepage Wireframe
+                        <h3>Homepage Wireframe </h3>
+                        <i class="fa fa-chevron-down"></i>
+                        <i class="fa fa-chevron-up"></i>
                     </a>
                   </h3>
                 </div>
@@ -33,7 +33,9 @@
                 <div class="card-block accordion-heading" role="tab" id="headingTwo">
                   <h3 class="card-title accordion-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Catering Menu Wireframe
+                        <h3>Catering Menu Wireframe</h3>
+                        <i class="fa fa-chevron-down"></i>
+                        <i class="fa fa-chevron-up"></i>
                     </a>
                   </h3>
                 </div>
@@ -51,7 +53,9 @@
                 <div class="card-block accordion-heading" role="tab" id="headingThree">
                   <h3 class="card-title accordion-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Regular Menu Wireframe
+                        <h3>Regular Menu Wireframe</h3>
+                        <i class="fa fa-chevron-down"></i>
+                        <i class="fa fa-chevron-up"></i>
                     </a>
                   </h3>
                 </div>
@@ -65,18 +69,40 @@
                     </div>
                 </div>
             </div>
+            
             <div class="card accordion-panel">
                 <div class="card-block accordion-heading" role="tab" id="headingFour">
                   <h3 class="card-title accordion-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Contact Page Wireframe
+                        <h3>Contact Page Wireframe</h3>
+                        <i class="fa fa-chevron-down"></i>
+                        <i class="fa fa-chevron-up"></i>
                     </a>
                   </h3>
                 </div>
                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                     <div class="accordion-content">
                         <div class="divider"></div>
-                        <div id="wireframePics"> <%= image_tag("sharkoWire3.JPG", class: "img-responsive")%></div>
+                        <div id="popout-img">
+                        <a href="#lightbox" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire3.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
+                            <div class="modal fade" id="lightbox">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        
+                                        <div class="modal-header">
+                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                            <h4 class="modal-title" id="modal-label">Contact Page Wireframe</h4>
+                                        </div> <!--end modal header -->
+                                        
+                                        <div class="modal-body">
+                                                <div class="item" style="object-fit:contain">
+                                                    <%= image_tag("sharkoWire3.JPG", class: "img-responsive")%>
+                                                </div>
+                                        </div><!-- /.modal-body -->
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+                        </div>
                         <p id="wireText" class="lead">
                             For the contact page, I wanted every piece of information to be clearly avaible, and without food images to distract from the purpose fo the page. I also wanted a map of the store location so users could easily look up directions or the surrounding area. In the final development of this page, I ended up only using one image, which was a picture of Sharko's storefront. This was also the first time I worked with Google Map APIs, and I was able to succesfully develop a map into the final page - which was a huge feat for me at the time.
                         </p>
@@ -87,14 +113,36 @@
                 <div class="card-block accordion-heading" role="tab" id="headingFive">
                   <h3 class="card-title accordion-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Notable Mentions
+                      <h3>Notable Mentions</h3>
+                      <i class="fa fa-chevron-down"></i>
+                      <i class="fa fa-chevron-up"></i>
                     </a>
                   </h3>
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                     <div class="accordion-content">
                         <div class="divider"></div>
-                        <div id="wireframePics"> <%= image_tag("sharkoWire1.JPG", class: "img-responsive")%></div>
+                        <div id="wireframePics"> 
+                        <a href="#lightbox" data-toggle="modal"><%= image_tag("sharkoWire1.JPG", class: "img-responsive center-block")%></a>
+
+                                    <div class="modal fade and carousel slide" id="lightbox">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                
+                                                <div class="modal-header">
+                                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                                    <h4 class="modal-title" id="modal-label">Notable Mentions Wireframe</h4>
+                                                </div> <!--end modal header -->
+                                                
+                                                <div class="modal-body">
+                                                        <div class="item">
+                                                            <%= image_tag("sharkoWire1.JPG", class: "img-responsive center-block")%>
+                                                        </div>
+                                                </div><!-- /.modal-body -->
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+                        </div>
                         <p id="wireText" class="lead">
                             The original Sharko's site had many accolades regarding their BBQ food along with their missions and history of stores, but they chose to messily list those all these things throughout the homepage. Since I chose to tidy up the homepage, I decided to put the notable mentions content into a new page altogether. With a seperate page, interested users can easily check out Sharko's awards, purpose, and history. I felt this was more effective than having them scroll down a very long homepage to find.
                         </p>

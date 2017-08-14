@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ERB Portfolio</title>
+    <title>.ERB Portfolio</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
 <body>
-  
 <header>
     <nav class="navbar-default">   <!--Nav bar default -->
-      
-      <div class = "navbar-header col-lg-1">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <div class = "navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  <!--Nav bar collapsed upong screensize -->
+      <div class="collapse navbar-collapse" id="navbar-collapse-1"> <!--Nav bar collapsed upong screensize -->
         <ul class="nav navbar-nav">
-          <li class="<%=is_active('home')%>"><a href="/">About Me<span class="sr-only">(current)</span></a></li>
-          <li class="<%=is_active('design')%>"><a href="/static_pages/design">Design / Workflow</a></li>
-          <li class="<%=is_active('development')%>"><a href="/static_pages/development">Development Work</a></li>
+          <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "About Me", root_path %></li>
+          <li class="<%= 'active' if current_page?(static_pages_design_path) || current_page?(static_pages_sharkoWires_path) %>"><%= link_to "Design Work", static_pages_design_path %></li>
+          <li class="<%= 'active' if current_page?(static_pages_development_path) %>"><%= link_to "Development Work", static_pages_development_path %></li>
         </ul>
-        <div class=" navbar-right col-lg-2" id=social>
+        <div class=" navbar-right col-lg-2" id="social">
           <ul class ="nav navbar-nav">
               <li><a type="button" class="btn btn-block btn-sm btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></li><br>
               <li><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-sm btn-github" target="blank_"><i class="fa fa-github"></i></a></li>
@@ -35,8 +34,8 @@
     </nav>
 </header>     
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <%= yield %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

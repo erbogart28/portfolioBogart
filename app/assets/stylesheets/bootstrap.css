@@ -3412,6 +3412,7 @@ fieldset[disabled] .btn-danger.focus {
   color: #93c54b;
   font-weight: normal;
   border-radius: 0;
+  font-size:16px;
 }
 .btn-link,
 .btn-link:active,
@@ -4531,7 +4532,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: #ADADAD;
+  background-color: #505050;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
