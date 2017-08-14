@@ -43,6 +43,26 @@ h1.heading {
   font-weight: 800;
   height:auto;
 }
+/*-------------------------------------------------- */
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ffffff;
+  padding-top:1em;
+}
 /*#######################################
 #  Landing page and elements definied 
 ########################################*/
@@ -103,19 +123,13 @@ h1.heading {
 /*###############################
    Nav-circles | Landing / Homepage only
 #################################*/
-/* ID for nav circles CONTAINER */
-#navcircles{
-    display: flex;
-    justify-content: center;
-    overflow:hidden !important;
-    background-color:none;
-    min-width:100vw !important;
-    background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
-}
-#circles-row{
-    width:100vw !important;
-    margin:2em 0!important;
-    /*padding: 4em 0;*/
+/* btn class utility overrides for planet circle buttons */
+.btn {
+    border: none;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: initial !important;
 }
 .btn-circle.btn-xl {
     opacity:0;  /* make elements invisible upon start */
@@ -132,24 +146,25 @@ h1.heading {
     animation-duration:1s;
     font-size:28px;
 }
-#circle-active > .btn-circle.btn-xl{
-    background-image: -webkit-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);
-    background-image: -moz-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);
-    background-image: -o-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);
-    background-image: linear-gradient(233deg, #48C6EF 14%, #6f86d6 15%);
-      border-color: rgba(0, 0, 0, 0);
-      color: #ffffff;
+/* ID for nav circles CONTAINER */
+#navcircles{
+    display: flex;
+    justify-content: center;
+    overflow:hidden !important;
+    background-color:none;
+    min-width:100vw !important;
+    background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
 }
+/* ID for navcircles ol - contents navcircle list items - located inside row div */
+#circles-row{
+    width:100vw !important;
+    margin:2em 0!important;
+    /*padding: 4em 0;*/
+}
+
 #circle-dev{
     display:inline-block;
     border-color: rgba(0, 0, 0, 0);
-}
-.btn {
-    border: none;
-    font-size: 11px;
-    line-height: 22px;
-    font-weight: 500;
-    text-transform: initial !important;
 }
 .navcircle-text{
     color: black !important;
@@ -161,6 +176,7 @@ h1.heading {
     line-height: 0em !important;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+/* default circle nav overlay */
 .overlay {
      /*width: 10vw;*/
      /*height: 10vw;*/
@@ -176,14 +192,59 @@ h1.heading {
     border-radius: 50%;
     display: inherit;
     position: relative;
-    background: #303030 url(http://rojo2.com/img/texture-01.png) repeat-y;
+    background:  url(http://rojo2.com/img/texture-01.png) repeat-x;
     background-size: cover;
     padding: 125px !important;
     -webkit-animation: planet-rotation 30s linear infinite;
 }
+/* default circle nav before overlay */
+.overlay:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
+    background-size: cover;
+      -webkit-animation: planet-rotation 12s linear infinite;
+}
+/* development circle nav before overlay | jupiter */
+#circle-dev > .overlay:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background-size: cover;
+    background: transparent url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
+      -webkit-animation: planet-rotation 50s linear infinite;
+
+}
+/* dev circle nav after overlay | text content added here for btn title */
+#circle-dev > .overlay:after {
+    position: absolute;
+    content: 'Development';
+    padding-top: 50% !important;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -webkit-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -moz-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -o-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), linear-gradient(to top right, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
+    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
+}
+/* design circle nav after overlay | text content added here for btn title */
 #circle-design > .overlay:after {
     position: absolute;
-    content: '';
+    padding-top: 50% !important;
+    content: 'Design Work';
     top: -2px;
     left: -2px;
     right: -2px;
@@ -196,9 +257,25 @@ h1.heading {
     linear-gradient(to bottom right, rgba(255,240,220,0.5) 5%, rgba(255,240,220,0) 35%, rgba(0,0,0,0.64) 80%, rgba(0,0,0,1) 95%);
     box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
 }
+/*circle active custom background | acts as overlay for this element */
+#circle-active > .btn-circle.btn-xl{
+      /*background-image: -webkit-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);*/
+      /*background-image: -moz-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);*/
+      /*background-image: -o-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);*/
+      /*background-image: linear-gradient(233deg, #48C6EF 14%, #6f86d6 15%);*/
+      /*border-color: rgba(0, 0, 0, 0);*/
+      /*color: #ffffff;*/
+      background-image: -webkit-linear-gradient(200deg, #48C6EF 10%, #6f86d6 60%);
+      background-image: -moz-linear-gradient(200deg, #48C6EF 10%, #6f86d6 60%);
+      background-image: -o-linear-gradient(200deg, #48C6EF 10%, #6f86d6 60%);
+      background-image: linear-gradient(290deg, #48C6EF 10%, #6f86d6 60%);
+}
+
+/* about me (active) circle nav after overlay | text content added here for btn title */
 #circle-active > .overlay:after {
     position: absolute;
-    content: '';
+    padding-top: 50% !important;
+    content: 'About Me';
     top: -2px;
     left: -2px;
     right: -2px;
@@ -207,46 +284,6 @@ h1.heading {
     border-radius: 50%;
     background-image: -webkit-radial-gradient(-8% 50%, 0% 50%, rgba(255,240,230,.6), transparent), linear-gradient(to left, rgba(255,240,220,0.5) 30%, rgba(255,240,220,0) 64%, rgba(0,0,0,0.64) 98%, rgba(0,0,0,1) 100%);
     box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
-}
-#circle-dev > .overlay:after {
-    position: absolute;
-    content: 'Development';
-    padding-top: 50% !important;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 50%;
-    background:  url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -webkit-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -moz-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -o-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), linear-gradient(to top right, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
-}
-#circle-dev > .overlay:before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    background-size: cover;
-    background: transparent url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
-    -webkit-animation: planet-rotation 180s linear infinite;
-}
-.overlay:before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
-    background-size: cover;
-    -webkit-animation: planet-rotation 12s linear infinite;
 }
 
 /*.container1{*/
@@ -541,7 +578,7 @@ h1.heading {
 }
 .tooltip-inner {
   width:200px;
-    box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);
+    /*box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);*/
   }
 @keyframes animatedBackground {
     from { background-position: 0 0 !important }
@@ -586,13 +623,13 @@ h1.heading {
 #wireframeWalk{
     width:80%;
 }
-#wireframePics{
-    margin:auto;
-    width:50%;
+#wireframePics > img{
+    border:.1px solid black;
 }
+/*accordion text for wireframes*/
 #wireText{
     text-align:left;
-    margin-top:2em;
+    margin-top:1em;
 }
 /********************************************/
 /*accordion definitions */
@@ -613,10 +650,9 @@ h1.heading {
 .accordion-title {
   text-transform: uppercase;
   font-weight: 100!important;
-  padding: .75em!important;
+  padding: .1em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin-bottom: 0!important;
 }
 .accordion-title>a:hover {
   text-decoration: none!important;
@@ -632,13 +668,55 @@ h1.heading {
 #accordion-container{
   margin-top:1em;
 }
-/************ back arrow **********/
+/*full screen display modal */
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.fa-expand {
+  position: relative;
+  display: inline-block;
+}
+#wireframePics::before {
+    content: '⤡';
+    z-index: 5;
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    /* font-size: 12px; */
+    transform: translate( -50%, -50% );
+    padding: 0px 8px 4px 8px;
+    color: white;
+    font-size: 25px !important;
+    background-color: rgba(23, 35, 34, 0.5);
+    border-radius: 5px 5px 5px 5px;
+}
+#wireframePics:after{
+  content:'';
+}
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+/* display buttons according to expansion */
+.accordion-title > a[aria-expanded="true"] .fa-chevron-down {
+  display:none !important;
+}
+.accordion-title > a[aria-expanded="false"] .fa-chevron-up {
+  display:none !important;
+}
+/************ back arrow / back page / btn **********/
 #back{
-  display:flex;
+  padding-left: 5px;
+  display: flex;
+  width: 11em;
 }
 .fa-2x {
   display:flex;
-    font-size: 3em;
+  font-size: 3em;
 }
 /************back arrow icon ***********/
 .fa-arrow-left{
@@ -649,6 +727,9 @@ h1.heading {
   display:flex;
   line-height: 3.25em;
 }
+/*********************************************************/
+/*  Lightbox modal for image preview
+***************************************************************/
 .modal.and.carousel {
   position: fixed; /* Needed because the carousel overrides the position property */
 }
@@ -705,7 +786,7 @@ h1.heading {
     bottom:0;
 }
 
-/*close "x" button for mods */
+/*close "x" button for modal preview displays */
 .close {
     margin-top: -2px;
     color:#990000;
@@ -719,7 +800,9 @@ h1.heading {
     opacity: 1;
     /*filter: alpha(opacity=50);*/
 }
-/* tooltip elements -- popup message for scroll-down */
+/*********************************************************/
+/*    tooltip - popover element on scroll-down btn  
+***************************************************************/
 .visible.tooltip {
   position: absolute;
   z-index: 1070;
@@ -759,7 +842,13 @@ h1.heading {
     background-color: #3e3f3a;
     border-radius: 4px;
 }
-
+/*********************************************************/
+/*    Definied media queries for improved responsiveness 
+***************************************************************/
+#footer-elements{
+  background-color:white;
+  bottom:0;
+}
 /*********************************************************/
 /*    Definied media queries for improved responsiveness 
 ***************************************************************/
@@ -770,17 +859,6 @@ h1.heading {
   }
   #circles-row{
     padding-top:5vh;
-  }
-  /* text in nav circles */
-  .navcircle-text{
-      display:flex;
-      color:black;
-      justify-content:center;
-      font-size: 26px;
-      letter-spacing: 1px;
-      line-height: 0em;
-      font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-      transform:rotate(-360deg);
   }
     #aboutMeText{
     font-size:16px;
@@ -801,7 +879,7 @@ h1.heading {
   #landing-header{
     font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   	letter-spacing: .4em;
-  	padding-top:1em;
+  	padding-top:.5em;
   	padding-bottom:0 !important;
   }
   #circles-row {
@@ -961,6 +1039,9 @@ h1.heading {
 } /* end min-width: 620 and max-width: 768px */
 /* mobile focus */
 @media(max-width: 620px) and (min-width: 320px){
+  #circle-active{
+    display:none;
+  }
   .landing {
     background-color:white;
   }
@@ -971,8 +1052,9 @@ h1.heading {
   #landing-header{
     font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 2px !important;
-    /*max-height:30vh !important;*/
-  }
+    margin-top: -1em !important;
+    padding:0 !important;
+    }
   #landing-header span {
     font: 700 2em/1 "Oswald", sans-serif;;
     display: block;
@@ -1001,7 +1083,7 @@ h1.heading {
     display: flex;
     color: black;
     justify-content: center;
-    font-size: 22px !important;
+    font-size: 18px !important;
     line-height: 0em !important;
     font-family: "Roboto";
     border-radius: 5px;
@@ -1080,7 +1162,6 @@ h1.heading {
     background-color: #3e3f3a;
     border-radius: 4px;
     letter-spacing:1px;
-    box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12) !impo
   }
   .tooltip.top {
     margin-top: 10px;
