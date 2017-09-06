@@ -186,7 +186,7 @@ body {
      /*background: #303030 url('http://rojo2.com/img/texture-01.png') repeat-x;*/
      /*background-size: cover;*/
      /*    padding: 125px !important;*/
-     /*-webkit-animation: planet-rotation 30s linear infinite;*/
+     /*-webkit-animation: circles-rotation 30s linear infinite;*/
     width: 10vw;
     height: 10vw;
     border-radius: 50%;
@@ -195,7 +195,7 @@ body {
     background:  url(http://rojo2.com/img/texture-01.png) repeat-x;
     background-size: cover;
     padding: 125px !important;
-    -webkit-animation: planet-rotation 30s linear infinite;
+    -webkit-animation: circles-rotation 30s linear infinite;
 }
 /* default circle nav before overlay */
 .overlay:before {
@@ -208,7 +208,7 @@ body {
     border-radius: 50%;
     background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
     background-size: cover;
-      -webkit-animation: planet-rotation 12s linear infinite;
+      -webkit-animation: circles-rotation 12s linear infinite;
 }
 /* development circle nav before overlay | jupiter */
 #circle-dev > .overlay:before {
@@ -221,7 +221,7 @@ body {
     border-radius: 50%;
     background-size: cover;
     background: transparent url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
-      -webkit-animation: planet-rotation 50s linear infinite;
+      -webkit-animation: circles-rotation 50s linear infinite;
 
 }
 /* dev circle nav after overlay | text content added here for btn title */
@@ -329,10 +329,10 @@ body {
     /*background-image: -moz-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
     /*background-image: -o-linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
     /*background-image: linear-gradient(107deg, #f5f7fa 50%, #c3cfe2 76%);*/
-    /* -webkit-animation: planet-rotation 30s linear infinite;*/
+    /* -webkit-animation: circles-rotation 30s linear infinite;*/
 }
 
-@-webkit-keyframes planet-rotation {
+@-webkit-keyframes circles-rotation {
     from {
         background-position: 0% 0%;
     }
@@ -340,7 +340,7 @@ body {
         background-position: -200% 0%;
     }
 }
-@keyframes planet-rotation {
+@keyframes circles-rotation {
     from {
         background-position: 0% 0%;
     }
@@ -360,7 +360,7 @@ body {
 /*     position: relative;*/
 /*     background: #303030 url('http://rojo2.com/img/texture-01.png') repeat-x;*/
 /*     background-size: cover;*/
-/*     -webkit-animation: planet-rotation 30s linear infinite;*/
+/*     -webkit-animation: circles-rotation 30s linear infinite;*/
 /*}*/
 
 /*.planet-image:after {*/
@@ -389,7 +389,7 @@ body {
 /*  border-radius: 50%;*/
 /*  background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;*/
 /*  background-size: cover;*/
-/*  -webkit-animation: planet-rotation 18s linear infinite;*/
+/*  -webkit-animation: circles-rotation 18s linear infinite;*/
 /*}*/
 /* utility clsses used for circle buttons */
 /*.btn-circle.btn-xl {*/
@@ -679,28 +679,25 @@ body {
   position: relative;
   display: inline-block;
 }
-#wireframePics::before {
-    content: '⤡';
-    z-index: 5;
-    position: absolute;
-    left: 15%;
-    top: 20%;
+/*#wireframePics::before {*/
+/*    content: '⤡';*/
+/*    z-index: 5;*/
+/*    position: absolute;*/
+/*    left: 15%;*/
+/*    top: 20%;*/
     /* font-size: 12px; */
-    transform: translate( -50%, -50% );
-    padding: 0px 8px 4px 8px;
-    color: white;
-    font-size: 25px !important;
-    background-color: rgba(23, 35, 34, 0.5);
-    border-radius: 5px 5px 5px 5px;
-}
-#wireframePics:after{
-  content:'';
-}
-.modal-content {
-  height: auto;
-  min-height: 100%;
-  border-radius: 0;
-}
+/*    transform: translate( -50%, -50% );*/
+/*    padding: 0px 8px 4px 8px;*/
+/*    color: white;*/
+/*    font-size: 25px !important;*/
+/*    background-color: rgba(23, 35, 34, 0.5);*/
+/*    border-radius: 5px 5px 5px 5px;*/
+/*}*/
+/*#wireframePics > a{*/
+/*  height: auto;*/
+/*  min-height: 100%;*/
+/*  border-radius: 0;*/
+/*}*/
 /* display buttons according to expansion */
 .accordion-title > a[aria-expanded="true"] .fa-chevron-down {
   display:none !important;
@@ -709,26 +706,26 @@ body {
   display:none !important;
 }
 /************ back arrow / back page / btn **********/
+/*display flex for back button and text / allows back-text to be positioned perfectly */
 #back{
-  padding-left: 5px;
   display: flex;
-  width: 11em;
 }
-.fa-2x {
-  display:flex;
-  font-size: 3em;
+/* text after back arrow icon --*/
+#back-text{
+  line-height: 2.9em; /* this line height easily centers text according to the 3em back arrow size */
+  font-weight: 500;
+  word-spacing: .1em;
+  font-size: 16px;
 }
 /************back arrow icon ***********/
 .fa-arrow-left{
+  padding-left: 5px;  
   margin-right:1%;
   padding-bottom: .75em;
 }
-#back-text{
-  display:flex;
-  line-height: 3.25em;
-}
+
 /*********************************************************/
-/*  Lightbox modal for image preview
+/*  Modal for image preview
 ***************************************************************/
 .modal.and.carousel {
   position: fixed; /* Needed because the carousel overrides the position property */
@@ -843,12 +840,34 @@ body {
     border-radius: 4px;
 }
 /*********************************************************/
-/*    Definied media queries for improved responsiveness 
+/*   footer stlyes / header nav elememnts -> social media
 ***************************************************************/
 #footer-elements{
   background-color:white;
   bottom:0;
 }
+.fa-linkedin {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-github
+{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (min-width: 768px){
+   br 
+    { 
+       display: none;  
+    }
+} 
 /*********************************************************/
 /*    Definied media queries for improved responsiveness 
 ***************************************************************/
@@ -857,9 +876,9 @@ body {
     margin:25vh auto;
     height: 45vh;
   }
-  #circles-row{
-    padding-top:5vh;
-  }
+  /*#circles-row{*/
+  /*  padding-top:5vh;*/
+  /*}*/
     #aboutMeText{
     font-size:16px;
     margin:4em .25em;
