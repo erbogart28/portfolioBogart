@@ -436,36 +436,36 @@ body {
     line-height: 100px;
     width: 100px;
   /*button animations */
-    -webkit-animation: a 2s 2 !important;
-    -moz-animation: a 2s 2 !important; 
-    -o-animation: a 2s 2 !important; 
-    animation: a 2s 2 !important;
+    -webkit-animation:scroll-down-popup 2s 2 !important;
+    -moz-animation: scroll-down-popup 2s 2 !important; 
+    -o-animation: scroll-down-popup 2s 2 !important; 
+    animation: scroll-down-popup 2s 2 !important;
     
     -webkit-transition: bottom 1s ease-in !important;
     -moz-transition: bottom 1s ease-in !important;
     -o-transition: bottom 1s ease-in !important;
     transition: bottom 1s ease-in !important; 
 }
-/*scrolldown button keyframes defined */
-@-webkit-keyframes a {
+/*scrolldown button keyframes defined | show from bottom */
+@-webkit-keyframes scroll-down-popup {
   0%   { opacity: .8; }
   50%   { opacity: 1; }
   100% { opacity: .8; }
 }
 
-@-moz-keyframes a {
+@-moz-keyframes scroll-down-popup {
   0%   { opacity: .8; }
   50%   { opacity: 1; }
   100% { opacity: .8; }
 }
 
-@-o-keyframes a {
+@-o-keyframes scroll-down-popup {
   0%   { opacity: .3; }
   50%   { opacity: 1; }
   100% { opacity: .3; }
 }
 
-@keyframes a {
+@keyframes scroll-down-popup {
   0%   { opacity: .8; }
   50%   { opacity: 1; }
   100% { opacity: .8; }
@@ -580,10 +580,6 @@ body {
   width:200px;
     /*box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);*/
   }
-@keyframes animatedBackground {
-    from { background-position: 0 0 !important }
-    to { background-position: 600px 0 !important;}
-}
 /********************************************/
 /**** homepage content | Beneath landing page *****/
 /********************************************/
@@ -698,6 +694,9 @@ body {
 /*  min-height: 100%;*/
 /*  border-radius: 0;*/
 /*}*/
+ .fa-chevron-up {
+   color: #004e92;
+ }
 /* display buttons according to expansion */
 .accordion-title > a[aria-expanded="true"] .fa-chevron-down {
   display:none !important;
