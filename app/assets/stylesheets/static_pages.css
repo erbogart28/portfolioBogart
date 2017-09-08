@@ -16,7 +16,6 @@ body {
   font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-       background-color:#eeeeee;
 }
 h2{
   margin-left:.4em;
@@ -422,11 +421,11 @@ body {
     border-radius: 50%;
     color: #eee;
     text-align: center;
-    background-image: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.04, #f83600), color-stop(0.8, #f9d423));
-    background-image: -webkit-linear-gradient(to right, #f83600 4%, #f9d423 80%);
-    background-image: -moz-linear-gradient(to right, #f83600 4%, #f9d423 80%);
-    background-image: -o-linear-gradient(to right, #f83600 4%, #f9d423 80%);
-    background-image: linear-gradient(to right, #f83600 4%, #f9d423 80%);
+    /*background-image: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.04, #f83600), color-stop(0.8, #f9d423));*/
+    /*background-image: -webkit-linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
+    /*background-image: -moz-linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
+    /*background-image: -o-linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
+    /*background-image: linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
     display: block;
     left: 50%;
     margin-left: -50px;
