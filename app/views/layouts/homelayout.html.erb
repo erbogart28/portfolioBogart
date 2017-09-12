@@ -26,25 +26,62 @@
           return false;
         });
     }); // end scroll-down arrow click
+    
+    $(function() {
+      $('.scroll-down2').on ('click', function() {
+        $('html, body').animate({scrollTop: $('section.design-content').offset().top }, 'slow');
+          return false;
+        });
+    }); // end scroll-down arrow click
+    
+    $(function() {
+      $('.scroll-down3').on ('click', function() {
+        $('html, body').animate({scrollTop: $('section.dev-content').offset().top }, 'slow');
+          return false;
+        });
+    }); // end scroll-down arrow click
+    
     $(function() {
       $('.scroll-button').on('click', function() {
         $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
         return false;
       });
     }); //end scroll button click func
+    
+    $(function() {
+      $('.scroll-button2').on('click', function() {
+        $('html, body').animate({scrollTop: $('section.design-content').offset().top }, 'slow');
+        return false;
+      });
+    }); //end scroll button click func
+
+
+    $(function() {
+      $('.scroll-button3').on('click', function() {
+        $('html, body').animate({scrollTop: $('section.dev-content').offset().top }, 'slow');
+        return false;
+      });
+    }); //end scroll button click func
     $(function (){
       $('[data-toggle="tooltip"]').tooltip()
     }); 
-    $(function () {                               // show tool tip for scroll-down upon load 
-      $('.arrow-scroll-btn[data-toggle="tooltip"]').tooltip("show");
-      $('[data-toggle="tooltip"]').find(".arrow-scroll-btn").removeClass("in");
-   });
+  //   $(function () {                               // show tool tip for scroll-down upon load
+  //     $('.arrow-scroll-btn[data-toggle="tooltip"]').tooltip("show");
+  //     $('[data-toggle="tooltip"]').find(".arrow-scroll-btn").removeClass("in");
+  // });
   }); //end .on turobolinks load
 </script>
 </head>
 
 <body>
 <%= yield %>
+ 
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">© 2017 .ERB Portfolio <%= link_to "Back to Top", root_path, :class => "btn-link pull-right" %></p>
+      </div>
+</footer>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->

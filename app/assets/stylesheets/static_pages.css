@@ -409,17 +409,22 @@ body {
 /*}*/
 
 
+
+
 /*#######################################
 #   scroll down button and elements / landing paage 
 ########################################*/
 /* visible scroll down btn positioning */
-#scrolldown-button-row{
-  /*max-height:25vh;*/
-}
-.scroll-down.visible {
+.scroll-down.visible{
     bottom: 1vh;
 }
-/*scroll down btn animations and further positioning to hid offscreen */
+
+.scroll-down2,
+.scroll-down3{
+    display: flex;
+    justify-content: center;
+}
+
 .scroll-down {
     border: 1px solid #eee;
     border-radius: 50%;
