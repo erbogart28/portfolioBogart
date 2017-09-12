@@ -82,9 +82,10 @@
     z-index:1;
     padding:1em 0;
 
-    background: #cb2d3e;  
-    background: -webkit-linear-gradient(to top, #ef473a, );  
-    background: linear-gradient(to top, #ef473a, #cb2d3e); 
+ background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-color: #3e3f3a;
     display: inline-block;
     white-space: nowrap;
     width: 35px;
