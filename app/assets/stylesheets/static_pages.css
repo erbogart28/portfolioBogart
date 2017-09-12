@@ -213,40 +213,41 @@ body {
       -webkit-animation: circles-rotation 12s linear infinite;
 }
 /* development circle nav before overlay | jupiter */
-#circle-dev > .overlay:before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    background-size: cover;
-    background: transparent url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;
-      -webkit-animation: circles-rotation 50s linear infinite;
+/*#circle-dev > .overlay:before {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*top: -4px;*/
+    /*left: -4px;*/
+    /*right: -4px;*/
+    /*bottom: -4px;*/
+    /*border-radius: 50%;*/
+    /*background-size: cover;*/
+    /*/*background: transparent url('https://svs.gsfc.nasa.gov/vis/a010000/a010900/a010981/still_image_1-576.jpg') repeat-x;*/
+    /*  -webkit-animation: circles-rotation 50s linear infinite;*/
 
-}
+/*}*/
 /* dev circle nav after overlay | text content added here for btn title */
-#circle-dev > .overlay:after {
-    position: absolute;
-    content: 'Development';
-    padding-top: 50% !important;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 50%;
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -webkit-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -moz-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -o-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), linear-gradient(to top right, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);
-    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
-}
+/*#circle-dev > .overlay:after {*/
+/*    position: absolute;*/
+/*    content: '*/
+/*    padding-top: 50% !important;*/
+/*    top: -2px;*/
+/*    left: -2px;*/
+/*    right: -2px;*/
+/*    bottom: -2px;*/
+/*    border-radius: 50%;*/
+/*    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -webkit-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);*/
+/*    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -moz-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);*/
+/*    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), -o-linear-gradient(bottom left, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);*/
+/*    background-image: -webkit-radial-gradient(16% 50%, 30% 50%, rgba(255,240,230,0), transparent), linear-gradient(to top right, rgba(255,240,220,0.2) 25%, rgba(255,240,220,0) 50%, rgba(0,0,0,0.64) 77%, rgba(0,0,0,1) 87%);*/
+/*    box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);*/
+/*}*/
 /* design circle nav after overlay | text content added here for btn title */
-#circle-design > .overlay:after {
+#circle-design > .overlay:after,
+#circle-dev > .overlay:after{
     position: absolute;
     padding-top: 50% !important;
-    content: 'Design Work';
+    content: '';
     top: -2px;
     left: -2px;
     right: -2px;
@@ -259,7 +260,7 @@ body {
     linear-gradient(to bottom right, rgba(255,240,220,0.5) 5%, rgba(255,240,220,0) 35%, rgba(0,0,0,0.64) 80%, rgba(0,0,0,1) 95%);
     box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
 }
-/*circle active custom background | acts as overlay for this element */
+/*circle active (aboutME_custom background */
 #circle-active > .btn-circle.btn-xl{
       /*background-image: -webkit-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);*/
       /*background-image: -moz-linear-gradient(143deg, #48C6EF 14%, #6f86d6 15%);*/
@@ -277,7 +278,7 @@ body {
 #circle-active > .overlay:after {
     position: absolute;
     padding-top: 50% !important;
-    content: 'About Me';
+    content: '';
     top: -2px;
     left: -2px;
     right: -2px;
