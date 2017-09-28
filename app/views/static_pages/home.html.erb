@@ -5,12 +5,12 @@
         </div>
     </article>
     
-    <article class="container" id="navcircles">
+    <article class="container-fluid" id="navcircles">
         <div class="row-fluid">  
             <ol id="circles-row">
-                <li id="circle-dev"><%= link_to "Development", root_path, :class => "overlay scroll-button3 col-xs-12 col-xs-offset-0 col-sm-3 col-sm-pull-1 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
-                <li id="circle-design"><%= link_to "Design", root_path, :class => "overlay scroll-button2 col-xs-offset-1 col-sm-3 col-sm-offset-0 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
-                <li id="circle-active" class=""><%= link_to "About Me", root_path, :class => "overlay scroll-button col-xs-11 col-sm-3 col-sm-offset-1 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
+                <li class="row" id="circle-dev"><%= link_to "Development", root_path, :class => "overlay scroll-button3 col-xs-11 col-md-6 col-md-pull-6  navcircle-text btn btn-primary btn-circle btn-xl" %></li>
+                <li class=" row-fluid" id="circle-design"><%= link_to "Design", root_path, :class => "overlay scroll-button2 col-sm-12 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
+                <li class="row" id="circle-active" class=""><%= link_to "About Me", root_path, :class => "overlay scroll-button col-xs-11 col-md-6 col-md-push-6 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
             </ol>
         </div>
         <!--<div id="ufo" class="scroll-down orbits container-fluid"> <span id="ray" style=""></span></div> <!-- UFO -->

@@ -152,15 +152,12 @@ body {
 #navcircles{
     display: flex;
     justify-content: center;
-    overflow:hidden !important;
-    background-color:none;
-    min-width:100vw !important;
     background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
 }
 /* ID for navcircles ol - contents navcircle list items - located inside row div */
 #circles-row{
-    width:100vw !important;
-    margin:2em 0!important;
+    /*width:100vw !important;*/
+    margin:2em;
     /*padding: 4em 0;*/
 }
 
