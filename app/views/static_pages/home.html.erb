@@ -1,19 +1,22 @@
-<section class="landing">
+<section class="landing"><!-- Landing Page -->
     <article class="container" id="animatedtext">
         <div class= "row" id="animatedtext-cols">
             <p id="landing-header" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
         </div>
     </article>
     
-    <article class="container-fluid" id="navcircles">
-        <div class="row-fluid">  
-            <ol id="circles-row">
-                <li class="row" id="circle-dev"><%= link_to "Development", root_path, :class => "overlay scroll-button3 col-xs-11 col-md-6 col-md-pull-6  navcircle-text btn btn-primary btn-circle btn-xl" %></li>
-                <li class=" row-fluid" id="circle-design"><%= link_to "Design", root_path, :class => "overlay scroll-button2 col-sm-12 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
-                <li class="row" id="circle-active" class=""><%= link_to "About Me", root_path, :class => "overlay scroll-button col-xs-11 col-md-6 col-md-push-6 navcircle-text btn btn-primary btn-circle btn-xl" %></li>
-            </ol>
-        </div>
-        <!--<div id="ufo" class="scroll-down orbits container-fluid"> <span id="ray" style=""></span></div> <!-- UFO -->
+    <article class="container-fluid " id="landingPageRows">
+        <section class="row landingRow" id="aboutRowLanding">
+            <%= link_to "About Me", root_path, :class => "scroll-button overlay" %>
+        </section>
+        
+        <section class="row landingRow" id="devRowLanding">
+            <%= link_to "Development Work", root_path, :class => "overlay scroll-button3" %>
+        </section>
+        
+        <section class="row landingRow" id="designRowLanding"> 
+            <%= link_to "Design", root_path, :class => "overlay scroll-button2" %>
+        </section>
     </article>
     
     <article id="scrolldown-button-row"  class="container" >
@@ -23,7 +26,7 @@
             </a>
         </div>
     </article>
-</section>
+</section><!-- END landing page section -->
 
 <section id="aboutme-content">
         
