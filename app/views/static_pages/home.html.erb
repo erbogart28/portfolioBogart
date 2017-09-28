@@ -25,219 +25,232 @@
     </article>
 </section>
 
-<section class="aboutme-content">
-    
-    <div class="page-header container"> <!-- page header | heading class adds font styles -->
-        <h1 class="heading">About Me</h1>
-    </div>
-
-
-    <article id="aboutMe" class="row-fluid">
-        <div class="container-fluid"> 
-            <section class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
-                <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
-            </section>
-            <section class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
-                <p>Hello there! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
-                <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM mostly taught me about modern UI/UX design principles and heuristics, which can be very useful to know when evaulating, designing, or developing a site/application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, and JavaScript/jQuery. I have extensive use with Bootstrap, and I'll tend to heavily utilize utility classes to setup a quick and easy grid system.</p> 
-                <p>I love Ruby-on-Rails! It's the first MVC framework I learned for web development, and I feel fully confident in coding the front-end for a Ruby-on-Rails web application. I know my way around the Ruby-on-Rails MVC framework, and I'm not scared to utilize the whole spectrum of the framework to correctly implement partials, views, and layouts. Though, when it comes down to it all, I fell in love with this framework because it allows me to work with ".erb" files - my exact initials. &#128516;</p>   
-            </section>
+<section id="aboutme-content">
+        
+        <div class="page-header container"> <!-- page header | heading class adds font styles -->
+            <h1 class="heading">About Me</h1>
         </div>
-    </article>
-
-   <article class="container"  id="homepageCards">
+    
+    
+        <article id="aboutMe" class="row-fluid">
+            <div class="container-fluid"> 
+                <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
+                    <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
+                </div>
+                <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
+                    <p>Hello there! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
+                    <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM mostly taught me about modern UI/UX design principles and heuristics, which can be very useful to know when evaulating, designing, or developing a site/application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, and JavaScript/jQuery. I have extensive use with Bootstrap, and I'll tend to heavily utilize utility classes to setup a quick and easy grid system.</p> 
+                    <p>I love Ruby-on-Rails! It's the first MVC framework I learned for web development, and I feel fully confident in coding the front-end for a Ruby-on-Rails web application. I know my way around the Ruby-on-Rails MVC framework, and I'm not scared to utilize the whole spectrum of the framework to correctly implement partials, views, and layouts. Though, when it comes down to it all, I fell in love with this framework because it allows me to work with ".erb" files - my exact initials. &#128516;</p>   
+                </div>
+            </div>
+        </article><!-- end aboutme article -- content pertaining to me -->
+    
+    
+    
+    <article id="homepageCards">
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-push-3 col-md-6">
+            <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
-                        <h4 class="card-title">
-                            Contact Me
-                        </h4>
+                        
+                        <div class="card-title">
+                           Contact Me
+                        </div>
+                        
                         <div class="contactText">
                             <p>If you have any questions, please feel free to email me!</p>
                             <p><b>Email:</b> erbogart28@gmail.com</p>
                             <p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>
                             <p><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
-                        <h4 class="card-title">
-                            View My Resume
-                        </h4>
-                        <p class="resumeText">
-                           My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.
-                        </p>
+                        </div>
+                         
+    
                     </div>
-                    <div class="card-read-more">
-                        <%= link_to " View Resume", image_path("resume.jpg"), :target => "_blank", :class => "btn btn-link btn-block" %>
+                </div><!--end card -->
+            </div><!-- end column div -->
+    
+            
+    
+            <div class="col-md-4 col-sm-8 col-sm-push-2">
+                <div class="card">
+                    <div class="card-content">
+                            <div class="card-title">
+                                View My Resume
+                            </div>
+                            <div class="resumeText">
+                                <p>My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
+                            </div>
+                        <div class="card-read-more">
+                            <%= link_to " View Resume", image_path("resume.jpg"), :target => "_blank", :class => "btn btn-link btn-block" %>
+                        </div><!-- end read more -->
                     </div>
-                </div>
-            </div>
-        </div>
-    </article>
+                </div><!--end card -->
+            </div><!-- end column div -->
+        </div><!--end row -->
+    </article> <!-- end homepage cards article within aboutme-content section -->
 
-        <div class="row">
-            <a class="scroll-down3" href="#" address="true">
-                <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Development Section" ></div>
-            </a>
-        </div>
+    <div class="row">
+        <a class="scroll-down3" href="#" address="true">
+            <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Development Section" ></div>
+        </a>
+    </div>
 
- </section>
+</section><!-- end aboutme-content section -->
  
 
 
-<section class="dev-content">
-    <div class="container">
-        
-        <div class="page-header"> <!-- page header | heading class adds font styles -->
-            <h1 class="heading">Development Work</h1>
-        </div>
+<section class="container"  id="dev-content">
     
-        <div class="row">
-            <div class="col-xs-12 col-sm-4">
-                <div class="card">
-                    <a class="img-card" href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">
-                    <%= image_tag "depaul-logo.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
-                    </a>
-                    
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_"> Computer Science Capstone | When If Project</a>
-                        </h4>
-                        <p class="">fsdfsdf</p> 
-                        <p class ="fakNewsAbout">sdfsdf </p>
-                    </div>
-                    
-                    <div class="card-read-more">
-                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="_blank" class="btn btn-link btn-block">View Site Here</a>
-                    </div>
+    <div class="page-header"> 
+        <h1 class="heading">Development Work</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">
+                <%= image_tag "depaul-logo.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
+                </a>
+                
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_"> Computer Science Capstone | When If Project</a>
+                    </h4>
+                    <p class="">fsdfsdf</p> 
+                    <p class ="fakNewsAbout">sdfsdf </p>
+                </div>
+                
+                <div class="card-read-more">
+                    <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="_blank" class="btn btn-link btn-block">View Site Here</a>
                 </div>
             </div>
-            
-            <div class="col-xs-12 col-sm-4">
-                <div class="card">
-                    <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
-                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
-                    </a>
-                   
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
-                        </h4>
-                        <p class="sharkosAbout">This was the first website I developed and designed.</p>
-                        <p class="sharkosAbout">This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
-                    </div>
-                    
-                    <div class="card-read-more">
-                        <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank" class="btn btn-link btn-block">
-                            View Site Here
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-xs-12 col-sm-4">
-                <div class="card">
-                    <a class="img-card" href="https://sharkos-rails.herokuapp.com/" target="_blank">
-                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none"%>
-                    </a>
-                    
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="https://sharkos-rails.herokuapp.com/" target="_blank">Sharko's Updated</a>
-                        </h4>
-                        <p class="sharkos-two-about">
-                            I later revisited my attempt at creating a Sharko website. This time around I was far more equipped to create a responsive and clean site. The site is using Ruby-on-Rails, with Bootstrap to pull the front-end together. User are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. 
-                        </p>
-                    </div>
-                    
-                    <div class="card-read-more">
-                        <a href="https://sharkos-rails.herokuapp.com/" target="_blank" class="btn btn-link btn-block">
-                            View site here
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-        </div><!-- END row -->
-    </div><!-- END container -->
-    
-    
-    <div class="container" id="developmentWork">
-        <div class="row">
-            
-            <div class="col-xs-12 col-sm-4">
-                <div class="card">
-                  <a class="img-card" href="training.greatmoods.com" target="blank_">
-                    <%= image_tag "formPic.png"%>
-                  </a>
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="training.greatmoods.com" target="_blank">GreatMoods Internship Work</a>
-                          </a>
-                        </h4>
-                        <p class="">
-                            I cannot show the hosted code, bt I am able to show and explain what I have developed for GreatMoods thus far.   
-                        </p>
-                    </div>
-                    <div class="card-read-more">
-                        <a href="" target="blank_" class="btn btn-link btn-block">
-                            Read More About My Experiences
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <div class="card">
-                  <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
-                    <%= image_tag "calcPic.png", :style => "object-fit:contain"%>
-                  </a>
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">Baic JS User Input Calculations
-                          </a>
-                        </h4>
-                        <p class="">
-                            Claulates the cost of a movie trip depending on user inputted values. 
-                        </p>
-                    </div>
-                    <div class="card-read-more">
-                        <a href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_" class="btn btn-link btn-block">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <div class="card">
-                    <a class="img-card" href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_">
-                    <%= image_tag "fakeNewsPic.png" %>
-                    </a>
-                    
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_"> Fake News Bootstrap</a>
-                        </h4>
-                        <p class="">Utilized Bootstrap for a responsive design.</p> 
-                        <p class ="fakNewsAbout">For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first learned about bootstrap. </p>
-                    </div>
-                    
-                    <div class="card-read-more">
-                        <a href="https://evanbogart.com/examples/bootstrapFinal/" target="_blank" class="btn btn-link btn-block">View Site Here</a>
-                    </div>
-                </div>
-            </div>
-            </div><!-- end row -->
-            
-        <div class="row">
-            <a class="scroll-down2" href="#" address="true">
-                <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Design Section" ></div>
-            </a>
         </div>
         
-     </div><!-- end container -->
- </section><!--end design section -->
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
+                <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
+                </a>
+               
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
+                    </h4>
+                    <p class="sharkosAbout">This was the first website I developed and designed.</p>
+                    <p class="sharkosAbout">This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
+                </div>
+                
+                <div class="card-read-more">
+                    <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank" class="btn btn-link btn-block">
+                        View Site Here
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="https://sharkos-rails.herokuapp.com/" target="_blank">
+                <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none"%>
+                </a>
+                
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="https://sharkos-rails.herokuapp.com/" target="_blank">Sharko's Updated</a>
+                    </h4>
+                    <p class="sharkos-two-about">
+                        I later revisited my attempt at creating a Sharko website. This time around I was far more equipped to create a responsive and clean site. The site is using Ruby-on-Rails, with Bootstrap to pull the front-end together. User are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. 
+                    </p>
+                </div>
+                
+                <div class="card-read-more">
+                    <a href="https://sharkos-rails.herokuapp.com/" target="_blank" class="btn btn-link btn-block">
+                        View site here
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div><!-- END row -->
+</section><!-- END container -->
 
 
-<section class="design-content">
-     <div class="container">
+<section class="container">
+    <div class="row">
+        
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+              <a class="img-card" href="training.greatmoods.com" target="blank_">
+                <%= image_tag "formPic.png"%>
+              </a>
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="training.greatmoods.com" target="_blank">GreatMoods Internship Work</a>
+                      </a>
+                    </h4>
+                    <p class="">
+                        I cannot show the hosted code, bt I am able to show and explain what I have developed for GreatMoods thus far.   
+                    </p>
+                </div>
+                <div class="card-read-more">
+                    <a href="" target="blank_" class="btn btn-link btn-block">
+                        Read More About My Experiences
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+              <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
+                <%= image_tag "calcPic.png", :style => "object-fit:contain"%>
+              </a>
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">Baic JS User Input Calculations
+                      </a>
+                    </h4>
+                    <p class="">
+                        Claulates the cost of a movie trip depending on user inputted values. 
+                    </p>
+                </div>
+                <div class="card-read-more">
+                    <a href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_" class="btn btn-link btn-block">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_">
+                <%= image_tag "fakeNewsPic.png" %>
+                </a>
+                
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_"> Fake News Bootstrap</a>
+                    </h4>
+                    <p class="">Utilized Bootstrap for a responsive design.</p> 
+                    <p class ="fakNewsAbout">For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first learned about bootstrap. </p>
+                </div>
+                
+                <div class="card-read-more">
+                    <a href="https://evanbogart.com/examples/bootstrapFinal/" target="_blank" class="btn btn-link btn-block">View Site Here</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end CONTENT row -->
+
+    <div class="row">
+        <a class="scroll-down2" href="#" address="true">
+            <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Design Section" ></div>
+        </a>
+    </div>
+
+</section><!--end design section -->
+
+
+<section id="design-content" class="container">
         
         <div class="page-header"> <!-- page header | heading class adds font styles -->
             <h1 class="heading">Design Work</h1>
@@ -364,72 +377,4 @@
                 </div><!-- end column div -->
             </div><!-- end row -->
         </div><!-- end container -->
-
-   <div class="container"  id="designWork">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="card">
-                            <a class="img-card" href="">
-                            <img src="" />
-                          </a>
-                            <div class="card-content">
-                                <h4 class="card-title">
-                                    <a href=""> Example
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    asdfasdfasdfasdfasdfsad
-                                </p>
-                            </div>
-                            <div class="card-read-more">
-                                <a href="" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="card">
-                            <a class="img-card" href="">
-                            <img src="" />
-                          </a>
-                            <div class="card-content">
-                                <h4 class="card-title">
-                                    <a href="">Example
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    asdfasdfsafasdfasdfasdfasfsadf
-                                </p>
-                            </div>
-                            <div class="card-read-more">
-                                <a href="" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="card">
-                            <a class="img-card" href="">
-                            <img src="" />
-                          </a>
-                            <div class="card-content">
-                                <h4 class="card-title">
-                                    <a href="">Example
-                                  </a>
-                                </h4>
-                                <p class="">
-                                   asdfasdfasdfasfasfdasdfasdfsafasf
-                                </p>
-                            </div>
-                            <div class="card-read-more">
-                                <a href="" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                </div>
-            </div><!-- end row -->
-     </div><!-- end container -->
  </section><!--end design section -->

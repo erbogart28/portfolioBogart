@@ -609,11 +609,11 @@ body {
     margin:3em 0;
 }
 #homepageCards{
-    margin-bottom:5em;
+    padding-top: 6em;
     background: #ECE9E6;
     background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);
     background: linear-gradient(to top, #FFFFFF, #ECE9E6);
-    width:100vw;
+
 }
 /********************************************/
 /************  Dev Page *********************/
