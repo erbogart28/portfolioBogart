@@ -139,6 +139,7 @@ body {
     line-height: 0em !important;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+
 /* default circle nav overlay */
 .landingRow {
     height: 15rem;
@@ -158,13 +159,19 @@ body {
     /* padding: 125px !important; */
     /* -webkit-animation: circles-rotation 30s linear infinite; */
     width: 100vw;
-    display: inline-flex;
+    display: inline-block;
     position: relative;
     background: url(http://rojo2.com/img/texture-01.png) repeat-x;
-    background-size: cover;
-    padding: 500px !important;
+    /*background-size: cover;*/
+    /*padding: 500px !important;*/
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size:6rem;
+    line-height:8rem;
+
 }
-/* default circle nav before overlay */
+
 #aboutRowLanding > .overlay:after {
     content: 'About Me';
     position: absolute;
@@ -172,6 +179,7 @@ body {
     left: -4px;
     right: -4px;
     bottom: -4px;
+
 
     background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
     background-size: cover;
@@ -193,7 +201,6 @@ body {
 
 #designRowLanding > .overlay:after {
     content: 'Design Work';
-    font-size:6em;
     position: absolute;
     top: -4px;
     left: -4px;
@@ -211,7 +218,7 @@ body {
         background-position: 0% 0%;
     }
     to {
-        background-position: -1000% 0%;
+        background-position: -10000% 200%;
     }
 }
 @keyframes circles-rotation {
@@ -219,7 +226,7 @@ body {
         background-position: 0% 0%;
     }
     to {
-        background-position: -1000% 0%;
+        background-position: -10000% 200%;
     }
 }
 
