@@ -37,11 +37,13 @@ article{
   overflow:hidden;
 }
 h1.heading {
-  color: #000000;
+  color: black;
   font-size: 3.25em;
   font-weight: 800;
   height:auto;
+  padding: 1.5rem 0 0 2rem;
 }
+
 /*-------------------------------------------------- */
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -60,11 +62,12 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
     background: #000428;
-    background: -webkit-linear-gradient(to right, #000428, #004e92);
-    background: linear-gradient(to right, #000428, #004e92);
+    background: -webkit-linear-gradient(to left, #000428, #004e92);
+    background: linear-gradient(to left, #000428, #004e92);
     border-color: #3e3f3a;
   padding-top:1em;
 }
+
 /*#######################################
 #  Landing page and elements definied 
 ########################################*/
@@ -90,10 +93,6 @@ body {
     margin-bottom:-1.5em;
 }
 
- /*div id for the start of the ROW and the start of columns within the div for animated text  */
-/*#animatedtext-cols {*/
-/*    right:0px;*/
-/*}*/
  /*ID for the P tag which utilizes the animated text itself | first header seen on page */
 #landing-header {
   	font: 500 22px/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -102,7 +101,6 @@ body {
     display:block !important;
   	justify-content:center;
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
-     /*Clip Background Image */
     color:black;
 }
 #landing-header span {
@@ -123,7 +121,12 @@ body {
     	-webkit-transform: translate3d(0px,0px,0px);
     	/*-webkit-backface-visibility: hidden;*/
 }
-
+/*.page-header{*/
+/*    background: #000428;*/
+/*    background: -webkit-linear-gradient(to left, #000428, #004e92);*/
+/*    background: linear-gradient(to left, #000428, #004e92);*/
+/*    border-color: #3e3f3a;*/
+/*}*/
 /*###############################
    Nav-circles | Landing / Homepage only
 #################################*/
@@ -142,38 +145,30 @@ body {
 
 /* default circle nav overlay */
 .landingRow {
-    height: 15rem;
-    /*-webkit-animation: circles-rotation 30s linear infinite;*/
+    /*-webkit-animation: cloud-animations 30s linear infinite;*/
 }
 /* default circle nav before overlay */
 
 .overlay {
-    height: 15rem;
-    /* width: 10vw; */
-    /* height: 10vw; */
-    /* border-radius: 50%; */
-    /* display: inherit; */
-    /* position: relative; */
-    /* background: #303030 url(http://rojo2.com/img/texture-01.png) repeat-x; */
-    /* background-size: cover; */
-    /* padding: 125px !important; */
-    /* -webkit-animation: circles-rotation 30s linear infinite; */
+    height: 10rem;
     width: 100vw;
     display: inline-block;
     position: relative;
     background: url(http://rojo2.com/img/texture-01.png) repeat-x;
     /*background-size: cover;*/
-    /*padding: 500px !important;*/
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     letter-spacing: 1px;
     font-size:6rem;
-    line-height:8rem;
+    line-height:10rem;
+}
 
+.overlay:hover{
+  color:black;
 }
 
 #aboutRowLanding > .overlay:after {
-    content: 'About Me';
+    content: '- About Me -';
     position: absolute;
     top: -4px;
     left: -4px;
@@ -181,39 +176,41 @@ body {
     bottom: -4px;
 
 
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
+    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
     background-size: cover;
-      -webkit-animation: circles-rotation 30s linear infinite;
+      -webkit-animation: cloud-animations 30s linear infinite;
 }
 
 #devRowLanding > .overlay:after {
-    content: 'Development Work';
+    content: '- Dev Work -';
     position: absolute;
     top: -4px;
     left: -4px;
     right: -4px;
     bottom: -4px;
 
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
+    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
     background-size: cover;
-      -webkit-animation: circles-rotation 30s linear infinite;
+      -webkit-animation: cloud-animations 30s linear infinite;
 }
 
 #designRowLanding > .overlay:after {
-    content: 'Design Work';
+    content: '- Design Work -';
     position: absolute;
     top: -4px;
     left: -4px;
     right: -4px;
     bottom: -4px;
-
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
+    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
     background-size: cover;
-      -webkit-animation: circles-rotation 30s linear infinite;
+      -webkit-animation: cloud-animations 30s linear infinite;
+      -moz-animation: cloud-animations 30s linear infinite;
+      -o-animation: cloud-animations 30s linear infinite; 
+      animation: cloud-animations 30s linear infinite;
 }
 
 
-@-webkit-keyframes circles-rotation {
+@-webkit-keyframes cloud-animations {
     from {
         background-position: 0% 0%;
     }
@@ -221,7 +218,7 @@ body {
         background-position: -10000% 200%;
     }
 }
-@keyframes circles-rotation {
+@keyframes cloud-animations {
     from {
         background-position: 0% 0%;
     }
@@ -261,16 +258,16 @@ body {
     height: 100px;
     line-height: 100px;
     width: 100px;
-  /*button animations */
-    -webkit-animation:scroll-down-popup 2s 2 !important;
-    -moz-animation: scroll-down-popup 2s 2 !important; 
-    -o-animation: scroll-down-popup 2s 2 !important; 
-    animation: scroll-down-popup 2s 2 !important;
-    
-    -webkit-transition: bottom 1s ease-in !important;
-    -moz-transition: bottom 1s ease-in !important;
-    -o-transition: bottom 1s ease-in !important;
-    transition: bottom 1s ease-in !important; 
+      /* section down button animations */
+      -webkit-animation:scroll-down-popup 2s 2 !important;
+      -moz-animation: scroll-down-popup 2s 2 !important; 
+      -o-animation: scroll-down-popup 2s 2 !important; 
+      animation: scroll-down-popup 2s 2 !important;
+      
+      -webkit-transition: bottom 1s ease-in !important;
+      -moz-transition: bottom 1s ease-in !important;
+      -o-transition: bottom 1s ease-in !important;
+      transition: bottom 1s ease-in !important; 
 }
 /*scrolldown button keyframes defined | show from bottom */
 @-webkit-keyframes scroll-down-popup {
@@ -494,11 +491,11 @@ body {
 #accordion-container{
   margin-top:1em;
 }
-/*full screen display modal */
+/*full screen display modal ** commented out margin and width which allow full screen, here if needed later */
 .modal-dialog {
-  width: 100%;
+  /*width: 100%;*/
   height: 100%;
-  margin: 0;
+  /*margin: 0;*/
   padding: 0;
 }
 .fa-expand {
@@ -830,7 +827,8 @@ body {
     margin-bottom:2em;
   }
 } /* end min-width: 620 and max-width: 768px */
-/* mobile focus */
+
+/* mobile phone screen size focus - 620px and below */
 @media(max-width: 620px) and (min-width: 320px){
   .landing {
     background-color:white;
@@ -861,6 +859,16 @@ body {
     font-family: "Roboto";
     border-radius: 5px;
     z-index:10 !important;
+  }
+  #devRowLanding,
+  #aboutRowLanding{
+    margin-bottom:3em;
+    
+  }
+  .overlay{
+    font-size:4rem;
+    height:6rem;
+    line-height: 6.5rem;
   }
   .scroll-down.visible {
     bottom: 5em !important;
@@ -917,6 +925,9 @@ body {
     display: block;
     line-height:44px;
     letter-spacing:6px;
+  }
+  .overlay{
+    font-size:4rem;
   }
   /* text within nav circles */
   .navcircle-text {
