@@ -155,9 +155,9 @@ body {
 #dev-content,
 #design-content{
     background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -webkit-linear-gradient(top, #FFFFFF, #ECE9E6);
+    background: -moz-linear-gradient(top, #FFFFFF, #ECE9E6);
+    background: -o-linear-gradient(top, #FFFFFF, #ECE9E6);
     background: linear-gradient(to top, #FFFFFF, #ECE9E6);
     border-bottom: .01px solid black;
 }
@@ -427,6 +427,9 @@ body {
 }
 #aboutMe{
     background-color:white;
+    /*below creates overhang to card section, but title is still full width */
+    /*width:100vw;*/
+    /*margin-left: -2rem;*/
 }
 #aboutMeText{
     font-size:16px;
@@ -439,10 +442,6 @@ body {
 }
 #homepageCards{
     padding-top: 6em;
-    background: #ECE9E6;
-    background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to top, #FFFFFF, #ECE9E6);
-
 }
 /********************************************/
 /************  Dev Page *********************/

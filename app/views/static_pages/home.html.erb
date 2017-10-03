@@ -34,13 +34,13 @@
             <h1 class="heading">About Me</h1>
         </div>
 
-        <article id="aboutMe"> 
+        <article id="aboutMe" class="container-fluid">
             <div class="row">
                 <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
                     <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
-                    <p>Hello there! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
+                    <p>Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
                     <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM mostly taught me about modern UI/UX design principles and heuristics, which can be very useful to know when evaulating, designing, or developing a site/application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, and JavaScript/jQuery. I have extensive use with Bootstrap, and I'll tend to heavily utilize utility classes to setup a quick and easy grid system.</p> 
                     <p>I love Ruby-on-Rails! It's the first MVC framework I learned for web development, and I feel fully confident in coding the front-end for a Ruby-on-Rails web application. I know my way around the Ruby-on-Rails MVC framework, and I'm not scared to utilize the whole spectrum of the framework to correctly implement partials, views, and layouts. Though, when it comes down to it all, I fell in love with this framework because it allows me to work with ".erb" files - my exact initials. &#128516;</p>   
                 </div>
@@ -62,7 +62,7 @@
                         <div class="contactText">
                             <p>If you have any questions, please feel free to email me!</p>
                             <p><b>Email:</b> erbogart28@gmail.com</p>
-                            <p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>
+                            <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
                             <p><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
                         </div>
                          
@@ -83,7 +83,7 @@
                                 <p>My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
                             </div>
                         <div class="card-read-more">
-                            <%= link_to " View Resume", image_path("resume.jpg"), :target => "_blank", :class => "btn btn-link btn-block" %>
+                            <%= link_to " View Resume", image_path("resumePortfolioSite.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
                         </div><!-- end read more -->
                     </div>
                 </div><!--end card -->
@@ -127,37 +127,27 @@
                     </div>
                 </div><!-- END CARD 1 -->
             </div><!-- END col placement -->
-            
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 2 | Sharkos BBQ First Go Through --->
-                    <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
-                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
+                    <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
+                        <%= image_tag "headshot1.jpg", :style => "object-fit:contain"%>
                     </a>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
-                        </h4>
-                        <p>This was the first website I developed and designed.</p>
-                        <p>This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
+                        <h4 class="card-title">Portfolio Site</h4>
+                        <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the database and models in some sort of way. I've gone through many diferent itterations for this portfolio site - most of this code and process can be seen through my seperation of branches.</p>
                     </div>
-                    
-                    <div class="card-read-more"><!-- github code view / removed site option as the site is not really worth seeing in it's current state, still might put it in here though-->
-                        <!--<a href="" target="_blank" class="btn btn-link btn-block">-->
-                        <!--    View site-->
-                        <!--</a>-->
-                        <a href="https://github.com/erbogart28/sharkosPureCSShtml" target="_blank" class="btn btn-link btn-block">
-                            <i class="fa fa-github"></i> Source Code
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/portfolioBogart" target="blank_" class="btn btn-link btn-block">
+                             <i class="fa fa-github"></i> Source Code
                         </a>
                     </div>
                 </div><!-- END CARD 2 -->
             </div><!-- END col placement -->
-            
             <div class="col-xs-12 col-sm-4">
                 <div class="card"> <!-- CARD 3 | Sharkos rails -->
                     <a class="img-card" href="https://sharkos-rails.herokuapp.com/" target="_blank">
                     <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none"%>
                     </a>
-                    
                     <div class="card-content">
                         <h4 class="card-title">
                             <a href="https://sharkos-rails.herokuapp.com/" target="_blank">Sharko's Updated</a>
@@ -196,16 +186,22 @@
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 5 PORTFOLIO SITE -->
-                    <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
-                        <%= image_tag "headshot1.jpg", :style => "object-fit:contain"%>
+                    <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
+                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
                     </a>
                     <div class="card-content">
-                        <h4 class="card-title">Portfolio Site</h4>
-                        <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the database and models in some sort of way. I've gone through many diferent itterations for this portfolio site - most of this code and process can be seen through my seperation of branches.</p>
+                        <h4 class="card-title">
+                            <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
+                        </h4>
+                        <p>This was the first website I developed and designed.</p>
+                        <p>This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
                     </div>
-                    <div class="card-read-more"><!-- view Github source code -->
-                        <a href="https://github.com/erbogart28/portfolioBogart" target="blank_" class="btn btn-link btn-block">
-                             <i class="fa fa-github"></i> Source Code
+                    <div class="card-read-more"><!-- github code view / removed site option as the site is not really worth seeing in it's current state, still might put it in here though-->
+                        <!--<a href="" target="_blank" class="btn btn-link btn-block">-->
+                        <!--    View site-->
+                        <!--</a>-->
+                        <a href="https://github.com/erbogart28/sharkosPureCSShtml" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
                         </a>
                     </div>
                 </div><!-- END CARD 5 -->
