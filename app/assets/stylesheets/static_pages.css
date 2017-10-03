@@ -61,11 +61,11 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-    background: #000428;
-    background: -webkit-linear-gradient(to left, #000428, #004e92);
-    background: linear-gradient(to left, #000428, #004e92);
-    border-color: #3e3f3a;
-  padding-top:1em;
+    background-image: -webkit-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: -moz-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: -o-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+    padding-top:1em;
 }
 
 /*#######################################
@@ -79,9 +79,11 @@ body {
     /*color: rgba(255,255,255,.25); */
     text-align: center; 
     margin: 0;
-    background: #ECE9E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to top, #FFFFFF, #ECE9E6);
     border-bottom: .01px solid black;
 }
 /* article ID for animated text CONTAINER */
@@ -103,6 +105,7 @@ body {
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
     color:black;
 }
+/* NON MAIN INTRO TEXT - words below and above introduction */
 #landing-header span {
   	font: 700 60px/1.2 "Oswald", sans-serif;
     letter-spacing: 8px;  	
@@ -143,28 +146,41 @@ body {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-/* default circle nav overlay */
+/* ladning page rows */
 .landingRow {
-    /*-webkit-animation: cloud-animations 30s linear infinite;*/
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 /* default circle nav before overlay */
-
+#aboutme-content,
+#dev-content,
+#design-content{
+    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to top, #FFFFFF, #ECE9E6);
+    border-bottom: .01px solid black;
+}
 .overlay {
     height: 10rem;
     width: 100vw;
-    display: inline-block;
+    display: block;
     position: relative;
-    background: url(http://rojo2.com/img/texture-01.png) repeat-x;
+    background-image: -webkit-linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
+    background-image: -moz-linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
+    background-image: -o-linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
     /*background-size: cover;*/
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     letter-spacing: 1px;
-    font-size:6rem;
+    font-size:5rem;
     line-height:10rem;
 }
 
 .overlay:hover{
-  color:black;
+  /*color:#AEAEAE;*/
+    opacity: .75;
 }
 
 #aboutRowLanding > .overlay:after {
@@ -195,7 +211,7 @@ body {
 }
 
 #designRowLanding > .overlay:after {
-    content: '- Design Work -';
+    content: '- UI/UX Work -';
     position: absolute;
     top: -4px;
     left: -4px;
@@ -410,10 +426,7 @@ body {
     margin-top:2em;
 }
 #aboutMe{
-    margin-bottom:2em;
     background-color:white;
-    width:100vw;
-    height:auto;
 }
 #aboutMeText{
     font-size:16px;

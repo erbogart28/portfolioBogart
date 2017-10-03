@@ -9,4 +9,8 @@ class StaticPagesController < ApplicationController
     
     def design
     end
+    
+    def sharkoWires
+        render layout: "homelayout"
+    end
 end

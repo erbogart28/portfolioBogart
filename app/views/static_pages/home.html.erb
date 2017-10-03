@@ -28,16 +28,14 @@
     </article>
 </section><!-- END landing page section -->
 
-<section id="aboutme-content">
+<section class="container-fluid" id="aboutme-content">
         
-        <div class="container"><!-- container wrap for page header -->
-            <div class="page-header"> <!-- page header | heading class adds font styles -->
-                <h1 class="heading">About Me</h1>
-            </div>
+        <div class="page-header"> <!-- page header | heading class adds font styles -->
+            <h1 class="heading">About Me</h1>
         </div>
-        
-        <article id="aboutMe" class="row-fluid">
-            <div class="container-fluid"> 
+
+        <article id="aboutMe"> 
+            <div class="row">
                 <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
                     <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
                 </div>
@@ -101,282 +99,243 @@
 
 </section><!-- end aboutme-content section -->
  
-<section class="container"  id="dev-content">
-    
-    <div class="page-header"> 
+<section class="container-fluid"  id="dev-content">
+    <div class="page-header"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">Dev Work</h1>
     </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-                <a class="img-card" href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">
-                <%= image_tag "depaul-logo.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
-                </a>
-                
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_"> Computer Science Capstone | When If Project</a>
-                    </h4>
-                    <p class="">fsdfsdf</p> 
-                    <p class ="fakNewsAbout">sdfsdf </p>
-                </div>
-                
-                <div class="card-read-more">
-                    <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="_blank" class="btn btn-link btn-block">View Site Here</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-                <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
-                <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
-                </a>
-               
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
-                    </h4>
-                    <p class="sharkosAbout">This was the first website I developed and designed.</p>
-                    <p class="sharkosAbout">This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
-                </div>
-                
-                <div class="card-read-more">
-                    <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank" class="btn btn-link btn-block">
-                        View Site Here
+    <article class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 1 | COMP SCI CAPSTONE -->
+                    <a class="img-card" href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">
+                    <%= image_tag "depaul-logo.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
                     </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-                <a class="img-card" href="https://sharkos-rails.herokuapp.com/" target="_blank">
-                <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none"%>
-                </a>
-                
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="https://sharkos-rails.herokuapp.com/" target="_blank">Sharko's Updated</a>
-                    </h4>
-                    <p class="sharkos-two-about">
-                        I later revisited my attempt at creating a Sharko website. This time around I was far more equipped to create a responsive and clean site. The site is using Ruby-on-Rails, with Bootstrap to pull the front-end together. User are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. 
-                    </p>
-                </div>
-                
-                <div class="card-read-more">
-                    <a href="https://sharkos-rails.herokuapp.com/" target="_blank" class="btn btn-link btn-block">
-                        View site here
+                    <div class="card-content">
+                        <h4 class="card-title">
+                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">Computer Science Capstone | When If Project</a>
+                        </h4>
+                        <p>fsdfsdf</p> 
+                        <p>sdfsdf </p>
+                    </div>
+                    <div class="card-read-more"><!-- view site -->
+                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="_blank" class="btn btn-link btn-block"> View site</a>
+                    </div> 
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/CS-Capstone-Final" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 1 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 2 | Sharkos BBQ First Go Through --->
+                    <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
+                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
                     </a>
-                </div>
-            </div>
-        </div>
-        
-    </div><!-- END row -->
-</section><!-- END container -->
-
-
-<section class="container">
-    <div class="row">
-        
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-              <a class="img-card" href="training.greatmoods.com" target="blank_">
-                <%= image_tag "formPic.png"%>
-              </a>
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="training.greatmoods.com" target="_blank">GreatMoods Internship Work</a>
-                      </a>
-                    </h4>
-                    <p class="">
-                        I cannot show the hosted code, bt I am able to show and explain what I have developed for GreatMoods thus far.   
-                    </p>
-                </div>
-                <div class="card-read-more">
-                    <a href="" target="blank_" class="btn btn-link btn-block">
-                        Read More About My Experiences
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
+                        </h4>
+                        <p>This was the first website I developed and designed.</p>
+                        <p>This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
+                    </div>
+                    
+                    <div class="card-read-more"><!-- github code view / removed site option as the site is not really worth seeing in it's current state, still might put it in here though-->
+                        <!--<a href="" target="_blank" class="btn btn-link btn-block">-->
+                        <!--    View site-->
+                        <!--</a>-->
+                        <a href="https://github.com/erbogart28/sharkosPureCSShtml" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 2 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"> <!-- CARD 3 | Sharkos rails -->
+                    <a class="img-card" href="https://sharkos-rails.herokuapp.com/" target="_blank">
+                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none"%>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-              <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
-                <%= image_tag "calcPic.png", :style => "object-fit:contain"%>
-              </a>
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">Baic JS User Input Calculations
-                      </a>
-                    </h4>
-                    <p class="">
-                        Claulates the cost of a movie trip depending on user inputted values. 
-                    </p>
-                </div>
-                <div class="card-read-more">
-                    <a href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_" class="btn btn-link btn-block">
-                        Read More
+                    
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="https://sharkos-rails.herokuapp.com/" target="_blank">Sharko's Updated</a>
+                        </h4>
+                        <p>I later revisited my attempt at creating a Sharko website. This time around I was far more equipped to create a responsive and clean site. I developed this site using Ruby-on-Rails, and with CSS/Bootstrap to pull the front-end together. I created role based permissions and page views, an ordering system, user sign-ups, and user sessions. Users are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. </p>
+                    </div>
+                    <div class="card-read-more"> <!-- view site -->
+                        <a href="https://sharkos-rails.herokuapp.com/" target="_blank" class="btn btn-link btn-block">View site</a>
+                    </div>
+                    <div class="card-read-more"><!-- github code view -->
+                        <a href="https://github.com/erbogart28/sharko-web-dev-2" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 3 -->
+            </div><!-- END col placement -->
+        </div><!-- END row  1 -->
+    
+        <div class="row"><!-- START ROW 2 | DEVELOPMENT -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 4 | Greatmoods Work -->
+                  <a class="img-card" href="training.greatmoods.com" target="blank_">
+                    <%= image_tag "formPic.png"%>
+                  </a>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="training.greatmoods.com" target="_blank">GreatMoods Internship Work</a>
+                        </h4>
+                        <p> This was an interesting internship to say the least! I learned a lot: how to communicate effecticely and express my opionins on design choices, how to compromise on ideas depedning on what the boss hoped to see, how to best collaborate remotely. I did a LOT of work, and ended up being the only front-end dev, even though I was expecting to mentored or led by at least one other front-end developer. At the end of the day I was tasked with redeveloping the whole entire site based off the current site GreatMoods.com, which is completely unresponsive and outdated. I would've been able to complete full site responsiveness, but leadership issues and redeveloping 100+ pages by myself as an unpaid intern led to complications for reaching the finish line. </p>
+                        <p>I was able to learn a lot mainly because I was tasked to do so much, while having very little support or direction. I took the good with the bad, and in the end I feel I've come out a strong coder. </p>
+                    </div>
+                    <div class="card-read-more">
+                        <a href="" target="blank_" class="btn btn-link btn-block">View My Work</a>
+                    </div>
+                </div><!-- END CARD 4 -->
+            </div><!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 5 PORTFOLIO SITE -->
+                    <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
+                        <%= image_tag "headshot1.jpg", :style => "object-fit:contain"%>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-                <a class="img-card" href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_">
-                <%= image_tag "fakeNewsPic.png" %>
-                </a>
-                
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_"> Fake News Bootstrap</a>
-                    </h4>
-                    <p class="">Utilized Bootstrap for a responsive design.</p> 
-                    <p class ="fakNewsAbout">For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first learned about bootstrap. </p>
-                </div>
-                
-                <div class="card-read-more">
-                    <a href="https://evanbogart.com/examples/bootstrapFinal/" target="_blank" class="btn btn-link btn-block">View Site Here</a>
-                </div>
-            </div>
-        </div>
-    </div><!-- end CONTENT row -->
-
-    <!--<div class="row">-->
+                    <div class="card-content">
+                        <h4 class="card-title">Portfolio Site</h4>
+                        <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the database and models in some sort of way. I've gone through many diferent itterations for this portfolio site - most of this code and process can be seen through my seperation of branches.</p>
+                    </div>
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/portfolioBogart" target="blank_" class="btn btn-link btn-block">
+                             <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 5 -->
+            </div><!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 6 | Fake news bootstrap -->
+                    <a class="img-card" href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_">
+                    <%= image_tag "fakeNewsPic.png" %>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_"> Fake News Bootstrap</a>
+                        </h4>
+                        <p>Utilized Bootstrap for a responsive design.</p> 
+                        <p>For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first learned about bootstrap. </p>
+                    </div>
+                    <div class="card-read-more">
+                        <a href="https://evanbogart.com/examples/bootstrapFinal/" target="_blank" class="btn btn-link btn-block">
+                            View site
+                        </a>
+                    </div>
+                    <div class="card-read-more">
+                        <a href="https://github.com/erbogart28/fakenewsBootstrap" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div><!-- end read more -->
+                </div><!--  END CARD 6 -->
+            </div><!-- END column placement -->
+        </div><!-- END DEVELOPMENT ROW 2-->
+    <!-- SCROLL DOWN BUTTON REMOVED -- Scrolling should suffice as opposed to having a scroll down button like on the landing page -- leaving just in case!!
+    <div class="row">-->
     <!--    <a class="scroll-down2" href="#" address="true">-->
     <!--        <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Design Section" ></div>-->
     <!--    </a>-->
     <!--</div>-->
+    </article><!-- end DEV cards container / article -->
+</section><!--end dev section -->
 
-</section><!--end design section -->
 
-
-<section id="design-content" class="container">
-        
-        <div class="page-header"> <!-- page header | heading class adds font styles -->
-            <h1 class="heading">Design Work</h1>
-        </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="card">
-                        <a class="img-card" href="/static_pages/sharkoWires">
+<section id="design-content" class="container-fluid">
+    <div class="page-header"> <!-- page header | heading class adds font styles -->
+        <h1 class="heading">UI/UX Work</h1>
+    </div>
+    <article class="container" id="designCards"><!-- design cards section article / container -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 1 | sharko Wireframes -->
+                    <a class="img-card" href="/static_pages/sharkoWires">
                         <%= image_tag "sharkoWire1.JPG" %>
-                        </a>
-                        
-                        <div class="card-content">
-                            <h4 class="card-title">
-                                <a href="/static_pages/sharkoWires"> Sharko's Wireframe</a>
-                            </h4>
-                            <p class="sharkoWireText">Before developing the site for Shako's BBQ, I created these wireframes. This was not my first time creating wireframes, and I was a bit ambitious in my designs considering the coding knowledge I had for web development at this time. It was a fun challenge to try and develop the site as closely as I could based off these wireframes.</p>
-                        </div>
-                        
-                        <div class="card-read-more">
-                            <a class="btn btn-link btn-block" href="/static_pages/sharkoWires">See all wireframes</a>
-                        </div>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="/static_pages/sharkoWires"> Sharko's Wireframe</a>
+                        </h4>
+                        <p class="sharkoWireText">Before developing the site for Shako's BBQ, I created these wireframes. This was not my first time creating wireframes, and I was a bit ambitious in my designs considering the coding knowledge I had for web development at this time. It was a fun challenge to try and develop the site as closely as I could based off these wireframes.</p>
                     </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-4">
-                    <div class="card">
-                        
-                        <a class="img-card" href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_" >
-                        <%= image_tag "fireflyLogo.png", :style => "object-fit:contain"%>
-                        </a>
-                        
-                        <div class="card-content">
-                            <h4 class="card-title">
-                                <a href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_">Firefly Prototype</a>
-                            </h4>
-                            <p class="fireflyAbout">
-                                This was a group project. Our goal was to research and create an application that allows users to join into pick up sports games. Before creating the prototype, we made a <a href="https://docs.google.com/presentation/d/1fd33APLmPYgnBo0cI0U0GJc4l0tJ-PRS2lof48TPnXk/edit?usp=sharing" target="blank_">component library</a> with all of the elements that would be used, and we also created style tiles to allow for a better understanding of the overall design before we started.
-                            </p>
-                        </div>
-                        
-                        <div class="card-read-more">
-                            <a href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" class="btn btn-link btn-block" target="blank_">
-                                View Design
-                            </a>
-                        </div>
+                    <div class="card-read-more">
+                        <a class="btn btn-link btn-block" href="/static_pages/sharkoWires">See all wireframes</a>
                     </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-4">
-                    <div class="card">
-                        <a class="img-card"><%= image_tag "bulldoghead.png" %></a>
-                       
+                </div><!-- END CARD 1 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 2 | Firefly -->
+                    <a class="img-card" href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_" >
+                    <%= image_tag "fireflyLogo.png", :style => "object-fit:contain"%>
+                    </a>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_">Firefly Prototype</a>
+                        </h4>
+                        <p class="fireflyAbout"> This was a group project. Our goal was to research and create an application that allows users to join into pick up sports games. Before creating the prototype, we made a <a href="https://docs.google.com/presentation/d/1fd33APLmPYgnBo0cI0U0GJc4l0tJ-PRS2lof48TPnXk/edit?usp=sharing" target="blank_">component library</a> with all of the elements that would be used, and we also created style tiles to allow for a better understanding of the overall design before we started.</p>
+                    </div>
+                    <div class="card-read-more">
+                        <a href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" class="btn btn-link btn-block" target="blank_">
+                            View Design
                         </a>
-                        
-                        <div class="card-content">
-                            <h4 class="card-title">
-                                Athens Bulldogs Redesign
-                            </h4>
-                            <p class="bulldogsText">
-                               This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.
-                            </p> 
-                            <p>
-                                Luckily I was able to find my protoype iterations I created in Photoshop for this project. I was in task of the homepage design. I had multiple iterations with different designs and colors for each page. I decided a clean homepage with useful links was the best approach, as opposed to having a homepage with an overwhelming amount of information like I had in my first designs. This project was from my first web design class, and that class is what made me realize I wanted to web design and develop websites for a living one day.
-                            </p>
-                        </div>
-                        
-                        <!--<div class="card-read-more">-->
-                            <!--<a class="btn btn-link btn-block" href="<%# asset_path 'athensTabletProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]">Athens Bulldogs Redesign</a>-->
-                            <!--<a href="<%# asset_path 'athensDesktopProtos.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>-->
-                            <!--<a href="<%# asset_path 'athensTablet1.png' %>" data-lightbox="athensProtos" data-title="My caption" rel="lightbox[bulldogs]"></a>-->
-                            <%# link_to "View Prototypes", image_path("bulldogProtos.jpg"), :class => "btn btn-link btn-block" %>
-                            <!-- popup modal images preview -->
-                            <div class="card-read-more">
-                                <a href="#lightbox" data-toggle="modal"  class="btn btn-link btn-block">View Prototype Designs</a>
-                            </div>
-
-                                <div class="modal fade and carousel slide" id="lightbox">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            
-                                        <div class="modal-header">
-                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                            <h4 class="modal-title" id="modal-label">Athens Bulldogs Redesigns</h4>
-                                        </div> <!--end modal header -->
-                                        
-                                        <div class="modal-body">
-                                            <ol class="carousel-indicators">
-                                            <li id="img1" data-target="#lightbox" data-slide-to="0" class="active"></li>
-                                            <li data-target="#lightbox" data-slide-to="1"></li>
-                                            <li data-target="#lightbox" data-slide-to="2"></li>
-                                            </ol>
-                                            <!-- images -->
-                                            <div class="carousel-inner">
-                                                <div class="item active">
-                                                    <%= image_tag 'athensTabletProtos.png', class: "img-responsive center-block"%>
-                                                    <div class="carousel-caption" style="color:black"><p>Multiple Tablet Iterations.</p></div>
-                                                </div>
-                                                <div class="item">
-                                                    <%= image_tag 'athensTablet1.png', class: "img-responsive center-block" %>
-                                                    <div class="carousel-caption" style="color:black"><p>Final Tablet Design</p></div>
-                                                </div>
-                                                
-                                                <div class="item">
-                                                    <%= image_tag 'athensDesktopProtos.png', class: "img-responsive center-block" %>
-                                                     <div class="carousel-caption" style="color:black"><p>Desktop Prototypes</p></div>
-                                                </div>
-                                            </div><!-- end carousel-inner -->
-                                            <div class="row">
-                                            <!-- /.carousel-contorols -->
-                                            <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
-                                                <span class="fa fa-chevron-left"></span>
-                                            </a>
-                                            <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
-                                                <span class="fa fa-chevron-right"></span>
-                                            </div>
-                                            </a>
-                                        </div><!-- /.modal-body -->
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- /.modal -->
-                            
-                    </div><!-- end card -->
-                </div><!-- end column div -->
-            </div><!-- end row -->
-        </div><!-- end container -->
- </section><!--end design section -->
+                    </div>
+                </div><!-- END CARD 2 -->
+            </div>  <!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 3 | Athens Redesign -->
+                    <a class="img-card"><%= image_tag "bulldoghead.png" %></a></a>
+                    <div class="card-content">
+                        <h4 class="card-title">Athens Bulldogs Redesign</h4>
+                        <p>This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.</p> 
+                        <p>Luckily I was able to find my protoype iterations I created in Photoshop for this project. I was in task of the homepage design. I had multiple iterations with different designs and colors for each page. I decided a clean homepage with useful links was the best approach, as opposed to having a homepage with an overwhelming amount of information like I had in my first designs. This project was from my first web design class, and that class is what made me realize I wanted to web design and develop websites for a living one day.</p>
+                    </div>
+                    <div class="card-read-more"><!-- view redesigns using modal slideshow -->
+                        <a href="#lightbox" data-toggle="modal"  class="btn btn-link btn-block">View Prototype Designs</a>
+                    </div>
+                    <!-- MODAL / SLIDESHOW LIGHTBOX EFFECT USING BOOTSTRAP ELEMENTS -->
+                    <div class="modal fade and carousel slide" id="lightbox">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    <h4 class="modal-title" id="modal-label">Athens Bulldogs Redesigns</h4>
+                                </div> <!--end modal header -->
+                                <div class="modal-body">
+                                    <ol class="carousel-indicators">
+                                    <li id="img1" data-target="#lightbox" data-slide-to="0" class="active"></li>
+                                    <li data-target="#lightbox" data-slide-to="1"></li>
+                                    <li data-target="#lightbox" data-slide-to="2"></li>
+                                    </ol>
+                                    <!-- images -->
+                                    <div class="carousel-inner"><!-- slideshow modal images as ITEMS --> 
+                                        <div class="item active">
+                                            <%= image_tag 'athensTabletProtos.png', class: "img-responsive center-block"%>
+                                            <!--<div class="carousel-caption" style="color:black"><p>Multiple Tablet Iterations.</p></div>-->
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'athensTablet1.png', class: "img-responsive center-block" %>
+                                            <!--<div class="carousel-caption" style="color:black"><p>Final Tablet Design</p></div>-->
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'athensDesktopProtos.png', class: "img-responsive center-block" %>
+                                             <!--<div class="carousel-caption" style="color:black"><p>Desktop Prototypes</p></div>-->
+                                        </div>
+                                    </div><!-- end carousel-inner -->
+                                    <div class="row">
+                                        <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#lightbox" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+                                    </div><!-- end CAROUSEL CONTROLS ROW -->
+                                </div><!-- END modal-BODY -->
+                            </div><!-- END modal CONTENT -->
+                        </div><!-- END modal DIALOG -->
+                    </div><!-- END modal -->
+                </div><!-- END CARD 3 -->
+            </div><!-- end column placement -->
+        </div><!-- END row 1 -->
+    </article><!-- END design cards article / container wrap -->
+</section><!--END design section -->
