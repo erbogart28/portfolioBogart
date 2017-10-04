@@ -9,7 +9,7 @@
     
 <style>
     
-.rightbar{
+#rightbar{
   position: fixed;
   top: 2vh;
   left: 0px;
@@ -27,16 +27,15 @@
 }
 
 .item a:hover,
-.item a:active,
-.item a:focus{
+.item a:active{
     background-color: white;
     width: 5rem;
-    color: black;
+    color: black !important;
 }
-.rightbar .fa {
+#rightbar .fa {
     padding:1rem;
 }
-.rightbar a{
+#rightbar a{
     color:white;
 }
 </style>    
@@ -49,11 +48,15 @@
       w.scroll(function () {
         if (w.scrollTop() !== 0) {
           $(".scroll-down").removeClass("visible");
-        return;}
-        $(".scroll-down").addClass("visible"), 
-        $(".scroll-down").css('opacity', '1');
+          $("#rightbar").removeClass("hidden");
+        return;
+          }
+          $(".scroll-down").addClass("visible"), 
+          $(".scroll-down").css('opacity', '1');
+          $("#rightbar").addClass("hidden");
         });
         $(".scroll-down").addClass("visible");
+        $("#rightbar").addClass("hidden");
     }); // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
     $(function() {
       $('.scroll-down').on ('click', function() {
@@ -105,19 +108,19 @@
 
 </head>
 
-<!--<section class="rightbar">-->
-<!--    <div class="item">-->
-<!--      <li id="aboutSidebar"></%= link_to "", root_path, :class => "scroll-button fa fa-2x fa-info-circle" %></li>-->
-<!--    </div>-->
+<section id="rightbar" class="hidden">
+    <div class="item">
+      <li id="aboutSidebar"><%= link_to "", root_path, :class => "scroll-button fa fa-2x fa-info-circle" %></li>
+    </div>
     
-<!--    <div class="item">-->
-<!--      <li id="devSidebar"></%= link_to "", root_path, :class => "scroll-button3 fa fa-2x fa-keyboard-o" %></li>-->
-<!--    </div> -->
+    <div class="item">
+      <li id="devSidebar"><%= link_to "", root_path, :class => "scroll-button3 fa fa-2x fa-keyboard-o" %></li>
+    </div> 
     
-<!--    <div class="item">-->
-<!--       <li id="designSidebar"></%= link_to "", root_path, :class => "scroll-button2 fa fa-2x fa-universal-access" %></li>-->
-<!--    </div>  -->
-<!--</section>-->
+    <div class="item">
+       <li id="designSidebar"><%= link_to "", root_path, :class => "scroll-button2 fa fa-2x fa-universal-access" %></li>
+    </div>  
+</section>
 
 <body>
 <%= yield %>

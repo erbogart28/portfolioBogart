@@ -30,7 +30,7 @@
 
 <section class="container-fluid" id="aboutme-content">
         
-        <div class="page-header"> <!-- page header | heading class adds font styles -->
+        <div class="page-header container"> <!-- page header | heading class adds font styles -->
             <h1 class="heading">About Me</h1>
         </div>
 
@@ -54,11 +54,7 @@
             <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
-                        
-                        <div class="card-title">
-                           Contact Me
-                        </div>
-                        
+                        <div class="card-title"> Contact Me </div>
                         <div class="contactText">
                             <p>If you have any questions, please feel free to email me!</p>
                             <p><b>Email:</b> erbogart28@gmail.com</p>
@@ -70,9 +66,6 @@
                     </div>
                 </div><!--end card -->
             </div><!-- end column div -->
-    
-            
-    
             <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
@@ -100,7 +93,7 @@
 </section><!-- end aboutme-content section -->
  
 <section class="container-fluid"  id="dev-content">
-    <div class="page-header"> <!-- page header | heading class adds font styles -->
+    <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">Dev Work</h1>
     </div>
     <article class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->
@@ -129,9 +122,7 @@
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 2 | Sharkos BBQ First Go Through --->
-                    <a class="img-card" href="http://evanb1.sgedu.site/calc/movieCalc.html" target="blank_">
-                        <%= image_tag "headshot1.jpg", :style => "object-fit:contain"%>
-                    </a>
+                    <%= image_tag "headshot1.jpg", :class => "img-card", :style => "object-fit:contain" %>
                     <div class="card-content">
                         <h4 class="card-title">Portfolio Site</h4>
                         <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the database and models in some sort of way. I've gone through many diferent itterations for this portfolio site - most of this code and process can be seen through my seperation of branches.</p>
@@ -145,8 +136,8 @@
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"> <!-- CARD 3 | Sharkos rails -->
-                    <a class="img-card" href="https://sharkos-rails.herokuapp.com/" target="_blank">
-                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none"%>
+                    <a href="https://sharkos-rails.herokuapp.com/" target="_blank">
+                    <%= image_tag "sharkologo3.png", :class => "img-card", :style => "padding: 15px;object-fit:contain" %>
                     </a>
                     <div class="card-content">
                         <h4 class="card-title">
@@ -169,14 +160,14 @@
         <div class="row"><!-- START ROW 2 | DEVELOPMENT -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 4 | Greatmoods Work -->
-                  <a class="img-card" href="training.greatmoods.com" target="blank_">
-                    <%= image_tag "formPic.png"%>
+                  <a href="training.greatmoods.com" target="blank_">
+                    <%= image_tag "GMlogo.png", :class => "img-card", :style => "object-fit:contain;padding-left:20px" %>
                   </a>
                     <div class="card-content">
                         <h4 class="card-title">
                             <a href="training.greatmoods.com" target="_blank">GreatMoods Internship Work</a>
                         </h4>
-                        <p> This was an interesting internship to say the least! I learned a lot: how to communicate effecticely and express my opionins on design choices, how to compromise on ideas depedning on what the boss hoped to see, how to best collaborate remotely. I did a LOT of work, and ended up being the only front-end dev, even though I was expecting to mentored or led by at least one other front-end developer. At the end of the day I was tasked with redeveloping the whole entire site based off the current site GreatMoods.com, which is completely unresponsive and outdated. I would've been able to complete full site responsiveness, but leadership issues and redeveloping 100+ pages by myself as an unpaid intern led to complications for reaching the finish line. </p>
+                        <p> This was an interesting internship to say the least! I learned a lot: how to communicate effecticely and express my opionins on design choices, how to compromise on ideas depedning on what the boss hoped to see, how to best collaborate remotely. I did a LOT of work, and ended up being the only front-end dev even though I was expecting to be mentored or led by at least one other front-end developer. At the end of the day I was tasked with redeveloping the whole entire site based off the current site GreatMoods.com, which is completely unresponsive and outdated. I would've been able to complete full site responsiveness, but leadership issues and redeveloping 100+ pages by myself as an unpaid intern led to complications for reaching the finish line. </p>
                         <p>I was able to learn a lot mainly because I was tasked to do so much, while having very little support or direction. I took the good with the bad, and in the end I feel I've come out a strong coder. </p>
                     </div>
                     <div class="card-read-more">
@@ -186,9 +177,7 @@
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 5 PORTFOLIO SITE -->
-                    <a class="img-card" href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">
-                    <%= image_tag "sharkologo3.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
-                    </a>
+                    <%= image_tag "sharkologo3.png", :class => "img-card", :style => "padding: 15px;object-fit:contain" %>
                     <div class="card-content">
                         <h4 class="card-title">
                             <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
@@ -242,16 +231,14 @@
 
 
 <section id="design-content" class="container-fluid">
-    <div class="page-header"> <!-- page header | heading class adds font styles -->
+    <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">UI/UX Work</h1>
     </div>
     <article class="container" id="designCards"><!-- design cards section article / container -->
         <div class="row">
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 1 | sharko Wireframes -->
-                    <a class="img-card" href="/static_pages/sharkoWires">
-                        <%= image_tag "sharkoWire1.JPG" %>
-                    </a>
+                        <%= image_tag "sharkologo3.png", :class => "img-card", :style => "padding: 15px;object-fit:contain" %>
                     <div class="card-content">
                         <h4 class="card-title">
                             <a href="/static_pages/sharkoWires"> Sharko's Wireframe</a>
@@ -259,7 +246,7 @@
                         <p class="sharkoWireText">Before developing the site for Shako's BBQ, I created these wireframes. This was not my first time creating wireframes, and I was a bit ambitious in my designs considering the coding knowledge I had for web development at this time. It was a fun challenge to try and develop the site as closely as I could based off these wireframes.</p>
                     </div>
                     <div class="card-read-more">
-                        <a class="btn btn-link btn-block" href="/static_pages/sharkoWires">See all wireframes</a>
+                        <a class="btn btn-link btn-block" href="/static_pages/sharkoWires">View Wireframes</a>
                     </div>
                 </div><!-- END CARD 1 -->
             </div><!-- END col placement -->
@@ -284,7 +271,7 @@
             </div>  <!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 3 | Athens Redesign -->
-                    <a class="img-card"><%= image_tag "bulldoghead.png" %></a></a>
+                    <%= image_tag "bulldoghead.png", :class => "img-card", :style => "object-fit:contain" %>
                     <div class="card-content">
                         <h4 class="card-title">Athens Bulldogs Redesign</h4>
                         <p>This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.</p> 
@@ -333,5 +320,56 @@
                 </div><!-- END CARD 3 -->
             </div><!-- end column placement -->
         </div><!-- END row 1 -->
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 4 | Wingstop App Redeisgn -->
+                    <%= image_tag "WingstopLogo.png", :class => "img-card", :style => "object-fit:contain" %>
+                    <div class="card-content">
+                        <h4 class="card-title">Wingostop App</h4>
+                        <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
+                        <p></p>
+                    </div>
+                    <div class="card-read-more"><!-- view redesigns using modal slideshow -->
+                        <a href="#" class="btn btn-link btn-block">Research and Evaluations</a>
+                    </div>
+                    <div class="card-read-more"><!-- view redesigns using modal slideshow -->
+                        <a href="#lightbox1" data-toggle="modal"  class="btn btn-link btn-block">View Redesigns</a>
+                    </div>
+                    <!-- MODAL / SLIDESHOW LIGHTBOX EFFECT USING BOOTSTRAP ELEMENTS -->
+                    <div class="modal fade and carousel slide" id="lightbox1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    <h4 class="modal-title" id="modal-label">Wingstop App | Order Process Redesigns</h4>
+                                </div> <!--end modal header -->
+                                <div class="modal-body">
+                                    <ol class="carousel-indicators">
+                                    <li id="img1" data-target="#lightbox1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#lightbox1" data-slide-to="1"></li>
+                                    </ol>
+                                    <!-- images -->
+                                    <div class="carousel-inner"><!-- slideshow modal images as ITEMS --> 
+                                        <div class="item active">
+                                            <%= image_tag 'wingstopFinals.png', class: "img-responsive center-block" %>
+                                            <!--<div class="carousel-caption" style="color:black"><p>Final Tablet Design</p></div>-->
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'wingstopfinals2.png', class: "img-responsive center-block" %>
+                                             <!--<div class="carousel-caption" style="color:black"><p>Desktop Prototypes</p></div>-->
+                                        </div>
+                                    </div><!-- end carousel-inner -->
+                                    <div class="row">
+                                        <a class="left carousel-control" href="#lightbox1" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#lightbox1" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+                                    </div><!-- end CAROUSEL CONTROLS ROW -->
+                                </div><!-- END modal-BODY -->
+                            </div><!-- END modal CONTENT -->
+                        </div><!-- END modal DIALOG -->
+                    </div><!-- END modal -->
+                </div><!-- END CARD 4 -->
+            </div><!-- END col placement -->
+        </div><!-- END ROW 2 -->
     </article><!-- END design cards article / container wrap -->
 </section><!--END design section -->
