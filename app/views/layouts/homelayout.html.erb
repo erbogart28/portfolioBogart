@@ -7,6 +7,39 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+<style>
+    
+#rightbar{
+  position: fixed;
+  top: 2vh;
+  left: 0px;
+  z-index:1;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  list-style:none;
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-color: #3e3f3a;
+  display: inline-block;
+  margin:0;
+  border-radius: 0 5px 5px 0;
+}
+
+.item a:hover,
+.item a:active{
+    background-color: white;
+    width: 5rem;
+    color: black !important;
+}
+#rightbar .fa {
+    padding:1rem;
+}
+#rightbar a{
+    color:white;
+}
+</style>    
+
 <script>
   $(document).on("turbolinks:load", function() {
     // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
@@ -15,39 +48,93 @@
       w.scroll(function () {
         if (w.scrollTop() !== 0) {
           $(".scroll-down").removeClass("visible");
-        return;}
-        $(".scroll-down").addClass("visible"), $(".scroll-down").css('opacity', '1');
+          $("#rightbar").removeClass("hidden");
+        return;
+          }
+          $(".scroll-down").addClass("visible"), 
+          $(".scroll-down").css('opacity', '1');
+          $("#rightbar").addClass("hidden");
         });
         $(".scroll-down").addClass("visible");
+        $("#rightbar").addClass("hidden");
     }); // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
     $(function() {
       $('.scroll-down').on ('click', function() {
-        $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+        $('html, body').animate({scrollTop: $('#aboutme-content').offset().top }, 'slow');
           return false;
         });
     }); // end scroll-down arrow click
+    
+    $(function() {
+      $('.scroll-down2').on ('click', function() {
+        $('html, body').animate({scrollTop: $('#design-content').offset().top }, 'slow');
+          return false;
+        });
+    }); // end scroll-down arrow click
+    
+    $(function() {
+      $('.scroll-down3').on ('click', function() {
+        $('html, body').animate({scrollTop: $('#dev-content').offset().top }, 'slow');
+          return false;
+        });
+    }); // end scroll-down arrow click
+    
     $(function() {
       $('.scroll-button').on('click', function() {
-        $('html, body').animate({scrollTop: $('section.aboutme-content').offset().top }, 'slow');
+        $('html, body').animate({scrollTop: $('#aboutme-content').offset().top }, 'slow');
+        return false;
+      });
+    }); //end scroll button click func
+    
+    $(function() {
+      $('.scroll-button2').on('click', function() {
+        $('html, body').animate({scrollTop: $('#design-content').offset().top }, 'slow');
+        return false;
+      });
+    }); //end scroll button click func
+
+
+    $(function() {
+      $('.scroll-button3').on('click', function() {
+        $('html, body').animate({scrollTop: $('#dev-content').offset().top }, 'slow');
         return false;
       });
     }); //end scroll button click func
     $(function (){
       $('[data-toggle="tooltip"]').tooltip()
     }); 
-    $(function () {                               // show tool tip for scroll-down upon load
-      $('.arrow-scroll-btn[data-toggle="tooltip"]').tooltip("show");
-      $('[data-toggle="tooltip"]').find(".arrow-scroll-btn").removeClass("in");
-   });
   }); //end .on turobolinks load
 </script>
+
 </head>
+
+<section id="rightbar" class="hidden">
+    <div class="item">
+      <li id="aboutSidebar"><%= link_to "", root_path, :class => "scroll-button fa fa-2x fa-info-circle" %></li>
+    </div>
+    
+    <div class="item">
+      <li id="devSidebar"><%= link_to "", root_path, :class => "scroll-button3 fa fa-2x fa-keyboard-o" %></li>
+    </div> 
+    
+    <div class="item">
+       <li id="designSidebar"><%= link_to "", root_path, :class => "scroll-button2 fa fa-2x fa-universal-access" %></li>
+    </div>  
+</section>
 
 <body>
 <%= yield %>
+ 
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">© 2017 .ERB Portfolio <%= link_to "Back to Top", root_path, :class => "btn-link pull-right" %></p>
+      </div>
+</footer>
+
+<!-- required jquery/JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
+<!--  script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
