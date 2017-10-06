@@ -341,7 +341,7 @@
                     </div>
                     <!-- MODAL / SLIDESHOW LIGHTBOX EFFECT USING BOOTSTRAP ELEMENTS -->
                     <div class="modal fade and carousel slide" id="lightbox1">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog"  style="width:100% !important; height:auto !important">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
@@ -350,23 +350,23 @@
                                 <div class="modal-body">
                                     <ol class="carousel-indicators">
                                     <li id="img1" data-target="#lightbox1" data-slide-to="0" class="active"></li>
-                                    <li data-target="#lightbox1" data-slide-to="1"></li>
+                                    <!--<li data-target="#lightbox1" data-slide-to="1"></li>-->
                                     </ol>
                                     <!-- images -->
                                     <div class="carousel-inner"><!-- slideshow modal images as ITEMS --> 
                                         <div class="item active">
                                             <%= image_tag 'wingstopFinals.png', class: "img-responsive center-block" %>
-                                            <!--<div class="carousel-caption" style="color:black"><p>Final Tablet Design</p></div>-->
+                                            <div class="carousel-caption" style="color:black"><p>Designs were made blurry from the software I used - unfortunately have no backups</p></div>
                                         </div>
-                                        <div class="item">
-                                            <%= image_tag 'wingstopfinals2.png', class: "img-responsive center-block" %>
+                                        <!--<div class="item">-->
+                                            <!--</%= image_tag 'wingstopfinals2.png', class: "img-responsive center-block" %>-->
                                              <!--<div class="carousel-caption" style="color:black"><p>Desktop Prototypes</p></div>-->
-                                        </div>
+                                        <!--</div>-->
                                     </div><!-- end carousel-inner -->
-                                    <div class="row">
-                                        <a class="left carousel-control" href="#lightbox1" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-                                        <a class="right carousel-control" href="#lightbox1" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
-                                    </div><!-- end CAROUSEL CONTROLS ROW -->
+                                    <!--<div class="row">-->
+                                    <!--    <a class="left carousel-control" href="#lightbox1" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>-->
+                                    <!--    <a class="right carousel-control" href="#lightbox1" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>-->
+                                    <!--</div><!-- end CAROUSEL CONTROLS ROW -->
                                 </div><!-- END modal-BODY -->
                             </div><!-- END modal CONTENT -->
                         </div><!-- END modal DIALOG -->

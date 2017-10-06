@@ -746,7 +746,7 @@ body {
 @media screen and (max-width:768px){
   #rightbar{
     position: fixed;
-    top: 2vh;
+    top: 50vh;
     left: 0px;
     z-index:1;
     padding-top:1rem;
@@ -763,11 +763,19 @@ body {
   .item a:hover,
   .item a:active{
       background-color: white;
-      width: 3rem;
+      width: 3.5rem;
       color: black !important;
   }
   #rightbar .fa {
-      padding:.25rem;
+      padding:1.25rem .5rem;
+      font-size:1.75em;
+  }
+  .card-title{
+    text-indent:.5rem;
+  }
+  .page-header{
+    margin-bottom:2rem;
+    
   }
 }
 /*********************************************************/
