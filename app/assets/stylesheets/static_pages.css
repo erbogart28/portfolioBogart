@@ -155,11 +155,14 @@ body {
 #dev-content,
 #design-content{
     background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(top, #FFFFFF, #ECE9E6);
-    background: -moz-linear-gradient(top, #FFFFFF, #ECE9E6);
-    background: -o-linear-gradient(top, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to top, #FFFFFF, #ECE9E6);
-    border-bottom: .01px solid black;
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    border-bottom: .01px solid #eeeeee;
+}
+#aboutme-content{
+  border-top:1px solid #eeeeee;
 }
 .overlay {
     height: 10rem;
@@ -365,6 +368,7 @@ body {
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
     transition: box-shadow .25s; 
+    border: 1px solid #eeeeee;
 }
 .card:hover {
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -441,7 +445,7 @@ body {
     margin:3em 0;
 }
 #homepageCards{
-    padding-top: 6em;
+    padding-top: 5em;
 }
 /********************************************/
 /************  Dev Page *********************/
@@ -707,8 +711,76 @@ body {
        display: none;  
     }
 } 
+
 /*********************************************************/
-/*    Definied media queries for improved responsiveness 
+/*   SIDEBAR STYLES
+***************************************************************/
+#rightbar{
+  position: fixed;
+  top: 2vh;
+  left: 0px;
+  z-index:1;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  list-style:none;
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-color: #3e3f3a;
+  display: inline-block;
+  margin:0;
+  border-radius: 0 5px 5px 0;
+}
+
+.item a:hover,
+.item a:active{
+    background-color: white;
+    width: 5rem;
+    color: black !important;
+}
+#rightbar .fa {
+    padding:1rem;
+}
+#rightbar a{
+    color:white;
+}
+@media screen and (max-width:768px){
+  #rightbar{
+    position: fixed;
+    top: 50vh;
+    left: 0px;
+    z-index:1;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    list-style:none;
+    background: #000428; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-color: #3e3f3a;
+    display: inline-block;
+    margin:0;
+    border-radius: 0 5px 5px 0;
+  }
+  .item a:hover,
+  .item a:active{
+      background-color: white;
+      width: 3.5rem;
+      color: black !important;
+  }
+  #rightbar .fa {
+      padding:1.25rem .5rem;
+      font-size:1.75em;
+  }
+  .card-title{
+    text-indent:.5rem;
+  }
+  .page-header{
+    margin-bottom:2rem;
+    
+  }
+}
+/*********************************************************/
+/*    Definied media queries for improved responsiveness for general page layout // mainly landing page
 ***************************************************************/
 @media(max-width:2800px) and (min-width: 1200px){
   #nav-circles{
@@ -778,16 +850,6 @@ body {
   	letter-spacing: .4em;
   	padding-top: 1em !important;
   }
-  .navcircle-text {
-    display: flex !important;
-    color: black;
-    justify-content: center;
-    font-size: 24px;
-    font-family: "Roboto";
-    letter-spacing: 1px;
-    line-height: .5em !important;
-    text-align:center;
-  }
   #aboutMeText{
     font-size:16px;
     margin:0;
@@ -808,15 +870,6 @@ body {
   #landing-header{
     font: 600 16px/1 "Roboto", sans-serif;
     letter-spacing: 5px;
-  }
-  .navcircle-text {
-    display: flex;
-    color: black;
-    justify-content: center;
-    font-size: 24px;
-    font-family: "Roboto";
-    letter-spacing: 1px;
-    line-height: .5em !important;
   }
   .scroll-down.visible {
     bottom: 4em !important;
@@ -854,28 +907,17 @@ body {
     letter-spacing: 2px !important;
     margin-top: -1em !important;
     padding:0 !important;
-    }
+  }
+    
   #landing-header span {
     font: 700 2em/1 "Oswald", sans-serif;;
     display: block;
     line-height:44px;
     letter-spacing:6px;
   }
-  /* text within nav circles */
-  .navcircle-text {
-    display: flex;
-    color: black;
-    justify-content: center;
-    font-size: 18px !important;
-    line-height: 0em !important;
-    font-family: "Roboto";
-    border-radius: 5px;
-    z-index:10 !important;
-  }
   #devRowLanding,
   #aboutRowLanding{
     margin-bottom:3em;
-    
   }
   .overlay{
     font-size:4rem;
@@ -885,7 +927,6 @@ body {
   .scroll-down.visible {
     bottom: 5em !important;
   }
-
   #headshot{
     border:none;
     margin:1em 0;
@@ -930,7 +971,7 @@ body {
   #landing-header{
     font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 1px !important;
-    /*max-height:30vh !important;*/
+    padding-right: 3.5rem;
   }
   #landing-header span {
     font: 700 2em/1 "Oswald", sans-serif;;
@@ -938,19 +979,14 @@ body {
     line-height:44px;
     letter-spacing:6px;
   }
-  .overlay{
-    font-size:4rem;
+  #devRowLanding,
+  #aboutRowLanding{
+    margin-bottom:1.5em;
   }
-  /* text within nav circles */
-  .navcircle-text {
-    display: flex;
-    color: black;
-    justify-content: center;
-    font-size: 22px !important;
-    line-height: 0em !important;
-    font-family: "Roboto";
-    border-radius: 5px;
-    z-index:10 !important;
+  .overlay{
+    font-size:3rem;
+    height:6rem;
+    line-height: 6.5rem;
   }
   .scroll-down.visible {
     bottom: 5em !important;

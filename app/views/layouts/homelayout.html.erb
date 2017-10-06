@@ -7,39 +7,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-<style>
-    
-#rightbar{
-  position: fixed;
-  top: 2vh;
-  left: 0px;
-  z-index:1;
-  padding-top:1rem;
-  padding-bottom:1rem;
-  list-style:none;
-  background: #000428; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-color: #3e3f3a;
-  display: inline-block;
-  margin:0;
-  border-radius: 0 5px 5px 0;
-}
-
-.item a:hover,
-.item a:active{
-    background-color: white;
-    width: 5rem;
-    color: black !important;
-}
-#rightbar .fa {
-    padding:1rem;
-}
-#rightbar a{
-    color:white;
-}
-</style>    
-
 <script>
   $(document).on("turbolinks:load", function() {
     // add remove chevyron arrow down if window is scrolled -- only fully visible if 0 scroll occurs  
