@@ -26,28 +26,26 @@
             </a>
         </div>
     </article>
-</section><!-- END landing page section -->
+</section><!-- END LANDING page section -->
 
 <section class="container-fluid" id="aboutme-content">
         
-        <div class="page-header container"> <!-- page header | heading class adds font styles -->
-            <h1 class="heading">About Me</h1>
-        </div>
+    <div class="page-header container"> <!-- page header | heading class adds font styles -->
+        <h1 class="heading">About Me</h1>
+    </div>
 
-        <article id="aboutMe" class="container-fluid">
-            <div class="row">
-                <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
-                    <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
-                </div>
-                <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
-                    <p>Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
-                    <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM mostly taught me about modern UI/UX design principles and heuristics, which can be very useful to know when evaulating, designing, or developing a site/application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, and JavaScript/jQuery. I have extensive use with Bootstrap, and I'll tend to heavily utilize utility classes to setup a quick and easy grid system.</p> 
-                    <p>I love Ruby-on-Rails! It's the first MVC framework I learned for web development, and I feel fully confident in coding the front-end for a Ruby-on-Rails web application. I know my way around the Ruby-on-Rails MVC framework, and I'm not scared to utilize the whole spectrum of the framework to correctly implement partials, views, and layouts. Though, when it comes down to it all, I fell in love with this framework because it allows me to work with ".erb" files - my exact initials. &#128516;</p>   
-                </div>
+    <article id="aboutMe" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
+                <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
             </div>
-        </article><!-- end aboutme article -- content pertaining to me -->
-    
-    
+            <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
+                <p>Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media (ISM for short) with a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
+                <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM mostly taught me about modern UI/UX design principles and heuristics, which can be very useful to know when evaulating, designing, or developing a site/application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, and JavaScript/jQuery. I have extensive use with Bootstrap, and I'll tend to heavily utilize utility classes to setup a quick and easy grid system.</p> 
+                <p>I love Ruby-on-Rails! It's the first MVC framework I learned for web development, and I feel fully confident in coding the front-end for a Ruby-on-Rails web application. I know my way around the Ruby-on-Rails MVC framework, and I'm not scared to utilize the whole spectrum of the framework to correctly implement partials, views, and layouts. Though, when it comes down to it all, I fell in love with this framework because it allows me to work with ".erb" files - my exact initials. &#128516;</p>   
+            </div>
+        </div>
+    </article><!-- end aboutme article -- content pertaining to me -->
     
     <article id="homepageCards">
         <div class="row">
@@ -107,14 +105,15 @@
                         <h4 class="card-title">
                         <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">Computer Science Capstone | When If Project</a>
                         </h4>
-                        <p>fsdfsdf</p> 
-                        <p>sdfsdf </p>
+                        <p>This was probably my favorite project at DePaul. This was a group project where we were tasked to create a website for student's, faculty, and admin's. The site's purpose was to allow for student's to run a "when-if" report where they could generate a schedule of classes for completing IT or IS grad school classes. Faculty could waive classes and view student's reports. Admin's can view all accounts and have the power to do whatever faculty or student's can do. </p>
+                        <p>I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familar with Obeject Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
+                        <p>Overall it was a great experience. I learned a lot from the computer science guys - new approaches to sessions and other things I have not considered - and I feel like they learned a lot of from me as well. </p>
                     </div>
                     <div class="card-read-more"><!-- view site -->
                         <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="_blank" class="btn btn-link btn-block"> View site</a>
                     </div> 
                     <div class="card-read-more"><!-- view Github source code -->
-                        <a href="https://github.com/erbogart28/CS-Capstone-Final" target="_blank" class="btn btn-link btn-block">
+                        <a href="https://github.com/erbogart28/CS-Capstone-Final" target="_blank" class="btn btn-link btn-block"> 
                             <i class="fa fa-github"></i> Source Code
                         </a>
                     </div>
@@ -329,9 +328,10 @@
                 <div class="card"><!-- CARD 4 | Wingstop App Redeisgn -->
                     <%= image_tag "WingstopLogo.png", :class => "img-card", :style => "object-fit:contain" %>
                     <div class="card-content">
-                        <h4 class="card-title">Wingostop App</h4>
+                        <h4 class="card-title">WingStop App</h4>
                         <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
-                        <p></p>
+                        <p>This was a project for redesigning an application's order proccesing screens. I decided to redesign the Wingstop Application. It wasn't a huge design overhaul, but rather simple fixes to improve the checkout process; the application's ordering process was confusing at times.</p>
+                        <p>I designed screens that would provide visible feedback as to what a user needs to complete, and how many pages it would take to complete a food order. I also made the ability to edit orders easier to do while at the checkout screen.</p>
                     </div>
                     <div class="card-read-more"><!-- view redesigns using modal slideshow -->
                         <a href="#" class="btn btn-link btn-block">Research and Evaluations</a>
@@ -348,15 +348,15 @@
                                     <h4 class="modal-title" id="modal-label">Wingstop App | Order Process Redesigns</h4>
                                 </div> <!--end modal header -->
                                 <div class="modal-body">
-                                    <ol class="carousel-indicators">
-                                    <li id="img1" data-target="#lightbox1" data-slide-to="0" class="active"></li>
+                                    <!--<ol class="carousel-indicators">-->
+                                    <!--<li id="img1" data-target="#lightbox1" data-slide-to="0" class="active"></li>-->
                                     <!--<li data-target="#lightbox1" data-slide-to="1"></li>-->
-                                    </ol>
+                                    <!--</ol>-->
                                     <!-- images -->
                                     <div class="carousel-inner"><!-- slideshow modal images as ITEMS --> 
                                         <div class="item active">
                                             <%= image_tag 'wingstopFinals.png', class: "img-responsive center-block" %>
-                                            <div class="carousel-caption" style="color:black"><p>Designs were made blurry from the software I used - unfortunately have no backups</p></div>
+                                            <!--<div class="carousel-caption" style="color:black"><p>Designs were made blurry from the software I used - unfortunately have no backups</p></div>-->
                                         </div>
                                         <!--<div class="item">-->
                                             <!--</%= image_tag 'wingstopfinals2.png', class: "img-responsive center-block" %>-->
