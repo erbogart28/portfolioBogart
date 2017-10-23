@@ -87,6 +87,7 @@ SECTION STYLES
 /*#######################################
 #  Landing page and elements definied 
 ########################################*/
+/* landing page section wrap. Full screen load landing page */
 .landing {
     position: relative;
     min-height: 100vh !important;
@@ -122,6 +123,7 @@ SECTION STYLES
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
     color:black;
 }
+
 /* SECONDARY MAIN TITLE TEXT | above and below the larger main title text (landing header) */
 #landing-header span {
   	font: 700 60px/1.2 "Oswald", sans-serif;
@@ -135,13 +137,13 @@ SECTION STYLES
       -webkit-text-fill-color: transparent;
 }
 
-/* LANDING PAGE ROWS */
-.landingRow {
+/* LANDING PAGE ROWS - CLASS FOR THE ROW SECTIONS */
+.landingRowSection {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
-/* overlay for landing page row buttons */
-.overlay {
+/* landing row buttons | 3 in total - about me, dev work, design work */
+.landingRowButton {
     height: 10rem;
     width: 100vw;
     display: block;
@@ -156,87 +158,233 @@ SECTION STYLES
     font-weight: 500;
 }
 
-#designRowLanding > .overlay {
-    background-color: #c2e9fb; 
-    /*background: -webkit-linear-gradient(#c2e9fb  0%, #c2e9fb 100%);*/
-      background-image: transparent url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
-
-}
-
-#aboutRowLanding > .overlay{
+/*background color for about me row - dark blue to black/grey - high atmosphere */
+#aboutRowLanding{
   background-color: #a1c4fd;
-  background-image: -webkit-linear-gradient(#4d4d4d -75%, #a1c4fd 95%);
-  /*background-image:none !important;*/
+  background: -webkit-linear-gradient(#4d4d4d -75%, #a1c4fd 95%);
+  background: -moz-linear-gradient(#4d4d4d -75%, #a1c4fd 95%);
+  background: -o-linear-gradient(#4d4d4d -75%, #a1c4fd 95%);
+  background: linear-gradient(#4d4d4d -75%, #a1c4fd 95%);
 }
 
-#devRowLanding > .overlay{
-   background-image:linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+/*background  color for dev row -  sky blue to darker blue */
+#devRowLanding{
+   background:-webkit-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+   background:-moz-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+   background:-o-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+   background:linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
 }
 
-#designRowLanding > .overlay:hover{
-  /*color:#AEAEAE;*/
-    opacity: .75;
-    background-image: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') !important;
+/*background color sky blue with cloud image | DESIGN row */
+#designRowLanding{
+    background-color: #c2e9fb !important; 
+    background: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
+}
 
+/* animated clouds on design row hover */
+#designRowLanding > a:hover{
+    background: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
       -webkit-animation: cloud-animations 25s linear infinite;
       -moz-animation: cloud-animations 25s linear infinite;
       -o-animation: cloud-animations 25s linear infinite; 
       animation: cloud-animations 25s linear infinite;
 }
 
-#aboutRowLanding > .overlay:after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-
-
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
-    background-size: cover;
+/*animate airplane movement on hover */
+#devRowLanding > a:hover{
+  /*color:#AEAEAE;*/
+    background: url('http://dev2.slicejack.com/rocket-launch/img/airplane--right.svg') repeat-y;
+    /* moving clouds on hover */
+      -webkit-animation: plane-animations 25s linear infinite;
+      -moz-animation: plane-animations 25s linear infinite;
+      -o-animation: plane-animations 25s linear infinite; 
+      animation: plane-animations 25s linear infinite;
 }
 
-#devRowLanding > .overlay:after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-
+/*animate shooting stars when hovering over about me sections */
+#aboutRowLanding:hover > .star1 {
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#FFF;
+  top:-40px;
+  left:400px;
+  position:relative;
+  transform-origin:100% 0;
+   animation:star-ani 2s 1 ease-out;
+  animation-direction: normal;
+  opacity:0;
 }
 
-#designRowLanding > .overlay:after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    
-        background: transparent url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
-
+#aboutRowLanding:hover > .star1:after {
+  content:'';
+  position:absolute;
+  top:0px;
+  left:4px;
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px; 
+  border-color:transparent transparent transparent #FFF;
+  transform:rotate(-20deg) translate3d(1px, -1px, 0);
+  transform-origin:0% 100%;
+  animation:shooting-ani s infinite ease-out;
+  animation-direction: normal;
 }
 
+#aboutRowLanding:hover > .star2 {
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#FFF;
+  top:-60px;
+  left:-250px;
+  position:relative;
+  transform-origin:100% 0;
+   animation:star-ani 2s 1 ease-out;
+  animation-direction: normal;
+  opacity:0;
+  animation-delay:1s;
+}
 
+#aboutRowLanding:hover > .star2:after {
+  content:'';
+  position:absolute;
+  top:0px;
+  left:4px;
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px; 
+  border-color:transparent transparent transparent #FFF;
+  transform:rotate(-10deg) translate3d(1px, -1px, 0);
+  transform-origin:0% 100%;
+  animation:shooting-ani s infinite  ease-out;
+  animation-direction: normal;
+}
+
+#aboutRowLanding:hover > .star3 {
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#FFF;
+  top:-60px;
+  left:-550px;
+  position:relative;
+  transform-origin:100% 0;
+   animation:star-ani 2s 1 ease-out;
+  animation-direction: normal;
+  opacity:0;
+  animation-delay:2.2s;
+}
+
+#aboutRowLanding:hover > .star3:after {
+  content:'';
+  position:absolute;
+  top:0px;
+  left:4px;
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px; 
+  border-color:transparent transparent transparent #FFF;
+  transform:rotate(195deg) translate3d(1px, -1px, 0);
+  transform-origin:0% 100%;
+  animation:shooting-ani s infinite  ease-out;
+  animation-direction: normal;
+}
+
+/* cloud animation webkit keyframes / start / end positioning */
 @-webkit-keyframes cloud-animations {
     from {
         background-position: 0% 0%;
     }
     to {
-        background-position: 100% 0%;
-    }
-}
-@keyframes cloud-animations {
-    from {
-        background-position: 0% 0%;
-    }
-    to {
-        background-position: 100% 0%;
+        background-position: 110% 0%;
     }
 }
 
+/* cloud animation keyframes / start / end positioning  | for older browsers*/
+@keyframes cloud-animations {
+    from {
+        background-position: 110% 0%;
+    }
+    to {
+        background-position: 0% 0%;
+    }
+}
+
+/* plane webkit animation keyframes / start / end positioning */
+@-webkit-keyframes plane-animations {
+    from {
+        background-position: -10% 0%;
+    }
+    to {
+        background-position: 110% 5%;
+    }
+}
+
+/* plane  animation keyframes / start / end positioning | for older browsers*/
+@keyframes plane-animations {
+    from {
+        background-position: -10% 0%;
+    }
+    to {
+        background-position: 110% 5%;
+    }
+}
+
+/* shooting star webkit animation keyframes / start / end positioning  */
+@-webkit-keyframes shooting-ani {
+  0% {
+    
+  }
+  50% {
+    transform:scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  100% {
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+}
+
+/* star webkit animation keyframes / start / end positioning */
+@-webkit-keyframes star-ani {
+  0% {
+    opacity:0;
+    transform:scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  100% {
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+}
+
+/* shooting star keyframes animation keyframes / start / end positioning | for older browsers*/
+@keyframes shooting-ani {
+  0% {
+    
+  }
+  50% {
+    transform:scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  100% {
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+}
+
+/* star keyframes animation keyframes / start / end positioning | for older browsers*/
+@keyframes star-ani {
+  0% {
+    opacity:0;
+    transform:scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  100% {
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+}
 /*#######################################
 #   scroll down button and elements / landing paage 
 ########################################*/
