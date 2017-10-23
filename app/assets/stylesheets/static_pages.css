@@ -1030,6 +1030,13 @@ CARD styles
   .landing {
     background-color:white;
   }
+  .landingRowSection{
+    height:10vh;
+  }
+  .landingRowButton{
+    font-size: 4rem;
+    line-height: 7rem;
+  }
   #animatedtext {
     padding-top:1em;
   }
@@ -1058,6 +1065,9 @@ CARD styles
   }
   .scroll-down.visible {
     bottom: 5em !important;
+  }
+  .scroll-down {
+    border: 0;
   }
   #headshot{
     border:none;
