@@ -1,7 +1,6 @@
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com*/
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
 * { margin:0; padding:0; } /* to remove the top and left whitespace */
 
 .clearfix:after {
@@ -11,12 +10,7 @@
    height: 0;
    clear: both;
 }
-html,
-body {
-  font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-}
+
 h2{
   margin-left:.4em;
 }
@@ -50,6 +44,7 @@ h1.heading {
 html {
   position: relative;
   min-height: 100%;
+  font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
   /* Margin bottom by footer height */
@@ -66,6 +61,27 @@ body {
     background-image: -o-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
     background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
     padding-top:1em;
+}
+
+
+/**********************
+SECTION STYLES 
+/********************* */
+/* SECTION BACKGROUNDS */
+#aboutme-content,
+#dev-content,
+#design-content{
+    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    border-bottom: .01px solid #eeeeee;
+}
+
+/*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
+#aboutme-content{
+  border-top:1px solid #eeeeee;
 }
 
 /*#######################################
@@ -86,7 +102,8 @@ body {
     background: linear-gradient(to top, #FFFFFF, #ECE9E6);
     border-bottom: .01px solid black;
 }
-/* article ID for animated text CONTAINER */
+
+/* article ID for MAIN TITLE ON LANDING PAGE | CONTAINER */
 #animatedtext{
     display: flex;
     justify-content: center;
@@ -105,89 +122,70 @@ body {
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
     color:black;
 }
-/* NON MAIN INTRO TEXT - words below and above introduction */
+/* SECONDARY MAIN TITLE TEXT | above and below the larger main title text (landing header) */
 #landing-header span {
   	font: 700 60px/1.2 "Oswald", sans-serif;
     letter-spacing: 8px;  	
     display:block !important;
   	justify-content:center;
   	text-shadow: 0 0 80px rgba(255,255,255,.5);
-  	
-      /* Clip Background Image */
-  	/*background: url("http://static.colourlovers.com/uploads/images/4/44/44982.pic.jpg"); */
+    /* Clip Background Image for text fill */
   	background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
-  	-webkit-background-clip: text;
-      /* Animate Background Image */
-      /* Animate Background Image */
-    	-webkit-text-fill-color: transparent;
-    	-webkit-animation: aitf 1200s linear infinite;
-    	-webkit-transform: translate3d(0px,0px,0px);
-    	/*-webkit-backface-visibility: hidden;*/
-}
-/*.page-header{*/
-/*    background: #000428;*/
-/*    background: -webkit-linear-gradient(to left, #000428, #004e92);*/
-/*    background: linear-gradient(to left, #000428, #004e92);*/
-/*    border-color: #3e3f3a;*/
-/*}*/
-/*###############################
-   Nav-circles | Landing / Homepage only
-#################################*/
-/* btn class utility overrides for planet circle buttons */
-
-.navcircle-text{
-    color: black !important;
-    display: flex  !important;
-    color: white  !important;
-    justify-content: center  !important;
-    font-size: 28px  !important;
-    letter-spacing: 1px  !important;
-    line-height: 0em !important;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 }
 
-/* ladning page rows */
+/* LANDING PAGE ROWS */
 .landingRow {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
-/* default circle nav before overlay */
-#aboutme-content,
-#dev-content,
-#design-content{
-    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
-    border-bottom: .01px solid #eeeeee;
-}
-#aboutme-content{
-  border-top:1px solid #eeeeee;
-}
+
+/* overlay for landing page row buttons */
 .overlay {
     height: 10rem;
     width: 100vw;
     display: block;
     position: relative;
-    background-image: -webkit-linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
-    background-image: -moz-linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
-    background-image: -o-linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
-    background-image: linear-gradient(#a1c4fd 0%, #c2e9fb 100%);
-    /*background-size: cover;*/
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
-    letter-spacing: 1px;
-    font-size:5rem;
-    line-height:10rem;
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 3px;
+    font-size: 5rem;
+    line-height: 10rem;
+    font-weight: 500;
 }
 
-.overlay:hover{
+#designRowLanding > .overlay {
+    background-color: #c2e9fb; 
+    /*background: -webkit-linear-gradient(#c2e9fb  0%, #c2e9fb 100%);*/
+      background-image: transparent url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
+
+}
+
+#aboutRowLanding > .overlay{
+  background-color: #a1c4fd;
+  background-image: -webkit-linear-gradient(#4d4d4d -75%, #a1c4fd 95%);
+  /*background-image:none !important;*/
+}
+
+#devRowLanding > .overlay{
+   background-image:linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+}
+
+#designRowLanding > .overlay:hover{
   /*color:#AEAEAE;*/
     opacity: .75;
+    background-image: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') !important;
+
+      -webkit-animation: cloud-animations 25s linear infinite;
+      -moz-animation: cloud-animations 25s linear infinite;
+      -o-animation: cloud-animations 25s linear infinite; 
+      animation: cloud-animations 25s linear infinite;
 }
 
 #aboutRowLanding > .overlay:after {
-    content: '- About Me -';
+    content: '';
     position: absolute;
     top: -4px;
     left: -4px;
@@ -197,35 +195,28 @@ body {
 
     background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
     background-size: cover;
-      -webkit-animation: cloud-animations 30s linear infinite;
 }
 
 #devRowLanding > .overlay:after {
-    content: '- Dev Work -';
+    content: '';
     position: absolute;
     top: -4px;
     left: -4px;
     right: -4px;
     bottom: -4px;
 
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
-    background-size: cover;
-      -webkit-animation: cloud-animations 30s linear infinite;
 }
 
 #designRowLanding > .overlay:after {
-    content: '- UI/UX Work -';
+    content: '';
     position: absolute;
     top: -4px;
     left: -4px;
     right: -4px;
     bottom: -4px;
-    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-y;
-    background-size: cover;
-      -webkit-animation: cloud-animations 30s linear infinite;
-      -moz-animation: cloud-animations 30s linear infinite;
-      -o-animation: cloud-animations 30s linear infinite; 
-      animation: cloud-animations 30s linear infinite;
+    
+        background: transparent url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
+
 }
 
 
@@ -234,7 +225,7 @@ body {
         background-position: 0% 0%;
     }
     to {
-        background-position: -10000% 200%;
+        background-position: 100% 0%;
     }
 }
 @keyframes cloud-animations {
@@ -242,7 +233,7 @@ body {
         background-position: 0% 0%;
     }
     to {
-        background-position: -10000% 200%;
+        background-position: 100% 0%;
     }
 }
 
@@ -359,7 +350,9 @@ body {
       -ms-transform: rotate(0deg);
       transform: rotate(45deg);
 }
-/************** card definitions **********/
+/************** 
+CARD styles
+**********/
 .card {
     display: block; 
     margin-bottom: 20px;
@@ -451,7 +444,7 @@ body {
 /************  Dev Page *********************/
 /********************************************/
 #developmentWork{
-    margin-bottom:5em;
+  margin-bottom:5em;
 }
 /********************************************/
 /****************   Design Page  ************/
@@ -738,12 +731,15 @@ body {
     width: 5rem;
     color: black !important;
 }
+
 #rightbar .fa {
     padding:1rem;
 }
+
 #rightbar a{
-    color:white;
+  color:white;
 }
+
 @media screen and (max-width:768px){
   #rightbar{
     position: fixed;
@@ -763,13 +759,13 @@ body {
   }
   .item a:hover,
   .item a:active{
-      background-color: white;
-      width: 3.5rem;
-      color: black !important;
+    background-color: white;
+    width: 3.65rem;
+    color: black !important;
   }
   #rightbar .fa {
-      padding:1.25rem .5rem;
-      font-size:1.75em;
+    padding:1.25rem .5rem;
+    font-size:1.75em;
   }
   .card-title{
     text-indent:.5rem;
@@ -787,9 +783,6 @@ body {
     margin:25vh auto;
     height: 45vh;
   }
-  /*#circles-row{*/
-  /*  padding-top:5vh;*/
-  /*}*/
     #aboutMeText{
     font-size:16px;
     margin:4em .25em;
@@ -822,15 +815,6 @@ body {
     transition: box-shadow .25s;
     background-color: #EEEEE8;
   }  
-  .navcircle-text {
-    display: flex !important;
-    color: black;
-    justify-content: center;
-    font-size: 24px;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    line-height: .5em !important;
-  }
   .scroll-down.visible{
     bottom: 3vh;  
   }
@@ -860,7 +844,7 @@ body {
 /* tablet focus */
 @media(max-width: 768px) and (min-width: 620px){ 
   #animatedtext {
-  padding-top:1em;
+    padding-top:1em;
   }
   #landing-header span {
     font: 700 48px/1 "Oswald", sans-serif;
@@ -1004,16 +988,5 @@ body {
     margin:0;
     line-height:1.6;
     margin-bottom:2em;
-  }
-  #page-title {
-    color: #000000;
-    font-weight: 800;
-    height:auto;
-    text-indent:.25em;
-    border: 1px solid black;
-    border-right:none; 
-    border-left:none;
-    z-index: 20;
-    padding-bottom:5px;
   }
 }
