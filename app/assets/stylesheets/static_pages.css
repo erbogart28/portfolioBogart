@@ -1006,7 +1006,7 @@ CARD styles
   }
   .landingRowButton{
     font-size: 4rem;
-    line-height: 7rem;
+    line-height: 6.5rem;
   }
   #animatedtext {
     padding-top:1em;
@@ -1037,7 +1037,7 @@ CARD styles
     bottom: 5em;
   }
   .scroll-down {
-    background:none;
+     border: 0 solid transparent;
   }
   #headshot{
     border:none;
