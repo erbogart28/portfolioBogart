@@ -1,106 +1,27 @@
-   <div class="page-header container"> <!-- page header | heading class adds font styles -->
-            <h1 class="heading">Sharko Wireframes Walkthrough</h1>
-    </div>
+<div class="page-header container"> <!-- page header | heading class adds font styles -->
+        <h1 class="heading">Sharko Wireframes Walkthrough</h1>
+</div>
 
-    <div class="container" id="accordion-container">
-        <div id="accordion" role="tablist" aria-multiselectable="true">
-            <a href="/#design-content" id="back"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>&#09;<span id="back-text">Back to Designs</span></a>
+<section class="container" id="accordion-container"><!-- START accordian container wrap -->
+    <a href="/#design-content" id="back"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>&#09;<span id="back-text">Back to Designs</span></a>
+    <div id="accordion" role="tablist" aria-multiselectable="true"><!-- START multi select tab accordions -->
 
-            <div class="card accordion-panel">
-                <div class="card-block accordion-heading" role="tab" id="headingOne">
-                  <h3 class="card-title accordion-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <h3>Homepage Wireframe </h3>
-                        <i class="fa fa-chevron-down"></i>
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                  </h3>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="accordion-content">
-                            <a href="#lightboxHome" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire5.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
-                            <div class="modal fade" id="lightboxHome"> <!-- modal display to enlarge image -->
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        
-                                        <div class="modal-header">
-                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                            <h4 class="modal-title" id="modal-label">Regular Menu Page Wireframe</h4>
-                                        </div> <!--end modal header -->
-                                        
-                                        <div class="modal-body">
-                                                <div class="item" style="object-fit:contain">
-                                                    <%= image_tag("sharkoWire5.JPG", class: "img-responsive center-block")%>
-                                                </div>
-                                        </div><!-- /.modal-body -->
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- end lightbox, aka enlarged mage focus modal -->
-                        <p id="wireText">
-                                The original homepage design for Sharko's website was full of text, and I felt was lacking in appeal considering it was the landing page for users. I wanted to create a new homepage that utilized images, so potential customers could find themselves hungry for Sharko's the second the go to the site. I decided to utlize more images by using an image carousel. I placed many food images in there that would hopefully get the user in the mood for Sharko's.
-                        </p> 
-                        <p id="wireText">
-                            I intended to have 3 large buttons for navigating to pages, but in the final development stage I opted to integrate the 'about us' page into this homepage. I did this the hopes that the homepage could communicate the essence of Sharko's without the users having to dig for information. 
-                        </p>
-                    </div>
-                </div>
-            </div><!-- end pannel 1 -->
-            
-            <div class="card accordion-panel">
-                <div class="card-block accordion-heading" role="tab" id="headingTwo">
-                  <h3 class="card-title accordion-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <h3>Catering Menu Wireframe</h3>
-                        <i class="fa fa-chevron-down"></i>
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                  </h3>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="accordion-content">
-                            <a href="#lightboxCater" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire2.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
-                            <div class="modal fade" id="lightboxCater"> <!-- modal display to enlarge image -->
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        
-                                        <div class="modal-header">
-                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                            <h4 class="modal-title" id="modal-label">Catering Menu Page Wireframe</h4>
-                                        </div> <!--end modal header -->
-                                        
-                                        <div class="modal-body">
-                                                <div class="item" style="object-fit:contain">
-                                                    <%= image_tag("sharkoWire2.JPG", class: "img-responsive center-block")%>
-                                                </div>
-                                        </div><!-- /.modal-body -->
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- end lightbox, aka enlarged mage focus modal -->
-                            
-                        <p id="wireText">
-                            My wireframe design for the cartering menu page was a bit too ambitious for me when I first began coding, and this is a design I can now proudly say I'd be able to develop. The original goal was, like my homepage, was to utilize images to entice potential customers into buying more. For the final development of this page I had to resort to HTML design semantics, utilizing many horizontal line breaks. The page I developed does a great job getting information across, but it doesn't entice customers as much as in image based menu would. 
-                        </p>
-                    </div>
-                </div>
-            </div><!-- end pannel 2 -->
-            
-             <div class="card accordion-panel">
-                <div class="card-block accordion-heading" role="tab" id="headingThree">
-                  <h3 class="card-title accordion-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <h3>Regular Menu Wireframe</h3>
-                        <i class="fa fa-chevron-down"></i>
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                  </h3>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="accordion-content">
-                        <a href="#lightboxMenu" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire4.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
-                        <div class="modal fade" id="lightboxMenu"> <!-- modal display to enlarge image -->
+        <div class="card accordion-panel">
+            <div class="card-block accordion-heading" role="tab" id="headingOne">
+              <h3 class="card-title accordion-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h3>Homepage Wireframe </h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="accordion-content">
+                        <a href="#lightboxHome" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire5.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
+                        <div class="modal fade" id="lightboxHome"> <!-- modal display to enlarge image -->
                             <div class="modal-dialog">
                                 <div class="modal-content">
-    
                                     <div class="modal-header">
                                         <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                                         <h4 class="modal-title" id="modal-label">Regular Menu Page Wireframe</h4>
@@ -108,98 +29,172 @@
                                     
                                     <div class="modal-body">
                                             <div class="item" style="object-fit:contain">
-                                                <%= image_tag("sharkoWire4.JPG", class: "img-responsive center-block")%>
+                                                <%= image_tag("sharkoWire5.JPG", class: "img-responsive center-block")%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    <p id="wireText">
+                            The original homepage design for Sharko's website was full of text, and I felt was lacking in appeal considering it was the landing page for users. I wanted to create a new homepage that utilized images, so potential customers could find themselves hungry for Sharko's the second the go to the site. I decided to utlize more images by using an image carousel. I placed many food images in there that would hopefully get the user in the mood for Sharko's.
+                    </p> 
+                    <p id="wireText">
+                        I intended to have 3 large buttons for navigating to pages, but in the final development stage I opted to integrate the 'about us' page into this homepage. I did this the hopes that the homepage could communicate the essence of Sharko's without the users having to dig for information. 
+                    </p>
+                </div><!-- end accordiao content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 1 -->
+        
+        <div class="card accordion-panel">
+            <div class="card-block accordion-heading" role="tab" id="headingTwo">
+              <h3 class="card-title accordion-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h3>Catering Menu Wireframe</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="accordion-content">
+                        <a href="#lightboxCater" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire2.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
+                        <div class="modal fade" id="lightboxCater"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Catering Menu Page Wireframe</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item" style="object-fit:contain">
+                                                <%= image_tag("sharkoWire2.JPG", class: "img-responsive center-block")%>
                                             </div>
                                     </div><!-- /.modal-body -->
                                 </div><!-- /.modal-content -->
                             </div><!-- /.modal-dialog -->
                         </div><!-- end lightbox, aka enlarged mage focus modal -->
                         
-                        <p id="wireText">
-                            Again, another ambitous menu design I was not able to follow through with at the time. I wanted another picture menu which, and I wanted categories to split off using a side nav on the menu itself. I also hoped to allow for items to be added in the right hand box for online ordering, which would have been impossible at the time I started this project with barely any JS and AJAX knowledge. I ended up keeping things consistant and creating a menu page similar to the catering menu.
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- end pannel 3 -->
-            
-            <div class="card accordion-panel">
-                <div class="card-block accordion-heading" role="tab" id="headingFour">
-                  <h3 class="card-title accordion-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <h3>Contact Page Wireframe</h3>
-                        <i class="fa fa-chevron-down"></i>
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                  </h3>
-                </div>
-                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                    <div class="accordion-content">
-                            <a href="#lightboxContact" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire3.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
-                            <div class="modal fade" id="lightboxContact"> <!-- modal display to enlarge image -->
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        
-                                        <div class="modal-header">
-                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                            <h4 class="modal-title" id="modal-label">Contact Page Wireframe</h4>
-                                        </div> <!--end modal header -->
-                                        
-                                        <div class="modal-body">
-                                                <div class="item" style="object-fit:contain">
-                                                    <%= image_tag("sharkoWire3.JPG", class: "img-responsive center-block")%>
-                                                </div>
-                                        </div><!-- /.modal-body -->
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- end lightbox, aka enlarged mage focus modal -->
-                            
-                        <p id="wireText">
-                            For the contact page, I wanted every piece of information to be clearly avaible, and without food images to distract from the purpose fo the page. I also wanted a map of the store location so users could easily look up directions or the surrounding area. In the final development of this page, I ended up only using one image, which was a picture of Sharko's storefront. This was also the first time I worked with Google Map APIs, and I was able to succesfully develop a map into the final page - which was a huge feat for me at the time.
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- end pannel 4 -->
-            
-            <div class="card accordion-panel">
-                <div class="card-block accordion-heading" role="tab" id="headingFive">
-                  <h3 class="card-title accordion-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      <h3>Notable Mentions</h3>
-                      <i class="fa fa-chevron-down"></i>
-                      <i class="fa fa-chevron-up"></i>
-                    </a>
-                  </h3>
-                </div>
-                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                    <div class="accordion-content">
-                           <a href="#lightboxNotable" data-toggle="modal"  id="wireframePics"><%= image_tag("sharkoWire1.JPG", class: "img-responsive center-block", :style => "z-index:1")%></a>
-                            <div class="modal fade and carousel slide" id="lightboxNotable"><!-- modal display for expanding image !! IN THIS CASE IMAGE IMPORPERLY SIZED -->
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        
-                                        <div class="modal-header">
-                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                            <h4 class="modal-title" id="modal-label">Notable Mentions Wireframe</h4>
-                                        </div> <!--end modal header -->
-                                        
-                                        <div class="modal-body">
-                                                <div class="item">
-                                                    <%= image_tag("sharkoWire1.JPG", class: "img-responsive center-block")%>
-                                                </div>
-                                        </div><!-- /.modal-body -->
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- end lightbox, aka enlarged mage focus modal -->
-                            
-                        <p id="wireText">
-                            The original Sharko's site had many accolades regarding their BBQ food along with their missions and history of stores, but they chose to messily list those all these things throughout the homepage. Since I chose to tidy up the homepage, I decided to put the notable mentions content into a new page altogether. With a seperate page, interested users can easily check out Sharko's awards, purpose, and history. I felt this was more effective than having them scroll down a very long homepage to find.
-                        </p>
-                    </div>
-                </div>
-            </div><!-- end pannel 5 -->
-            
-        </div> <!-- end accordion pannels -->
-    </div>    <!-- end ccontent container -->
+                    <p id="wireText">
+                        My wireframe design for the cartering menu page was a bit too ambitious for me when I first began coding, and this is a design I can now proudly say I'd be able to develop. The original goal was, like my homepage, was to utilize images to entice potential customers into buying more. For the final development of this page I had to resort to HTML design semantics, utilizing many horizontal line breaks. The page I developed does a great job getting information across, but it doesn't entice customers as much as in image based menu would. 
+                    </p>
+                </div><!-- end accordiao content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 2 -->
+        
+         <div class="card accordion-panel">
+            <div class="card-block accordion-heading" role="tab" id="headingThree">
+              <h3 class="card-title accordion-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h3>Regular Menu Wireframe</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="accordion-content">
+                    <a href="#lightboxMenu" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire4.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
+                    <div class="modal fade" id="lightboxMenu"> <!-- modal display to enlarge image -->
+                        <div class="modal-dialog">
+                            <div class="modal-content">
 
-
-
+                                <div class="modal-header">
+                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    <h4 class="modal-title" id="modal-label">Regular Menu Page Wireframe</h4>
+                                </div> <!--end modal header -->
+                                
+                                <div class="modal-body">
+                                        <div class="item" style="object-fit:contain">
+                                            <%= image_tag("sharkoWire4.JPG", class: "img-responsive center-block")%>
+                                        </div>
+                                </div><!-- /.modal-body -->
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    
+                    <p id="wireText">
+                        Again, another ambitous menu design I was not able to follow through with at the time. I wanted another picture menu which, and I wanted categories to split off using a side nav on the menu itself. I also hoped to allow for items to be added in the right hand box for online ordering, which would have been impossible at the time I started this project with barely any JS and AJAX knowledge. I ended up keeping things consistant and creating a menu page similar to the catering menu.
+                    </p>
+                </div><!-- end accordiao content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 3 -->
+        
+        <div class="card accordion-panel">
+            <div class="card-block accordion-heading" role="tab" id="headingFour">
+              <h3 class="card-title accordion-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h3>Contact Page Wireframe</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="accordion-content">
+                        <a href="#lightboxContact" data-toggle="modal" id="wireframePics"><%= image_tag("sharkoWire3.JPG", class: "img-responsive fa fa-expand fa-2x", :style => "z-index:1")%></a>
+                        <div class="modal fade" id="lightboxContact"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Contact Page Wireframe</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item" style="object-fit:contain">
+                                                <%= image_tag("sharkoWire3.JPG", class: "img-responsive center-block")%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                        
+                    <p id="wireText">
+                        For the contact page, I wanted every piece of information to be clearly avaible, and without food images to distract from the purpose fo the page. I also wanted a map of the store location so users could easily look up directions or the surrounding area. In the final development of this page, I ended up only using one image, which was a picture of Sharko's storefront. This was also the first time I worked with Google Map APIs, and I was able to succesfully develop a map into the final page - which was a huge feat for me at the time.
+                    </p>
+                </div><!-- end accordiao content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 4 -->
+        
+        <div class="card accordion-panel">
+            <div class="card-block accordion-heading" role="tab" id="headingFive">
+              <h3 class="card-title accordion-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <h3>Notable Mentions</h3>
+                  <i class="fa fa-chevron-down"></i>
+                  <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="accordion-content">
+                       <a href="#lightboxNotable" data-toggle="modal"  id="wireframePics"><%= image_tag("sharkoWire1.JPG", class: "img-responsive center-block", :style => "z-index:1")%></a>
+                        <div class="modal fade and carousel slide" id="lightboxNotable"><!-- modal display for expanding image !! IN THIS CASE IMAGE IMPORPERLY SIZED -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Notable Mentions Wireframe</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag("sharkoWire1.JPG", class: "img-responsive center-block")%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                        
+                    <p id="wireText">
+                        The original Sharko's site had many accolades regarding their BBQ food along with their missions and history of stores, but they chose to messily list those all these things throughout the homepage. Since I chose to tidy up the homepage, I decided to put the notable mentions content into a new page altogether. With a seperate page, interested users can easily check out Sharko's awards, purpose, and history. I felt this was more effective than having them scroll down a very long homepage to find.
+                    </p>
+                </div><!-- END accordiao content -->
+            </div><!-- END tabpanel collapse wrap -->
+        </div><!-- END card accordion pannel 5 -->
+    </div> <!-- END accordion pannel / multi collapse wrap -->
+</section>  <!-- END content container section wrap -->

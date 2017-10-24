@@ -1,43 +1,44 @@
 <section class="landing"><!-- Landing Page -->
-    <article class="container" id="animatedtext">
-        <div class= "row" id="animatedtext-cols">
+    <div class="container" id="animatedtext"><!-- main header on landing page -->
+        <div class= "row" id="animatedtext-cols"><!-- main header row -->
             <p id="landing-header" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
-        </div>
-    </article>
+        </div><!-- END main header row -->
+    </div><!-- END main header text container -->
     
-    <article class="container-fluid fade-in" id="landingPageRows">
+    <article class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
         <section class="row landingRowSection" id="aboutRowLanding">
-                <%= link_to "About Me", root_path, :class => "scroll-button landingRowButton" %>
-                <span class="star1"></span>
-                <span class="star2"></span>
-                <span class="star3"></span>
+            <%= link_to "About Me", '#aboutme-content', :class => 'scroll-button landingRowButton' %>
+            <!-- shooting stars / CSS animations used for star movements -->
+            <span class="star1"></span>
+            <span class="star2"></span>
+            <span class="star3"></span>
         </section>
         
         <section class="row landingRowSection fade-in" id="devRowLanding">
-                <%= link_to "Dev Work", root_path, :class => "landingRowButton scroll-button3" %>
+            <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton scroll-button' %>
         </section>
         
         <section class="row row-flex landingRowSection fade-in" id="designRowLanding"> 
-                <%= link_to "UI/UX Work", root_path, :class => "landingRowButton scroll-button2" %>
+            <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton scroll-button2' %>
         </section>
     </article>
     
-    <article id="scrolldown-button-row"  class="container" >
+    <div id="scrolldown-button-row"  class="container" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
         <div class="row">
             <a class="scroll-down" href="#" address="true">
                 <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="About Me Section" ></div>
             </a>
         </div>
-    </article>
+    </div><!-- end scroll down container -->
 </section><!-- END LANDING page section -->
 
-<section class="container-fluid" id="aboutme-content">
-        
+<section class="container-fluid" id="aboutme-content"><!-- START aboutme section homepage -->
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">About Me</h1>
     </div>
-
-    <article id="aboutMe" class="container-fluid">
+    
+    <article class="container-fluid">
+    <!--<article id="aboutMe" class="container-fluid">-->
         <div class="row">
             <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
                 <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
@@ -62,8 +63,6 @@
                             <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
                             <p><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
                         </div>
-                         
-    
                     </div>
                 </div><!--end card -->
             </div><!-- end column div -->
@@ -84,36 +83,26 @@
             </div><!-- end column div -->
         </div><!--end row -->
     </article> <!-- end homepage cards article within aboutme-content section -->
-
-    <!--<div class="row">-->
-    <!--    <a class="scroll-down3" href="#" address="true">-->
-    <!--        <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Development Section" ></div>-->
-    <!--    </a>-->
-    <!--</div>-->
-
 </section><!-- end aboutme-content section -->
  
-<section class="container-fluid"  id="dev-content">
+<section class="container-fluid"  id="dev-content"><!-- START developer section of homepage -->
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">Dev Work</h1>
     </div>
+    
     <article class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->
         <div class="row">
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 1 | COMP SCI CAPSTONE -->
-                    <a class="img-card" href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">
-                    <%= image_tag "depaul-logo.png", :class => "img-responsive", :style => "object-fit:contain;border:none" %>
-                    </a>
+                    <%= image_tag "depaul-logo.png", :class => 'img-card', :style => 'object-fit:contain' %>
                     <div class="card-content">
-                        <h4 class="card-title">
-                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="blank_">Computer Science Capstone | When If Project</a>
-                        </h4>
+                        <h4 class="card-title">Computer Science Capstone | When If Project</h4>
                         <p>This was probably my favorite project at DePaul. This was a group project where we were tasked to create a website for student's, faculty, and admin's. The site's purpose was to allow for student's to run a "when-if" report where they could generate a schedule of classes for completing IT or IS grad school classes. Faculty could waive classes and view student's reports. Admin's can view all accounts and have the power to do whatever faculty or student's can do. </p>
                         <p>I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familar with Obeject Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
                         <p>Overall it was a great experience. I learned a lot from the computer science guys - new approaches to sessions and other things I have not considered - and I feel like they learned a lot of from me as well. </p>
                     </div>
                     <div class="card-read-more"><!-- view site -->
-                        <a href="http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/" target="_blank" class="btn btn-link btn-block"> View site</a>
+                         <%= link_to "View site", 'http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div> 
                     <div class="card-read-more"><!-- view Github source code -->
                         <a href="https://github.com/erbogart28/CS-Capstone-Final" target="_blank" class="btn btn-link btn-block"> 
@@ -123,8 +112,8 @@
                 </div><!-- END CARD 1 -->
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 2 | Sharkos BBQ First Go Through --->
-                    <%= image_tag "headshot1.jpg", :class => "img-card", :style => "object-fit:contain" %>
+                <div class="card"><!-- CARD 2 | Portfolio -->
+                    <%= image_tag "headshot1.jpg", :class => 'img-card', :style => 'object-fit:contain' %>
                     <div class="card-content">
                         <h4 class="card-title">Portfolio Site</h4>
                         <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the database and models in some sort of way. I've gone through many diferent itterations for this portfolio site - most of this code and process can be seen through my seperation of branches.</p>
@@ -138,17 +127,13 @@
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"> <!-- CARD 3 | Sharkos rails -->
-                    <a href="https://sharkos-rails.herokuapp.com/" target="_blank">
-                    <%= image_tag "sharkologo3.png", :class => "img-card", :style => "padding: 15px;object-fit:contain" %>
-                    </a>
+                    <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px;object-fit:contain' %>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="https://sharkos-rails.herokuapp.com/" target="_blank">Sharko's Updated</a>
-                        </h4>
-                        <p>I later revisited my attempt at creating a Sharko website. This time around I was far more equipped to create a responsive and clean site. I developed this site using Ruby-on-Rails, and with CSS/Bootstrap to pull the front-end together. I created role based permissions and page views, an ordering system, user sign-ups, and user sessions. Users are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. </p>
+                        <h4 class="card-title">Sharko's Updated</a></h4>
+                        <p>This was my second attempt at developing Sharko's website. This time around I was far more equipped to create a responsive and clean site. I developed this site using Ruby-on-Rails, and with CSS/Bootstrap to pull the front-end together. I created role based permissions and page views, an ordering system, user sign-ups, and user sessions. Users are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. </p>
                     </div>
                     <div class="card-read-more"> <!-- view site -->
-                        <a href="https://sharkos-rails.herokuapp.com/" target="_blank" class="btn btn-link btn-block">View site</a>
+                        <%= link_to "View Site", 'https://sharkos-rails.herokuapp.com/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div>
                     <div class="card-read-more"><!-- github code view -->
                         <a href="https://github.com/erbogart28/sharko-web-dev-2" target="_blank" class="btn btn-link btn-block">
@@ -162,31 +147,25 @@
         <div class="row"><!-- START ROW 2 | DEVELOPMENT -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 4 | Greatmoods Work -->
-                  <a href="training.greatmoods.com" target="blank_">
-                    <%= image_tag "GMlogo.png", :class => "img-card", :style => "object-fit:contain;padding-left:20px" %>
-                  </a>
+                    <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'object-fit:contain;padding-left:20px' %>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="http://www.training.greatmoods.com/index.php" target="_blank">GreatMoods Internship Work</a>
-                        </h4>
+                        <h4 class="card-title">GreatMoods Internship Work </h4>
                         <p> This was an interesting internship to say the least! I learned a lot: how to communicate effecticely and express my opionins on design choices, how to compromise on ideas depedning on what the boss hoped to see, how to best collaborate remotely. I did a LOT of work, and ended up being the only front-end dev even though I was expecting to be mentored or led by at least one other front-end developer. At the end of the day I was tasked with redeveloping the whole entire site based off the current site GreatMoods.com, which is completely unresponsive and outdated. I would've been able to complete full site responsiveness, but leadership issues and redeveloping 100+ pages by myself as an unpaid intern led to complications for reaching the finish line. </p>
                         <p>I was able to learn a lot mainly because I was tasked to do so much, while having very little support or direction. I took the good with the bad, and in the end I feel I've come out a strong coder. </p>
                     </div>
                     <div class="card-read-more">
-                        <a href="" target="blank_" class="btn btn-link btn-block">View My Work</a>
+                        <%= link_to "Before & After", '#', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div>
                     <div class="card-read-more"> <!-- view site -->
-                        <a href="http://www.training.greatmoods.com/index.php" target="_blank" class="btn btn-link btn-block">Current Redeveloped Site</a>
+                        <%= link_to "Redeveloped Site", 'http://www.training.greatmoods.com/index.php', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div>
                 </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 5 PORTFOLIO SITE -->
-                    <%= image_tag "sharkologo3.png", :class => "img-card", :style => "padding: 15px;object-fit:contain" %>
+                    <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px;object-fit:contain' %>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="http://evanb1.sgedu.site/bogartefinalwebsite%208-3/index.html" target="_blank">Sharko's BBQ</a>
-                        </h4>
+                        <h4 class="card-title">Sharko's BBQ - First Site</h4>
                         <p>This was the first website I developed and designed.</p>
                         <p>This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
                     </div>
@@ -206,16 +185,12 @@
                     <%= image_tag "fakeNewsPic.png" %>
                     </a>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_"> Fake News Bootstrap</a>
-                        </h4>
+                        <h4 class="card-title">Fake News Bootstrap</h4>
                         <p>Utilized Bootstrap for a responsive design.</p> 
-                        <p>For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first learned about bootstrap. </p>
+                        <p>For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first started learning about Bootstrap. </p>
                     </div>
                     <div class="card-read-more">
-                        <a href="https://evanbogart.com/examples/bootstrapFinal/" target="_blank" class="btn btn-link btn-block">
-                            View site
-                        </a>
+                        <%= link_to "View Site", 'https://evanbogart.com/examples/bootstrapFinal/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div>
                     <div class="card-read-more">
                         <a href="https://github.com/erbogart28/fakenewsBootstrap" target="_blank" class="btn btn-link btn-block">
@@ -236,47 +211,43 @@
 
 
 <section id="design-content" class="container-fluid">
+    
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">UI/UX Work</h1>
     </div>
+    
     <article class="container" id="designCards"><!-- design cards section article / container -->
-        <div class="row">
+        <div class="row"><!-- START row 1 | Design Cards -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 1 | sharko Wireframes -->
-                        <%= image_tag "sharkologo3.png", :class => "img-card", :style => "padding: 15px;object-fit:contain" %>
+                        <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px;object-fit:contain' %>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="/static_pages/sharkoWires"> Sharko's Wireframe</a>
-                        </h4>
+                        <h4 class="card-title">Sharko's Wireframe</h4>
                         <p class="sharkoWireText">Before developing the site for Shako's BBQ, I created these wireframes. This was not my first time creating wireframes, and I was a bit ambitious in my designs considering the coding knowledge I had for web development at this time. It was a fun challenge to try and develop the site as closely as I could based off these wireframes.</p>
                     </div>
                     <div class="card-read-more">
-                        <a class="btn btn-link btn-block" href="/static_pages/sharkoWires">View Wireframes</a>
+                        <!--<a  href="/static_pages/sharkoWires"></a>-->
+                        <!-- turbolinks:false added to prevent JS / jQuery conflicts when new page is loaded -->
+                        <%= link_to "View Wireframes", static_pages_sharkoWires_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' %>
                     </div>
                 </div><!-- END CARD 1 -->
             </div><!-- END col placement -->
             
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 2 | Firefly -->
-                    <a class="img-card" href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_" >
-                    <%= image_tag "fireflyLogo.png", :style => "object-fit:contain"%>
-                    </a>
+                    <%= image_tag "fireflyLogo.png", :class => 'img-card', :style => 'object-fit:contain' %>
                     <div class="card-content">
-                        <h4 class="card-title">
-                            <a href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" target="blank_">Firefly Prototype</a>
-                        </h4>
+                        <h4 class="card-title">Firefly Prototype</h4>
                         <p class="fireflyAbout"> This was a group project. Our goal was to research and create an application that allows users to join into pick up sports games. Before creating the prototype, we made a <a href="https://docs.google.com/presentation/d/1fd33APLmPYgnBo0cI0U0GJc4l0tJ-PRS2lof48TPnXk/edit?usp=sharing" target="blank_">component library</a> with all of the elements that would be used, and we also created style tiles to allow for a better understanding of the overall design before we started.</p>
                     </div>
                     <div class="card-read-more">
-                        <a href="https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/" class="btn btn-link btn-block" target="blank_">
-                            View Design
-                        </a>
+                      <%= link_to "View Prototype", 'https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div>
                 </div><!-- END CARD 2 -->
             </div>  <!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 3 | Athens Redesign -->
-                    <%= image_tag "bulldoghead.png", :class => "img-card", :style => "object-fit:contain" %>
+                    <%= image_tag "bulldoghead.png", :class => 'img-card', :style => 'object-fit:contain' %>
                     <div class="card-content">
                         <h4 class="card-title">Athens Bulldogs Redesign</h4>
                         <p>This was a group project in which we were assigned to research and redesign the Athens Bulldogs website. There was a lot of research that went into this that I no longer have (as this was multiple years ago, and I did not consider to keep all my work back then), we created user profiles, style tiles, and wireframes.</p> 
@@ -326,10 +297,10 @@
             </div><!-- end column placement -->
         </div><!-- END row 1 -->
         
-        <div class="row">
+        <div class="row"><!-- START row 2 | Design cards -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 4 | Wingstop App Redeisgn -->
-                    <%= image_tag "WingstopLogo.png", :class => "img-card", :style => "object-fit:contain" %>
+                    <%= image_tag "WingstopLogo.png", :class => 'img-card', :style => 'object-fit:contain' %>
                     <div class="card-content">
                         <h4 class="card-title">WingStop App</h4>
                         <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
@@ -379,3 +350,4 @@
         </div><!-- END ROW 2 -->
     </article><!-- END design cards article / container wrap -->
 </section><!--END design section -->
+
