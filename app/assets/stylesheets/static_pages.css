@@ -547,12 +547,6 @@ CARD styles
     border-radius: 10px!important;
     border-bottom: 5px solid #eee!important;
 }
-/*utility class for centering verticaclly in a row without flex */
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
 .tooltip-inner {
   width:200px;
     /*box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);*/
@@ -680,12 +674,11 @@ CARD styles
 /************ back arrow / back page / btn **********/
 /*display flex for back button and text / allows back-text to be positioned perfectly */
 #back{
-  display: flex;
+  display: initial;
+  text-decoration:none !important;
 }
 /* text after back arrow icon --*/
 #back-text{
-  line-height: 2.9em; /* this line height easily centers text according to the 3em back arrow size */
-  font-weight: 500;
   word-spacing: .1em;
   font-size: 16px;
 }
