@@ -859,7 +859,10 @@ CARD styles
 .nav a:hover{
     color: black !important;
     transition: all .25s;
-    background-color:#93c54b;
+    background: -webkit-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: -moz-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: -o-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
 }
 .nav > li > a:focus{
   background:none;
