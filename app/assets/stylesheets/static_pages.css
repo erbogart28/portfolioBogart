@@ -392,22 +392,11 @@ SECTION STYLES
 .scroll-down.visible{
     bottom: 1vh;
 }
-
-.scroll-down2,
-.scroll-down3{
-    display: flex;
-    justify-content: center;
-}
 .scroll-down {
-    border: 1px solid #eee;
     border-radius: 50%;
-    color: #eee;
+    border:1px solid #eeeeee;
     text-align: center;
-    /*background-image: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.04, #f83600), color-stop(0.8, #f9d423));*/
-    /*background-image: -webkit-linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
-    /*background-image: -moz-linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
-    /*background-image: -o-linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
-    /*background-image: linear-gradient(to right, #f83600 4%, #f9d423 80%);*/
+
     display: block;
     left: 50%;
     margin-left: -50px;
@@ -417,46 +406,73 @@ SECTION STYLES
     line-height: 100px;
     width: 100px;
       /* section down button animations */
-      -webkit-animation:scroll-down-popup 2s 2 !important;
-      -moz-animation: scroll-down-popup 2s 2 !important; 
-      -o-animation: scroll-down-popup 2s 2 !important; 
-      animation: scroll-down-popup 2s 2 !important;
+      -webkit-animation:scroll-down-popup 2.5s 2 !important;
+      -moz-animation: scroll-down-popup 2.5s 2 !important; 
+      -o-animation: scroll-down-popup 2.5s 2 !important; 
+      animation: scroll-down-popup 2.5s 2 !important;
       
       -webkit-transition: bottom 1s ease-in !important;
       -moz-transition: bottom 1s ease-in !important;
       -o-transition: bottom 1s ease-in !important;
       transition: bottom 1s ease-in !important; 
 }
+.scroll-down > .arrow-scroll-btn:hover{
+    /*background-color: #808080;*/
+    opacity:1 !important;
+    border-right: 2px solid green;
+    border-bottom: 2px solid green;
+    color:green !important;
+}
+/* arrow used inside button to indicate there is more info below */
+.arrow-scroll-btn {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 0;
+    height: 50px;
+    line-height: 0;
+    margin-top: -25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(45deg);
+}
 /*scrolldown button keyframes defined | show from bottom */
 @-webkit-keyframes scroll-down-popup {
-  0%   { opacity: .8; }
-  50%   { opacity: 1; }
-  100% { opacity: .8; }
+  0%   { opacity: .3; }
+  50%   { opacity: .55; }
+  100% { opacity: .85; }
 }
 
 @-moz-keyframes scroll-down-popup {
-  0%   { opacity: .8; }
-  50%   { opacity: 1; }
-  100% { opacity: .8; }
+  0%   { opacity: .3; }
+  50%   { opacity: .55; }
+  100% { opacity: .85; }
 }
 
 @-o-keyframes scroll-down-popup {
   0%   { opacity: .3; }
-  50%   { opacity: 1; }
-  100% { opacity: .3; }
+  50%   { opacity: .55; }
+  100% { opacity: .85; }
 }
 
 @keyframes scroll-down-popup {
-  0%   { opacity: .8; }
-  50%   { opacity: 1; }
-  100% { opacity: .8; }
-  0%   { border-color: #eee; }
+  0%   { opacity: .3; }
+  50%   { opacity: .55; }
+  100% { opacity: .85; }
+  0%   { border-color:  #555; }
   50%   { border-color: #555; }
   100% { border-color: #eee; }
 }
 /*  start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
  /*fade in landing page elements */
@@ -474,30 +490,7 @@ SECTION STYLES
     -moz-animation-duration:1s;
     animation-duration:1s;
 }
-.scroll-down:hover{
-    background-color: #808080;
-    opacity:.8 !important;
-}
-/* arrow used inside button to indicate there is more info below */
-.arrow-scroll-btn {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 2px;
-    color: #eee;
-    display: inline-block;
-    font-size: 0;
-    height: 50px;
-    line-height: 0;
-    margin-top: -25px;
-    text-align: center;
-    vertical-align: middle;
-    width: 50px;
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(45deg);
-}
+
 /************** 
 CARD styles
 **********/
@@ -554,12 +547,6 @@ CARD styles
     border-radius: 10px!important;
     border-bottom: 5px solid #eee!important;
 }
-/*utility class for centering verticaclly in a row without flex */
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
 .tooltip-inner {
   width:200px;
     /*box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);*/
@@ -583,10 +570,10 @@ CARD styles
 /* headhshot image */
 #headshot{
     border:none;
-    margin:3em 0;
+    margin:2em 0;
 }
 #homepageCards{
-    padding-top: 5em;
+    padding-top: 2em;
 }
 /********************************************/
 /************  Dev Page *********************/
@@ -687,12 +674,11 @@ CARD styles
 /************ back arrow / back page / btn **********/
 /*display flex for back button and text / allows back-text to be positioned perfectly */
 #back{
-  display: flex;
+  display: initial;
+  text-decoration:none !important;
 }
 /* text after back arrow icon --*/
 #back-text{
-  line-height: 2.9em; /* this line height easily centers text according to the 3em back arrow size */
-  font-weight: 500;
   word-spacing: .1em;
   font-size: 16px;
 }
@@ -852,7 +838,7 @@ CARD styles
 /*********************************************************/
 /*   SIDEBAR STYLES
 ***************************************************************/
-#rightbar{
+#sidebar{
   position: fixed;
   top: 2vh;
   left: 0px;
@@ -860,59 +846,48 @@ CARD styles
   padding-top:1rem;
   padding-bottom:1rem;
   list-style:none;
-  background: #000428; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: -webkit-linear-gradient(left, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -moz-linear-gradient(left, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(left, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: linear-gradient(to right, #a1c4fd 90%, #c2e9fb 100%);
   border-color: #3e3f3a;
   display: inline-block;
   margin:0;
   border-radius: 0 5px 5px 0;
 }
 
-.item a:hover,
-.item a:active{
-    background-color: white;
-    width: 5rem;
+.nav a:hover{
     color: black !important;
+    transition: all .25s;
+    background-color:#93c54b;
+}
+.nav > li > a:focus{
+  background:none;
+}
+.nav > li.active{
+  background-color:#f8f5f0 !important;
 }
 
-#rightbar .fa {
+.nav > li > a.fa {
     padding:1rem;
+    color:#f8f5f0;
 }
-
-#rightbar a{
-  color:white;
+.nav > li.active > a.fa {
+    padding:1rem;
+    color:#79a736 !important;
+    background: -webkit-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: -moz-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: -o-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
 }
 
 @media screen and (max-width:768px){
-  #rightbar{
-    position: fixed;
-    top: 50vh;
-    left: 0px;
-    z-index:1;
-    padding-top:1rem;
-    padding-bottom:1rem;
-    list-style:none;
-    background: #000428; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-color: #3e3f3a;
-    display: inline-block;
-    margin:0;
-    border-radius: 0 5px 5px 0;
-  }
-  .item a:hover,
-  .item a:active{
-    background-color: white;
-    width: 3.65rem;
-    color: black !important;
-  }
-  #rightbar .fa {
+  #sidebar .fa {
     padding:1.25rem .5rem;
     font-size:1.75em;
   }
-  .card-title{
-    text-indent:.5rem;
+  #homepageCards{
+    margin: 10px;
   }
   .page-header{
     margin-bottom:2rem;
@@ -1031,7 +1006,7 @@ CARD styles
   }
   .landingRowButton{
     font-size: 4rem;
-    line-height: 7rem;
+    line-height: 6.5rem;
   }
   #animatedtext {
     padding-top:1em;
@@ -1043,7 +1018,6 @@ CARD styles
     margin-top: -1em !important;
     padding:0 !important;
   }
-    
   #landing-header span {
     font: 700 2em/1 "Oswald", sans-serif;;
     display: block;
@@ -1060,10 +1034,10 @@ CARD styles
     line-height: 6.5rem;
   }
   .scroll-down.visible {
-    bottom: 5em !important;
+    bottom: 5em;
   }
   .scroll-down {
-    border: 0;
+     border: 0 solid transparent;
   }
   #headshot{
     border:none;
@@ -1086,61 +1060,5 @@ CARD styles
     border-left:none;
     z-index: 20;
     padding-bottom:5px;
-  }
-  .tooltip-inner {
-    width: 200px;
-    padding: 2px 10px;
-    color: #ffffff;
-    text-align: center;
-    background-color: #3e3f3a;
-    border-radius: 4px;
-    letter-spacing:1px;
-  }
-  .tooltip.top {
-    margin-top: 10px;
-    padding: 5px 10px;
-  }
-}
-@media(max-width: 320px) and (min-width: 2px){
-  #animatedtext {
-    padding:0;
-  }
-   /*landing page and large header redifined */
-  #landing-header{
-    font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 1px !important;
-    padding-right: 3.5rem;
-  }
-  #landing-header span {
-    font: 700 2em/1 "Oswald", sans-serif;;
-    display: block;
-    line-height:44px;
-    letter-spacing:6px;
-  }
-  #devRowLanding,
-  #aboutRowLanding{
-    margin-bottom:1.5em;
-  }
-  .overlay{
-    font-size:3rem;
-    height:6rem;
-    line-height: 6.5rem;
-  }
-  .scroll-down.visible {
-    bottom: 5em !important;
-  }
-  .tooltip-inner{
-    padding: 2px 6px;
-  }
-  #headshot{
-    border:none;
-    margin:1em 0;
-    z-index:20;
-  }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin-bottom:2em;
   }
 }

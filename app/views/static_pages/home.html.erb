@@ -7,7 +7,7 @@
     
     <article class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
         <section class="row landingRowSection" id="aboutRowLanding">
-            <%= link_to "About Me", '#aboutme-content', :class => 'scroll-button landingRowButton' %>
+            <%= link_to "About Me", '#aboutme-content', :class => 'landingRowButton' %>
             <!-- shooting stars / CSS animations used for star movements -->
             <span class="star1"></span>
             <span class="star2"></span>
@@ -15,20 +15,18 @@
         </section>
         
         <section class="row landingRowSection fade-in" id="devRowLanding">
-            <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton scroll-button' %>
+            <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton' %>
         </section>
         
         <section class="row row-flex landingRowSection fade-in" id="designRowLanding"> 
-            <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton scroll-button2' %>
+            <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton' %>
         </section>
     </article>
     
     <div id="scrolldown-button-row"  class="container" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
-        <div class="row">
-            <a class="scroll-down" href="#" address="true">
-                <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="About Me Section" ></div>
-            </a>
-        </div>
+        <a class="scroll-down" href="#aboutme-content" address="true">
+            <span class="arrow-scroll-btn"></span>
+        </a>
     </div><!-- end scroll down container -->
 </section><!-- END LANDING page section -->
 
@@ -57,28 +55,22 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-title"> Contact Me </div>
-                        <div class="contactText">
-                            <p>If you have any questions, please feel free to email me!</p>
-                            <p><b>Email:</b> erbogart28@gmail.com</p>
-                            <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
-                            <p><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
-                        </div>
-                    </div>
+                        <p>If you have any questions, please feel free to email me!</p>
+                        <p><b>Email:</b> erbogart28@gmail.com</p>
+                        <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
+                        <p><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
+                    </div><!-- END card content -->
                 </div><!--end card -->
             </div><!-- end column div -->
             <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
-                            <div class="card-title">
-                                View My Resume
-                            </div>
-                            <div class="resumeText">
-                                <p>My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
-                            </div>
-                        <div class="card-read-more">
-                            <%= link_to " View Resume", image_path("resumePortfolioSite.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
-                        </div><!-- end read more -->
-                    </div>
+                        <div class="card-title"> View My Resume</div>
+                        <p>My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
+                     </div><!-- END card content -->
+                    <div class="card-read-more">
+                        <%= link_to " View Resume", image_path("resumePortfolioSite.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
+                    </div><!-- end read more -->
                 </div><!--end card -->
             </div><!-- end column div -->
         </div><!--end row -->
@@ -211,7 +203,6 @@
 
 
 <section id="design-content" class="container-fluid">
-    
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">UI/UX Work</h1>
     </div>

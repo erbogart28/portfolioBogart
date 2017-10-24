@@ -3,11 +3,11 @@
   <head>
     <title>.ERB Portfolio</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'pray_favi.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <%= favicon_link_tag 'pray_favi.ico' %>
  
 <script>
   $(document).on("turbolinks:load", function() {
@@ -16,63 +16,58 @@
       var w = $(window);
       w.scroll(function () {
         if (w.scrollTop() !== 0) {
-          $(".scroll-down").removeClass("visible");
-        return;
-          }
-          $(".scroll-down").addClass("visible"), 
-          $(".scroll-down").css('opacity', '1');
-        });
-        $(".scroll-down").addClass("visible");
+          $(".scroll-down").removeClass("visible"); // allows for scroll down to become hidden and transition out of view
+          return;
+        }
+        $(".scroll-down").addClass("visible"), // will add visible if scrolled back to top
+        $(".scroll-down").css('opacity', '.8');
+      });
+      $(".scroll-down").addClass("visible");  // line repeated here for initial landing page visibility
     });
+    
     // add sidebar 200px down from the top of page. Prevents sidebar on load, and prevents sidebar being shown for a tiny scroll 
     $(function () {
       var w = $(window);
       w.scroll(function () {
         if (w.scrollTop() > 200) {
-          $("#rightbar").removeClass("hidden");
-        return;
-          }
-          $("#rightbar").addClass("hidden");
-        });
-        $("#rightbar").addClass("hidden");
+          $("#sidebar").removeClass("hidden");
+          return;
+        }
+        $("#sidebar").addClass("hidden");
+      });
+      $("#sidebar").addClass("hidden");
     });
     
-    $(function() {
-      $('.scroll-down').on('click', function() {
-        $('html, body').animate({scrollTop: $('#aboutme-content').offset().top }, 'slow');
-          return false;
-        });
-    }); // scroll down to about me - arrow indicator on landing page
-    
-    $(function() {
-      $('.scroll-button').on('click', function() {
-        $('html, body').animate({scrollTop: $('#aboutme-content').offset().top }, 'slow');
-        return false;
-      });
-    }); // scroll down to about me section, sidebar and row buttons 
-    
-    $(function() {
-      $('.scroll-button2').on('click', function() {
-        $('html, body').animate({scrollTop: $('#design-content').offset().top }, 'slow');
-        return false;
-      });
-    }); //scroll down to design section, sidebar and row buttons 
-
-    $(function() {
-      $('.scroll-button3').on('click', function() {
-        $('html, body').animate({scrollTop: $('#dev-content').offset().top }, 'slow');
-        return false;
-      });
-    });  // scroll down to dev section, sidebar and row buttons 
-    
+    //toggle tooltip
     $(function (){
-      $('[data-toggle="tooltip"]').tooltip()  //toggle tooltip
-    }); 
-  }); //end .on turobolinks load
+      $('[data-toggle="tooltip"]').tooltip()  
+    });
+    
+    // smooth scrolling to sections 
+    $(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+    
+    $(".nav").on("activate.bs.scrollspy", function(){
+        var currentItem = $(".nav li.active > a").text();
+        $('#label span').empty().html(currentItem);
+    })
+  });    
 </script>
 </head>
 
-<body>
+<body class="scroll-area" data-spy="scroll" data-target="#sidebar">
 <%= render 'sidebar' %>
 <%= yield %>
 <%= render 'footer' %>
