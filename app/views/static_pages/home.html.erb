@@ -6,7 +6,7 @@
     </div><!-- END main header text container -->
     
     <article class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
-        <section class="row landingRowSection" id="aboutRowLanding">
+        <section class="row landingRowSection sectionScroll" id="aboutRowLanding">
             <%= link_to "About Me", '#aboutme-content', :class => 'landingRowButton' %>
             <!-- shooting stars / CSS animations used for star movements -->
             <span class="star1"></span>
@@ -14,11 +14,11 @@
             <span class="star3"></span>
         </section>
         
-        <section class="row landingRowSection fade-in" id="devRowLanding">
+        <section class="row landingRowSection fade-in sectionScroll" id="devRowLanding">
             <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton' %>
         </section>
         
-        <section class="row row-flex landingRowSection fade-in" id="designRowLanding"> 
+        <section class="row row-flex landingRowSection fade-in sectionScroll" id="designRowLanding"> 
             <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton' %>
         </section>
     </article>
