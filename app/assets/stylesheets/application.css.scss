@@ -11,29 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= require lightbox
  *= require font-awesome
  *= require_tree .
  */
-.fa-linkedin {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 18px !important;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-.fa-github
-{
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 18px !important;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-
-@media screen and (min-width: 768px){
-   br 
-    { 
-       display: none;  
-    }
-} 

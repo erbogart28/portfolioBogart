@@ -746,45 +746,53 @@ CARD styles
 /*********************************************************/
 /*    tooltip - popover element on scroll-down btn  
 ***************************************************************/
-.visible.tooltip {
-  position: absolute;
-  z-index: 1070;
-  display: flex;
-  justify-content:center;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: normal;
-  left:-20px;
-  line-break: auto;
-  line-height: 1.42857143;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  white-space: nowrap !important;
-  word-break: normal;
-  word-spacing: normal;
-  word-wrap: normal;
-  font-size: 14px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.tooltip {
-    font-size: 12px;
-    line-height: 21px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-.tooltip-inner {
-    max-width: 280px;
-    padding: 3px 8px;
-    color: #ffffff;
-    text-align: center;
-    background-color: #3e3f3a;
-    border-radius: 4px;
-}
+/*.visible.tooltip {*/
+/*  position: absolute;*/
+/*  z-index: 1070;*/
+/*  display: flex;*/
+/*  justify-content:center;*/
+/*  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: normal;*/
+/*  letter-spacing: normal;*/
+/*  left:-20px;*/
+/*  line-break: auto;*/
+/*  line-height: 1.42857143;*/
+/*  text-align: left;*/
+/*  text-align: start;*/
+/*  text-decoration: none;*/
+/*  text-shadow: none;*/
+/*  text-transform: none;*/
+/*  white-space: nowrap !important;*/
+/*  word-break: normal;*/
+/*  word-spacing: normal;*/
+/*  word-wrap: normal;*/
+/*  font-size: 14px;*/
+/*  opacity: 0;*/
+/*  filter: alpha(opacity=0);*/
+/*}*/
+/*.tooltip {*/
+/*    font-size: 12px;*/
+/*    line-height: 21px;*/
+/*    font-weight: 500;*/
+/*    text-transform: uppercase;*/
+/*}*/
+/*.tooltip-inner {*/
+/*    max-width: 280px;*/
+/*    padding: 3px 8px;*/
+/*    color: #ffffff;*/
+/*    text-align: center;*/
+/*    background-color: #3e3f3a;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .tooltip {
+        display: none !important;
+    }
+ }
 /*********************************************************/
 /*   footer stlyes / header nav elememnts -> social media
 ***************************************************************/
@@ -807,13 +815,6 @@ CARD styles
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
-
-@media screen and (min-width: 768px){
-   br 
-    { 
-       display: none;  
-    }
-} 
 
 /*********************************************************/
 /*   SIDEBAR STYLES
@@ -874,7 +875,6 @@ CARD styles
   }
   .page-header{
     margin-bottom:2rem;
-    
   }
 }
 /*********************************************************/

@@ -1,6 +1,7 @@
 <nav id="sidebar" class="hidden">
     <ul class="nav">
-      <li id="aboutSidebar"><%= link_to "", '#aboutme-content', title: "About Me",  :class => 'fa fa-2x fa-info-circle'  %></li>
-      <li id="devSidebar"><%= link_to "", '#dev-content', title: "Development Work", :class => 'fa fa-2x fa-keyboard-o' %></li>
-      <li id="designSidebar"><%= link_to "", '#design-content', title: "Design Work", :class => 'fa fa-2x fa-universal-access' %></li>
+      <li id="aboutSidebar" data-toggle="tooltip" title="About Me" data-placement="right"><%= link_to "", '#aboutme-content', :class => 'fa fa-2x fa-info-circle' %></li>
+      <li id="devSidebar" data-toggle="tooltip" title="Development" data-placement="right"><%= link_to "", '#dev-content', :class => 'fa fa-2x fa-keyboard-o' %></li>
+      <li id="designSidebar" data-toggle="tooltip" title="Design" data-placement="right"><%= link_to "", '#design-content', :class => 'fa fa-2x fa-universal-access' %></li>
+    </ul>
 </nav>

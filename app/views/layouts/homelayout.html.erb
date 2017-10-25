@@ -38,11 +38,15 @@
       $("#sidebar").addClass("hidden");
     });
     
-    //toggle tooltip
+  //toggle tooltip on hover. Destroy tool tip on mobile screen sizes - allows for single click on mobile screen widths - as opposed to simply hiding w/ css
     $(function (){
-      $('[data-toggle="tooltip"]').tooltip()  
+      if ( $(window).width() < 760 ){
+        $('li').tooltip('destroy');
+      }else {
+          $('[data-toggle="tooltip"]').tooltip({trigger:'hover'}); 
+      }
     });
-    
+
     // smooth scrolling to sections 
     $(function() {
 		  $('a[href*="#"]:not([href="#"])').click(function() {
@@ -65,6 +69,12 @@
     })
   });    
 </script>
+
+
+<!--// function isTouchDevice(){-->
+<!--//     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);-->
+<!--// }-->
+
 </head>
 
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
