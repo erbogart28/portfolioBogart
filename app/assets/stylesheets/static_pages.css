@@ -642,25 +642,6 @@ CARD styles
   position: relative;
   display: inline-block;
 }
-/*#wireframePics::before {*/
-/*    content: '⤡';*/
-/*    z-index: 5;*/
-/*    position: absolute;*/
-/*    left: 15%;*/
-/*    top: 20%;*/
-    /* font-size: 12px; */
-/*    transform: translate( -50%, -50% );*/
-/*    padding: 0px 8px 4px 8px;*/
-/*    color: white;*/
-/*    font-size: 25px !important;*/
-/*    background-color: rgba(23, 35, 34, 0.5);*/
-/*    border-radius: 5px 5px 5px 5px;*/
-/*}*/
-/*#wireframePics > a{*/
-/*  height: auto;*/
-/*  min-height: 100%;*/
-/*  border-radius: 0;*/
-/*}*/
  .fa-chevron-up {
    color: #004e92;
  }
@@ -747,7 +728,6 @@ CARD styles
     background-color: rgba(0, 0, 0, 0);
     bottom:0;
 }
-
 /*close "x" button for modal preview displays */
 .close {
     margin-top: -2px;
@@ -760,7 +740,7 @@ CARD styles
     text-decoration: none;
     cursor: pointer;
     opacity: 1;
-    /*filter: alpha(opacity=50);*/
+    filter: alpha(opacity=50);
 }
 
 /*********************************************************/
@@ -846,9 +826,9 @@ CARD styles
   padding-top:1rem;
   padding-bottom:1rem;
   list-style:none;
-  background-image: -webkit-linear-gradient(left, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: -moz-linear-gradient(left, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: -o-linear-gradient(left, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -webkit-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -moz-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
   background-image: linear-gradient(to right, #a1c4fd 90%, #c2e9fb 100%);
   border-color: #3e3f3a;
   display: inline-block;
@@ -859,13 +839,13 @@ CARD styles
 .nav a:hover{
     color: black !important;
     transition: all .25s;
-    background: -webkit-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
-    background: -moz-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
-    background: -o-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
     background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
 }
 .nav > li > a:focus{
-  background:none;
+  background:none !important;
 }
 .nav > li.active{
   background-color:#f8f5f0 !important;
@@ -878,9 +858,9 @@ CARD styles
 .nav > li.active > a.fa {
     padding:1rem;
     color:#79a736 !important;
-    background: -webkit-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
-    background: -moz-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
-    background: -o-linear-gradient(left, #FFFFFF 86%, #ECE9E6 92%);
+    background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
     background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
 }
 
