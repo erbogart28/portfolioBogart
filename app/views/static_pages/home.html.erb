@@ -67,7 +67,7 @@
                         <p>My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
                      </div><!-- END card content -->
                     <div class="card-read-more">
-                        <%= link_to " View Resume", image_path("resumePortfolioSite.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
+                        <%= link_to " View Resume", image_path("EvanBogartResume.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
                     </div><!-- end read more -->
                 </div><!--end card -->
             </div><!-- end column div -->
@@ -88,12 +88,13 @@
                     <div class="card-content">
                         <h4 class="card-title">Computer Science Capstone | When If Project</h4>
                         <p>This was probably my favorite project at DePaul. This was a group project where we were tasked to create a website for student's, faculty, and admin's. The site's purpose was to allow for student's to run a "when-if" report where they could generate a schedule of classes for completing IT or IS grad school classes. Faculty could waive classes and view student's reports. Admin's can view all accounts and have the power to do whatever faculty or student's can do. </p>
-                        <p>I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familar with Obeject Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
+                        <p>I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familiar with Object Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
                         <p>Overall it was a great experience. I learned a lot from the computer science guys - new approaches to sessions and other things I have not considered - and I feel like they learned a lot of from me as well. </p>
                     </div>
+                    <!--Site is currently down. Heroku will not recognize as a Rails app cause the DB. Am working on hosting on server.
                     <div class="card-read-more"><!-- view site -->
-                         <%= link_to "View site", 'http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
-                    </div> 
+                    <!--     </%= link_to "View site", 'http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/', :class => 'btn btn-link btn-block', :target => 'blank_' %>-->
+                    <!--</div> -->
                     <div class="card-read-more"><!-- view Github source code -->
                         <a href="https://github.com/erbogart28/CS-Capstone-Final" target="_blank" class="btn btn-link btn-block"> 
                             <i class="fa fa-github"></i> Source Code
@@ -107,7 +108,7 @@
                     <%= image_tag "headshot1.jpg", :class => 'img-card' %>
                     <div class="card-content">
                         <h4 class="card-title">Portfolio Site</h4>
-                        <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the database and models in some sort of way. I've gone through many diferent iterations for this portfolio site - most of this code and process can be seen through my seperation of branches.</p>
+                        <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the db, models, and controllers in some sort of way eventually here. I've gone through many different iterations for this portfolio site - my code and thought process can be seen through my separation of branches.</p>
                     </div>
                     <div class="card-read-more"><!-- view Github source code -->
                         <a href="https://github.com/erbogart28/portfolioBogart" target="blank_" class="btn btn-link btn-block">
@@ -143,7 +144,7 @@
                     <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
                     <div class="card-content">
                         <h4 class="card-title">GreatMoods Internship Work </h4>
-                        <p> This was an interesting internship to say the least! I learned a lot: how to communicate effecticely and express my opionins on design choices, how to compromise on ideas depedning on what the boss hoped to see, how to best collaborate remotely.</p>
+                        <p> This was an interesting internship to say the least! I learned a lot: how to communicate effectively and express my opinions on design choices, how to compromise on ideas depending on what the boss hoped to see, how to best collaborate remotely.</p>
                         <p>I did a LOT of work, and ended up being the lead front-end developer in charge of the site's redevelopment and BitBucket repository. I also led one front-end developer for a period of time, who I gave tasks to and helped when needed. The previous design had zero responsiveness, and it was a large project to take on considering the ~150 page source code.</p>
                         <p> Since I was tasked a lot, I was able to learn a lot. As a result, I have become even more confident developing new elements and responsive pages using CSS, JS, jQuery, and HTML.</p>
                         <p>Feel free to check out the staging site with my code in action!</p>
@@ -155,7 +156,7 @@
             </div><!-- END col placement -->
             
             <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 5 PORTFOLIO SITE -->
+                <div class="card"><!-- CARD 5 Sharkos SITE -->
                     <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
                     <div class="card-content">
                         <h4 class="card-title">Sharko's BBQ - First Site</h4>
@@ -193,12 +194,12 @@
         </div><!-- END DEVELOPMENT ROW 2-->
         <div class="row">
             <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 1 | COMP SCI CAPSTONE -->
+                <div class="card"><!-- CARD 1 | 1st rails -->
                     <%= image_tag "pragmatic.png", :class => 'img-card'%>
                     <div class="card-content">
                         <h4 class="card-title">Depot Project</h4>
                         <p>This was my first project using Ruby-on-Rails, and my first project where I was tasked with using git! At this point in time I did not even understand the concept of branches, so I setup 3 different repositories for this one project. I've definitely come a long way since then. This really was the project that got me into developing and messing around with Ruby-on-Rails, and eventually led to me wanting to learn other MVC frameworks as well. </p>
-                        <p>Side navigation links do not work. The cart and order system are functioning properly. Purchasing an item prompts an ajax built cart, and if purchased the admin can see the orders via controller methods and erb inside the views. I pretty followed along in a book for this project, but it was still a project I was proud of completeing at the time. </p>
+                        <p>Side navigation links do not work. The cart and order system are functioning properly. Purchasing an item prompts an ajax built cart, and if purchased the admin can see the orders via controller methods and erb inside the views. I pretty followed along in a book for this project, but it was still a project I was proud of completing at the time. </p>
                     </div>
                     <div class="card-read-more"><!-- view site -->
                          <%= link_to "View site", 'https://depotredo.herokuapp.com/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
@@ -231,7 +232,7 @@
                     <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
                     <div class="card-content">
                         <h4 class="card-title">GreatMoods Internship Work </h4>
-                        <p> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explainations on what I develolped and why, and before and after pictures of the developed site. </p>
+                        <p> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explanations on what I developed and why, and before and after pictures of the developed site. </p>
                     </div>
                     <div class="card-read-more">
                         <!-- explaination page link. Turbolinks false allows for accordions to properly collapse  - avoids turbolinks from firing twice -->
@@ -306,8 +307,8 @@
                     <div class="card-content">
                         <h4 class="card-title">WingStop App</h4>
                         <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
-                        <p>This was a project for redesigning an application's order proccesing screens. I decided to redesign the Wingstop Application. It wasn't a huge design overhaul, but rather heuristic based fixes to improve the checkout process. For my prototypes I used Axure RP.</p>
-                        <p>I designed screens based on ordering a wing combo meal, as this meal required a lot of steps and requirements that were at times confusing on the original application. I designed screens that provided feedback which clearly indicated which required constraints needed to be completed through the use of success alert colors/icons, and warning colors/icons. Added page indictators when users had a multi-page process for one meal type.</p>
+                        <p>This was a project for redesigning an application's order processing  screens. I decided to redesign the Wingstop Application. It wasn't a huge design overhaul, but rather heuristic based fixes to improve the checkout process. For my prototypes I used Axure RP.</p>
+                        <p>I designed screens based on ordering a wing combo meal, as this meal required a lot of steps and requirements that were at times confusing on the original application. I designed screens that provided feedback which clearly indicated which required constraints needed to be completed through the use of success alert colors/icons, and warning colors/icons. Added page indicators when users had a multi-page process for one meal type.</p>
                         <p>You can read an in-depth analysis on my design decisions and why I changed what I did, or you can simply view the final redesigns below!</p>
                     </div>
                     <div class="card-read-more"><!-- view redesigns using modal slideshow -->
