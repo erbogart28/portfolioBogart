@@ -63,7 +63,7 @@
 		  });
 		});
     
-    $(".nav").on("activate.bs.scrollspy", function(){
+    $(".sectionScroll").on("activate.bs.scrollspy", function(){
         var currentItem = $(".nav li.active > a").text();
         $('#label span').empty().html(currentItem);
     })

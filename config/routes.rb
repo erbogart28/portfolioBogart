@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     
     get 'static_pages/sharkoWires'
     
+    get 'static_pages/greatmoods'
+    
 end

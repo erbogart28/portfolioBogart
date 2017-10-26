@@ -514,13 +514,10 @@ CARD styles
     border-top-right-radius:2px;
     display:block;
     overflow: hidden;
+    object-fit:contain; 
+    border-bottom:1px solid #eeeeee;
 }
-.img-card img{
-    width: 100%;
-    height: 200px;
-    object-fit:cover; 
-    transition: all .25s ease;
-} 
+
 .card-content {
     padding:15px;
     text-align:left;
@@ -530,27 +527,28 @@ CARD styles
     font-weight: 700;
     font-size: 1.65em;
 }
-.card-title a {
-    color: #000;
-    text-decoration: none !important;
-}
 .card-read-more {
     border-top: 1px solid #D4D4D4;
 }
 .card-read-more a {
-    text-decoration: none !important;
-    padding:10px;
-    font-weight:600;
-    text-transform: uppercase
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: 0 solid white !important;
+    font-size: .9em;
+    letter-spacing: 1.1px;
+    white-space: normal;
+}
+.card-read-more a:hover {
+    transition: all .25s;
+    background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+    background: linear-gradient(to bottom, #FFFFFF 86%, #ECE9E6 92%);
 }
 .card {
     border-radius: 10px!important;
     border-bottom: 5px solid #eee!important;
 }
-.tooltip-inner {
-  width:200px;
-    /*box-shadow: 0px -3px 1px 1px rgba(0,0,0,1.1), 0 2px 8px 0 rgba(0,0,0,0.12);*/
-  }
 /********************************************/
 /**** homepage content | Beneath landing page *****/
 /********************************************/
@@ -595,14 +593,12 @@ CARD styles
 }
 /*accordion text for wireframes*/
 #wireText{
-    text-align:left;
     margin-top:1em;
 }
 /********************************************/
 /*accordion definitions */
 /********************************************/
 .accordion-panel {
-  text-align: center;
   display: block;
   text-decoration: none;
   -webkit-transition: background-color 0.8s ease-in-out;  
@@ -611,17 +607,23 @@ CARD styles
   box-shadow: none;
 }
 .accordion-title {
-  text-transform: uppercase;
-  font-weight: 100!important;
-  padding: .1em;
+  color:black !important;
+  font-weight: bold !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  text-align: center; 
 }
 .accordion-title>a:hover {
   text-decoration: none!important;
 }
 .accordion-content {
   margin: 0em 3em 3em 3em;
+}
+#picture-caption {
+    font-style: italic;
+    padding: 2rem 0 4rem 0;
+    width:80%;
+    line-height: 1.6;
 }
 .scroll-downivider {
   height: 3px;
@@ -643,7 +645,7 @@ CARD styles
   display: inline-block;
 }
  .fa-chevron-up {
-   color: #004e92;
+   color: #93c54b;
  }
 /* display buttons according to expansion */
 .accordion-title > a[aria-expanded="true"] .fa-chevron-down {
@@ -652,6 +654,7 @@ CARD styles
 .accordion-title > a[aria-expanded="false"] .fa-chevron-up {
   display:none !important;
 }
+
 /************ back arrow / back page / btn **********/
 /*display flex for back button and text / allows back-text to be positioned perfectly */
 #back{
@@ -676,38 +679,59 @@ CARD styles
 .modal.and.carousel {
   position: fixed; /* Needed because the carousel overrides the position property */
 }
+/* override width to fit picture content / bootstrap can fall back if necessary */
+.modal-dialog{
+    -webkit-min-logical-width: fit-content !important;
+}
 .left.carousel-control,
 .right.carousel-control{
-  background:none;
-  padding-top: 35px;  
-  margin: 15px 2.6% 70px 2.3%;
-  font-size:32px;
-  opacity: 1;
-  min-height:max-content;
-
-  color: #000428; /* fallback for old browsers */
-  color: -webkit-linear-gradient(to right, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(to right, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  overflow:hidden;
+    background:none;
+    padding-top: 35px;  
+    margin: 15px 2.6% 70px 2.3%;
+    font-size:32px;
+    opacity: 1;
+    min-height:max-content;
+    color: #93c54b;
+    overflow:hidden;
 }
-
-.left.carousel-control:hover,
+.left.carousel-control:hover{
+    opacity:1;
+    color:white;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
 .right.carousel-control:hover{
     opacity:1;
     color:white;
-
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 50%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-inner > .item > img, 
 .carousel-inner > .item > a > img {
     display: block;
     max-width: 100%;
     height: auto;
-    border: black;
-    border-style: double;
+    border-style: none !important;
+}
+.modal-body > .carousel-inner > .item.active > img{
+    border-style: none !important;
+}
+.modal-body > div > img{
+    border-style: none !important;
+}
+
+/* override webkit focus for images - blue border around them is not needed */
+img:focus,
+a:focus{
+    outline: 0 !important;
 }
 .carousel-indicators .active {
     margin: 0;
@@ -743,49 +767,13 @@ CARD styles
     filter: alpha(opacity=50);
 }
 
+.img-responsive{
+    border: 1px solid black !important;
+}
+
 /*********************************************************/
 /*    tooltip - popover element on scroll-down btn  
 ***************************************************************/
-/*.visible.tooltip {*/
-/*  position: absolute;*/
-/*  z-index: 1070;*/
-/*  display: flex;*/
-/*  justify-content:center;*/
-/*  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-/*  font-style: normal;*/
-/*  font-weight: normal;*/
-/*  letter-spacing: normal;*/
-/*  left:-20px;*/
-/*  line-break: auto;*/
-/*  line-height: 1.42857143;*/
-/*  text-align: left;*/
-/*  text-align: start;*/
-/*  text-decoration: none;*/
-/*  text-shadow: none;*/
-/*  text-transform: none;*/
-/*  white-space: nowrap !important;*/
-/*  word-break: normal;*/
-/*  word-spacing: normal;*/
-/*  word-wrap: normal;*/
-/*  font-size: 14px;*/
-/*  opacity: 0;*/
-/*  filter: alpha(opacity=0);*/
-/*}*/
-/*.tooltip {*/
-/*    font-size: 12px;*/
-/*    line-height: 21px;*/
-/*    font-weight: 500;*/
-/*    text-transform: uppercase;*/
-/*}*/
-/*.tooltip-inner {*/
-/*    max-width: 280px;*/
-/*    padding: 3px 8px;*/
-/*    color: #ffffff;*/
-/*    text-align: center;*/
-/*    background-color: #3e3f3a;*/
-/*    border-radius: 4px;*/
-/*}*/
-
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
@@ -863,6 +851,10 @@ and (max-device-width : 1024px) {
     background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
     background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
     background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
+}
+
+.tooltip-inner {
+  width:100px;
 }
 
 @media screen and (max-width:768px){

@@ -12,4 +12,7 @@ class StaticPagesController < ApplicationController
     
     def sharkoWires
     end
+    
+    def greatmoods
+    end
 end

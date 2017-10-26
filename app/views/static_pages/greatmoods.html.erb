@@ -1,0 +1,546 @@
+<div class="page-header container"> <!-- page header  -->
+    <h1 class="heading">GreatMoods: Evaluation, Redesigns, and Redevelopment</h1>
+</div>
+
+<section class="container" id="accordion-container"><!-- START accordian container wrap -->
+    <span role="button" onclick="backPage()" id="back" class="btn btn-link"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>&#09;<span id="back-text">Back to Dev Work</span></span>
+    <div class="row-fluid">
+        <p>For the evaluations, I analyzed 7 design principles that I felt really needed to be worked on to improve overall usability, while also trying to note areas where these principles were well implemented. I created redesigns based off those design principle evaluations.</p> 
+        <p>Unfortunately, most my designs were not utilized - was told to basically just update the old site's look, and make everything responsive. The only redesigned page I was able to draw inspiration was the homepage, and I was also able utilize and build upon my collapsible side navigation designs to avoid clutter. After hitting many roadblocks with my design suggestions, I tried to make usability improvements wherever I could.</p>
+    </div>
+    
+    <div id="accordion" role="tablist" aria-multiselectable="true"><!-- START multi select tab accordions -->
+
+        <div class="card accordion-panel">
+            <div class="accordion-heading" role="tab" id="headingOne">
+              <h3 class="accordion-title">
+                <a data-toggle="collapse" class="accordion-title" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h3>GreatMoods Homepage</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div><!--END ACCORDION HEADER -->
+
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="accordion-content">
+                    
+                    <ul class="nav nav-tabs"><!-- START NAV TABS / DATA TABS -->
+                        <li class="active"><a data-toggle="tab" href="#evaluation-home">Evaluation</a></li>
+                        <li><a data-toggle="tab" href="#redesign-home">Redesign</a></li>
+                        <li><a data-toggle="tab" href="#before-after-home">Before/After</a></li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div id="evaluation-home" class="tab-pane fade in active">
+                          <h3 class="page-header">Homepage Evaluation | Alignment Analyzed</h3>
+                            <div class="row row-flex" id="img-row">
+                                <!-- image wrapped in anchor to allow for modal popup preview -->
+                                <a href="#lightboxHome" class=" center-block" data-toggle="modal" id="eval-img"><%= image_tag('gmHomeEval.png', class: 'img-responsive', alt: 'GreatMoods homepage evaluation', title: 'Click to Expand' )%></a>
+                            </div><!-- end Image Row Flex -->
+                                <div class="modal fade" id="lightboxHome"> <!-- modal display to enlarge image -->
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                                <h4 class="modal-title" id="modal-label">Homepage Evaluation | Alignment</h4>
+                                            </div> <!--end modal header -->
+                                            
+                                            <div class="modal-body">
+                                                <div class="item">
+                                                    <%= image_tag('gmHomeEvalExpanded.png', class: 'img-responsive center-block')%>
+                                                </div>
+                                            </div><!-- /.modal-body -->
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- end modal -->  
+                            <article id="evaluationText" class="row-fluid">
+                                <h4>Pros:</h4>
+                                    <p>It seems an alignment issue that I had originally noted in my deconstructed wireframe has been fixed. Before some of the side navs were leaking outside of the page margins - page margins are now properly aligned. Side navs, top nav, side pictures, and footer all properly align on the margins in the main container with content.</p>
+                                <h4>Cons:</h4>
+                                    <p>Alignment for the “reasons for my fundraiser” text block does not seem natural on the page, which can lead to taking away or lessening user focus on that specific text. The text box is too closely aligned with the side nav and the carrousel. This does technically follow the alignment definition – as edges on this text block do line up along with the carrousel and are at aligned on the margin of the body. But, by choosing to align simply via end of margin, the importance of the text becomes lost, and I’m almost left wondering if the text is a continuation of information for the carrousel. The text block’s current alignment is also offset with the 3 grey boxes in the same row, and it creates awkward white space.</p> 
+                                <h4>Recommendations:</h4>
+                                    <p>If this row with text block and the grey boxes were aligned by adding space between the carrousel, then the division of information would be clearer. Vertically aligning the text block with the width of the grey boxes in that row would also make for a well-designed alignment choice. Along with pushing away from the carousel, this row of elements could benefit from being pushed away from the side elements a bit, as the current alignment makes the layout feels squished together.</p>
+                            </article>
+                        </div><!-- END EVALUATION TAB -->
+                        
+                        <div id="redesign-home" class="tab-pane fade"><!-- START HOMEPAGE REDESIGN TAB -->
+                          <h3 class="page-header">Homepage Redesign</h3>
+                           <div class="row row-flex" id="img-row">
+                                <!-- image wrapped in anchor to allow for modal popup preview -->
+                                <div class="col-md-6" style="padding-bottom:2rem"><%= image_tag('gmHomeWires.png', class: 'img-responsive', alt: 'GreatMoods homepage wireframe' )%></div>
+                                <div class="col-md-6"><%= image_tag('gmHomeResdesign.png', class: 'img-responsive', alt: 'GreatMoods homepage prototype' )%></div><!-- end pic col -->
+                            </div><!-- end Image Row Flex --> 
+                            <article id="redesignnText" class="row-fluid">
+                                <p>My goal for this page was to reduce link options and add more information to the GreatMoods homepage as possible - the original verision did not explain the focus of the site at all. I made sure to add the basics of what GreatMoods stands for, and have clear calls to action that a user would understand if interested in the program. I simplified navigation and condensed sidebar options to best follow the Five Hat Racks and Hick's Law design principles.</p>
+                            </article>
+                        </div><!-- END REDESIGN TAB -->
+                        
+                        <div id="before-after-home" class="tab-pane fade">
+                          <h3 class="page-header">Homepage Before/After</h3>
+                           <div class="row row-flex" id="img-row">
+                                <!-- image wrapped in anchor to allow for modal popup preview -->
+                            <h3 class="col-md-12 text-center">Orginal Homepage</h3>
+                                <div class="center-block"><%= image_tag('gmHomeOG.png', class: 'img-responsive', alt: 'Greatoods Original Homepage' )%></div>
+                                <p class="center-block" id="picture-caption">Non-responsive. Cluttered. Lack of information, and confusing to random users who are unaware of the GreatMoods program.</p>
+                            <h3 class="col-md-12 text-center">First Iteration Homepage</h3>    
+                                <div class="center-block"><%= image_tag('gmHomeRedev1.png', class: 'img-responsive', alt: 'GreatMoods Homepage Redevelopment 1' )%></div><!-- end pic col -->
+                                <p class="center-block" id="picture-caption">First iteration of homepage development. Below the cards was a jumbotron (cutoff in image), which featured a short amount of text describing the GreatMoods purpose, along with a button so users could be linked to the GreatMoods purpose page.</p>
+                            <h3 class="col-md-12 text-center">Finalized Homepage</h3>    
+                                <div class="center-block"><%= image_tag('gmHomeRedev2.png', class: 'img-responsive', alt: 'GreatMoods Homepage Redevelopment 2' )%></div><!-- end pic col -->
+                                <p class="center-block" id="picture-caption">The final product, developed based off input from the boss throughout my homepage development. I condensed the sidebar links as much as I was allowed - I was not able to cut down on link options, but was at least able to make the sidebar minimal, and allowed for it to collapse in and out for page titles. I also added data tabs to provide for a ton of information about GreatMoods, all in one condensed area of the page. (Viewable on site).</p>
+                            </div><!-- end Image Row Flex -->                         
+                        </div><!-- END BEFORE/AFTER TAB -->
+                    </div><!-- END DATA TABS -->
+                </div><!-- END ACCORDION content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 1 -->
+        
+        <div class="card accordion-panel">
+            <div class="accordion-heading" role="tab" id="headingTwo">
+              <h3 class="accordion-title">
+                <a data-toggle="collapse" class="accordion-title" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h3>Navigations</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="accordion-content">
+                    
+                 <ul class="nav nav-tabs"><!-- START NAV TABS / DATA TABS -->
+                    <li class="active"><a data-toggle="tab" href="#evaluation-nav">Evaluations</a></li>
+                    <li><a data-toggle="tab" href="#redesign-nav">Redesign</a></li>
+                    <li><a data-toggle="tab" href="#before-after-nav">Before/After</a></li>
+                  </ul>
+                
+                  <div class="tab-content">
+                    <div id="evaluation-nav" class="tab-pane fade in active">
+                      <h3 class="page-header">Navigation Evaluation | Hick's Law Analyzed</h3>
+                       <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                            <div class="col-md-6" style="padding-bottom:2rem"><%= image_tag('gmMainNavEval.png', class: 'img-responsive', alt: 'GreatMoods Navigation Redesigns' )%></div>
+                            <div class="col-md-6"><%= image_tag('gmAllNavsOg.png', class: 'img-responsive', alt: 'GreatMoods Navigation Redesigns' )%></div><!-- end pic col -->
+                        </div><!-- end Image Row Flex --> 
+                        <article id="evaluationText" class="row-fluid">
+                            <h4>Pros:</h4>
+                                <p>Subcategories and category choices (for the most part) obscure complexity of lists - much like for the “five hat racks”, both principles provide an increase in efficiency for browsing list choices.</p>
+                            <h4>Cons:</h4>
+                                <p>It’s obvious that this design principle was overlooked in the creation of this site. The sheer amount of categories, subcategories, and specific list items are insane. The vague category meanings coupled with an overwhelming amount of subcategories will definitely slow down a user’s decision making process. In order to speed up efficiency for a browsing user, hick’s law must be addressed. </p> 
+                            <h4>Recommendations:</h4>
+                                <p>Categories and subcategories need to be rethought out and cut down – main navigation options are broad and can lead to confusion. Consider removing dropdown altogether, and placing subcategories (which are each different stores) onto a different page. Having the main category navigation options as a button that leads to specific category pages with subcategories (stores) and items offered would allow for more efficient decision making; this type of page could even use filtering options so users could have even more efficient ways to browse and make decisions.  </p>
+                                <p>One foolproof workaround for this - if keeping this monstrous dropdown menu is essential - is to have a search bar where users can search for certain items, categories, or stores (subcategories). With all the information given in these dropdowns, a search bar would allow for users to easily and efficiently find items and make buying decisions. </p>
+                        </article>
+                    </div><!-- END EVALUATION TAB-->
+                    
+                    <div id="redesign-nav" class="tab-pane fade">
+                      <h3 class="page-header">Navigation Redesign</h3>
+                        <div class="row row-flex" id="img-row">
+                            <%= image_tag('gmHomeResdesign.png', class: 'img-responsive center-block', alt: 'GreatMoods Navigation Redesign Homepage' )%>
+                        </div>
+                        <article id="redesignText" class="row-fluid">
+                            <p>My goal for this page was to reduce link options as much possible. My design was an attempt to simplify navigation and condense the sidebar options to best follow the Five Hat Racks and Hick's Law design principles, and to not overwhelm or confuse the users. Sub categories were listed multiple times in the main nav categories. Sidebar nav and main nav links were greatly reduced in my designs, and options were link options were focused on the most important categories and pages. I wanted to do away with the obnoxious sidebar links, so I designed this element to be collpasible.</p> 
+                            <p>For choosing nav options, I considered the focus of the site, and opted to leave the GreatMoods Mall as one button, as opposed to a giant dropdown; the main purpose of this site is to create and host fundraisers, not sell products to those visiting the homepage, so I opted in having a "create fundraiser" nav option listed first.</p>
+                        </article>
+                     </div><!-- END REDESIGN TAB -->
+                     
+                    <div id="before-after-nav" class="tab-pane fade">
+                        <h3 class="page-header">Navigation Before/After</h3>
+                        <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                        <h3 class="col-md-12 text-center">Oirginal Dropdown Navigation</h3>
+                            <div class="center-block"><%= image_tag('gmDropdownOg2.png', class: 'img-responsive', alt: 'GreatMoods Original Dropdown Nav' )%></div>
+                            <p class="center-block" id="picture-caption">Non-responsive. Hover can lead to forgetting which category your browsing through. Fundraiser examples is poorly positioned.</p>
+                        <h3 class="col-md-12 text-center">Finalized Dropdown</h3>    
+                            <div class="center-block"><%= image_tag('gmNewDropdown.png', class: 'img-responsive', alt: 'GreatMoods Homepage Navigation Redevelopment' )%></div><!-- end pic col -->
+                            <p class="center-block" id="picture-caption">Was denied the ability to use just a GreatMoods button. Developed using flex, bootstrap grid, and containers. Fully reponsive until collapsed. Sidebar is minized, design colors match the site's theme, and can be popped out to view page link names. (Viewable on site).</p>
+                        <h3 class="col-md-12 text-center">Collapsed Navigation</h3>    
+                            <div class="center-block"><%= image_tag('gmCollapsedNav.png', class: 'img-responsive', alt: 'GreatMoods Homepage Navigation Redevelopment' )%></div><!-- end pic col -->
+                            <p class="center-block" id="picture-caption">With the crazy amount of navigation options, I decided to develop a collapsible side navigation for the main nav at medium viewport widths - having a dropdown collapse from top of the page would've engulfed the screen. Kind of bugged me I had the sidebar on the same side of the collapsed navigation, but I was told leave it there. (Viewable on site).</p>                           
+                        </div>
+                    </div>
+                  </div><!-- END DATA TABS -->
+                </div><!-- end accordion content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 2 -->
+        
+         <div class="card accordion-panel">
+            <div class="accordion-heading" role="tab" id="headingThree">
+              <h3 class="accordion-title">
+                <a data-toggle="collapse" class="accordion-title" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h3>GreatMoods Mall</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="accordion-content">
+                    
+                 <ul class="nav nav-tabs"><!-- START NAV TABS / DATA TABS -->
+                    <li class="active"><a data-toggle="tab" href="#evaluation-mall">Evaluation</a></li>
+                    <li><a data-toggle="tab" href="#redesign-mall">Redesign</a></li>
+                    <li><a data-toggle="tab" href="#before-after-mall">Before/After</a></li>
+                  </ul>
+                
+                  <div class="tab-content">
+                    <div id="evaluation-mall" class="tab-pane fade in active">
+                      <h3 class="page-header">GreatMoods Mall Evaluation | Consitency Analyzed</h3>
+                       <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                            <%= image_tag('gmMallOg.png', class: 'img-responsive center-block', alt: 'GreatMoods Mall Redesigns' )%>
+                        </div><!-- end Image Row Flex --> 
+                        <article id="evaluationText" class="row-fluid">
+                            <h4>Pros:</h4>
+                                <p>Aesthetic consistency is utilized throughout pages through a consistent main navbar and logo, consistent side navbar, and (most of) the colors are consistent throughout. Functional consistency is minimal, some side nav options utilize this by having a text description and an appropriate icon for further understanding and usability; some examples: “We Deliver” has a moving truck; “Calculate Your $uccess” utilizes a calculator along with that ‘$’ in place of the ‘s’; Cash Deposited Weekly” has a dollar bill next to it. The products pages also have a search function, which is functionally consistent, but not aesthetically consistent with it’s front page (I feel like a search option on homepage would be beneficial).</p>
+                            <h4>Cons:</h4>
+                                <p>Overall, the store pages on this site feel different than the homepage.  The store pages do not have a footer, which is a lack of aesthetic consistency and internal consistency. The “Buy Now” buttons are a cool looking blue, but it goes directly against the color scheme. A new image is added to the header depending on what page you’re on, which looks ugly and is inconsistent with the overall site. A new sidebar nav is added above the original sidebar navigation from the home screen. This new side navbar has 0 purpose, as it is utilizing the exact same information as the header navigation main categories – the new side navigation would actually make sense if it had filtering options for specific stores or categories... but nope, it’s just makes for redundant information taking up space. </p> 
+                            <h4>Recommendations:</h4>
+                                <p>Change “Buy Now” color choice and use a color consistent with the brand.
+                                Either remove the newly added side bar, or utilize it for filtering options. 
+                                Add the footer to all pages, not just the homepage. 
+                                Consider moving banner image into the main content to emphasize what store you’re in – or consider no image at all and use large font stating what store you’re in.</p>
+                        </article>
+                    </div><!-- END EVALUATION -->
+                    <div id="redesign-mall" class="tab-pane fade">
+                      <h3 class="page-header">GreatMoods Mall Redesign</h3>
+                       <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                            <%= image_tag('gmStoreProto.png', class: 'img-responsive center-block', alt: 'GreatMoods Mall Redesign' )%>
+                        </div><!-- end Image Row Flex --> 
+                        <p>This was a prety simplisitic redesign compared to all other pages. Item listings are designed to use cards, as to better divide the listings. I added filter options for category type, and users could then filter those broader categories even further. There were two navigations with the same categories and links, I took both those away in favor of filtering and searching for items. I designed a newly added and browse items sections for the landing browse page. I designed for this to only show store namee, and no banner - as I'm not a fan of those.</p>
+                    </div><!-- END REDESIGN -->
+                    <div id="before-after-mall" class="tab-pane fade">
+                      <h3 class="page=header">Before/After</h3>
+                        <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                            <h3 class="col-md-12 text-center">Oirginal GreatMoods Mall</h3>
+                            <div class="center-block"><%= image_tag('gmStoreOg.png', class: 'img-responsive', alt: 'GreatMoods Original Dropdown Nav' )%></div>
+                            <p class="center-block" id="picture-caption">Greatmoods Mall sidebar categories are the exact same as the main navigation categories - only adds to sidebar clutter on this page.</P>
+
+                            <h3 class="col-md-12 text-center">Finalized Dropdown</h3>    
+                            <div class="center-block"><%= image_tag('gmStoreBrowseNew.png', class: 'img-responsive', alt: 'GreatMoods Homepage Navigation Redevelopment' )%></div><!-- end pic col -->
+                            <p class="center-block" id="picture-caption">These were the hardest pages to develop. GreatMoods uses a site called Ecwid to host and load their products via PHP into this mall. Ecwid made editing any elements on the page rather troublsome, as you couldn't just give an ID and use CSS directly. I altered what I could, and tried to clean up the clutter. I managed to get this fully repsonsive, with listings per row reducing as screen width becomes smaller. It was unfortunately impossible to develop cards with these listings, due to the strange workings of Ecwid. (Viewable on site).</p>
+                        </div>  
+                    </div><!-- END BEFORE AFTER -->
+                  </div><!-- END DATA TABS -->
+                </div><!-- end accordion content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 3 -->
+        
+        <div class="card accordion-panel">
+            <div class="accordion-heading" role="tab" id="headingFour">
+              <h3 class="accordion-title">
+                <a data-toggle="collapse" class="accordion-title" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h3>Profile Blocks</h3>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="accordion-content">
+                    <div class="row row-flex">
+                     <div class="center-block">
+                        <a href="#lightboxProfile" data-toggle="modal"><%= image_tag('coordProfileOg.png', class: 'img-responsive', alt: 'Sales Cooridinator Profile Block')%></a>
+                        <div class="modal fade" id="lightboxProfile"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Original Sales Coordinator Profile Block</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('coordProfileOg.png', class: 'img-responsive center-block', alt: 'Sales Cooridinator Profile Block')%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    </div>
+                    
+                    <div class="col-sm-offset-1 center-block">
+                        <a href="#lightboxProfile3" data-toggle="modal"><%= image_tag('1stProfileBlock.png', class: 'img-responsive', alt: 'First Redeveloped Profile Block')%></a>
+                        <div class="modal fade" id="lightboxProfile3"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">1st Iteration Profile Block</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                        <div class="item">
+                                            <%= image_tag('1stProfileBlock.png', class: 'img-responsive center-block', alt: 'First Redeveloped Profile Block')%>
+                                        </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal --> 
+                    </div>
+                    
+                    
+                    <div class="center-block">
+                     <a href="#lightboxProfile2" data-toggle="modal"><%= image_tag('gmProfileUpdated.png', class: 'img-responsive', alt: 'Sales Cooridinator Updated Profile Block')%></a>
+                        <div class="modal fade" id="lightboxProfile2"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Finalized Profile Block Style</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('gmProfileUpdated.png', class: 'img-responsive center-block', alt: 'Sales Cooridinator Updated Profile Block')%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                        </div>
+                    </div> <!-- END ROW -->  
+                    <p>These are images of the original profile block, my first iteration, and final iteration. Members who started a fundraiser, have slightly more information in the profile block header. Eventually all profile blocks were updated to have collapsible dropdowns, to once again avoid clutter and help deal with the large amount of links give to users. </p> 
+                    <p>You must be logged into the site to view these profile blocks, and users cannot actually register for this site. (Will see if I can get a code snippet up and running).</p>
+                </div><!-- end accordion content -->
+            </div><!-- end tabpanel collapse wrap -->
+        </div><!-- end card accordion pannel 4 -->
+        
+        <div class="card accordion-panel">
+            <div class="accordion-heading" role="tab" id="headingFive">
+              <h3 class="accordion-title">
+                <a data-toggle="collapse" class="accordion-title" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <h3>Fundraiser Storefront</h3>
+                  <i class="fa fa-chevron-down"></i>
+                  <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="accordion-content">
+                 <ul class="nav nav-tabs"><!-- START NAV TABS / DATA TABS -->
+                    <li><a data-toggle="tab" href="#redesign-store">Redesign</a></li>
+                    <li><a data-toggle="tab" href="#before-after-store">Before/After</a></li>
+                  </ul>
+                
+                  <div class="tab-content">
+                    <div id="redesign-store" class="tab-pane fade in active">
+                      <h3 class="page-header">Fundraiser Storefront Redesign</h3>
+                       <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                            <%= image_tag('storefrontProto.png', class: 'img-responsive center-block', alt: 'GreatMoods Fundraiser Storefront' )%>
+                        </div><!-- end Image Row Flex --> 
+                        <p>For this design, I wanted fundraiser leaders to be able to enter in their own about information, as opposed to only having a bullet list they can update. I wanted cards of best selling products to be visible, to encourage people to contribute to the fundraiser, but this was again stopped in it's tracks due to Ecwid. I also made the design to with a progress tracker that updates based of the PHP values for money raised divided by the desired goal.</p>
+                    </div><!-- END REDESIGN -->
+                    
+                    <div id="before-after-store" class="tab-pane fade">
+                        <div class="row row-flex" id="img-row">
+                            <!-- image wrapped in anchor to allow for modal popup preview -->
+                        <h3 class="col-md-12 text-center">Oirginal Fundraiser Storefront</h3>
+                            <div class="center-block"><%= image_tag('originalStorefront.png', class: 'img-responsive', alt: 'GreatMoods Original Dropdown Nav' )%></div>
+                            <p class="center-block" id="picture-caption">Non-responsive. Static image used as thermometer. Unclicable images below "New Arrivals Daily". Feels cluttered due to right sidebars and images - not enough white space.</p>
+                        <h3 class="col-md-12 text-center">Fundraiser Storefront Redevelop</h3>    
+                            <div class="center-block"><%= image_tag('updatedStoreFront.png', class: 'img-responsive', alt: 'GreatMoods Homepage Navigation Redevelopment' )%></div><!-- end pic col -->
+                            <p class="center-block" id="picture-caption">Wasn't able to use the layout I wanted for this page, but I was happy to get the working thermometer in there! Used PHP for variable, jQuery for animations, JS for currency based conversions, and CSS for styles. Removed right side clutter and added another popout sidebar. (Viewable on site).</p>
+                        </div>
+                    </div><!--ENF BEFORE AFTER -->
+                  </div><!-- END DATA TABS -->
+                </div><!-- END accordion content -->
+            </div><!-- END tabpanel collapse wrap -->
+        </div><!-- END card accordion pannel 5 -->
+        
+        <div class="card accordion-panel">
+            <div class="accordion-heading" role="tab" id="headingSix">
+              <h3 class="accordion-title">
+                <a data-toggle="collapse" class="accordion-title" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <h3>Updated Member Forms and Reports</h3>
+                  <i class="fa fa-chevron-down"></i>
+                  <i class="fa fa-chevron-up"></i>
+                </a>
+              </h3>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+               <div class="accordion-content">
+                   <h3 class="page-header">Updated and Old Member Forms</h3>
+                    <div class="container-fluid">
+                        
+                     <div class="row">
+                        <h3 class="col-md-12">Original Sales Reports Table</h3>
+                        <div class="row-fluid">
+                            <p class="col-md-offset-1">Non-responsive. Can only sort by a few options listed in the dropdown.</p>
+                        </div>
+                        <a href="#lightboxForm1" data-toggle="modal"><%= image_tag('gmTableReportOld.png', class: 'img-responsive center-block', alt: 'Sales Cooridinator Profile Block')%></a>
+
+                        <div class="modal fade" id="lightboxForm1"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Old Sales Reports Table</h4>
+                                    </div> <!--end modal header -->
+                                    <div class="modal-body">
+                                        <div class="item">
+                                            <%= image_tag('gmTableReportOld.png', class: 'img-responsive center-block', alt: 'Sales Cooridinator Profile Block')%>
+                                        </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    </div><!-- END ROW -->
+                    
+                    <div class="row">
+                        <h3 class="col-md-12">Updated Sales Reports Table</h3>
+                            <div class="row-fluid">
+                                <p class="col-md-offset-1">Utilized bootstrap data table. Table can be sorted through clicking headers - a tooltip shows up on TH hover. Responsive table that doesn't get cut off screen, and allows for side scrolling when necessary.</p>
+                            </div>
+                            <div class="row-fluid">
+                                <a href="#lightboxForm2" data-toggle="modal"><%= image_tag('dataTableNew.png', class: 'img-responsive center-block', alt: 'Updated Sales Reports Table')%></a>
+                            </div>
+                        
+                            <div class="modal fade" id="lightboxForm2"> <!-- modal display to enlarge image -->
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                            <h4 class="modal-title" id="modal-label">Updated Sales Reports Table</h4>
+                                        </div> <!--end modal header -->
+                                        <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('dataTableNew.png', class: 'img-responsive center-block', alt: 'Updated Sales Reports Table')%>
+                                            </div>
+                                        </div><!-- /.modal-body -->
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- end lightbox, aka enlarged mage focus modal --> 
+                    </div><!-- END ROW -->
+                    
+                    
+                    <div class="row">
+                        <h3 class="col-md-12">Old Friends and Family Form | Member</h3>
+                        <div class="row-fluid">
+                            <p class="col-md-offset-1">Non-responsive. For regular fundraiser member.</p>
+                        </div>                    
+                         <a href="#lightboxForm3" data-toggle="modal"><%= image_tag('addFriendFamilyOld.png', class: 'img-responsive center-block', alt: 'Old Friends and Family Form for Members')%></a>
+                        <div class="modal fade" id="lightboxForm3"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Old Friends and Family Form | Member</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('addFriendFamilyOld.png', class: 'img-responsive center-block', alt: 'Old Friends and Family Form for Members')%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    </div><!-- END ROW -->
+                        
+                    <div class="row">
+                        <h3 class="col-md-12">New Friends and Family Form | Sales Cooridinator</h3>
+                        <div class="row-fluid">
+                            <p class="col-md-offset-1">Fully responsive using the Bootstrap's grid system. Utilizes Bootstrap form-control for stlying purposes. PHP is used to load the Cooridnators representative in the dropdown. jQuery Ajax functions are used to load accounts and memebers into the dropdowns based off represenative and group selections. Updated submit button.</p>
+                        </div>    
+                        <a href="#lightboxForm4" data-toggle="modal"><%= image_tag('friendFamilyForm.png', class: 'img-responsive center-block', alt: 'New Friends and Family Form for Sales Cooridinators')%></a>
+                        <div class="modal fade" id="lightboxForm4"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">New Friends and Family Form | Sales Cooridinator</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('friendFamilyForm.png', class: 'img-responsive center-block', alt: 'New Friends and Family Form for Sales Cooridinators')%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    </div><!-- END ROW -->
+                        
+                    <div class="row">
+                        <h3 class="col-md-12">Edit Account Forms Old | Sales Cooridinator</h3>
+                        <div class="row-fluid">
+                            <p class="col-md-offset-1">Old forms for sales cooridantor. Not responsive. Sensitve data loaded into forms as plain text..</p>
+                        </div>   
+                       <a href="#lightboxForm5" data-toggle="modal"><%= image_tag('editAccountHomeOld.png', class: 'img-responsive center-block', alt: 'Old Edit Account Forms for Sales Cooridinator')%></a>
+                        <div class="modal fade" id="lightboxForm5"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Edit Account Old | Sales Coordinator</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                        <div class="item">
+                                            <%= image_tag('editAccountHomeOld.png', class: 'img-responsive center-block', alt: 'Old Edit Account Forms for Sales Cooridinator')%>
+                                        </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    </div><!-- END ROW -->
+                    
+                    <div class="row">
+                        <h3 class="col-md-12">Edit Account Home | Fundraiser Member</h3>
+                        <div class="row-fluid">
+                            <p class="col-md-offset-1">I kept the forms on cards for editing account information only. Did this because some of this information just seemed too random to have in one long page form. I was also schocked to see them expecting users to enter full SSN numbers. Granted, this is dummy data, but seeing the plain text SSN leads me to question how this very sensitive information is being stored. I commented that out with a warning message, and chose not to have that in the new forms for sales cooridinators. This form is for fundraiser members, though, and they do not have to enter in that tytpe of information. If the member is a Sales Coordinator, then they are prompted the informational alert, and can log into the Sales Cooridnator role from that message's login button.</p>
+                        </div>   
+                       <a href="#lightboxForm6" data-toggle="modal"><%= image_tag('accountHomeFormUpdated.png', class: 'img-responsive center-block', alt: 'Edit Account Home for Fundraiser Members')%></a>
+                        <div class="modal fade" id="lightboxForm6"> <!-- modal display to enlarge image -->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                        <h4 class="modal-title" id="modal-label">Edit Account | Fundraiser Member</h4>
+                                    </div> <!--end modal header -->
+                                    
+                                    <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('accountHomeFormUpdated.png', class: 'img-responsive center-block', alt: 'Edit Account Home for Fundraiser Members')%>
+                                            </div>
+                                    </div><!-- /.modal-body -->
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- end lightbox, aka enlarged mage focus modal -->
+                    </div><!-- END ROW -->
+                    
+                    <div class="row">
+                        <h3 class="col-md-12">Contacts Table | Sales Cooridinator</h3>
+                            <div class="row-fluid">
+                                <p class="col-md-offset-1">This was a form I kind of played around with because I wasn't able to fully customize the table loaded via ajax. In order for the table to load contacts, the user must select an option in all 3 dropdowns. Since there is no submit button indicating this is the case, I decided to label each option select with a "1, 2, 3", as to indicate the user must complete those steps to move on. I eventually added a jQuery function to change colors to green once an option was selected.</p>
+                            </div>   
+                            <a href="#lightboxForm7" data-toggle="modal"><%= image_tag('fundContactsTableAjax.png', class: 'img-responsive center-block', alt: 'Contacts Table for Sales Cooridinators')%></a>
+                            <div class="modal fade" id="lightboxForm7"> <!-- modal display to enlarge image -->
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                            <h4 class="modal-title" id="modal-label">Contacts Select | Sales Cooridinator</h4>
+                                        </div> <!--end modal header -->
+                                        
+                                        <div class="modal-body">
+                                            <div class="item">
+                                                <%= image_tag('fundContactsTableAjax.png', class: 'img-responsive center-block', alt: 'Contacts Table for Sales Cooridinators')%>
+                                            </div>
+                                        </div><!-- /.modal-body -->
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- end lightbox, aka enlarged mage focus modal -->
+                        </div>   <!-- END ROW -->
+                        
+                    </div> <!-- END Container -->  
+                </div><!-- END accordion content -->
+            </div><!-- END tabpanel collapse wrap -->
+        </div><!-- END card accordion pannel 6 -->
+    </div> <!-- END accordion pannel / multi collapse wrap -->
+</section>  <!-- END content container section wrap -->
