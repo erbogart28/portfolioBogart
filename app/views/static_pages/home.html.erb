@@ -146,11 +146,7 @@
                         <p> This was an interesting internship to say the least! I learned a lot: how to communicate effecticely and express my opionins on design choices, how to compromise on ideas depedning on what the boss hoped to see, how to best collaborate remotely.</p>
                         <p>I did a LOT of work, and ended up being the lead front-end developer in charge of the site's redevelopment and BitBucket repository. I also led one front-end developer for a period of time, who I gave tasks to and helped when needed. The previous design had zero responsiveness, and it was a large project to take on considering the ~150 page source code.</p>
                         <p> Since I was tasked a lot, I was able to learn a lot. As a result, I have become even more confident developing new elements and responsive pages using CSS, JS, jQuery, and HTML.</p>
-                        <p>You can view my redesign ideas (most designs were unfotunately dismissed), my original site evaluation/analysis, and before and after pictures of the developed site. Also, feel free to check out the staging site with my code in action!</p>
-                    </div>
-                    <div class="card-read-more">
-                        <!-- explaination page link. Turbolinks false allows for accordions to properly collapse  - avoids turbolinks from firing twice -->
-                        <%= link_to "Evaluation / Redesigns / Redevelopment ", static_pages_greatmoods_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' %>
+                        <p>Feel free to check out the staging site with my code in action!</p>
                     </div>
                     <div class="card-read-more"> <!-- view site -->
                         <%= link_to "Redeveloped Site", 'http://www.training.greatmoods.com/index.php', :class => 'btn btn-link btn-block', :target => 'blank_' %>
@@ -178,9 +174,7 @@
             </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 6 | Fake news bootstrap -->
-                    <a class="img-card" href="https://evanbogart.com/examples/bootstrapFinal/" target="blank_">
-                    <%= image_tag "fakeNewsPic.png" %>
-                    </a>
+                    <%= image_tag 'pragmatic.png', :class => 'img-card' %>
                     <div class="card-content">
                         <h4 class="card-title">Fake News Bootstrap</h4>
                         <p>Utilized Bootstrap for a responsive design.</p> 
@@ -197,12 +191,30 @@
                 </div><!--  END CARD 6 -->
             </div><!-- END column placement -->
         </div><!-- END DEVELOPMENT ROW 2-->
-    <!-- SCROLL DOWN BUTTON REMOVED -- Scrolling should suffice as opposed to having a scroll down button like on the landing page -- leaving just in case!!
-    <div class="row">-->
-    <!--    <a class="scroll-down2" href="#" address="true">-->
-    <!--        <div class="arrow-scroll-btn"  data-toggle="tooltip" data-placement="top" title="Design Section" ></div>-->
-    <!--    </a>-->
-    <!--</div>-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 1 | COMP SCI CAPSTONE -->
+                    <%= image_tag "pragmatic.png", :class => 'img-card'%>
+                    <div class="card-content">
+                        <h4 class="card-title">Depot Project</h4>
+                        <p>This was my first project using Ruby-on-Rails, and my first project where I was tasked with using git! At this point in time I did not even understand the concept of branches, so I setup 3 different repositories for this one project. I've definitely come a long way since then. This really was the project that got me into developing and messing around with Ruby-on-Rails, and eventually led to me wanting to learn other MVC frameworks as well. </p>
+                        <p>Side navigation links do not work. The cart and order system are functioning properly. Purchasing an item prompts an ajax built cart, and if purchased the admin can see the orders via controller methods and erb inside the views. I pretty followed along in a book for this project, but it was still a project I was proud of completeing at the time. </p>
+                    </div>
+                    <div class="card-read-more"><!-- view site -->
+                         <%= link_to "View site", 'https://depotredo.herokuapp.com/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
+                    </div> 
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/depot" target="_blank" class="btn btn-link btn-block"> <i class="fa fa-github"></i> Source Code 1 </a>
+                    </div>
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/depotupdate"  class="btn btn-link btn-block" target="_blank"><i class="fa fa-github"></i> Source Code 2</a>
+                    </div>
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/depotfinalstretch"  class="btn btn-link btn-block" target="_blank"><i class="fa fa-github"></i> Source Code 3</a>
+                    </div>
+                </div><!-- END CARD 1 -->
+            </div><!-- END col placement -->
+        </div><!-- END row -->
     </article><!-- end DEV cards container / article -->
 </section><!--end dev section -->
 
@@ -215,18 +227,17 @@
     <article class="container" id="designCards"><!-- design cards section article / container -->
         <div class="row"><!-- START row 1 | Design Cards -->
             <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 1 | sharko Wireframes -->
-                        <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px;object-fit:contain' %>
+                <div class="card"><!-- CARD 4 | Greatmoods Work -->
+                    <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
                     <div class="card-content">
-                        <h4 class="card-title">Sharko's Wireframe</h4>
-                        <p class="sharkoWireText">Before developing the site for Shako's BBQ, I created these wireframes. This was not my first time creating wireframes, and I was a bit ambitious in my designs considering the coding knowledge I had for web development at this time. It was a fun challenge to try and develop the site as closely as I could based off these wireframes.</p>
+                        <h4 class="card-title">GreatMoods Internship Work </h4>
+                        <p> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explainations on what I develolped and why, and before and after pictures of the developed site. </p>
                     </div>
                     <div class="card-read-more">
-                        <!--<a  href="/static_pages/sharkoWires"></a>-->
-                        <!-- turbolinks:false added to prevent JS / jQuery conflicts when new page is loaded -->
-                        <%= link_to "View Wireframes", static_pages_sharkoWires_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' %>
+                        <!-- explaination page link. Turbolinks false allows for accordions to properly collapse  - avoids turbolinks from firing twice -->
+                        <%= link_to "Evaluation / Redesigns / Redevelopment ", static_pages_greatmoods_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' %>
                     </div>
-                </div><!-- END CARD 1 -->
+                </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
             
             <div class="col-xs-12 col-sm-4">

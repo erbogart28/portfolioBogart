@@ -3,14 +3,14 @@
 </div>
 
 <section class="container" id="accordion-container"><!-- START accordian container wrap -->
-    <span role="button" onclick="backPage()" id="back" class="btn btn-link"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>&#09;<span id="back-text">Back to Dev Work</span></span>
-    <div class="row-fluid">
+    <span role="button" onclick="backPage()" id="back" class="btn btn-link"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>&#09;<span id="back-text">Back to Designs</span></span>
+    <div class="row">
         <p>For the evaluations, I analyzed 7 design principles that I felt really needed to be worked on to improve overall usability, while also trying to note areas where these principles were well implemented. I created redesigns based off those design principle evaluations.</p> 
         <p>Unfortunately, most my designs were not utilized - was told to basically just update the old site's look, and make everything responsive. The only redesigned page I was able to draw inspiration was the homepage, and I was also able utilize and build upon my collapsible side navigation designs to avoid clutter. After hitting many roadblocks with my design suggestions, I tried to make usability improvements wherever I could.</p>
+       <div class="pull-right"><%= link_to 'View Full Doc', image_path('P1A_bogart.pdf'), :target => '_blank', :class => 'btn btn-link btn-block fa fa-eye', alt: 'GreatMoods Evaluation Document', title: 'Full PDF' %></div>
     </div>
-    
-    <div id="accordion" role="tablist" aria-multiselectable="true"><!-- START multi select tab accordions -->
 
+    <div id="accordion" role="tablist" aria-multiselectable="true"><!-- START multi select tab accordions -->
         <div class="card accordion-panel">
             <div class="accordion-heading" role="tab" id="headingOne">
               <h3 class="accordion-title">
@@ -71,7 +71,7 @@
                                 <div class="col-md-6" style="padding-bottom:2rem"><%= image_tag('gmHomeWires.png', class: 'img-responsive', alt: 'GreatMoods homepage wireframe' )%></div>
                                 <div class="col-md-6"><%= image_tag('gmHomeResdesign.png', class: 'img-responsive', alt: 'GreatMoods homepage prototype' )%></div><!-- end pic col -->
                             </div><!-- end Image Row Flex --> 
-                            <article id="redesignnText" class="row-fluid">
+                            <article id="redesignText" class="row-fluid">
                                 <p>My goal for this page was to reduce link options and add more information to the GreatMoods homepage as possible - the original verision did not explain the focus of the site at all. I made sure to add the basics of what GreatMoods stands for, and have clear calls to action that a user would understand if interested in the program. I simplified navigation and condensed sidebar options to best follow the Five Hat Racks and Hick's Law design principles.</p>
                             </article>
                         </div><!-- END REDESIGN TAB -->

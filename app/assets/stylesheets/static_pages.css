@@ -631,7 +631,8 @@ CARD styles
   margin: 0em 3em 3em 3em;
 }
 #accordion-container{
-  margin-top:1em;
+  margin-top: 1em;
+    margin-bottom: 10em;
 }
 /*full screen display modal ** commented out margin and width which allow full screen, here if needed later */
 .modal-dialog {
