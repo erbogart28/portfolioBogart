@@ -41,22 +41,22 @@
                 <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
             </div>
             <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
-                <p>Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
-                <p>As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM taught me a lot about modern UI/UX design principles and heuristics. I've found this to be beyond useful when evaulating, designing, or developing a site or web application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, JavaScript, and jQuery. My current MVC framework of choice is Ruby-on-Rails.</p> 
+                <p id="aboutMeText">Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
+                <p id="aboutMeText">As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM taught me a lot about modern UI/UX design principles and heuristics. I've found this to be beyond useful when evaulating, designing, or developing a site or web application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, JavaScript, and jQuery. My current MVC framework of choice is Ruby-on-Rails.</p> 
             </div>
         </div>
     </article><!-- end aboutme article -- content pertaining to me -->
     
-    <article id="homepageCards">
+    <article id="contactCards">
         <div class="row">
             <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
                         <div class="card-title"> Contact Me </div>
-                        <p>If you'd like to get in contact, please feel free to email me!</p>
-                        <p><b>Email:</b> erbogart28@gmail.com</p>
+                        <p class="cardTxt">If you'd like to get in contact, please feel free to email me!</p>
+                        <p class="cardTxt"><b>Email:</b> erbogart28@gmail.com</p>
                         <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
-                        <p><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
+                        <p class="cardTxt"><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
                     </div><!-- END card content -->
                 </div><!--end card -->
             </div><!-- end column div -->
@@ -64,7 +64,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-title"> View My Resume</div>
-                        <p>My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
+                        <p class="cardTxt">My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
                      </div><!-- END card content -->
                     <div class="card-read-more">
                         <%= link_to " View Resume", image_path("EvanBogartResume.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
@@ -87,9 +87,9 @@
                     <%= image_tag "depaul-logo.png", :class => 'img-card'%>
                     <div class="card-content">
                         <h4 class="card-title">Computer Science Capstone | When If Project</h4>
-                        <p>This was probably my favorite project at DePaul. This was a group project where we were tasked to create a website for student's, faculty, and admin's. The site's purpose was to allow for student's to run a "when-if" report where they could generate a schedule of classes for completing IT or IS grad school classes. Faculty could waive classes and view student's reports. Admin's can view all accounts and have the power to do whatever faculty or student's can do. </p>
-                        <p>I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familiar with Object Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
-                        <p>Overall it was a great experience. I learned a lot from the computer science guys - new approaches to sessions and other things I have not considered - and I feel like they learned a lot of from me as well. </p>
+                        <p class="cardTxt">This was probably my favorite project at DePaul. This was a group project where we were tasked to create a website for student's, faculty, and admin's. The site's purpose was to allow for student's to run a "when-if" report where they could generate a schedule of classes for completing IT or IS grad school classes. Faculty could waive classes and view student's reports. Admin's can view all accounts and have the power to do whatever faculty or student's can do. </p>
+                        <p class="cardTxt">I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familiar with Object Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
+                        <p class="cardTxt">Overall it was a great experience. I learned a lot from the computer science guys - new approaches to sessions and other things I have not considered - and I feel like they learned a lot of from me as well. </p>
                     </div>
                     <!--Site is currently down. Heroku will not recognize as a Rails app cause the DB. Am working on hosting on server.
                     <div class="card-read-more"><!-- view site -->
@@ -108,7 +108,7 @@
                     <%= image_tag "headshot1.jpg", :class => 'img-card' %>
                     <div class="card-content">
                         <h4 class="card-title">Portfolio Site</h4>
-                        <p class="">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the db, models, and controllers in some sort of way eventually here. I've gone through many different iterations for this portfolio site - my code and thought process can be seen through my separation of branches.</p>
+                        <p class="cardTxt">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the db, models, and controllers in some sort of way eventually here. I've gone through many different iterations for this portfolio site - my code and thought process can be seen through my separation of branches.</p>
                     </div>
                     <div class="card-read-more"><!-- view Github source code -->
                         <a href="https://github.com/erbogart28/portfolioBogart" target="blank_" class="btn btn-link btn-block">
@@ -123,8 +123,8 @@
                     <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
                     <div class="card-content">
                         <h4 class="card-title">Sharko's Updated</a></h4>
-                        <p>This was my second attempt at developing Sharko's website. This time around I was far more equipped to create a responsive and clean site. I developed this site using Ruby-on-Rails, and with CSS/Bootstrap to pull the front-end together. I created role based permissions and page views, an ordering system, user sign-ups, and user sessions. Users are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. </p>
-                        <p>Admin Login:</br><b>Username:</b> admin@sharko.com </br> <b>PW:</b> password</p>
+                        <p class="cardTxt">This was my second attempt at developing Sharko's website. This time around I was far more equipped to create a responsive and clean site. I developed this site using Ruby-on-Rails, and with CSS/Bootstrap to pull the front-end together. I created role based permissions and page views, an ordering system, user sign-ups, and user sessions. Users are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. </p>
+                        <p class="cardTxt">Admin Login:</br><b>Username:</b> admin@sharko.com </br> <b>PW:</b> password</p>
                     </div>
                     <div class="card-read-more"> <!-- view site -->
                         <%= link_to "View Site", 'https://sharkos-rails.herokuapp.com/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
@@ -144,10 +144,10 @@
                     <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
                     <div class="card-content">
                         <h4 class="card-title">GreatMoods Internship Work </h4>
-                        <p> This was an interesting internship to say the least! I learned a lot: how to communicate effectively and express my opinions on design choices, how to compromise on ideas depending on what the boss hoped to see, how to best collaborate remotely.</p>
-                        <p>I did a LOT of work, and ended up being the lead front-end developer in charge of the site's redevelopment and BitBucket repository. I also led one front-end developer for a period of time, who I gave tasks to and helped when needed. The previous design had zero responsiveness, and it was a large project to take on considering the ~150 page source code.</p>
-                        <p> Since I was tasked a lot, I was able to learn a lot. As a result, I have become even more confident developing new elements and responsive pages using CSS, JS, jQuery, and HTML.</p>
-                        <p>Feel free to check out the staging site with my code in action!</p>
+                        <p class="cardTxt"> This was an interesting internship to say the least! I learned a lot: how to communicate effectively and express my opinions on design choices, how to compromise on ideas depending on what the boss hoped to see, how to best collaborate remotely.</p>
+                        <p class="cardTxt">I did a LOT of work, and ended up being the lead front-end developer in charge of the site's redevelopment and BitBucket repository. I also led one front-end developer for a period of time, who I gave tasks to and helped when needed. The previous design had zero responsiveness, and it was a large project to take on considering the ~150 page source code.</p>
+                        <p class="cardTxt"> Since I was tasked a lot, I was able to learn a lot. As a result, I have become even more confident developing new elements and responsive pages using CSS, JS, jQuery, and HTML.</p>
+                        <p class="cardTxt">Feel free to check out the staging site with my code in action!</p>
                     </div>
                     <div class="card-read-more"> <!-- view site -->
                         <%= link_to "Redeveloped Site", 'http://www.training.greatmoods.com/index.php', :class => 'btn btn-link btn-block', :target => 'blank_' %>
@@ -160,8 +160,8 @@
                     <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
                     <div class="card-content">
                         <h4 class="card-title">Sharko's BBQ - First Site</h4>
-                        <p>This was the first website I developed and designed.</p>
-                        <p>This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
+                        <p class="cardTxt">This was the first website I developed and designed.</p>
+                        <p class="cardTxt">This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
                     </div>
                     <div class="card-read-more"><!-- github code view / removed site option as the site is not really worth seeing in it's current state, still might put it in here though-->
                         <!--<a href="" target="_blank" class="btn btn-link btn-block">-->
@@ -178,8 +178,8 @@
                     <%= image_tag 'fakeNewsPic.png', :class => 'img-card' %>
                     <div class="card-content">
                         <h4 class="card-title">Fake News Bootstrap</h4>
-                        <p>Utilized Bootstrap for a responsive design. I made this fake news site before fake news was cool.</p> 
-                        <p>For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first started learning about Bootstrap. </p>
+                        <p class="cardTxt">Utilized Bootstrap for a responsive design. I made this fake news site before fake news was cool.</p> 
+                        <p class="cardTxt">For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first started learning about Bootstrap. </p>
                     </div>
                     <div class="card-read-more">
                         <%= link_to "View Site", 'https://evanbogart.com/examples/bootstrapFinal/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
@@ -208,7 +208,7 @@
                     <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
                     <div class="card-content">
                         <h4 class="card-title">GreatMoods Internship Work </h4>
-                        <p> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explanations on what I developed and why, and before and after pictures of the developed site. </p>
+                        <p class="cardTxt"> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explanations on what I developed and why, and before and after pictures of the developed site. </p>
                     </div>
                     <div class="card-read-more">
                         <!-- explaination page link. Turbolinks false allows for accordions to properly collapse  - avoids turbolinks from firing twice -->
@@ -222,7 +222,7 @@
                     <%= image_tag "fireflyLogo.png", :class => 'img-card' %>
                     <div class="card-content">
                         <h4 class="card-title">Firefly Prototype</h4>
-                        <p class="fireflyAbout"> This was a group project. Our goal was to research and create an application that allows users to join into pick up sports games. Before creating the prototype, we made a <a href="https://docs.google.com/presentation/d/1fd33APLmPYgnBo0cI0U0GJc4l0tJ-PRS2lof48TPnXk/edit?usp=sharing" target="blank_">component library</a> with all of the elements that would be used, and we also created style tiles to allow for a better understanding of the overall design before we started.</p>
+                        <p class="cardTxt"> This was a group project. Our goal was to research and create an application that allows users to join into pick up sports games. Before creating the prototype, we made a <a href="https://docs.google.com/presentation/d/1fd33APLmPYgnBo0cI0U0GJc4l0tJ-PRS2lof48TPnXk/edit?usp=sharing" target="blank_">component library</a> with all of the elements that would be used, and we also created style tiles to allow for a better understanding of the overall design before we started.</p>
                     </div>
                     <div class="card-read-more">
                       <%= link_to "View Prototype", 'https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
@@ -234,9 +234,9 @@
                     <%= image_tag "bulldoghead.png", :class => 'img-card' %>
                     <div class="card-content">
                         <h4 class="card-title">Athens Bulldogs Redesign</h4>
-                        <p>This project is from my first web design class around 4 years back - the class that peaked my interest in web design, and eventually web development. This was a group project in which we were assigned to research and redesign the Athens Bulldogs school website.</p> 
-                        <p>I had the task of redesigning the desktop and mobile homepage. I did some quick wireframes with general layout ideas (could not locate these unfortunately), and I created multiple iterations with different designs and colors based off my original wireframes.</p>
-                        <p>New iterations were altered based off the group feedback and collaboration regarding color schemes, element choices, and content choices. These designs were created with Photoshop; this was before I, nor my group members, knew of prototyping software. Designs were partially interactive by hiding/showing layers, to mimic what a click would look like.</p>
+                        <p class="cardTxt">This project is from my first web design class around 4 years back - the class that peaked my interest in web design, and eventually web development. This was a group project in which we were assigned to research and redesign the Athens Bulldogs school website.</p> 
+                        <p class="cardTxt">I had the task of redesigning the desktop and mobile homepage. I did some quick wireframes with general layout ideas (could not locate these unfortunately), and I created multiple iterations with different designs and colors based off my original wireframes.</p>
+                        <p class="cardTxt">New iterations were altered based off the group feedback and collaboration regarding color schemes, element choices, and content choices. These designs were created with Photoshop; this was before I, nor my group members, knew of prototyping software. Designs were partially interactive by hiding/showing layers, to mimic what a click would look like.</p>
                     </div>
                     <div class="card-read-more"><!-- view redesigns using modal slideshow -->
                         <a href="/#lightbox" data-toggle="modal"  class="btn btn-link btn-block">View Prototype Designs</a>
@@ -279,11 +279,11 @@
         <div class="row"><!-- START row 2 | Design cards -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 4 | Wingstop App Redeisgn -->
-                    <%= image_tag "WingstopLogo.png", :class => 'img-card' %>
+                    <%= image_tag "WingstopLogo.png", :class => 'img-card img-thumbnail',  :style => 'border:0 !important' %>
                     <div class="card-content">
                         <h4 class="card-title">WingStop App</h4>
                         <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
-                        <p>This was a project for redesigning an application's order processing  screens. I decided to redesign the Wingstop Application. It wasn't a huge design overhaul, but rather heuristic based fixes to improve the checkout process. For my prototypes I used Axure RP.</p>
+                        <p id="wingstopTxt" class="cardTxt">This was a project for redesigning an application's order processing  screens. I decided to redesign the Wingstop Application. It wasn't a huge design overhaul, but rather heuristic based fixes to improve the checkout process. For my prototypes I used Axure RP.</p>
                         <p>I designed screens based on ordering a wing combo meal, as this meal required a lot of steps and requirements that were at times confusing on the original application. I designed screens that provided feedback which clearly indicated which required constraints needed to be completed through the use of success alert colors/icons, and warning colors/icons. Added page indicators when users had a multi-page process for one meal type.</p>
                         <p>You can read an in-depth analysis on my design decisions and why I changed what I did, or you can simply view the final redesigns below!</p>
                     </div>
@@ -345,6 +345,18 @@
                     </div><!-- END modal -->
                 </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 2 | Firefly -->
+                    <%= image_tag "spokinLogo.png", :class => 'img-thumbnail img-card' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Spokin Research and Evaluations</h4>
+                        <p class="cardTxt">.</p>
+                    </div>
+                    <div class="card-read-more">
+                      <%= link_to "View Prototype", 'https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
+                    </div>
+                </div><!-- END CARD 2 -->
+            </div>  <!-- END col placement -->
         </div><!-- END ROW 2 | DESIG-->
     </article><!-- END design cards article / container wrap -->
 </section><!--END design section -->

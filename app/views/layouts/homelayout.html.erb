@@ -26,20 +26,22 @@
       $(".scroll-down").addClass("visible");  // line repeated here for initial landing page visibility
     });
     
-    // add sidebar 200px down from the top of page. Prevents sidebar on load, and prevents sidebar being shown for a tiny scroll 
-    $(function () {
-      var w = $(window);
-      w.scroll(function () {
-        if (w.scrollTop() > 200) {
-          $("#sidebar").removeClass("hidden");
-          return;
-        }
-        $("#sidebar").addClass("hidden");
-      });
-      $("#sidebar").addClass("hidden");
+    // add sidebar when user is outside of landing page section
+    $(function() {
+      var sidebar = $('#sidebar');
+      var hieghtThreshold = $(".landing").offset().top;
+      var hieghtThreshold_end  = $(".landing").offset().top +$(".landing").height() ;
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+          if (scroll >= hieghtThreshold && scroll <=  hieghtThreshold_end ) {
+              sidebar.addClass('hidden');
+          } else {
+              sidebar.removeClass('hidden');
+          }
+        });
     });
     
-  //toggle tooltip on hover. Destroy tool tip on mobile screen sizes - allows for single click on mobile screen widths - as opposed to simply hiding w/ css
+    //toggle tooltip on hover. Destroy tool tip on mobile screen sizes - allows for single click on mobile screen widths - as opposed to simply hiding w/ css
     $(function (){
       if ( $(window).width() < 760 ){
         $('li').tooltip('destroy');
