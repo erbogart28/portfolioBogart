@@ -590,14 +590,12 @@ CARD styles
 .accordion-content {
   margin: 0em 3em 3em 3em;
 }
-
 #picture-caption {
   font-style: italic;
   padding: 2rem 0 4rem 0;
   width:80%;
   line-height: 1.6;
 }
-
 #accordion-container{
   margin-top: 1em;
   margin-bottom: 10em;
