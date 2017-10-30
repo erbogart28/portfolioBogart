@@ -1610,7 +1610,11 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom:4em;
+}
 .row-flex {
     display: flex;
     flex-flow: row wrap;

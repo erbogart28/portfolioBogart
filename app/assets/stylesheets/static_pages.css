@@ -580,8 +580,8 @@ CARD styles
   background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
   background: linear-gradient(to top, #FFFFFF, #ECE9E6);
 }
-.accordion-title {
-
+.accordion-heading {
+    padding: 0 1rem;
 }
 .accordion-title>a:hover {
   text-decoration: none!important;
