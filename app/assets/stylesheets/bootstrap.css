@@ -1610,14 +1610,21 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom:4em;
-}
+
 .row-flex {
     display: flex;
     flex-flow: row wrap;
+}
+.row-new {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .col-flex-item {
     display: flex;
