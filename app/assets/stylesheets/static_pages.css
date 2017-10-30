@@ -582,6 +582,7 @@ CARD styles
 }
 .accordion-heading {
     padding: 0 1rem;
+    padding-bottom:.75rem;
 }
 .accordion-title>a:hover {
   text-decoration: none!important;
@@ -639,7 +640,11 @@ CARD styles
         padding: 0 5rem;
   }
 }
-
+@media(max-width: 360px){
+   span > h3{
+     font-size:18px;
+  }
+}
 /************ back arrow / back page / btn **********/
 /*display flex for back button and text / allows back-text to be positioned perfectly */
 #back{
