@@ -10,13 +10,6 @@
    height: 0;
    clear: both;
 }
-
-h2{
-  margin-left:.4em;
-}
-h3{
-  text-indent:.5em;
-}
 p{
   padding:.5em;
   margin-left:.2em;
@@ -516,7 +509,7 @@ CARD styles
     overflow: hidden;
     object-fit:contain; 
     border-bottom:1px solid #eeeeee;
-    /*background-color: #f8f5f0;*/
+    background-color: #f8f5f0;
 }
 .card-content {
     padding:15px;
@@ -557,9 +550,6 @@ CARD styles
 }
 #aboutMe{
     background-color:white;
-    /*below creates overhang to card section, but title is still full width */
-    /*width:100vw;*/
-    /*margin-left: -2rem;*/
 }
 #aboutMeText{
     font-size:16px;
@@ -577,20 +567,22 @@ CARD styles
 /********************************************/
 /*accordion definitions */
 /********************************************/
-.accordion-panel {
+.accordion-panel:not(.accordion-content) {
   display: block;
   text-decoration: none;
   -webkit-transition: background-color 0.8s ease-in-out;  
   -moz-transition: background-color 0.8s ease-in-out;  
   transition: background-color 0.5s ease-in-out;
   box-shadow: none;
+  background-color: #ECE9E6;
+  background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to top, #FFFFFF, #ECE9E6);
 }
-.accordion-title {
-  color:black !important;
-  font-weight: bold !important;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  text-align: center; 
+.accordion-heading {
+    padding: 0 1rem;
+    padding-bottom:.75rem;
 }
 .accordion-title>a:hover {
   text-decoration: none!important;
@@ -599,19 +591,14 @@ CARD styles
   margin: 0em 3em 3em 3em;
 }
 #picture-caption {
-    font-style: italic;
-    padding: 2rem 0 4rem 0;
-    width:80%;
-    line-height: 1.6;
-}
-.scroll-downivider {
-  height: 3px;
-  border-radius: 3px;
-  margin: 0em 3em 3em 3em;
+  font-style: italic;
+  padding: 2rem 0 4rem 0;
+  width:80%;
+  line-height: 1.6;
 }
 #accordion-container{
   margin-top: 1em;
-    margin-bottom: 10em;
+  margin-bottom: 10em;
 }
 /*full screen display modal ** commented out margin and width which allow full screen, here if needed later */
 .modal-dialog {
@@ -624,15 +611,37 @@ CARD styles
   position: relative;
   display: inline-block;
 }
- .fa-chevron-up {
-   color: #93c54b;
- }
+.fa-chevron-up {
+  color: #93c54b;
+}
 /* display buttons according to expansion */
-.accordion-title > a[aria-expanded="true"] .fa-chevron-down {
+.accordion-title[aria-expanded="true"] .fa-chevron-down {
   display:none !important;
 }
-.accordion-title > a[aria-expanded="false"] .fa-chevron-up {
+.accordion-title[aria-expanded="false"] .fa-chevron-up {
   display:none !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color:#79a736;
+    background-color: #ffffff;
+    border: 1px solid #dfd7ca;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+@media(min-width: 760px){
+  .accordion-content article{
+    padding:0 4rem;
+  }
+  .accordion-panel{
+        padding: 0 5rem;
+  }
+}
+@media(max-width: 360px){
+   span > h3{
+     font-size:18px;
+  }
 }
 
 /************ back arrow / back page / btn **********/
@@ -710,7 +719,8 @@ CARD styles
 
 /* override webkit focus for images - blue border around them is not needed */
 img:focus,
-a:focus{
+a:focus,
+span:focus{
     outline: 0 !important;
 }
 .carousel-indicators .active {
@@ -861,9 +871,6 @@ and (max-device-width : 1024px) {
 } /*end max 2800 min 1200px */
 
 @media (max-width: 1200px) and (min-width: 900px) {
-  h1.heading {
-    font-size: 3.25em;
-  }
   #landing-header > span {
   	font: 700 4em/1 "Oswald", sans-serif !important;
   	letter-spacing: 50;
@@ -881,9 +888,6 @@ and (max-device-width : 1024px) {
 } /*end max 1200 min 900px */
 
 @media (max-width: 900px) and (min-width: 768px) {
-  h1.heading {
-    font-size: 3.25em;
-  }
   #landing-header > span {
   	font: 700 3em/1 "Oswald", sans-serif !important;
   	letter-spacing: 50;
@@ -921,13 +925,6 @@ and (max-device-width : 1024px) {
   #headshot{
     border:none;
     margin:1em 0;
-  }
-  h1.heading {
-    color: #000000;
-    font-size: 3.25em;
-    font-weight: 800;
-    height:auto;
-    text-indent:.25em;
   }
   #aboutMeText{
     font-size:16px;

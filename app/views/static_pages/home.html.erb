@@ -23,8 +23,8 @@
         </section>
     </article>
     
-    <div id="scrolldown-button-row"  class="container" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
-        <a class="scroll-down" href="#aboutme-content" address="true">
+    <div id="scrolldown-button-row"  class="container  sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
+        <a class="scroll-down" href="#aboutme-content">
             <span class="arrow-scroll-btn"></span>
         </a>
     </div><!-- end scroll down container -->
@@ -279,7 +279,7 @@
         <div class="row"><!-- START row 2 | Design cards -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 4 | Wingstop App Redeisgn -->
-                    <%= image_tag "WingstopLogo.png", :class => 'img-card img-thumbnail',  :style => 'border:0 !important' %>
+                    <%= image_tag "WingstopLogo.png", :class => 'img-card', alt: 'Wingstop logo'%>
                     <div class="card-content">
                         <h4 class="card-title">WingStop App</h4>
                         <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
@@ -345,19 +345,7 @@
                     </div><!-- END modal -->
                 </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
-            <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 2 | Firefly -->
-                    <%= image_tag "spokinLogo.png", :class => 'img-thumbnail img-card' %>
-                    <div class="card-content">
-                        <h4 class="card-title">Spokin Research and Evaluations</h4>
-                        <p class="cardTxt">.</p>
-                    </div>
-                    <div class="card-read-more">
-                      <%= link_to "View Prototype", 'https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
-                    </div>
-                </div><!-- END CARD 2 -->
-            </div>  <!-- END col placement -->
-        </div><!-- END ROW 2 | DESIG-->
+
     </article><!-- END design cards article / container wrap -->
 </section><!--END design section -->
 

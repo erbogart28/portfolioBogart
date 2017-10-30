@@ -12,32 +12,33 @@
  
 <script>
   $(document).on("turbolinks:load", function() {
- // remove down arrow if window is scrolled down -- visible if 0 scroll / page is freshly loaded  
+ // remove down arrow / scrolldown button if window is scrolled down from the top of page -- only visible if 0 scroll 
     $(function () {
       var w = $(window);
       w.scroll(function () {
         if (w.scrollTop() !== 0) {
-          $(".scroll-down").removeClass("visible"); // allows for scroll down to become hidden and transition out of view
+          $('.scroll-down').removeClass('visible'); // scroll down becomes hidden, and begins animation out of view, below about me section 
           return;
         }
-        $(".scroll-down").addClass("visible"), // will add visible if scrolled back to top
-        $(".scroll-down").css('opacity', '.8');
+        $('.scroll-down').addClass('visible'), // will add visible if user SCROLLS BACK TO TOP after a page load | Without this - will not be visible again if scrolled from top
+        $('.scroll-down').css('opacity', '1');
       });
-      $(".scroll-down").addClass("visible");  // line repeated here for initial landing page visibility
+      $('.scroll-down').addClass('visible');  // line repeated here for INITIAL PAGE LOAD for landing page | Without this - will not load as a visibile; also, allows for animation on page load without adding visible to scrolldown class
     });
     
     // add sidebar when user is outside of landing page section
     $(function() {
       var sidebar = $('#sidebar');
-      var hieghtThreshold = $(".landing").offset().top;
-      var hieghtThreshold_end  = $(".landing").offset().top +$(".landing").height() ;
-        $(window).scroll(function() {
-          var scroll = $(window).scrollTop();
-          if (scroll >= hieghtThreshold && scroll <=  hieghtThreshold_end ) {
-              sidebar.addClass('hidden');
+      var landingpage_end  = $('.landing').offset().top +$('.landing').height()-25; //meausre height of landing page 
+      //This equation is giving correct screen height results, BUT would sometimes show sidebar too far down in aboutme section (maybe due to scrolldown below landing section). Added -25 for some cushion, and all mobile screen sizes show the sidebar fine now.
+        $(window).scroll(function() {  //pixels from top
+          var scroll2 = $(window).scrollTop();
+          if (scroll2 <=  landingpage_end ) {
+              sidebar.addClass('hidden'); //hide sidebar if scroll position is within landing page
           } else {
-              sidebar.removeClass('hidden');
-          }
+              sidebar.removeClass('hidden'); //show sidebar once scrolled outside of landing page section completely
+              $('a.landingRowButton').blur(); //Remove green focus when landingrow button link is clicked
+            }
         });
     });
     
@@ -50,10 +51,10 @@
       }
     });
 
-    // smooth scrolling to sections 
-    $(function() {
-		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    // smooth scrolling to sections // adds ACTIVE class to sidebar depending on sections
+    $(function smoothScroll() {
+		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {  //only section scroll links. NO empty links
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {  // On-page links
 			  var target = $(this.hash);
 			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			  if (target.length) {
@@ -66,10 +67,7 @@
 		  });
 		});
     
-    $(".sectionScroll").on("activate.bs.scrollspy", function(){
-        var currentItem = $(".nav li.active > a").text();
-        $('#label span').empty().html(currentItem);
-    })
+
   });    
 </script>
 </head>
