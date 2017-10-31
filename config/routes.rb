@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     
     get 'static_pages/greatmoods'
     
+    get 'static_pages/spokinResearch'
+    
 end
