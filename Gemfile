@@ -10,8 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem "font-awesome-rails"
 gem 'jquery-turbolinks'
-
-
+gem 'mail_form'
 
 group :development, :test do
   gem 'sqlite3'
