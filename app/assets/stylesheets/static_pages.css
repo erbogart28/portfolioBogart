@@ -30,10 +30,12 @@ h1.heading {
   height:auto;
   padding: 1.5rem 0 0 2rem;
 }
-
-/*-------------------------------------------------- */
-/* Sticky footer styles
--------------------------------------------------- */
+.eightypercent{
+  width:80% !Important;
+}
+/*#######################################
+#  Sticky footer styles 
+########################################*/
 html {
   position: relative;
   min-height: 100%;
@@ -55,11 +57,22 @@ body {
     background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
     padding-top:1em;
 }
-
-
-/**********************
-SECTION STYLES 
-/********************* */
+/*#######################################
+#  /* Utility class and common tag overrides
+########################################*/
+/*override defualt black border. This isn't that noticeable, but provides for a nice, suitable difference compared to no border at all or a small grey/black border */
+.img-responsive{
+  border: 1px solid #eeeeee !important
+}
+/* override webkit focus for image links. Span is occasionally used as role type button to toggle collapse - - blue border around them is not needed.  */
+img:focus,
+a:focus,
+span:focus{
+    outline: 0 !important;
+}
+/*#######################################
+#  /* SECTION STYLES
+########################################*/
 /* SECTION BACKGROUNDS */
 #aboutme-content,
 #dev-content,
@@ -71,14 +84,12 @@ SECTION STYLES
     background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
     border-bottom: .01px solid #eeeeee;
 }
-
 /*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
 #aboutme-content{
   border-top:1px solid #eeeeee;
 }
-
 /*#######################################
-#  Landing page and elements definied 
+#  Landing Page Section and elements definied 
 ########################################*/
 /* landing page section wrap. Full screen load landing page */
 .landing {
@@ -98,10 +109,9 @@ SECTION STYLES
 }
 
 /* article ID for MAIN TITLE ON LANDING PAGE | CONTAINER */
-#animatedtext{
+#landing-header-wrap{
     display: flex;
     justify-content: center;
-    width:100vw !important;
     margin-top:2em;
     margin-bottom:-1.5em;
 }
@@ -421,10 +431,10 @@ SECTION STYLES
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 2px;
+    border-left:0 !important;
+    border-top:0 !important;
     display: inline-block;
-    font-size: 0;
     height: 50px;
-    line-height: 0;
     margin-top: -25px;
     text-align: center;
     vertical-align: middle;
@@ -565,7 +575,7 @@ CARD styles
 }
 
 /********************************************/
-/*accordion definitions */
+/*accordion, tabs, and Secondary Page definitions */
 /********************************************/
 .accordion-panel:not(.accordion-content) {
   display: block;
@@ -590,22 +600,38 @@ CARD styles
 .accordion-content {
   margin: 0em 3em 3em 3em;
 }
+#seondary-page-content-wrap{
+    margin-bottom: 10em;  
+}
+/*H1 TAGS used on secondary page titles */
+#secondary-page-title{
+  font-size: 3em;
+  font-weight: 800;
+  color:black;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+#secondary-page-tite-h2{
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
 #picture-caption {
-  font-style: italic;
   padding: 2rem 0 4rem 0;
   width:80%;
   line-height: 1.6;
 }
+/* add spacing for all h3 image titles besides the first title, as it has spacing from the page title above */
+#img-row > h3:not(:nth-child(1)){
+  padding-top:4rem;
+}
+.tab-content > section > .page-header{
+    padding-bottom: 10px;
+    margin: 30px 20px 35px 0;
+}
 #view-button{
   margin: 2rem;
 }
-/*full screen display modal ** commented out margin and width which allow full screen, here if needed later */
-.modal-dialog {
-  /*width: 100%;*/
-  height: 100%;
-  /*margin: 0;*/
-  padding: 0;
-}
+
 .fa-expand {
   position: relative;
   display: inline-block;
@@ -620,7 +646,6 @@ CARD styles
 .accordion-title[aria-expanded="false"] .fa-chevron-up {
   display:none !important;
 }
-
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color:#79a736;
     background-color: #ffffff;
@@ -628,7 +653,6 @@ CARD styles
     border-bottom-color: transparent;
     cursor: default;
 }
-
 @media(min-width: 760px){
   .accordion-panel{
     padding: 0 1rem;
@@ -641,7 +665,7 @@ CARD styles
   }
 }
 @media(max-width: 425px){
-    .accordion-content {
+  .accordion-content {
     margin: 0em 1rem 1rem 1rem;
   }
 }
@@ -650,6 +674,7 @@ CARD styles
 #back{
   display: initial;
   text-decoration:none !important;
+  padding-bottom:3rem;
 }
 /* text after back arrow icon --*/
 #back-text{
@@ -667,9 +692,13 @@ CARD styles
 .modal.and.carousel {
   position: fixed; /* Needed because the carousel overrides the position property */
 }
-/* override width to fit picture content / bootstrap can fall back if necessary */
-.modal-dialog{
-    -webkit-min-logical-width: fit-content !important;
+/*full screen display modal ** commented out margin and width which allow full screen, here if needed later */
+.modal-dialog {
+  /*width: 100%;*/
+  height: 100%;
+  /*margin: 0;*/
+  -webkit-min-logical-width: fit-content !important;
+  padding: 0;
 }
 .left.carousel-control,
 .right.carousel-control{
@@ -715,13 +744,6 @@ CARD styles
 .modal-body > div > img{
     border-style: none !important;
 }
-
-/* override webkit focus for images - blue border around them is not needed */
-img:focus,
-a:focus,
-span:focus{
-    outline: 0 !important;
-}
 .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -755,11 +777,6 @@ span:focus{
     opacity: 1;
     filter: alpha(opacity=50);
 }
-
-.img-responsive{
-    border: 1px solid black !important;
-}
-
 /*********************************************************/
 /*    tooltip - popover element on scroll-down btn  
 ***************************************************************/
@@ -828,7 +845,6 @@ and (max-device-width : 1024px) {
 .nav > li.active{
   background-color:#f8f5f0 !important;
 }
-
 .nav > li > a.fa {
     padding:1rem;
     color:#f8f5f0;
@@ -841,11 +857,13 @@ and (max-device-width : 1024px) {
     background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
     background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
 }
-
 .tooltip-inner {
   width:100px;
 }
 
+/*********************************************************/
+/*General media queries for less than small or larger than small screens
+***************************************************************/
 @media screen and (max-width:768px){
   #sidebar .fa {
     padding:1.25rem .5rem;
@@ -857,9 +875,23 @@ and (max-device-width : 1024px) {
   .page-header{
     margin-bottom:2rem;
   }
+  .arrow-scroll-btn { 
+  /*chose to create a custom down arrow, because i did not like FA arrows for this button. As a result a veryyy faint border line can be seen above the arrow, 
+  opacity a .5 moakes these fain borders almost impossible to spot*/
+    opacity:.5;
+  }
+}
+
+@media(min-width: 768px){
+  .scroll-down.visible{
+    background-image: -webkit-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -moz-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -o-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  }
 }
 /*********************************************************/
-/*    Definied media queries for improved responsiveness for general page layout // mainly landing page
+/*    Definied media queries for improved responsiveness across all screen sizes needed for general page layout // mainly landing page
 ***************************************************************/
 @media(max-width:2800px) and (min-width: 1200px){
     #aboutMeText{
@@ -906,7 +938,7 @@ and (max-device-width : 1024px) {
 } /* end max 900 and min 768 px */
 /* tablet focus */
 @media(max-width: 768px) and (min-width: 620px){ 
-  #animatedtext {
+  #landing-header-wrap {
     padding-top:1em;
   }
   #landing-header span {
@@ -945,7 +977,7 @@ and (max-device-width : 1024px) {
     font-size: 4rem;
     line-height: 6.5rem;
   }
-  #animatedtext {
+  #landing-header-wrap {
     padding-top:1em;
   }
    /*landing page and large header redifined */

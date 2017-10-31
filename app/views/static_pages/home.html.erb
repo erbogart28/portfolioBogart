@@ -1,11 +1,11 @@
 <section class="landing"><!-- Landing Page -->
-    <div class="container" id="animatedtext"><!-- main header on landing page -->
+    <div class="container" id="landing-header-wrap"><!-- main header on landing page -->
         <div class= "row" id="animatedtext-cols"><!-- main header row -->
             <p id="landing-header" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
         </div><!-- END main header row -->
     </div><!-- END main header text container -->
     
-    <article class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
+    <div class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
         <section class="row landingRowSection sectionScroll" id="aboutRowLanding">
             <%= link_to "About Me", '#aboutme-content', :class => 'landingRowButton' %>
             <!-- shooting stars / CSS animations used for star movements -->
@@ -21,9 +21,9 @@
         <section class="row row-flex landingRowSection fade-in sectionScroll" id="designRowLanding"> 
             <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton' %>
         </section>
-    </article>
+    </div>
     
-    <div id="scrolldown-button-row"  class="container  sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
+    <div id="scrolldown-button-row"  class="sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
         <a class="scroll-down" href="#aboutme-content">
             <span class="arrow-scroll-btn"></span>
         </a>
@@ -348,4 +348,6 @@
         </div><!-- END ROW 2 | DESIG-->
     </div><!-- END design cards  container wrap -->
 </section><!--END design section -->
+
+
 
