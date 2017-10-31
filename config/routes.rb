@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
     
     get root 'static_pages#home'
-
-    
     
     get 'static_pages/sharkoWires'
     

@@ -78,9 +78,12 @@
  
  
  <div class="container">
+     <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success'  %>
+<%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success' %>
+<button class="btn btn-md btn-success" onclick="fillboth()">Both</button>
   <div class="row" id="slider-text">
-    <div class="col-md-6" >
-      <h2>Dev Work</h2>
+    <div class="page-header"> <!-- page header | heading class adds font styles -->
+        <h1 class="heading">Dev Work</h1>
     </div>
   </div>
 </div>
@@ -245,7 +248,7 @@
 
 
 
-  	<script>
+ <script>
 	$(document).ready(function(){
       $('#itemslider').carousel('pause');
       
@@ -267,17 +270,13 @@
       }
       });
   });
-	</script>
+</script>
 
-<%= link_to "Development Work", static_pages_render_dev_path, :remote => true %>
-
-
- <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true %>
-<div id="dev">
+<div id="fill-in">
 </div>
-<div id-"design">
-</div>
+
  
+
 
 
 

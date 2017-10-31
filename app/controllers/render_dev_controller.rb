@@ -1,7 +1,8 @@
-class StaticPagesController < ApplicationController
+class RenderDevController < ApplicationController
     def render_dev
         respond_to do |format|               
-        format.js
+        format.all
+        
         end    
     end
 end

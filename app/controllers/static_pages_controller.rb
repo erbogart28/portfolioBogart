@@ -10,6 +10,5 @@ class StaticPagesController < ApplicationController
     
     def greatmoods
     end
-
-
+    
 end
