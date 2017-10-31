@@ -1,0 +1,165 @@
+<section id="design-content" class="container-fluid">
+    <div class="page-header container"> <!-- page header | heading class adds font styles -->
+        <h1 class="heading">UI/UX Work</h1>
+    </div>
+    
+    <div class="container" id="designCards"><!-- design cards section article / container -->
+        <div class="row"><!-- START row 1 | Design Cards -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 4 | Greatmoods Work -->
+                    <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
+                    <div class="card-content">
+                        <h4 class="card-title">GreatMoods Internship Work </h4>
+                        <p class="cardTxt"> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explanations on what I developed and why, and before and after pictures of the developed site. </p>
+                    </div>
+                    <div class="card-read-more">
+                        <!-- explaination page link. Turbolinks false allows for accordions to properly collapse  - avoids turbolinks from firing twice -->
+                        <%= link_to "Evaluation / Redesigns / Redevelopment ", static_pages_greatmoods_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' %>
+                    </div>
+                </div><!-- END CARD 4 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 2 | Firefly -->
+                    <%= image_tag "fireflyLogo.png", :class => 'img-card' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Firefly Prototype</h4>
+                        <p class="cardTxt"> This was a group project. Our goal was to research and create an application that allows users to join into pick up sports games. Before creating the prototype, we made a <a href="https://docs.google.com/presentation/d/1fd33APLmPYgnBo0cI0U0GJc4l0tJ-PRS2lof48TPnXk/edit?usp=sharing" target="blank_">component library</a> with all of the elements that would be used, and we also created style tiles to allow for a better understanding of the overall design before we started.</p>
+                    </div>
+                    <div class="card-read-more">
+                      <%= link_to "View Prototype", 'https://xd.adobe.com/view/a56c83f0-a8fa-419b-48c0-8a108529b25f/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
+                    </div>
+                </div><!-- END CARD 2 -->
+            </div>  <!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 3 | Athens Redesign -->
+                    <%= image_tag "bulldoghead.png", :class => 'img-card' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Athens Bulldogs Redesign</h4>
+                        <p class="cardTxt">This project is from my first web design class around 4 years back - the class that peaked my interest in web design, and eventually web development. This was a group project in which we were assigned to research and redesign the Athens Bulldogs school website.</p> 
+                        <p class="cardTxt">I had the task of redesigning the desktop and mobile homepage. I did some quick wireframes with general layout ideas (could not locate these unfortunately), and I created multiple iterations with different designs and colors based off my original wireframes.</p>
+                        <p class="cardTxt">New iterations were altered based off the group feedback and collaboration regarding color schemes, element choices, and content choices. These designs were created with Photoshop; this was before I, nor my group members, knew of prototyping software. Designs were partially interactive by hiding/showing layers, to mimic what a click would look like.</p>
+                    </div>
+                    <div class="card-read-more"><!-- view redesigns using modal slideshow -->
+                        <a href="/#lightbox" data-toggle="modal"  class="btn btn-link btn-block">View Prototype Designs</a>
+                    </div>
+                    <!-- MODAL / SLIDESHOW LIGHTBOX EFFECT USING BOOTSTRAP ELEMENTS -->
+                    <div class="modal fade and carousel slide" id="lightbox">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    <h4 class="modal-title" id="modal-label">Athens Bulldogs Redesigns</h4>
+                                </div> <!--end modal header -->
+                                <div class="modal-body">
+                                 <ol class="carousel-indicators">
+                                    <li id="img1" data-target="#lightbox" data-slide-to="0" class="active"></li>
+                                    <li data-target="#lightbox" data-slide-to="1"></li>
+                                </ol>
+                                    <!-- images -->
+                                    <div class="carousel-inner"><!-- slideshow modal images as ITEMS --> 
+                                        <div class="item active">
+                                            <%= image_tag 'athensDesktopProtos.png', class: 'img-responsive center-block', alt: 'Desktop Redesigns' %>
+                                             <!--<div class="carousel-caption" style="color:black"><p>Desktop Prototypes</p></div>-->
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'bulldogsMobile.png', class: 'img-responsive center-block', alt: 'Mobile Redesigns' %>
+                                        </div>
+                                    </div><!-- end carousel-inner -->
+                                    <div class="row">
+                                        <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#lightbox" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+                                    </div><!-- end CAROUSEL CONTROLS ROW -->
+                                </div><!-- END modal-BODY -->
+                            </div><!-- END modal CONTENT -->
+                        </div><!-- END modal DIALOG -->
+                    </div><!-- END modal -->
+                </div><!-- END CARD 3 -->
+            </div><!-- end column placement -->
+        </div><!-- END row 1 -->
+        
+        <div class="row"><!-- START row 2 | Design cards -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 4 | Wingstop App Redeisgn -->
+                    <%= image_tag "WingstopLogo.png", :class => 'img-card', alt: 'Wingstop logo'%>
+                    <div class="card-content">
+                        <h4 class="card-title">WingStop App</h4>
+                        <h4 style="padding-left:1rem !important">| Ordering Process Redesign</h4>
+                        <p id="wingstopTxt" class="cardTxt">This was a project for redesigning an application's order processing  screens. I decided to redesign the Wingstop Application. It wasn't a huge design overhaul, but rather heuristic based fixes to improve the checkout process. For my prototypes I used Axure RP.</p>
+                        <p>I designed screens based on ordering a wing combo meal, as this meal required a lot of steps and requirements that were at times confusing on the original application. I designed screens that provided feedback which clearly indicated which required constraints needed to be completed through the use of success alert colors/icons, and warning colors/icons. Added page indicators when users had a multi-page process for one meal type.</p>
+                        <p>You can read my full analysis with research, evaluations and objectives, or you can simply view the final redesigned prototypes below!</p>
+                    </div>
+                    <div class="card-read-more"><!-- view redesigns using modal slideshow -->
+                        <%= link_to 'Research / Evaluations / Objectives', image_path('wingstopDesignExplainations.pdf'), :target => '_blank', :class => 'btn btn-link btn-block' %>
+                    </div>
+                    <div class="card-read-more"><!-- view redesigns using modal slideshow -->
+                        <a href="/#lightbox1" data-toggle="modal"  class="btn btn-link btn-block">View Redesigns</a>
+                    </div>
+                    <!-- MODAL / SLIDESHOW LIGHTBOX EFFECT USING BOOTSTRAP ELEMENTS -->
+                    <div class="modal fade and carousel slide" id="lightbox1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="#close" title="Close" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    <h4 class="modal-title" id="modal-label">Wingstop App | Order Process Redesigns</h4>
+                                </div> <!--end modal header -->
+                                <div class="modal-body">
+                                    <ol class="carousel-indicators">
+                                        <li id="img1" data-target="#lightbox1" data-slide-to="0" class="active"></li>
+                                        <li data-target="#lightbox1" data-slide-to="1"></li>
+                                        <li data-target="#lightbox1" data-slide-to="2"></li>
+                                        <li data-target="#lightbox1" data-slide-to="3"></li>
+                                        <li data-target="#lightbox1" data-slide-to="4"></li>
+                                        <li data-target="#lightbox1" data-slide-to="5"></li>
+                                        <li data-target="#lightbox1" data-slide-to="6"></li> 
+                                    </ol>
+                                    <!-- images -->
+                                    <div class="carousel-inner"><!-- slideshow modal images as ITEMS --> 
+                                        <div class="item active">
+                                            <%= image_tag 'wingstop1.png', class: 'center-block', alt: 'WingStop Order Process Main Menu' %>
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'wingstop2.png', class: "center-block", alt: 'WingStop Order Process Choose Wing Combo Meal' %>
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'wingstop3.png', class: "center-block", alt: 'WingStop Order Process Choose Wing Type' %>
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'wingstop4.png', class: 'center-block', alt: 'WingStop Order Process Wings Quantity' %>
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'wingstop5.png', class: "center-block", alt: 'WingStop Order Process Customize Order' %>
+                                        </div>
+                                        <div class="item">
+                                            <%= image_tag 'wingstop6.png', class: "center-block", alt: 'WingStop Order Process Checkout' %>
+                                        </div>          
+                                        <div class="item">
+                                            <%= image_tag 'wingstop7.png', class: "center-block", alt: 'WingStop Order Process Edit Meal' %>
+                                        </div>                                         
+                                    </div><!-- end carousel-inner -->
+                                    <div class="row">
+                                        <a class="left carousel-control" href="#lightbox1" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#lightbox1" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+                                    </div><!-- end CAROUSEL CONTROLS ROW -->
+                                </div><!-- END modal-BODY -->
+                            </div><!-- END modal CONTENT -->
+                        </div><!-- END modal DIALOG -->
+                    </div><!-- END modal -->
+                </div><!-- END CARD 4 -->
+            </div><!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 2 | Firefly -->
+                    <%= image_tag "spokinLogo.png", :class => 'img-card', alt:'Spokin logo' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Spokin Research and Evaluations</h4>
+                        <p class="cardTxt">Spokin focuses on connecting people with food allergies, people who have close friends or family with food allergies, and general experts on food allergy topics. The purpose of this connection is to allow for all those effected by food allergies to interact and inform by asking food allergy related questions, and writing/finding restaurant recommendations based on food allergy accommodations. </p>
+                        <p class="cardTxt">Employees at Spokin came into our class and spoke about this product. They offered to send a hi-fi prototype to anyone interested in doing user research and usability testing. I liked the idea of doing research, testing, and evaluations on an application that was still being designed, as opposed to doing that for a major website or app, so I immediately jumped on the offer.</p>
+                    </div>
+                    <div class="card-read-more">
+                      <%= link_to "Evaluations / Research", static_pages_spokinResearch_path, :class => 'btn btn-link btn-block' %>
+                    </div>
+                </div><!-- END CARD 2 -->
+            </div>  <!-- END col placement -->
+        </div><!-- END ROW 2 | DESIG-->
+    </div><!-- END design cards  container wrap -->
+</section><!--END design section -->

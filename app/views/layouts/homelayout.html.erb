@@ -54,6 +54,7 @@ $(document).on("turbolinks:load", function() {
     // smooth scrolling to sections // adds ACTIVE class to sidebar depending on sections
     $(function smoothScroll() {
 		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {  //only section scroll links. NO empty links
+		  		$('#design').html("<%= render :partial => 'design' %>");
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {  // On-page links
 			  var target = $(this.hash);
 			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

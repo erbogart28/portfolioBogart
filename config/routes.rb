@@ -2,9 +2,7 @@ Rails.application.routes.draw do
     
     get root 'static_pages#home'
 
-    get 'static_pages/development' 
     
-    get 'static_pages/design'
     
     get 'static_pages/sharkoWires'
     
@@ -12,4 +10,8 @@ Rails.application.routes.draw do
     
     get 'static_pages/spokinResearch'
     
+    get 'static_pages/render_dev' 
+
+    get 'static_pages/render_design' 
+
 end

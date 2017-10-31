@@ -1,99 +1,11 @@
-<section class="landing"><!-- Landing Page -->
-    <div class="container" id="landing-header-wrap"><!-- main header on landing page -->
-        <div class= "row" id="animatedtext-cols"><!-- main header row -->
-            <p id="landing-header" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
-        </div><!-- END main header row -->
-    </div><!-- END main header text container -->
-    
-    <div class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
-        <section class="row landingRowSection sectionScroll" id="aboutRowLanding">
-            <%= link_to "About Me", '#aboutme-content', :class => 'landingRowButton' %>
-            <!-- shooting stars / CSS animations used for star movements -->
-            <span class="star1"></span>
-            <span class="star2"></span>
-            <span class="star3"></span>
-        </section>
-        
-        <section class="row landingRowSection fade-in sectionScroll" id="devRowLanding">
-            <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton' %>
-        </section>
-        
-        <section class="row row-flex landingRowSection fade-in sectionScroll" id="designRowLanding"> 
-            <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton' %>
-        </section>
-    </d>
-    
-    <div id="scrolldown-button-row"  class="sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
-        <a class="scroll-down" href="#aboutme-content">
-            <span class="arrow-scroll-btn"></span>
-        </a>
-    </div><!-- end scroll down container -->
-</section><!-- END LANDING page section -->
-
-<section class="container-fluid" id="aboutme-content"><!-- START aboutme section homepage -->
+<section class="container-fluid"  id="dev-content"><!-- START developer section of homepage -->
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
-        <h1 class="heading">About Me</h1>
+        <h1 class="heading">Dev Work</h1>
     </div>
     
-    <section class="container-fluid">
+    <div class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->
         <div class="row">
-            <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
-                <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
-            </div>
-            <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
-                <p id="aboutMeText">Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
-                <p id="aboutMeText">As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM taught me a lot about modern UI/UX design principles and heuristics. I've found this to be beyond useful when evaulating, designing, or developing a site or web application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, JavaScript, and jQuery. My current MVC framework of choice is Ruby-on-Rails.</p> 
-            </div>
-        </div>
-    </section><!-- end aboutme article -- content pertaining to me -->
-    
-    <article id="contactCards">
-        <div class="row">
-            <div class="col-md-4 col-sm-8 col-sm-push-2">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-title"> Contact Me </div>
-                        <p class="cardTxt">If you'd like to get in contact, please feel free to email me!</p>
-                        <p class="cardTxt"><b>Email:</b> erbogart28@gmail.com</p>
-                        <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
-                        <p class="cardTxt"><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
-                    </div><!-- END card content -->
-                </div><!--end card -->
-            </div><!-- end column div -->
-            <div class="col-md-4 col-sm-8 col-sm-push-2">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-title"> View My Resume</div>
-                        <p class="cardTxt">My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
-                     </div><!-- END card content -->
-                    <div class="card-read-more">
-                        <%= link_to " View Resume", image_path("EvanBogartResume.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
-                    </div><!-- end read more -->
-                </div><!--end card -->
-            </div><!-- end column div -->
-        </div><!--end row -->
-    </article> <!-- end homepage cards article within aboutme-content section -->
-</section><!-- end aboutme-content section -->
- 
- 
- 
- <div class="container">
-  <div class="row" id="slider-text">
-    <div class="col-md-6" >
-      <h2>Dev Work</h2>
-    </div>
-  </div>
-</div>
-
- <!--Item slider-->
-<section class="container" id="item-showcase" >
-  <div class="row" style="margin-bottom:10em" >
-    <div class="col-xs-12 col-sm-12 col-md-12" >
-      <div class="carousel carousel-showmanymoveone slide" id="itemslider" >
-        <div class="carousel-inner">
-
-          <div class="item active  ">
-            <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 1 | COMP SCI CAPSTONE -->
                     <%= image_tag "depaul-logo.png", :class => 'img-card'%>
                     <div class="card-content">
@@ -112,10 +24,8 @@
                         </a>
                     </div>
                 </div><!-- END CARD 1 -->
-            </div>
-          </div>
-
-          <div class="item  ">
+            </div><!-- END col placement -->
+            
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 2 | Portfolio -->
                     <%= image_tag "headshot1.jpg", :class => 'img-card' %>
@@ -129,10 +39,8 @@
                         </a>
                     </div>
                 </div><!-- END CARD 2 -->
-            </div>
-          </div>
-
-          <div class="item  ">
+            </div><!-- END col placement -->
+            
             <div class="col-xs-12 col-sm-4">
                 <div class="card"> <!-- CARD 3 | Sharkos rails -->
                     <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
@@ -150,10 +58,10 @@
                         </a>
                     </div>
                 </div><!-- END CARD 3 -->
-            </div>
-          </div>
-
-          <div class="item  ">
+            </div><!-- END col placement -->
+        </div><!-- END row  1 -->
+    
+        <div class="row"><!-- START ROW 2 | DEVELOPMENT -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 4 | Greatmoods Work -->
                     <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
@@ -168,10 +76,8 @@
                         <%= link_to "Redeveloped Site", 'http://www.training.greatmoods.com/index.php', :class => 'btn btn-link btn-block', :target => 'blank_' %>
                     </div>
                 </div><!-- END CARD 4 -->
-            </div>
-          </div>
-
-          <div class="item  ">
+            </div><!-- END col placement -->
+            
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 5 Sharkos SITE -->
                     <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
@@ -189,10 +95,7 @@
                         </a>
                     </div>
                 </div><!-- END CARD 5 -->
-            </div>
-          </div>
-
-          <div class="item  ">
+            </div><!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
                 <div class="card"><!-- CARD 6 | Fake news bootstrap -->
                     <%= image_tag 'fakeNewsPic.png', :class => 'img-card' %>
@@ -210,78 +113,7 @@
                         </a>
                     </div><!-- end read more -->
                 </div><!--  END CARD 6 -->
-            </div>
-          </div>
-        </div>
-
-        <div id="slider-control">
-        <a class="left carousel-control" href="#itemslider" data-slide="prev"><img src="https://s12.postimg.org/uj3ffq90d/arrow_left.png" alt="Left" class="img-responsive"></a>
-        <a class="right carousel-control" href="#itemslider" data-slide="next"><img src="https://s12.postimg.org/djuh0gxst/arrow_right.png" alt="Right" class="img-responsive"></a>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-    <!--<script src="js/responsive-tabs.js"></script>-->
-    <!--<script type="text/javascript">-->
-
-    <!--  $( 'ul.nav.nav-tabs  a' ).click( function ( e ) {-->
-    <!--    e.preventDefault();-->
-    <!--    $( this ).tab( 'show' );-->
-    <!--  } );-->
-
-    <!--  ( function( $ ) {-->
-    <!--      $( '.js-alert-test' ).click( function () {-->
-    <!--        alert( 'Button Clicked: Event was maintained' );-->
-    <!--      } );-->
-    <!--      fakewaffle.responsiveTabs( [ 'xs', 'sm' ] );-->
-    <!--  } )( jQuery );-->
-
-
-
-
-  	<script>
-	$(document).ready(function(){
-      $('#itemslider').carousel('pause');
-      
-      $('.carousel-showmanymoveone .item').each(function(){
-      var itemToClone = $(this);
-      
-      for (var i=1;i<3;i++) {
-      itemToClone = itemToClone.next().css('background','white').css('z-index', '10');
-      
-      if (!itemToClone.length) {
-      itemToClone = $(this).siblings(':first').css('z-index','1');
-
-      }
-      
-      itemToClone.children(':first-child').clone()
-      .addClass("cloneditem-"+(i))
-      .css('background','white')
-      .appendTo($(this));
-      }
-      });
-  });
-	</script>
-
-<%= link_to "Development Work", static_pages_render_dev_path, :remote => true %>
-
-
- <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true %>
-<div id="dev">
-</div>
-<div id-"design">
-</div>
- 
-
-
-
-
-
-
-
+            </div><!-- END column placement -->
+        </div><!-- END DEVELOPMENT ROW 2-->
+    </div><!-- end DEV cards container / article -->
+</section><!--end dev section -->
