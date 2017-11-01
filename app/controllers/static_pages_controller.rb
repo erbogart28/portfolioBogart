@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
     layout "homelayout", only: [:index]
     def index
-        @contact = StaticPage.new(params[:static_pages])
+        @contact = StaticPage.new(params[:static_page])
     end
     
     def new
@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
     end
 
     def create
-        @contact = StaticPage.new(params[:static_pages])
+        @contact = StaticPage.new(params[:static_page])
         @contact.request = request
         respond_to do |format|
         if @contact.deliver

@@ -26,7 +26,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
   
-  config.action_mailer.default_url_options = { :host => 'https://ide.c9.io/erbogart28/portfolio-cleanup' }
+   config.action_mailer.default_url_options = { :host => 'https://ide.c9.io/erbogart28/portfolio-cleanup' }
 
   # For mail_form gem
   config.action_mailer.perform_deliveries = true
