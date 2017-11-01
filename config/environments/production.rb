@@ -57,9 +57,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "app_#{Rails.env}"
   config.action_mailer.perform_caching = false
   
-  config.action_mailer.default_url_options = { :host => 'https://erb-portfolio.herokuapp.com/' }
-  Rails.application.routes.default_url_options[:host] = 'https://erb-portfolio.herokuapp.com/'
-  
+  config.action_mailer.default_url_options = { :host => 'erb-portfolio.herokuapp.com/' }
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
@@ -72,7 +71,8 @@ Rails.application.configure do
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
+  password: ENV["GMAIL_PASSWORD"],
+  :openssl_verify_mode  => 'none'
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
