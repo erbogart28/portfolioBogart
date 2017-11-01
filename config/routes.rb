@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-    
-    get root 'static_pages#home'
+ resources :static_pages, only: [:index, :new, :create]   
+    get root 'static_pages#index'
     
     get 'static_pages/sharkoWires'
     

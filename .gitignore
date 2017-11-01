@@ -19,3 +19,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore to avoid committing sensitive infor
+.env
+Procfile
+/config/environments/development
+/config/environments/development.rb
