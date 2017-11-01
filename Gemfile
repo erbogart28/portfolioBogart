@@ -10,12 +10,14 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem "font-awesome-rails"
 gem 'jquery-turbolinks'
-
+gem 'mail_form'
+gem 'simple_form'
 
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platform: :mri
+  gem 'foreman'
 end
 
 group :development do

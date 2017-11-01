@@ -54,6 +54,7 @@ $(document).on("turbolinks:load", function() {
     // smooth scrolling to sections // adds ACTIVE class to sidebar depending on sections
     $(function smoothScroll() {
 		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {  //only section scroll links. NO empty links
+		  
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {  // On-page links
 			  var target = $(this.hash);
 			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -66,7 +67,12 @@ $(document).on("turbolinks:load", function() {
 			}
 		  });
 		});// end smoothScroll function
+		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>"); //Load both partials - allows for proper filtering
 });   // end turbolinks on load  
+// function for filter button click
+function fillboth() {
+    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>");
+}
 </script>
 </head>
 

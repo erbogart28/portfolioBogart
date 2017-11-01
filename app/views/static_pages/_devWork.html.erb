@@ -1,0 +1,119 @@
+<section class="container-fluid"  id="dev-content"><!-- START developer section of homepage -->
+    <div class="page-header container"> <!-- page header | heading class adds font styles -->
+        <h1 class="heading">Dev Work</h1>
+    </div>
+    
+    <div class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 1 | COMP SCI CAPSTONE -->
+                    <%= image_tag "depaul-logo.png", :class => 'img-card'%>
+                    <div class="card-content">
+                        <h4 class="card-title">Computer Science Capstone | When If Project</h4>
+                        <p class="cardTxt">This was probably my favorite project at DePaul. This was a group project where we were tasked to create a website for student's, faculty, and admin's. The site's purpose was to allow for student's to run a "when-if" report where they could generate a schedule of classes for completing IT or IS grad school classes. Faculty could waive classes and view student's reports. Admin's can view all accounts and have the power to do whatever faculty or student's can do. </p>
+                        <p class="cardTxt">I was the front-end lead for this project, and was the only one with real experience in web development - all the other's in the group were only familiar with Object Oriented Programming. Along with creating the front-end layout, I also setup the rails site and created user signup and role permissions using the application model, and user sessions using the application helper. I also had to walk group members through how to render a user's data onto certain pages using Ruby.</p>
+                        <p class="cardTxt">Overall it was a great experience. I learned a lot from the computer science guys - new approaches to sessions and other things I have not considered - and I feel like they learned a lot of from me as well. </p>
+                    </div>
+                    <!--Site is currently down. Heroku will not recognize as a Rails app cause the DB. Am working on hosting on server.
+                    <div class="card-read-more"><!-- view site -->
+                    <!--     </%= link_to "View site", 'http://ec2-54-212-244-135.us-west-2.compute.amazonaws.com:3000/', :class => 'btn btn-link btn-block', :target => 'blank_' %>-->
+                    <!--</div> -->
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/CS-Capstone-Final" target="_blank" class="btn btn-link btn-block"> 
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 1 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 2 | Portfolio -->
+                    <%= image_tag "headshot1.jpg", :class => 'img-card' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Portfolio Site</h4>
+                        <p class="cardTxt">I have treated this portfolio site as a project as well. I plan to update this frequently, and hope to eventually utilize the db, models, and controllers in some sort of way eventually here. I've gone through many different iterations for this portfolio site - my code and thought process can be seen through my separation of branches.</p>
+                    </div>
+                    <div class="card-read-more"><!-- view Github source code -->
+                        <a href="https://github.com/erbogart28/portfolioBogart" target="blank_" class="btn btn-link btn-block">
+                             <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 2 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"> <!-- CARD 3 | Sharkos rails -->
+                    <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Sharko's Updated</a></h4>
+                        <p class="cardTxt">This was my second attempt at developing Sharko's website. This time around I was far more equipped to create a responsive and clean site. I developed this site using Ruby-on-Rails, and with CSS/Bootstrap to pull the front-end together. I created role based permissions and page views, an ordering system, user sign-ups, and user sessions. Users are able to "order" and add items to their cart. Admin's can edit the menu and see orders placed. </p>
+                        <p class="cardTxt">Admin Login:</br><b>Username:</b> admin@sharko.com </br> <b>PW:</b> password</p>
+                    </div>
+                    <div class="card-read-more"> <!-- view site -->
+                        <%= link_to "View Site", 'https://sharkos-rails.herokuapp.com/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
+                    </div>
+                    <div class="card-read-more"><!-- github code view -->
+                        <a href="https://github.com/erbogart28/sharko-web-dev-2" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 3 -->
+            </div><!-- END col placement -->
+        </div><!-- END row  1 -->
+    
+        <div class="row"><!-- START ROW 2 | DEVELOPMENT -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 4 | Greatmoods Work -->
+                    <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
+                    <div class="card-content">
+                        <h4 class="card-title">GreatMoods Internship Work </h4>
+                        <p class="cardTxt"> This was an interesting internship to say the least! I learned a lot: how to communicate effectively and express my opinions on design choices, how to compromise on ideas depending on what the boss hoped to see, how to best collaborate remotely.</p>
+                        <p class="cardTxt">I did a LOT of work, and ended up being the lead front-end developer in charge of the site's redevelopment and BitBucket repository. I also led one front-end developer for a period of time, who I gave tasks to and helped when needed. The previous design had zero responsiveness, and it was a large project to take on considering the ~150 page source code.</p>
+                        <p class="cardTxt"> Since I was tasked a lot, I was able to learn a lot. As a result, I have become even more confident developing new elements and responsive pages using CSS, JS, jQuery, and HTML.</p>
+                        <p class="cardTxt">Feel free to check out the staging site with my code in action!</p>
+                    </div>
+                    <div class="card-read-more"> <!-- view site -->
+                        <%= link_to "Redeveloped Site", 'http://www.training.greatmoods.com/index.php', :class => 'btn btn-link btn-block', :target => 'blank_' %>
+                    </div>
+                </div><!-- END CARD 4 -->
+            </div><!-- END col placement -->
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 5 Sharkos SITE -->
+                    <%= image_tag "sharkologo3.png", :class => 'img-card', :style => 'padding: 15px' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Sharko's BBQ - First Site</h4>
+                        <p class="cardTxt">This was the first website I developed and designed.</p>
+                        <p class="cardTxt">This site is not responsive. My main goal for development was to create a straight forward site, where users could easily find a menu, location, and contact information.</p>
+                    </div>
+                    <div class="card-read-more"><!-- github code view / removed site option as the site is not really worth seeing in it's current state, still might put it in here though-->
+                        <!--<a href="" target="_blank" class="btn btn-link btn-block">-->
+                        <!--    View site-->
+                        <!--</a>-->
+                        <a href="https://github.com/erbogart28/sharkosPureCSShtml" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div><!-- END CARD 5 -->
+            </div><!-- END col placement -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="card"><!-- CARD 6 | Fake news bootstrap -->
+                    <%= image_tag 'fakeNewsPic.png', :class => 'img-card' %>
+                    <div class="card-content">
+                        <h4 class="card-title">Fake News Bootstrap</h4>
+                        <p class="cardTxt">Utilized Bootstrap for a responsive design. I made this fake news site before fake news was cool.</p> 
+                        <p class="cardTxt">For this project I focused on utilizing the cards and Bootstrap's responsive grid. This was my final project in the class where I first started learning about Bootstrap. </p>
+                    </div>
+                    <div class="card-read-more">
+                        <%= link_to "View Site", 'https://evanbogart.com/examples/bootstrapFinal/', :class => 'btn btn-link btn-block', :target => 'blank_' %>
+                    </div>
+                    <div class="card-read-more">
+                        <a href="https://github.com/erbogart28/fakenewsBootstrap" target="_blank" class="btn btn-link btn-block">
+                            <i class="fa fa-github"></i> Source Code
+                        </a>
+                    </div><!-- end read more -->
+                </div><!--  END CARD 6 -->
+            </div><!-- END column placement -->
+        </div><!-- END DEVELOPMENT ROW 2-->
+    </div><!-- end DEV cards container / article -->
+</section><!--end dev section -->

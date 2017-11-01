@@ -494,6 +494,10 @@ span:focus{
     animation-duration:1s;
 }
 
+/*filter buttons for cards */
+#filter-buttons{
+  padding-top:4rem;
+}
 /************** 
 CARD styles
 **********/
