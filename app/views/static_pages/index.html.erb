@@ -35,7 +35,7 @@
         <h1 class="heading">About Me</h1>
     </div>
     
-    <section class="container-fluid">
+    <section class="container-fluid" style="margin-bottom: -4rem">
         <div class="row">
             <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
                 <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
@@ -52,28 +52,32 @@
             <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
-                        <div class="card-title"> Contact Me </div>
-                        <p class="cardTxt">If you'd like to get in contact, please feel free to email me!</p>
-                        <p class="cardTxt"><b>Email:</b> erbogart28@gmail.com</p>
+                        <h2 class="page-header" style="margin-bottom:1.5rem;margin-top:1rem">  Contact Me </h2>
+                        <p class="card-txt">If you'd like to get in contact, please feel free to email me!</p>
                           <div id="contact">
                             <%= render 'contact_form' %>
                           </div>
-
                         <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
-                        <!--<p class="cardTxt"><i>Check out my github</i><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>-->
                     </div><!-- END card content -->
                 </div><!--end card -->
             </div><!-- end column div -->
             <div class="col-md-4 col-sm-8 col-sm-push-2">
                 <div class="card">
                     <div class="card-content">
-                        <div class="card-title"> View My Resume</div>
+                        <h3 class="page-header" style="margin-bottom:1.5rem;margin-top:1rem"> View My Resume</h3>
                         <p class="cardTxt">My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
-                     </div><!-- END card content -->
+                    </div><!-- END card content -->
                     <div class="card-read-more">
                         <%= link_to " View Resume", image_path("EvanBogartResume.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
                     </div><!-- end read more -->
                 </div><!--end card -->
+                <div class="card">
+                    <div class="card-content">    
+                        <h3 class="page-header"  style="margin-bottom:1.5rem;margin-top:1rem;">Check out my GitHub</h3>
+                        <p class="cardTxt">I try to code as much as I can. As of recently I've been working on this site everyday and trying to find areas of improvement that I could develop. Some weeks I don't commit to repos as much as I should, but I always make sure to get code I developed out there when I feel it's appropriate to do so!</p>
+                        <p class="cardTxt"><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
+                    </div>
+                </div><!-- end github card -->
             </div><!-- end column div -->
         </div><!--end row -->
     </article> <!-- end homepage cards article within aboutme-content section -->

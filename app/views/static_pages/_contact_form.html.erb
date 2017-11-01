@@ -1,4 +1,4 @@
-<h3>Email Me About the Position!</h3>
+<h3 class="text-center page-header" style="margin-bottom:0">Email Me About the Position!</h3>
 <div class="card-content">
   <%= simple_form_for @contact, url: static_pages_path, :html => {:class => 'form-horizontal' }, remote: true do |f| %>
     <%= f.input :name, :required => true %>
@@ -7,9 +7,8 @@
     <div class= "hidden">
       <%= f.input :nickname, :hint => 'Leave this field blank!' %>
     </div>
-    <div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+    <div class="row-new">
+      <%= f.button :submit, 'Send message', :class=> 'btn btn-primary col-xs-12 col-md-8 col-md-offset-2', :style => 'margin-top:1rem' %>
     </div>
   <% end %>
 </div>
