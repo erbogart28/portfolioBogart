@@ -12,7 +12,7 @@ gem "font-awesome-rails"
 gem 'jquery-turbolinks'
 gem 'mail_form'
 gem 'simple_form'
-
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'sqlite3'

@@ -70,24 +70,7 @@ a:focus,
 span:focus{
     outline: 0 !important;
 }
-/*#######################################
-#  /* SECTION STYLES
-########################################*/
-/* SECTION BACKGROUNDS */
-#aboutme-content,
-#dev-content,
-#design-content{
-    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
-    border-bottom: .01px solid #eeeeee;
-}
-/*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
-#aboutme-content{
-  border-top:1px solid #eeeeee;
-}
+
 /*#######################################
 #  Landing Page Section and elements definied 
 ########################################*/
@@ -95,23 +78,22 @@ span:focus{
 .landing {
     position: relative;
     min-height: 100vh !important;
-    width: 100%;
-    font: 400 1em/1.5 "Neuton"; background: #090d00; 
-    /*color: rgba(255,255,255,.25); */
     text-align: center; 
-    margin: 0;
+    padding: 0;
     background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
     background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
     background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
     background: linear-gradient(to top, #FFFFFF, #ECE9E6);
     border-bottom: .01px solid black;
+} 
+/* div wrap for all rows. contains fade-in class as well */
+#landingPageRows{
+   margin-top: 3rem;
 }
-
 /* article ID for MAIN TITLE ON LANDING PAGE | CONTAINER */
 #landing-header-wrap{
-    margin-top:1rem;
-    margin-bottom:2rem;
+  margin-top:3rem;
 }
 
  /*ID for the P tag which utilizes the animated text itself | first header seen on page */
@@ -140,24 +122,18 @@ span:focus{
 
 /* LANDING PAGE ROWS - CLASS FOR THE ROW SECTIONS */
 .landingRowSection {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-    width: 100vw;
-    margin-left:-1.5rem;
-
 }
 
 /* landing row buttons | 3 in total - about me, dev work, design work */
 .landingRowButton {
-    height: 8rem;
-    display: block;
-    position: relative;
+    display:flex;  
+    justify-content:center;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     -webkit-text-stroke: black;
     -webkit-text-stroke-width: 1px;
     letter-spacing: 3px;
     font-size: 5rem;
-    line-height: 8rem;
     font-weight: 500;
 }
 
@@ -178,7 +154,6 @@ span:focus{
    background:-o-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
    background:linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
   margin-bottom:4rem;
-
 }
 
 /*background color sky blue with cloud image | DESIGN row */
@@ -294,6 +269,58 @@ span:focus{
   animation-direction: normal;
 }
 
+/*LANDING PAGE media queries */
+@media(min-height: 800px) and (min-width: 650px){
+  #devRowLanding,
+  #aboutRowLanding{
+    margin-bottom:8rem;
+  }
+  .landingRowButton {
+    line-height: 10rem;
+    height:10rem;
+  }
+}
+
+@media(max-width: 650px) and (min-width: 320px){
+  .landingRowButton {
+    font-size:4.25rem;
+  }
+  .landingRowSection{
+    height:10vh;
+  }
+  #landing-header-wrap {
+    padding-top:1em;
+  }
+   /*landing page and large header redifined */
+  #landing-header{
+    font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px !important;
+    margin-top: -1em !important;
+    padding:0 !important;
+  }
+  #landing-header span {
+    font: 700 2em/1 "Oswald", sans-serif;;
+    display: block;
+    line-height:44px;
+    letter-spacing:6px;
+  }
+  #devRowLanding,
+  #aboutRowLanding{
+    margin-bottom:3em;
+  }
+  .overlay{
+    font-size:4rem;
+    height:6rem;
+    line-height: 6.5rem;
+  }
+  .scroll-down.visible {
+    bottom: 5em !important;
+  }
+  .scroll-down {
+     border: 0 solid transparent !important;
+  }
+}
+
 /* cloud animation webkit keyframes / start / end positioning */
 @-webkit-keyframes cloud-animations {
     from {
@@ -391,7 +418,66 @@ span:focus{
     transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
   }
 }
+
 /*#######################################
+#  /* SECTION STYLES
+########################################*/
+/* SECTION BACKGROUNDS */
+#aboutme-content,
+#dev-content,
+#design-content{
+    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    border-bottom: .01px solid #eeeeee;
+}
+/*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
+#aboutme-content{
+  border-top:1px solid #eeeeee;
+}
+/* mobile phone screen size focus - 620px and below */
+@media(max-width: 620px) and (min-width: 320px){
+  #headshot{
+    margin:1em 0;
+    z-index:20;
+  }
+  #page-title {
+    color: #000000;
+    font-weight: 800;
+    height:auto;
+    text-indent:.25em;
+    border: 1px solid black;
+    border-right:none; 
+    border-left:none;
+    z-index: 20;
+    padding-bottom:5px;
+  }
+}
+
+/********************************************/
+/**** homepage content | Beneath landing page *****/
+/********************************************/
+#aboutmepagecontent{
+    margin-top:2em;
+}
+#aboutMe{
+    background-color:white;
+}
+#aboutMeText{
+    font-size:16px;
+}
+/* headhshot image */
+#headshot{
+    border:none;
+    margin:2em 0;
+}
+#contactCards{
+    padding-top: 2em;
+}
+
+/*######################################
 #   scroll down button and elements / landing paage 
 ########################################*/
 /* visible scroll down btn positioning */
@@ -500,6 +586,7 @@ span:focus{
 /*filter buttons for cards */
 #filter-buttons{
   padding-top:4rem;
+  padding-bottom:2rem;
 }
 /************** 
 CARD styles
@@ -559,27 +646,7 @@ CARD styles
     border-radius: 10px!important;
     border-bottom: 5px solid #eee!important;
 }
-/********************************************/
-/**** homepage content | Beneath landing page *****/
-/********************************************/
-#aboutmepagecontent{
-    margin-top:2em;
-}
-#aboutMe{
-    background-color:white;
-}
-#aboutMeText{
-    font-size:16px;
-    margin:2em .25em;
-}
-/* headhshot image */
-#headshot{
-    border:none;
-    margin:2em 0;
-}
-#contactCards{
-    padding-top: 2em;
-}
+
 
 /********************************************/
 /*accordion, tabs, and Secondary Page definitions */
@@ -899,13 +966,7 @@ and (max-device-width : 1024px) {
 /*********************************************************/
 /*    Definied media queries for improved responsiveness across all screen sizes needed for general page layout // mainly landing page
 ***************************************************************/
-@media(max-width:2800px) and (min-width: 1200px){
-    #aboutMeText{
-    font-size:16px;
-    margin:2em .25em;
-    padding-left:4em !important;
-  }
-} /*end max 2800 min 1200px */
+
 
 @media (max-width: 1200px) and (min-width: 900px) {
   #landing-header > span {
@@ -935,105 +996,4 @@ and (max-device-width : 1024px) {
   	letter-spacing: .4em;
   	padding-top: 1em !important;
   }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin:1em 0;
-  }
 } /* end max 900 and min 768 px */
-/* tablet focus */
-@media(max-width: 768px) and (min-width: 620px){ 
-  #landing-header-wrap {
-    padding-top:1em;
-  }
-  #landing-header span {
-    font: 700 48px/1 "Oswald", sans-serif;
-    letter-spacing: 9px !important;
-    padding: .15em 0 .15em !important;
-  }
-  #landing-header{
-    font: 600 16px/1 "Roboto", sans-serif;
-    letter-spacing: 5px;
-  }
-  .scroll-down.visible {
-    bottom: 4em !important;
-  }
-  #headshot{
-    border:none;
-    margin:1em 0;
-  }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin-bottom:2em;
-  }
-} /* end min-width: 620 and max-width: 768px */
-
-/* mobile phone screen size focus - 620px and below */
-@media(max-width: 620px) and (min-width: 320px){
-  .landing {
-    background-color:white;
-  }
-  .landingRowSection{
-    height:10vh;
-  }
-  .landingRowButton{
-    font-size: 4rem;
-    line-height: 6.5rem;
-  }
-  #landing-header-wrap {
-    padding-top:1em;
-  }
-   /*landing page and large header redifined */
-  #landing-header{
-    font: 500 18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 2px !important;
-    margin-top: -1em !important;
-    padding:0 !important;
-  }
-  #landing-header span {
-    font: 700 2em/1 "Oswald", sans-serif;;
-    display: block;
-    line-height:44px;
-    letter-spacing:6px;
-  }
-  #devRowLanding,
-  #aboutRowLanding{
-    margin-bottom:3em;
-  }
-  .overlay{
-    font-size:4rem;
-    height:6rem;
-    line-height: 6.5rem;
-  }
-  .scroll-down.visible {
-    bottom: 5em;
-  }
-  .scroll-down {
-     border: 0 solid transparent;
-  }
-  #headshot{
-    border:none;
-    margin:1em 0;
-    z-index:20;
-  }
-  #aboutMeText{
-    font-size:16px;
-    margin:0;
-    line-height:1.6;
-    margin-bottom:2em;
-  }
-  #page-title {
-    color: #000000;
-    font-weight: 800;
-    height:auto;
-    text-indent:.25em;
-    border: 1px solid black;
-    border-right:none; 
-    border-left:none;
-    z-index: 20;
-    padding-bottom:5px;
-  }
-}

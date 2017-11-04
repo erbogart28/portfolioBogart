@@ -1,46 +1,14 @@
-<section class="landing"><!-- Landing Page -->
-    <div class="container" id="landing-header-wrap"><!-- main header on landing page -->
-        <div class= "row-new"><!-- main header row -->
-            <p id="landing-header" class="col-xs-12">&mdash; Web developer &mdash;<span>Hi, I'm Evan! </span> &mdash; UI/UX Designer &mdash;</p>
-        </div><!-- END main header row -->
-    </div><!-- END main header text container -->
-    
-    <div class="container-fluid fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
-        <section class="row-fluid landingRowSection sectionScroll" id="aboutRowLanding">
-            <%= link_to "About Me", '#aboutme-content', :class => 'landingRowButton' %>
-            <!-- shooting stars / CSS animations used for star movements -->
-            <span class="star1"></span>
-            <span class="star2"></span>
-            <span class="star3"></span>
-        </section>
-        
-        <section class="row-fluid landingRowSection fade-in sectionScroll" id="devRowLanding">
-            <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton' %>
-        </section>
-        
-        <section class="row-fluid landingRowSection fade-in sectionScroll" id="designRowLanding"> 
-            <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton' %>
-        </section>
-    </div>
-    
-    <div id="scrolldown-button-row"  class="sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
-        <a class="scroll-down" href="#aboutme-content">
-            <span class="arrow-scroll-btn"></span>
-        </a>
-    </div><!-- end scroll down container -->
-</section><!-- END LANDING page section -->
-
 <section class="container-fluid" id="aboutme-content"><!-- START aboutme section homepage -->
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">About Me</h1>
     </div>
     
-    <section class="container-fluid" style="margin-bottom: -4rem">
-        <div class="row">
-            <div class="col-lg-5 col-lg-push-1 col-md-4 col-md-offset-1 col-sm-5"> 
+    <section class="container" id="aboutme-txt-pic">
+        <div class="row-fluid">
+            <div class="col-md-3 col-sm-push-1 col-md-offset-1 col-sm-3  col-xs-7"> 
                 <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
             </div>
-            <div class="col-lg-5 col-lg-pull-1 col-md-6 col-sm-6" id="aboutMeText">
+            <div class="col-md-6 col-sm-push-1 col-sm-7" id="aboutMeText">
                 <p id="aboutMeText">Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
                 <p id="aboutMeText">As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM taught me a lot about modern UI/UX design principles and heuristics. I've found this to be beyond useful when evaulating, designing, or developing a site or web application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, JavaScript, and jQuery. My current MVC framework of choice is Ruby-on-Rails.</p> 
             </div>
@@ -82,17 +50,6 @@
         </div><!--end row -->
     </article> <!-- end homepage cards article within aboutme-content section -->
 </section><!-- end aboutme-content section -->
- 
-<div class="container">
-    <section class="pull-right" id="filter-buttons">
-    <%= label_tag 'btn-group', 'Filter By:' %>
-        <div class="btn-group ">
-            <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-            <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-            <button class="btn btn-md btn-success" onclick="fillboth()" id="filter-option">Both</button>
-        </div><!-- end btn group -->
-    </section><!-- end filter buttons section -->
-</div><!-- end btn container wrap -->
 
 <!-- render fill area -->
 <div id="fill-in">
