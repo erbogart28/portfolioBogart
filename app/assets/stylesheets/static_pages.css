@@ -28,10 +28,14 @@ h1.heading {
   font-size: 3.25em;
   font-weight: 800;
   height:auto;
-  padding: 1.5rem 0 0 2rem;
+  padding-left: 1.5rem;
 }
 .eightypercent{
   width:80% !Important;
+}
+#dev-content > div:nth-child(1) > section > h1,
+#design-content > div.container > section > h1{
+ margin-left:2rem;
 }
 /*#######################################
 #  Sticky footer styles 
@@ -527,6 +531,26 @@ span:focus{
       -ms-transform: rotate(0deg);
       transform: rotate(45deg);
 }
+.arrow-scroll-up {
+  bottom:2rem;
+  right:1rem;
+  opacity:.6;
+  position:fixed;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  border-left: 0 !important;
+  border-top: 0 !important;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(225deg);
+}
+
 /*scrolldown button keyframes defined | show from bottom */
 @-webkit-keyframes scroll-down-popup {
   0%   { opacity: .3; }
@@ -577,9 +601,10 @@ span:focus{
 }
 
 /*filter buttons for cards */
-#filter-buttons{
-  padding-top:4rem;
-  padding-bottom:2rem;
+#filter-buttons {
+    padding-top: 2.5rem;
+    right: 4rem;
+    position: absolute;
 }
 /************** 
 CARD styles

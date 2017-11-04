@@ -29,15 +29,18 @@ $(document).on("turbolinks:load", function() {
     // add sidebar when user is outside of landing page section
     $(function showSideBar() {
       var sidebar = $('#sidebar');
-      var landingpage_end  = $('.landing').offset().top +$('.landing').height()-25; //meausre height of landing page -- red next line for -25 reasoning
+      var landingpage_end  = $('.landing').offset().top +$('.landing').height()-28; //meausre height of landing page -- red next line for -25 reasoning
       //landingpage_end equation is giving correct screen height results, BUT would sometimes show sidebar too far down in aboutme section (maybe due to scrolldown below landing section - having a hidden height to landing page ?). Added -25 for some cushion, and all mobile screen sizes show the sidebar fine now.
         $(window).scroll(function() {  //pixels from top
           var scroll2 = $(window).scrollTop();
           if (scroll2 <=  landingpage_end ) {
-              sidebar.addClass('hidden'); //hide sidebar if scroll position is within landing page
+              sidebar.addClass('hidden') //hide sidebar if scroll position is within landing page
+               $('#scrollup').addClass('hidden');
+
           } else {
-              sidebar.removeClass('hidden'); //show sidebar once scrolled outside of landing page section completely
-              $('.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
+              sidebar.removeClass('hidden'), //show sidebar once scrolled outside of landing page section completely
+                $('#scrollup').removeClass('hidden'),
+              $('a.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
             }
         });
     });//end show sidebar
@@ -67,21 +70,15 @@ $(document).on("turbolinks:load", function() {
 			}
 		  });
 		});// end smoothScroll function
-		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>"); //Load both partials - allows for proper filtering
+		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('.design-btns').toggleClass('hidden');; //Load both partials - allows for proper filtering
 });   // end turbolinks on load  
 // function for filter button click
 function fillboth() {
-    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>");
+    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('.design-btns').toggleClass('hidden');
 } 
 </script>
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
-
-<%= render 'landing' %>
-<%= render 'sidebar' %>
-<%= render 'aboutme' %>
 <%= yield %>
-<%= render 'footer' %>
-
 <!-- required jquery/JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -1,16 +1,18 @@
 <section class="container-fluid"  id="dev-content"><!-- START developer section of homepage -->
-    <div class="page-header row-"> <!-- page header | heading class adds font styles -->
-        <h1 class="heading">Dev Work</h1>
-        <section class="pull-right" id="filter-buttons" style="margin-bottom:0">
-            <%= label_tag 'btn-group', 'Filter By:' %>
-            <div class="btn-group">
-                <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-                <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-                <button class="btn btn-md btn-success" onclick="fillboth()" id="filter-option">Both</button>
-            </div><!-- end btn group -->
-        </section><!-- end filter buttons section -->
+
+    <div class="container">
+        <section class="page-header row-new"> <!-- page header | heading class adds font styles -->
+            <h1 class="heading">Dev Work</h1>
+                <section class="pull-right" id="filter-buttons">
+                    <%= label_tag 'btn-group', 'Filter By:' %>
+                    <div class="btn-group">
+                        <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
+                        <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
+                        <button class="btn btn-md btn-success" onclick="fillboth()" id="filter-option">Both</button>
+                    </div><!-- end btn group -->
+            </section><!-- end filter buttons section -->
+        </section>
     </div>
-    
     <div class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->
         <div class="row">
             <div class="col-xs-12 col-sm-4">
