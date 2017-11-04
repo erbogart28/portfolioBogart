@@ -120,10 +120,6 @@ span:focus{
       -webkit-text-fill-color: transparent;
 }
 
-/* LANDING PAGE ROWS - CLASS FOR THE ROW SECTIONS */
-.landingRowSection {
-}
-
 /* landing row buttons | 3 in total - about me, dev work, design work */
 .landingRowButton {
     display:flex;  
@@ -284,9 +280,6 @@ span:focus{
 @media(max-width: 650px) and (min-width: 320px){
   .landingRowButton {
     font-size:4.25rem;
-  }
-  .landingRowSection{
-    height:10vh;
   }
   #landing-header-wrap {
     padding-top:1em;

@@ -37,7 +37,7 @@ $(document).on("turbolinks:load", function() {
               sidebar.addClass('hidden'); //hide sidebar if scroll position is within landing page
           } else {
               sidebar.removeClass('hidden'); //show sidebar once scrolled outside of landing page section completely
-              $('a.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
+              $('.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
             }
         });
     });//end show sidebar
@@ -72,15 +72,16 @@ $(document).on("turbolinks:load", function() {
 // function for filter button click
 function fillboth() {
     $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>");
-}
+} 
 </script>
-</head>
-
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
+
 <%= render 'landing' %>
-<%= yield %>
 <%= render 'sidebar' %>
+<%= render 'aboutme' %>
+<%= yield %>
 <%= render 'footer' %>
+
 <!-- required jquery/JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

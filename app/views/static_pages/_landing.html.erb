@@ -4,26 +4,26 @@
     </div><!-- END main header text container -->
     
     <div class="fade-in" id="landingPageRows"><!-- article wrap for Row sections -->
-        <section class="row landingRowSection sectionScroll" id="aboutRowLanding">
+        <section class="row sectionScroll" id="aboutRowLanding">
             <%= link_to "About Me", '#aboutme-content', :class => 'landingRowButton' %>
             <!-- shooting stars / CSS animations used for star movements -->
-            <span class="star1"></span>
-            <span class="star2"></span>
-            <span class="star3"></span>
+            <span class="star1 hidden-xs"></span>
+            <span class="star2 hidden-xs"></span>
+            <span class="star3 hidden-xs"></span>
         </section>
         
-        <section class="row landingRowSection sectionScroll" id="devRowLanding">
+        <section class="row sectionScroll" id="devRowLanding">
             <%= link_to "Dev Work", '#dev-content', :class => 'landingRowButton' %>
         </section>
         
-        <section class="row landingRowSection sectionScroll" id="designRowLanding"> 
+        <section class="row sectionScroll" id="designRowLanding"> 
             <%= link_to "UI/UX Work", '#design-content', :class => 'landingRowButton' %>
         </section>
     </div>
     
-    <div id="scrolldown-button-row"  class="sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
+    <section id="scrolldown-button-row"  class="sectionScroll" ><!-- Arrow down scroll down button - Scrolls to ABOUT ME section of page -->
         <a class="scroll-down" href="#aboutme-content">
             <span class="arrow-scroll-btn"></span>
         </a>
-    </div><!-- end scroll down container -->
+    </section><!-- end scroll down container -->
 </section><!-- END LANDING page section -->
