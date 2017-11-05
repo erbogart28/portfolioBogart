@@ -12,7 +12,7 @@
             </section><!-- end filter buttons section -->
         </section>
         <!-- hidden filter buttons for mobile view // located beneath page-header -->
-        <section class=" col-xs-12 hidden-sm hidden-lg hidden-md" id="design-filter" style="margin-bottom:3rem">
+        <section class=" col-xs-12 hidden-sm hidden-lg hidden-md" id="design-filter-xs" style="margin-bottom:3rem">
                 <%= label_tag 'btn-group', 'Filter By:' %>
                 <%= link_to "Dev", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-success col-md-4', :id => 'filter-option' %>
                 <%= link_to "UI/UX", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-success col-md-4', :id => 'filter-option' %>
