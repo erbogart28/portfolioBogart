@@ -70,11 +70,11 @@ $(document).on("turbolinks:load", function() {
 			}
 		  });
 		});// end smoothScroll function
-		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('.design-filter').toggleClass('hidden');; //Load both partials - allows for proper filtering
+		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden'); //Load both partials - allows for proper filtering
 });   // end turbolinks on load  
 // function for filter button click
 function fillboth() {
-    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('.design-filter').toggleClass('hidden');
+    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden');
 } 
 </script>
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
