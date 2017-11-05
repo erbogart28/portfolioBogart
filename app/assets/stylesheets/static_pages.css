@@ -601,7 +601,7 @@ span:focus{
 }
 
 /*filter buttons for cards */
-#filter-buttons {
+.filter-buttons {
     padding-top: 2.5rem;
     right: 4rem;
     position: absolute;

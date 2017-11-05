@@ -4,12 +4,12 @@ class StaticPagesController < ApplicationController
         @contact = StaticPage.new(params[:static_page])
     end
     def spokinResearch
-       render layout: "application" 
+       render layout: "application"
     end
     def greatmoods
         render layout: "application"
     end
-    
+  
     def new
         @contact = StaticPage.new
     end
