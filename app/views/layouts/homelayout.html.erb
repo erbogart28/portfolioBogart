@@ -29,7 +29,7 @@ $(document).on("turbolinks:load", function() {
     // add sidebar when user is outside of landing page section
     $(function showSideBar() {
       var sidebar = $('#sidebar');
-      var landingpage_end  = $('.landing').offset().top +$('.landing').height()-28; //meausre height of landing page -- red next line for -25 reasoning
+      var landingpage_end  = $('#landingPageSection').offset().top +$('#landingPageSection').height()-52; //meausre height of landing page -- red next line for -25 reasoning
       //landingpage_end equation is giving correct screen height results, BUT would sometimes show sidebar too far down in aboutme section (maybe due to scrolldown below landing section - having a hidden height to landing page ?). Added -25 for some cushion, and all mobile screen sizes show the sidebar fine now.
         $(window).scroll(function() {  //pixels from top
           var scroll2 = $(window).scrollTop();

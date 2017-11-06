@@ -417,7 +417,7 @@ span:focus{
 }
 
 /*#######################################
-#  /* SECTION STYLES
+#  /* SECTION STYLES|  Beneath landing page 
 ########################################*/
 /* SECTION BACKGROUNDS */
 #aboutme-content,
@@ -433,6 +433,12 @@ span:focus{
 /*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
 #aboutme-content{
   border-top:1px solid #eeeeee;
+}
+#aboutMeText{
+  font-size:16px;
+}
+#contactCards{
+  margin-top:6rem;
 }
 /* mobile phone screen size focus - 620px and below */
 @media(max-width: 620px) and (min-width: 320px){
@@ -451,27 +457,6 @@ span:focus{
     z-index: 20;
     padding-bottom:5px;
   }
-}
-
-/********************************************/
-/**** homepage content | Beneath landing page *****/
-/********************************************/
-#aboutmepagecontent{
-    margin-top:2em;
-}
-#aboutMe{
-    background-color:white;
-}
-#aboutMeText{
-    font-size:16px;
-}
-/* headhshot image */
-#headshot{
-    border:none;
-    margin:2em 0;
-}
-#contactCards{
-    padding-top: 2em;
 }
 
 /*######################################
