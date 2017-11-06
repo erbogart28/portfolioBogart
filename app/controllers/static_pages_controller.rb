@@ -3,9 +3,11 @@ class StaticPagesController < ApplicationController
     def index
         @contact = StaticPage.new(params[:static_page])
     end
+    
     def spokinResearch
-       render layout: "application" 
+       render layout: "application"
     end
+    
     def greatmoods
         render layout: "application"
     end

@@ -1,7 +1,25 @@
 <section id="design-content" class="container-fluid">
-    <div class="page-header container"> <!-- page header | heading class adds font styles -->
-        <h1 class="heading">UI/UX Work</h1>
+    <div class="container">
+        <section class="page-header row-new"> <!-- page header | heading class adds font styles -->
+            <h1 class="heading">UI/UX Work</h1>
+            <section class=" col-sm-pull-2 col-sm-6 col-md-5 hidden-xs filter-buttons" id="design-filter">
+                <%= label_tag 'btn-group', 'Filter By:' %>
+                <div class="btn-group">
+                    <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
+                    <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
+                    <button class="btn btn-md btn-success" onclick="fillboth()" id="filter-option">Both</button>
+                </div><!-- end btn group -->
+            </section><!-- end filter buttons section -->
+        </section>
+        <!-- hidden filter buttons for mobile view // located beneath page-header -->
+        <section class=" col-xs-12 hidden-sm hidden-lg hidden-md" id="design-filter-xs" style="margin-bottom:3rem">
+                <%= label_tag 'btn-group', 'Filter By:' %>
+                <%= link_to "Dev", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-success col-md-4', :id => 'filter-option' %>
+                <%= link_to "UI/UX", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-success col-md-4', :id => 'filter-option' %>
+                <button class="btn btn-sm btn-success col-md-4" onclick="fillboth()" id="filter-option">Both</button>
+        </section><!-- end filter buttons section -->
     </div>
+
     
     <div class="container" id="designCards"><!-- design cards section article / container -->
         <div class="row"><!-- START row 1 | Design Cards -->
@@ -147,19 +165,7 @@
                     </div><!-- END modal -->
                 </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
-            <!--<div class="col-xs-12 col-sm-4">-->
-            <!--    <div class="card"><!-- CARD 2 | Firefly -->
-            <!--        <#%= image_tag "spokinLogo.png", :class => 'img-card', alt:'Spokin logo' %>-->
-            <!--        <div class="card-content">-->
-            <!--            <h4 class="card-title">Spokin Research and Evaluations</h4>-->
-            <!--            <p class="cardTxt">Spokin focuses on connecting people with food allergies, people who have close friends or family with food allergies, and general experts on food allergy topics. The purpose of this connection is to allow for all those effected by food allergies to interact and inform by asking food allergy related questions, and writing/finding restaurant recommendations based on food allergy accommodations. </p>-->
-            <!--            <p class="cardTxt">Employees at Spokin came into our class and spoke about this product. They offered to send a hi-fi prototype to anyone interested in doing user research and usability testing. I liked the idea of doing research, testing, and evaluations on an application that was still being designed, as opposed to doing that for a major website or app, so I immediately jumped on the offer.</p>-->
-            <!--        </div>-->
-            <!--        <div class="card-read-more">-->
-            <!--          <#%= link_to "Evaluations / Research", static_pages_spokinResearch_path, :class => 'btn btn-link btn-block' %>-->
-            <!--        </div>-->
-            <!--    </div><!-- END CARD 2 -->
-            <!--</div>  <!-- END col placement -->
+
         </div><!-- END ROW 2 | DESIG-->
     </div><!-- END design cards  container wrap -->
 </section><!--END design section -->

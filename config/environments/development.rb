@@ -26,9 +26,11 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
   
-   config.action_mailer.default_url_options = { :host => 'https://ide.c9.io/erbogart28/portfolio-cleanup' }
+#   config.action_mailer.default_url_options = { :host => 'https://ide.c9.io/erbogart28/portfolio-cleanup' }
 
-  # For mail_form gem
+  # config.action_mailer.default_url_options = { :host => 'portfolio-cleanup-erbogart28.c9users.io:8080' }
+
+  # For mail_form gem 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors= true
   config.action_mailer.delivery_method = :smtp
@@ -42,7 +44,6 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
