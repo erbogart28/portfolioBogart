@@ -6,10 +6,8 @@
     <%= favicon_link_tag 'pray_favi.ico' %>
     <meta name = "author" content = "[Evan Bogart]">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
    <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
   </style>
@@ -80,7 +78,7 @@
   });   // end turbolinks on load  
   // function for BOTH filter button click - renders partials in div id fill-in when button is clicked. Design filter buttons toggled to hidden to avoid both sections having the same filter choices
   function fillboth() {
-      $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
+    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
   } 
 </script>
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
