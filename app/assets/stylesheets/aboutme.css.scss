@@ -1,0 +1,57 @@
+/*
+ *= require_self
+ *= require font-awesome
+ *= require_tree .
+ */
+ 
+#aboutme-content{ 
+  border-top: 1px solid #eeeeee;  /*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
+}
+
+#aboutMeText{
+  font-size: 16px;
+}
+
+#contactCards{
+  margin-top: 6rem;
+}
+
+#static_page_message{
+	max-width: 100% !important; /*prevent message text area from width expanding outside of card */
+}
+
+.fa-linkedin {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 18px !important;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+.fa-github{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 18px !important;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 992px){
+	#contact{
+	    width: 83.33333333%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 768px){
+	#contactCards{
+		margin: 10px;
+	}
+}
+
+@media(max-width: 620px) and (min-width: 320px){
+	#headshot{
+		margin: 1em 0;
+	}
+}
