@@ -10,33 +10,24 @@
    height: 0;
    clear: both;
 }
+
 p{
   padding:.5em;
   margin-left:.2em;
 }
+
 a{
   text-decoration: none!important;
 }
+
 section {
   overflow: hidden;
 }
+
 article{
   overflow:hidden;
 }
-h1.heading {
-  color: black;
-  font-size: 3.25em;
-  font-weight: 800;
-  height:auto;
-  padding-left: 1.5rem;
-}
-.eightypercent{
-  width:80% !Important;
-}
-#dev-content > div:nth-child(1) > section > h1,
-#design-content > div.container > section > h1{
- margin-left:2rem;
-}
+
 /*#######################################
 #  Sticky footer styles 
 ########################################*/
@@ -45,34 +36,78 @@ html {
   min-height: 100%;
   font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
-  bottom: 0;
+  bottom: 0;  
+  padding-top:1em;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-    background-image: -webkit-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-    background-image: -moz-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-    background-image: -o-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-    padding-top:1em;
+  background-image: -webkit-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: -moz-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
 }
+
+#footer-elements{
+  background-color:white;
+  bottom:0;
+}
+
 /*#######################################
 #  /* Utility class and common tag overrides
 ########################################*/
-/*override defualt black border. This isn't that noticeable, but provides for a nice, suitable difference compared to no border at all or a small grey/black border */
-.img-responsive{
-  border: 1px solid #eeeeee !important
-}
 /* override webkit focus for image links. Span is occasionally used as role type button to toggle collapse - - blue border around them is not needed.  */
 img:focus,
 a:focus,
 span:focus{
-    outline: 0 !important;
+  outline: 0 !important;
+}
+
+h1.heading {
+  color: black;
+  font-size: 3.25em;
+  font-weight: 800;
+  height:auto;
+  padding-left: 1.5rem;
+}
+
+/*80% width, used mainly on cards / accordions */
+.eightypercent{
+  width:80% !Important;
+}
+
+/*override defualt black border. This isn't that noticeable, but provides for a nice, suitable difference compared to no border at all or a small grey/black border */
+.img-responsive{
+  border: 1px solid #eeeeee !important
+}
+ /*fade in elements */
+.fade-in {
+  opacity:0;  
+    -webkit-animation:fadeIn ease-in 1; 
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+/* page header class, mobile adjustments */
+@media screen and (max-width:768px){
+  .page-header{
+    margin-bottom:2rem;
+  }
 }
 
 /*#######################################
@@ -80,21 +115,23 @@ span:focus{
 ########################################*/
 /* landing page section wrap. Full screen load landing page */
 .landing {
-    position: relative;
-    min-height: 100vh !important;
-    text-align: center; 
-    padding: 0;
-    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to top, #FFFFFF, #ECE9E6);
-    border-bottom: .01px solid black;
+  position: relative;
+  min-height: 100vh !important;
+  text-align: center; 
+  padding: 0;
+  background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to top, #FFFFFF, #ECE9E6);
+  border-bottom: .01px solid black;
 } 
+
 /* div wrap for all rows. contains fade-in class as well */
 #landingPageRows{
    margin-top: 3rem;
 }
+
 /* article ID for MAIN TITLE ON LANDING PAGE | CONTAINER */
 #landing-header-wrap{
   margin-top:3rem;
@@ -102,39 +139,39 @@ span:focus{
 
  /*ID for the P tag which utilizes the animated text itself | first header seen on page */
 #landing-header {
-  	font: 500 22px/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  	text-transform:uppercase;
-    letter-spacing: 2.5px;  	
-    display:block !important;
-  	justify-content:center;
-  	text-shadow: 0 0 80px rgba(255,255,255,.5);
-    color:black;
+  font: 500 22px/1 "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+  letter-spacing: 2.5px;  	
+  display:block !important;
+  justify-content:center;
+  text-shadow: 0 0 80px rgba(255,255,255,.5);
+  color:black;
 }
 
 /* SECONDARY MAIN TITLE TEXT | above and below the larger main title text (landing header) */
 #landing-header span {
-  	font: 700 60px/1.2 "Oswald", sans-serif;
-    letter-spacing: 8px;  	
-    display:block !important;
-  	justify-content:center;
-  	text-shadow: 0 0 80px rgba(255,255,255,.5);
-    /* Clip Background Image for text fill */
-  	background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  font: 700 60px/1.2 "Oswald", sans-serif;
+  letter-spacing: 8px;  	
+  display:block !important;
+  justify-content:center;
+  text-shadow: 0 0 80px rgba(255,255,255,.5);
+  /* Clip Background Image for text fill */
+  background: url(https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* landing row buttons | 3 in total - about me, dev work, design work */
 .landingRowButton {
-    display:flex;  
-    justify-content:center;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: white;
+  display:flex;  
+  justify-content:center;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 5rem;
+  font-weight: 500;
     -webkit-text-stroke: black;
     -webkit-text-stroke-width: 1px;
-    letter-spacing: 3px;
-    font-size: 5rem;
-    font-weight: 500;
 }
 
 /*background color for about me row - dark blue to black/grey - high atmosphere */
@@ -149,37 +186,36 @@ span:focus{
 
 /*background  color for dev row -  sky blue to darker blue */
 #devRowLanding{
-   background:-webkit-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
-   background:-moz-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
-   background:-o-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
-   background:linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+  background:-webkit-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+  background:-moz-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+  background:-o-linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
+  background:linear-gradient(#A1C4F7 30%, #c2e9fb 90%);
   margin-bottom:4rem;
 }
 
 /*background color sky blue with cloud image | DESIGN row */
 #designRowLanding{
-    background-color: #c2e9fb !important; 
-    background: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
+  background-color: #c2e9fb !important; 
+  background: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
 }
 
 /* animated clouds on design row hover */
 #designRowLanding > a:hover{
-    background: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
-      -webkit-animation: cloud-animations 25s linear infinite;
-      -moz-animation: cloud-animations 25s linear infinite;
-      -o-animation: cloud-animations 25s linear infinite; 
-      animation: cloud-animations 25s linear infinite;
+  background: url('https://pics.clipartpng.com/midle/Cirrus_Clouds_PNG_Clipart-867.png') repeat-y;
+    -webkit-animation: cloud-animations 25s linear infinite;
+    -moz-animation: cloud-animations 25s linear infinite;
+    -o-animation: cloud-animations 25s linear infinite; 
+    animation: cloud-animations 25s linear infinite;
 }
 
 /*animate airplane movement on hover */
 #devRowLanding > a:hover{
-  /*color:#AEAEAE;*/
-    background: url('http://dev2.slicejack.com/rocket-launch/img/airplane--right.svg') repeat-y;
-    /* moving clouds on hover */
-      -webkit-animation: plane-animations 25s linear infinite;
-      -moz-animation: plane-animations 25s linear infinite;
-      -o-animation: plane-animations 25s linear infinite; 
-      animation: plane-animations 25s linear infinite;
+  background: url('http://dev2.slicejack.com/rocket-launch/img/airplane--right.svg') repeat-y;
+  /* moving clouds on hover */
+    -webkit-animation: plane-animations 25s linear infinite;
+    -moz-animation: plane-animations 25s linear infinite;
+    -o-animation: plane-animations 25s linear infinite; 
+    animation: plane-animations 25s linear infinite;
 }
 
 /*animate shooting stars when hovering over about me sections */
@@ -191,10 +227,10 @@ span:focus{
   top:-40px;
   left:400px;
   position:relative;
-  transform-origin:100% 0;
-   animation:star-ani 2s 1 ease-out;
-  animation-direction: normal;
   opacity:0;
+    transform-origin:100% 0;
+    animation:star-ani 2s 1 ease-out;
+    animation-direction: normal;
 }
 
 #aboutRowLanding:hover > .star1:after {
@@ -205,10 +241,10 @@ span:focus{
   border:2px solid #F00;
   border-width:2px 150px 2px 150px; 
   border-color:transparent transparent transparent #FFF;
-  transform:rotate(-20deg) translate3d(1px, -1px, 0);
-  transform-origin:0% 100%;
-  animation:shooting-ani s infinite ease-out;
-  animation-direction: normal;
+    transform:rotate(-20deg) translate3d(1px, -1px, 0);
+    transform-origin:0% 100%;
+    animation:shooting-ani s infinite ease-out;
+    animation-direction: normal;
 }
 
 #aboutRowLanding:hover > .star2 {
@@ -219,11 +255,11 @@ span:focus{
   top:-60px;
   left:-250px;
   position:relative;
-  transform-origin:100% 0;
-   animation:star-ani 2s 1 ease-out;
-  animation-direction: normal;
-  opacity:0;
-  animation-delay:1s;
+    transform-origin:100% 0;
+    animation:star-ani 2s 1 ease-out;
+    animation-direction: normal;
+    opacity:0;
+    animation-delay:1s;
 }
 
 #aboutRowLanding:hover > .star2:after {
@@ -234,10 +270,10 @@ span:focus{
   border:2px solid #F00;
   border-width:2px 150px 2px 150px; 
   border-color:transparent transparent transparent #FFF;
-  transform:rotate(-10deg) translate3d(1px, -1px, 0);
-  transform-origin:0% 100%;
-  animation:shooting-ani s infinite  ease-out;
-  animation-direction: normal;
+    transform:rotate(-10deg) translate3d(1px, -1px, 0);
+    transform-origin:0% 100%;
+    animation:shooting-ani s infinite  ease-out;
+    animation-direction: normal;
 }
 
 #aboutRowLanding:hover > .star3 {
@@ -248,11 +284,11 @@ span:focus{
   top:-60px;
   left:-550px;
   position:relative;
-  transform-origin:100% 0;
-   animation:star-ani 2s 1 ease-out;
-  animation-direction: normal;
   opacity:0;
-  animation-delay:2.2s;
+    transform-origin:100% 0;
+    animation:star-ani 2s 1 ease-out;
+    animation-direction: normal;
+    animation-delay:2.2s;
 }
 
 #aboutRowLanding:hover > .star3:after {
@@ -263,13 +299,114 @@ span:focus{
   border:2px solid #F00;
   border-width:2px 150px 2px 150px; 
   border-color:transparent transparent transparent #FFF;
-  transform:rotate(195deg) translate3d(1px, -1px, 0);
-  transform-origin:0% 100%;
-  animation:shooting-ani s infinite  ease-out;
-  animation-direction: normal;
+    transform:rotate(195deg) translate3d(1px, -1px, 0);
+    transform-origin:0% 100%;
+    animation:shooting-ani s infinite  ease-out;
+    animation-direction: normal;
 }
 
-/*LANDING PAGE media queries */
+/* SCROLL DOWN BUTTON and elements / LANDING page */
+.scroll-down.visible{    /* visible scroll down btn positioning */
+  bottom: 1vh;
+}
+
+.scroll-down {
+  border-radius: 50%;
+  border:1px solid #eeeeee;
+  text-align: center;
+  display: block;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+  bottom:-140px;
+  height: 100px;
+  line-height: 100px;
+  width: 100px;
+    /* section down button animations */
+    -webkit-animation:scroll-down-popup 2.5s 2 !important;
+    -moz-animation: scroll-down-popup 2.5s 2 !important; 
+    -o-animation: scroll-down-popup 2.5s 2 !important; 
+    animation: scroll-down-popup 2.5s 2 !important;
+    
+    -webkit-transition: bottom 1s ease-in !important;
+    -moz-transition: bottom 1s ease-in !important;
+    -o-transition: bottom 1s ease-in !important;
+    transition: bottom 1s ease-in !important; 
+}
+
+.scroll-down > .arrow-scroll-btn:hover{
+  opacity:1 !important;
+  border-right: 2px solid green;
+  border-bottom: 2px solid green;
+  color:green !important;
+}
+
+/* arrow used inside button to indicate there is more info below */
+.arrow-scroll-btn {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  border-left:0 !important;
+  border-top:0 !important;
+  display: inline-block;
+  height: 50px;
+  margin-top: -25px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(45deg);
+}
+
+/*LANDING PAGE MEDIA QUERIES*/
+@media (max-width: 1200px) and (min-width: 900px) {
+  #landing-header > span {
+  	font: 700 3.25em/1 "Oswald", sans-serif !important;
+  	letter-spacing: 50;
+  	padding:.1em 0 !important;
+  }
+  #landing-header{
+    font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  	letter-spacing: .4em;
+  	padding-top:.5em;
+  	padding-bottom:0 !important;
+  }
+  .scroll-down.visible{
+    bottom: 3vh;  
+  }
+} 
+
+@media (max-width: 900px) and (min-width: 768px) {
+  #landing-header > span {
+  	font: 700 3em/1 "Oswald", sans-serif !important;
+  	letter-spacing: 50;
+  	padding:.1em 0 !important;
+  }
+  #landing-header{
+    font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  	letter-spacing: .4em;
+  	padding-top: 1em !important;
+  }
+} 
+
+@media screen and (max-width:768px){
+  .arrow-scroll-btn { 
+    opacity:.5;   /* removes faint line only visible on mobile */
+  }
+}
+
+@media(min-width: 768px){
+  .scroll-down.visible{
+    background-image: -webkit-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -moz-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -o-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  }
+}
+
 @media(min-height: 800px) and (min-width: 650px){
   #devRowLanding,
   #aboutRowLanding{
@@ -318,44 +455,45 @@ span:focus{
   }
 }
 
-/* cloud animation webkit keyframes / start / end positioning */
+/*** LANGING PAGE ANIMATIONS ***
+cloud animation webkit keyframes / start / end positioning */
 @-webkit-keyframes cloud-animations {
-    from {
-        background-position: 0% 0%;
-    }
-    to {
-        background-position: 110% 0%;
-    }
+  from {
+      background-position: 0% 0%;
+  }
+  to {
+      background-position: 110% 0%;
+  }
 }
 
 /* cloud animation keyframes / start / end positioning  | for older browsers*/
 @keyframes cloud-animations {
-    from {
-        background-position: 110% 0%;
-    }
-    to {
-        background-position: 0% 0%;
-    }
+  from {
+      background-position: 110% 0%;
+  }
+  to {
+      background-position: 0% 0%;
+  }
 }
 
 /* plane webkit animation keyframes / start / end positioning */
 @-webkit-keyframes plane-animations {
-    from {
-        background-position: -10% 0%;
-    }
-    to {
-        background-position: 110% 5%;
-    }
+  from {
+      background-position: -10% 0%;
+  }
+  to {
+      background-position: 110% 5%;
+  }
 }
 
-/* plane  animation keyframes / start / end positioning | for older browsers*/
+/* plane animation keyframes / start / end positioning | for older browsers*/
 @keyframes plane-animations {
-    from {
-        background-position: -10% 0%;
-    }
-    to {
-        background-position: 110% 5%;
-    }
+  from {
+      background-position: -10% 0%;
+  }
+  to {
+      background-position: 110% 5%;
+  }
 }
 
 /* shooting star webkit animation keyframes / start / end positioning  */
@@ -416,126 +554,6 @@ span:focus{
   }
 }
 
-/*#######################################
-#  /* SECTION STYLES|  Beneath landing page 
-########################################*/
-/* SECTION BACKGROUNDS */
-#aboutme-content,
-#dev-content,
-#design-content{
-    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
-    border-bottom: .01px solid #eeeeee;
-}
-/*ABOUT ME SECTION | BORDER TOP HERE TO CLEARLY SEPERATE FROM LANDING PAGE */
-#aboutme-content{
-  border-top:1px solid #eeeeee;
-}
-#aboutMeText{
-  font-size:16px;
-}
-#contactCards{
-  margin-top:6rem;
-}
-/* mobile phone screen size focus - 620px and below */
-@media(max-width: 620px) and (min-width: 320px){
-  #headshot{
-    margin:1em 0;
-    z-index:20;
-  }
-  #page-title {
-    color: #000000;
-    font-weight: 800;
-    height:auto;
-    text-indent:.25em;
-    border: 1px solid black;
-    border-right:none; 
-    border-left:none;
-    z-index: 20;
-    padding-bottom:5px;
-  }
-}
-
-/*######################################
-#   scroll down button and elements / landing paage 
-########################################*/
-/* visible scroll down btn positioning */
-.scroll-down.visible{
-    bottom: 1vh;
-}
-.scroll-down {
-    border-radius: 50%;
-    border:1px solid #eeeeee;
-    text-align: center;
-
-    display: block;
-    left: 50%;
-    margin-left: -50px;
-    position: absolute;
-    bottom:-140px;
-    height: 100px;
-    line-height: 100px;
-    width: 100px;
-      /* section down button animations */
-      -webkit-animation:scroll-down-popup 2.5s 2 !important;
-      -moz-animation: scroll-down-popup 2.5s 2 !important; 
-      -o-animation: scroll-down-popup 2.5s 2 !important; 
-      animation: scroll-down-popup 2.5s 2 !important;
-      
-      -webkit-transition: bottom 1s ease-in !important;
-      -moz-transition: bottom 1s ease-in !important;
-      -o-transition: bottom 1s ease-in !important;
-      transition: bottom 1s ease-in !important; 
-}
-.scroll-down > .arrow-scroll-btn:hover{
-    /*background-color: #808080;*/
-    opacity:1 !important;
-    border-right: 2px solid green;
-    border-bottom: 2px solid green;
-    color:green !important;
-}
-/* arrow used inside button to indicate there is more info below */
-.arrow-scroll-btn {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 2px;
-    border-left:0 !important;
-    border-top:0 !important;
-    display: inline-block;
-    height: 50px;
-    margin-top: -25px;
-    text-align: center;
-    vertical-align: middle;
-    width: 50px;
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(45deg);
-}
-.arrow-scroll-up {
-  bottom:2rem;
-  right:1rem;
-  opacity:.6;
-  position:fixed;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-radius: 2px;
-  border-left: 0 !important;
-  border-top: 0 !important;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(225deg);
-}
-
 /*scrolldown button keyframes defined | show from bottom */
 @-webkit-keyframes scroll-down-popup {
   0%   { opacity: .3; }
@@ -563,212 +581,193 @@ span:focus{
   50%   { border-color: #555; }
   100% { border-color: #eee; }
 }
+
 /*  start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
- /*fade in landing page elements */
-.fade-in {
-    opacity:0;  
-    -webkit-animation:fadeIn ease-in 1; 
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-    
-    -webkit-animation-fill-mode:forwards; 
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-    
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
+/*#######################################
+#  /* SECTION STYLES|  Beneath landing page 
+########################################*/
+/* SECTION BACKGROUNDS */
+#aboutme-content,
+#dev-content,
+#design-content{
+  border-bottom: .01px solid #eeeeee;
+  background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+}
+
+/*section headers for dev and design, adjusted for sidebar*/
+#dev-content > div:nth-child(1) > section > h1,
+#design-content > div.container > section > h1{
+  margin-left:2rem;
+}
+
+/* Back to top arrow up */
+.arrow-scroll-up {
+  bottom:2rem;
+  right:1rem;
+  opacity:.6;
+  position:fixed;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  border-left: 0 !important;
+  border-top: 0 !important;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(225deg);
 }
 
 /*filter buttons for cards */
 .filter-buttons {
-    padding-top: 2.5rem;
-    right: 4rem;
-    position: absolute;
+  padding-top: 2.5rem;
+  right: 4rem;
+  position: absolute;
 }
-/************** 
-CARD styles
-**********/
+
+/*** CARD STYLES ***/
 .card {
-    display: block; 
-    margin-bottom: 20px;
-    line-height: 1.42857143;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
-    transition: box-shadow .25s; 
-    border: 1px solid #eeeeee;
+  display: block; 
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+  transition: box-shadow .25s; 
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  border-bottom: 5px solid #eee !important;
 }
+
 .card:hover {
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.img-card {
-    width: 100%;
-    height:200px;
-    border-top-left-radius:2px;
-    border-top-right-radius:2px;
-    display:block;
-    overflow: hidden;
-    object-fit:contain; 
-    border-bottom:1px solid #eeeeee;
-    background-color: #f8f5f0;
+
+.img-card {  /* image portion of card */
+  width: 100%;
+  height:200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display:block;
+  overflow: hidden;
+  object-fit:contain; 
+  border-bottom:1px solid #eeeeee;
+  background-color: #f8f5f0;
 }
+
 .card-content {
-    padding:15px;
-    text-align:left;
+  padding:15px;
+  text-align:left;
 }
+
 .card-title {
-    margin-top:0px;
-    font-weight: 700;
-    font-size: 1.65em;
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
 }
 .card-read-more {
-    border-top: 1px solid #D4D4D4;
+  border-top: 1px solid #D4D4D4;
 }
+
 .card-read-more a {
-    font-weight: 600;
-    text-transform: uppercase;
-    outline: 0 solid white !important;
-    font-size: .9em;
-    letter-spacing: 1.1px;
-    white-space: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  outline: 0 solid white !important;
+  font-size: .9em;
+  letter-spacing: 1.1px;
+  white-space: normal;
 }
+
 .card-read-more a:hover {
-    transition: all .25s;
-    background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: linear-gradient(to bottom, #FFFFFF 86%, #ECE9E6 92%);
-}
-.card {
-    border-radius: 10px!important;
-    border-bottom: 5px solid #eee!important;
+  transition: all .25s;
+  background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: linear-gradient(to bottom, #FFFFFF 86%, #ECE9E6 92%);
 }
 
-
-/********************************************/
-/*accordion, tabs, and Secondary Page definitions */
-/********************************************/
-.accordion-panel:not(.accordion-content) {
-  display: block;
-  text-decoration: none;
-  -webkit-transition: background-color 0.8s ease-in-out;  
-  -moz-transition: background-color 0.8s ease-in-out;  
-  transition: background-color 0.5s ease-in-out;
-  box-shadow: none;
-  background-color: #ECE9E6;
-  background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-  background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-  background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
-  background: linear-gradient(to top, #FFFFFF, #ECE9E6);
-}
-.accordion-heading {
-    padding: 0 1rem;
-    padding-bottom:.75rem;
-}
-.accordion-title>a:hover {
-  text-decoration: none!important;
-}
-.accordion-content {
-  margin: 0em 3em 3em 3em;
-}
-#seondary-page-content-wrap{
-    margin-bottom: 10em;  
-}
-/*H1 TAGS used on secondary page titles */
-#secondary-page-title{
-  font-size: 3em;
-  font-weight: 800;
-  color:black;
-  letter-spacing: 1px;
-  margin-bottom: 3rem;
-}
-#secondary-page-tite-h2{
-    padding-top: 1rem;
-    padding-bottom: .5rem;
-}
-#picture-caption {
-  padding: 2rem 0 4rem 0;
-  width:80%;
-  line-height: 1.6;
-}
-/* add spacing for all h3 image titles besides the first title, as it has spacing from the page title above */
-#img-row > h3:not(:nth-child(1)){
-  padding-top:4rem;
-}
-.tab-content > section > .page-header{
-    padding-bottom: 10px;
-    margin: 30px 20px 35px 0;
-}
-#view-button{
-  margin: 2rem;
-}
-
-.fa-expand {
-  position: relative;
+/*#######################################
+#  /* SIDEBAR STYLES
+########################################*/
+#sidebar{
+  position: fixed;
   display: inline-block;
-}
-.fa-chevron-up {
-  color: #93c54b;
-}
-/* display buttons according to expansion */
-.accordion-title[aria-expanded="true"] .fa-chevron-down {
-  display:none !important;
-}
-.accordion-title[aria-expanded="false"] .fa-chevron-up {
-  display:none !important;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    color:#79a736;
-    background-color: #ffffff;
-    border: 1px solid #dfd7ca;
-    border-bottom-color: transparent;
-    cursor: default;
-}
-@media(min-width: 760px){
-  .accordion-panel{
-    padding: 0 1rem;
-  }
-}
-/*accordion title headers - made small at this point to avoid conflict with arrows and text */
-@media(max-width: 360px){
-   span > h3{
-     font-size:18px;
-  }
-}
-@media(max-width: 425px){
-  .accordion-content {
-    margin: 0em 1rem 1rem 1rem;
-  }
-}
-/************ back arrow / back page / btn **********/
-/*display flex for back button and text / allows back-text to be positioned perfectly */
-#back{
-  display: initial;
-  text-decoration:none !important;
-  padding-bottom:3rem;
-}
-/* text after back arrow icon --*/
-#back-text{
-  word-spacing: .1em;
-  font-size: 16px;
-}
-/************back arrow icon ***********/
-.fa-arrow-left{
-  margin-right:1%;
+  margin:0;
+  top: 2vh;
+  left: 0px;
+  z-index:1;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  list-style:none;
+  border-color: #3e3f3a;
+  border-radius: 0 5px 5px 0;
+  background-image: -webkit-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -moz-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: linear-gradient(to right, #a1c4fd 90%, #c2e9fb 100%);
 }
 
-/*********************************************************/
-/*  Modal for image preview
-***************************************************************/
+.nav a:hover{
+  color: black !important;
+  transition: all .25s;
+  background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
+}
+
+.nav > li > a:focus{
+  background:none !important;
+}
+
+.nav > li.active{
+  background-color:#f8f5f0 !important;
+}
+
+.nav > li > a.fa {
+  padding:1rem;
+  color:#f8f5f0;
+}
+
+.nav > li.active > a.fa {
+  padding:1rem;
+  color:#79a736 !important;
+  background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
+}
+
+.tooltip-inner {    /* prevent line breaks for tooltip at this width */
+  width:100px;
+}
+
+/* mobile icon adjustments*/
+@media screen and (max-width:768px){
+  #sidebar .fa {
+    padding:1.25rem .5rem;
+    font-size:1.75em;
+  }
+}
+
+/*#######################################
+#  /*   Modal for image preview
+########################################*/
 .modal.and.carousel {
   position: fixed; /* Needed because the carousel overrides the position property */
 }
+
 /*full screen display modal ** commented out margin and width which allow full screen, here if needed later */
 .modal-dialog {
   /*width: 100%;*/
@@ -777,226 +776,213 @@ CARD styles
   -webkit-min-logical-width: fit-content !important;
   padding: 0;
 }
+  
 .left.carousel-control,
 .right.carousel-control{
-    background:none;
-    padding-top: 35px;  
-    margin: 15px 2.6% 70px 2.3%;
-    font-size:32px;
-    opacity: 1;
-    min-height:max-content;
-    color: #93c54b;
-    overflow:hidden;
+  background:none;
+  padding-top: 35px;  
+  margin: 15px 2.6% 70px 2.3%;
+  font-size:32px;
+  opacity: 1;
+  min-height:max-content;
+  color: #93c54b;
+  overflow:hidden;
 }
+
 .left.carousel-control:hover{
-    opacity:1;
-    color:white;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  opacity:1;
+  color:white;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
+
 .right.carousel-control:hover{
-    opacity:1;
-    color:white;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  opacity:1;
+  color:white;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
+
 .carousel-inner > .item > img, 
 .carousel-inner > .item > a > img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-style: none !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-style: none !important;
 }
+
 .modal-body > .carousel-inner > .item.active > img{
-    border-style: none !important;
+  border-style: none !important;
 }
+
 .modal-body > div > img{
-    border-style: none !important;
+  border-style: none !important;
 }
+
 .carousel-indicators .active {
-    margin: 0;
-    width: 12px;
-    height: 12px;
-    background-color: #000428;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #000428;
 }
 .carousel-indicators li {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 1px;
-    text-indent: -999px;
-    border: 1px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0);
-    bottom:0;
-}
-/*close "x" button for modal preview displays */
-.close {
-    margin-top: -2px;
-    color:#990000;
-    opacity: .7;
-}
-.close:hover, 
-.close:focus {
-    color: #990000;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 1;
-    filter: alpha(opacity=50);
-}
-/*********************************************************/
-/*    tooltip - popover element on scroll-down btn  
-***************************************************************/
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-    .tooltip {
-        display: none !important;
-    }
- }
-/*********************************************************/
-/*   footer stlyes / header nav elememnts -> social media
-***************************************************************/
-#footer-elements{
-  background-color:white;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0);
   bottom:0;
 }
-.fa-linkedin {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 18px !important;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-.fa-github{
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 18px !important;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+
+/*close "x" button for modal preview displays */
+.close {
+  margin-top: -2px;
+  color:#990000;
+  opacity: .7;
 }
 
-/*********************************************************/
-/*   SIDEBAR STYLES
-***************************************************************/
-#sidebar{
-  position: fixed;
-  top: 2vh;
-  left: 0px;
-  z-index:1;
-  padding-top:1rem;
-  padding-bottom:1rem;
-  list-style:none;
-  background-image: -webkit-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: -moz-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: -o-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: linear-gradient(to right, #a1c4fd 90%, #c2e9fb 100%);
-  border-color: #3e3f3a;
-  display: inline-block;
-  margin:0;
-  border-radius: 0 5px 5px 0;
+.close:hover, 
+.close:focus {
+  color: #990000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  filter: alpha(opacity=50);
 }
 
-.nav a:hover{
-    color: black !important;
-    transition: all .25s;
-    background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
-}
-.nav > li > a:focus{
-  background:none !important;
-}
-.nav > li.active{
-  background-color:#f8f5f0 !important;
-}
-.nav > li > a.fa {
-    padding:1rem;
-    color:#f8f5f0;
-}
-.nav > li.active > a.fa {
-    padding:1rem;
-    color:#79a736 !important;
-    background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-    background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
-}
-.tooltip-inner {
-  width:100px;
+/*#######################################
+#  /* SECONDARY PAGE STYLES |  Beneath landing page 
+########################################*/
+.accordion-panel:not(.accordion-content) {
+  display: block;
+  text-decoration: none;
+  box-shadow: none;
+  background-color: #ECE9E6;
+  background: -webkit-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -moz-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: -o-linear-gradient(bottom, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to top, #FFFFFF, #ECE9E6);
+    -webkit-transition: background-color 0.8s ease-in-out;  
+    -moz-transition: background-color 0.8s ease-in-out;  
+    transition: background-color 0.5s ease-in-out;
 }
 
-/*********************************************************/
-/*General media queries for less than small or larger than small screens
-***************************************************************/
-@media screen and (max-width:768px){
-  #sidebar .fa {
-    padding:1.25rem .5rem;
-    font-size:1.75em;
-  }
-  #contactCards{
-    margin: 10px;
-  }
-  .page-header{
-    margin-bottom:2rem;
-  }
-  .arrow-scroll-btn { 
-  /*chose to create a custom down arrow, because i did not like FA arrows for this button. As a result a veryyy faint border line can be seen above the arrow, 
-  opacity a .5 moakes these fain borders almost impossible to spot*/
-    opacity:.5;
+.accordion-heading {
+  padding: 0 1rem;
+  padding-bottom:.75rem;
+}
+
+.accordion-title>a:hover {
+  text-decoration: none !important;
+}
+
+.accordion-content {
+  margin: 0em 3em 3em 3em;
+}
+
+#seondary-page-content-wrap{
+  margin-bottom: 10em;  
+}
+
+/*H1 TAGS used on secondary page titles */
+#secondary-page-title{
+  font-size: 3em;
+  font-weight: 800;
+  color:black;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+
+#secondary-page-tite-h2{
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+#picture-caption {
+  padding: 2rem 0 4rem 0;
+  width:80%;
+  line-height: 1.6;
+}
+
+/* add spacing for all h3 image titles besides the first title, as it has spacing from the page title above */
+#img-row > h3:not(:nth-child(1)){
+  padding-top:4rem;
+}
+
+.tab-content > section > .page-header{
+    padding-bottom: 10px;
+    margin: 30px 20px 35px 0;
+}
+
+#view-button{  /* view document button */
+  margin: 2rem;
+}
+
+.fa-chevron-up {
+  color: #93c54b;
+}
+
+/* display buttons according to expansion */
+.accordion-title[aria-expanded="true"] .fa-chevron-down {
+  display:none !important;
+}
+
+/* display buttons according to expansion */
+.accordion-title[aria-expanded="false"] .fa-chevron-up {
+  display:none !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color:#79a736;
+  background-color: #ffffff;
+  border: 1px solid #dfd7ca;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+/** back arrow / back page / btn */
+#back{
+  display: initial;
+  text-decoration:none !important;
+  padding-bottom:3rem;
+}
+
+#back-text{   /* text after back arrow icon --*/
+  word-spacing: .1em;
+  font-size: 16px;
+}
+
+.fa-arrow-left{   /* back arrow icon*/
+  margin-right:1%;
+}
+
+@media(min-width: 760px){
+  .accordion-panel{
+    padding: 0 1rem;
   }
 }
 
-@media(min-width: 768px){
-  .scroll-down.visible{
-    background-image: -webkit-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
-    background-image: -moz-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
-    background-image: -o-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+@media(max-width: 425px){
+  .accordion-content {
+    margin: 0em 1rem 1rem 1rem;
   }
 }
-/*********************************************************/
-/*    Definied media queries for improved responsiveness across all screen sizes needed for general page layout // mainly landing page
-***************************************************************/
 
-
-@media (max-width: 1200px) and (min-width: 900px) {
-  #landing-header > span {
-  	font: 700 3.25em/1 "Oswald", sans-serif !important;
-  	letter-spacing: 50;
-  	padding:.1em 0 !important;
+@media(max-width: 360px){    /*accordion title headers - made small at this point to avoid conflict with arrows and text */
+  span > h3{
+    font-size:18px;
   }
-  #landing-header{
-    font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  	letter-spacing: .4em;
-  	padding-top:.5em;
-  	padding-bottom:0 !important;
-  }
-  .scroll-down.visible{
-    bottom: 3vh;  
-  }
-} /*end max 1200 min 900px */
-
-@media (max-width: 900px) and (min-width: 768px) {
-  #landing-header > span {
-  	font: 700 3em/1 "Oswald", sans-serif !important;
-  	letter-spacing: 50;
-  	padding:.1em 0 !important;
-  }
-  #landing-header{
-    font: 700 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  	letter-spacing: .4em;
-  	padding-top: 1em !important;
-  }
-} /* end max 900 and min 768 px */
+}

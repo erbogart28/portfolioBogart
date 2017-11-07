@@ -1,17 +1,17 @@
-<h3 class="text-center page-header" style="margin-bottom:0">Email Me About the Position!</h3>
-<div class="card-content">
+<div class="card-content" id="email-form">
   <%= simple_form_for @contact, url: static_pages_path, :html => {:class => 'form-horizontal' }, remote: true do |f| %>
-    <%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
+    <%= f.input :name, :required => true, label: 'Your Name / Employer' %>
+    <%= f.input :email, :required => true, label: 'Your Email' %>
     <%= f.input :message, :as => :text, :required => true %>
     <div class= "hidden">
       <%= f.input :nickname, :hint => 'Leave this field blank!' %>
     </div>
     <div class="row-new">
-      <%= f.button :submit, 'Send message', :class => 'btn btn-primary col-xs-12 col-md-8 col-md-offset-2', :style => 'margin-top:1rem' %>
+      <%= f.button :submit, 'Send Email', :class => 'btn btn-primary col-xs-12 col-md-8 col-md-offset-2', :style => 'margin-top:1rem' %>
     </div>
   <% end %>
 </div>
+<!-- render flas messages beneath submit button and within the card -->
 <div class="" id="flash-message">
-    <%= render 'flash' %>
+  <%= render 'flash' %>
 </div>
