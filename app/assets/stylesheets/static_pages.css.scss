@@ -156,7 +156,7 @@ h1.heading {
   justify-content:center;
   text-shadow: 0 0 80px rgba(255,255,255,.5);
   /* Clip Background Image for text fill */
-  background-image: url("hubble_friday.png");
+  background-image: asset-data-url("hubble_friday.png");
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -196,12 +196,12 @@ h1.heading {
 /*background color sky blue with cloud image | DESIGN row */
 #designRowLanding{
   background-color: #c2e9fb !important;
-  background: url("cloud2.png") repeat-y;
+  background: asset-data-url("cloud2.png") repeat-y;
 }
 
 /* animated clouds on design row hover */
 #designRowLanding > a:hover{
-  background: url("cloud2.png") repeat-y;
+  background: asset-data-url("cloud2.png") repeat-y;
     -webkit-animation: cloud-animations 25s linear infinite;
     -moz-animation: cloud-animations 25s linear infinite;
     -o-animation: cloud-animations 25s linear infinite; 
