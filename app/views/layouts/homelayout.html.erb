@@ -15,72 +15,73 @@
   </style>
 </head>
 <script>
-$(document).on("turbolinks:load", function() {
- // remove down arrow / scrolldown button if window is scrolled down from the top of page -- only visible if 0 scroll 
-    $(function showHideScrollArrow() {
-      var w = $(window);
-      w.scroll(function () {
-        if (w.scrollTop() !== 0) {
-          $('.scroll-down').removeClass('visible'); // scroll down becomes hidden, and begins animation out of view, below about me section 
-          return;
-        }
-        $('.scroll-down').addClass('visible'), // will add visible if user SCROLLS BACK TO TOP after a page load | Without this - will not be visible again if scrolled from top
-        $('.scroll-down').css('opacity', '1');
-      });
-      $('.scroll-down').addClass('visible');  // line repeated here for INITIAL PAGE LOAD for landing page | Without this - will not load as a visibile; also, allows for animation on page load without adding visible to scrolldown class
-    });//end showHideScrollArrow
-    
-    // add sidebar when user is outside of landing page section
-    $(function showSideBar() {
-      var sidebar = $('#sidebar');
-      var landingpage_end  = $('#landingPageSection').offset().top +$('#landingPageSection').height()-52; //meausre height of landing page -- red next line for -25 reasoning
-      //landingpage_end equation is giving correct screen height results, BUT would sometimes show sidebar too far down in aboutme section (maybe due to scrolldown below landing section - having a hidden height to landing page ?). Added -25 for some cushion, and all mobile screen sizes show the sidebar fine now.
-        $(window).scroll(function() {  //pixels from top
-          var scroll2 = $(window).scrollTop();
-          if (scroll2 <=  landingpage_end ) {
-              sidebar.addClass('hidden') //hide sidebar if scroll position is within landing page
-               $('#scrollup').addClass('hidden');
-
-          } else {
-              sidebar.removeClass('hidden'), //show sidebar once scrolled outside of landing page section completely
-                $('#scrollup').removeClass('hidden'),
-              $('a.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
-            }
+  $(document).on("turbolinks:load", function() {
+   // remove down arrow / scrolldown button if window is scrolled down from the top of page -- only visible if 0 scroll 
+      $(function showHideScrollArrow() {
+        var w = $(window);
+        w.scroll(function () {
+          if (w.scrollTop() !== 0) {
+            $('.scroll-down').removeClass('visible'); // scroll down becomes hidden, and begins animation out of view, below about me section 
+            return;
+          }
+          $('.scroll-down').addClass('visible'), // will add visible if user SCROLLS BACK TO TOP after a page load | Without this - will not be visible again if scrolled from top
+          $('.scroll-down').css('opacity', '1');
         });
-    });//end show sidebar
-    
-    //toggle tooltip on hover. Destroy tool tip on mobile screen sizes - allows for single click on mobile screen widths - as opposed to simply hiding w/ css
-    $(function (){
-      if ( $(window).width() < 760 ){
-        $('li').tooltip('destroy'); //remove toolbars from sidebar to avoid complications with touch screen users.
-      }else {
-          $('[data-toggle="tooltip"]').tooltip({trigger:'hover'}); // basic hover for toolbar
-      }
-    });
-
-    // smooth scrolling to sections // adds ACTIVE class to sidebar depending on sections
-    $(function smoothScroll() {
-		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {  //only section scroll links. NO empty links
-		  
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {  // On-page links
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			  if (target.length) {
-				$('html, body').animate({
-				  scrollTop: target.offset().top //animate to target section and stop once section top is at 0
-				}, 1000);
-				return false;
-			  }
-			}
-		  });
-		});// end smoothScroll function
-		//Load both partials on page load - allows for sections to be filtered out properly by rendering on page load
-		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs'); 
-});   // end turbolinks on load  
-// function for BOTH filter button click - renders partials in div id fill-in when button is clicked. Design filter buttons toggled to hidden to avoid both sections having the same filter choices
-function fillboth() {
-    $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
-} 
+        $('.scroll-down').addClass('visible');  // line repeated here for INITIAL PAGE LOAD for landing page | Without this - will not load as a visibile; also, allows for animation on page load without adding visible to scrolldown class
+      });//end showHideScrollArrow
+      
+      // add sidebar when user is outside of landing page section
+      $(function showSideBar() {
+        var sidebar = $('#sidebar');
+        var landingpage_end  = $('#landingPageSection').offset().top +$('#landingPageSection').height()-52; //meausre height of landing page -- red next line for -25 reasoning
+        //landingpage_end equation is giving correct screen height results, BUT would sometimes show sidebar too far down in aboutme section (maybe due to scrolldown below landing section - having a hidden height to landing page ?). Added -25 for some cushion, and all mobile screen sizes show the sidebar fine now.
+          $(window).scroll(function() {  //pixels from top
+            var scroll2 = $(window).scrollTop();
+            if (scroll2 <=  landingpage_end ) {
+                sidebar.addClass('hidden') //hide sidebar if scroll position is within landing page
+                 $('#scrollup').addClass('hidden');
+  
+            } else {
+                sidebar.removeClass('hidden'), //show sidebar once scrolled outside of landing page section completely
+                  $('#scrollup').removeClass('hidden'),
+                $('a.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
+              }
+          });
+      });//end show sidebar
+      
+      //toggle tooltip on hover. Destroy tool tip on mobile screen sizes - allows for single click on mobile screen widths - as opposed to simply hiding w/ css
+      $(function (){
+        if ( $(window).width() < 760 ){
+          $('li').tooltip('destroy'); //remove toolbars from sidebar to avoid complications with touch screen users.
+        }else {
+            $('[data-toggle="tooltip"]').tooltip({trigger:'hover'}); // basic hover for toolbar
+        }
+      });
+  
+      // smooth scrolling to sections // adds ACTIVE class to sidebar depending on sections
+      $(function smoothScroll() {
+  		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {  //only section scroll links. NO empty links
+  		  
+  			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {  // On-page links
+  			  var target = $(this.hash);
+  			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  			  if (target.length) {
+  				$('html, body').animate({
+  				  scrollTop: target.offset().top //animate to target section and stop once section top is at 0
+  				}, 1000);
+  				return false;
+  			  }
+  			}
+  		  });
+  		});// end smoothScroll function
+  		
+  		//Load both partials on page load - allows for sections to be filtered out properly by rendering on page load
+  		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs'); 
+  });   // end turbolinks on load  
+  // function for BOTH filter button click - renders partials in div id fill-in when button is clicked. Design filter buttons toggled to hidden to avoid both sections having the same filter choices
+  function fillboth() {
+      $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
+  } 
 </script>
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
 <%= yield %>
