@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'pray_favi.ico' %>
     <meta name = "author" content = "[Evan Bogart]">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0" />
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <style>
@@ -73,16 +73,15 @@
       			}
       		  });
       		});// end smoothScroll function
-      		
       		//Load both partials on page load - allows for sections to be filtered out properly by rendering on page load
-      		$('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs'); 
+      	  $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs'); 
       });   // end turbolinks on load  
       // function for BOTH filter button click - renders partials in div id fill-in when button is clicked. Design filter buttons toggled to hidden to avoid both sections having the same filter choices
       function fillboth() {
-          $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
+        $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
       } 
     </script>
-</head>
+  </head>
 <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
 <%= yield %>
 <!-- required jquery/JS -->
