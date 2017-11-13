@@ -62,6 +62,14 @@
     -webkit-text-stroke-width: 1px;
 }
 
+/* eases out back to white text to avoid having focused/clicked row remain green until another is clicked or page is refreshed */
+.sectionScroll > .landingRowButton:focus{
+  color: white;
+}
+.sectionScroll > .landingRowButton:hover{
+  color: #79a736 !important;
+  transition: all 0.2s ease-in;
+}
 /*background color for about me row - dark blue to black/grey - high atmosphere */
 #aboutRowLanding{
   background-color: #a1c4fd;

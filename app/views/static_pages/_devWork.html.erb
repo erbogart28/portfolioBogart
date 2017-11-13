@@ -6,9 +6,9 @@
             <section class=" col-sm-pull-2 col-sm-6 col-md-5 hidden-xs filter-buttons" id="dev-filter">
                 <%= label_tag 'btn-group', 'Filter By:' %>
                 <div class="btn-group">
-                    <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-                    <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-                    <button class="btn btn-md btn-success" onclick="fillboth()" id="filter-option">Both</button>
+                    <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-primary', :id => 'filter-option' %>
+                    <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-primary', :id => 'filter-option' %>
+                    <button class="btn btn-md btn-primary" onclick="fillboth()" id="filter-option">Both</button>
                 </div><!-- end btn group -->
             </section><!-- end filter buttons section -->
         </section>
