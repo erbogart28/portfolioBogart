@@ -1,6 +1,26 @@
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com*/
+
+@mixin footer-gradient(){
+    background: -webkit-linear-gradient(left, #a1c4fd 0%, #c2e9fb 100%);
+    background: -moz-linear-gradient(left, #a1c4fd 0%, #c2e9fb 100%);
+    background: -o-linear-gradient(left, #a1c4fd 0%, #c2e9fb 100%);
+    background: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+}
+@mixin hover-gradient(){
+  background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
+  background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
+}
+@mixin sidebar(){
+    background-image: -webkit-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -moz-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
+  background-image: linear-gradient(to right, #a1c4fd 90%, #c2e9fb 100%);
+}
+
 * { margin:0; padding:0; } /* to remove the top and left whitespace */
 
 .clearfix:after {
@@ -49,10 +69,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-image: -webkit-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-  background-image: -moz-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-  background-image: -o-linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
-  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+  @include footer-gradient();
 }
 
 #footer-elements{
@@ -224,51 +241,42 @@ h1.heading {
 ########################################*/
 #sidebar{
   position: fixed;
-  display: inline-block;
-  margin:0;
+  margin: 0;
   top: 2vh;
   left: 0px;
-  z-index:1;
-  padding-top:1rem;
-  padding-bottom:1rem;
-  list-style:none;
+  z-index: 1;
+  padding: .5rem 0;
+  list-style: none;
   border-color: #3e3f3a;
   border-radius: 0 5px 5px 0;
-  background-image: -webkit-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: -moz-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: -o-linear-gradient(right, #a1c4fd 90%, #c2e9fb 100%);
-  background-image: linear-gradient(to right, #a1c4fd 90%, #c2e9fb 100%);
+  background-color: #444;
 }
 
-.nav a:hover{
-  color: black !important;
-  transition: all .25s;
-  background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-  background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-  background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-  background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
+#sidebar-nav > li > a {
+  padding: 1rem;
+  color: #f8f5f0;
+  text-align: center;
+  border-right: .1px solid black;
+  background-color: #444;
 }
 
-.nav > li > a:focus{
-  background:none !important;
+#sidebar-nav > li > a:hover{
+  color: #444 !important;
+  transition: all 0.30s ease-out;
+  background-color: #f8f5f0;
 }
 
-.nav > li.active{
-  background-color:#f8f5f0 !important;
+/* active class added to list item depending on section scroll */
+#sidebar-nav > li.active > a {
+  color: #79a736 !important;
+  background-color: #f8f5f0 !important;
+  transition: all 0.4s ease-in;
 }
 
-.nav > li > a.fa {
-  padding:1rem;
-  color:#f8f5f0;
-}
-
-.nav > li.active > a.fa {
-  padding:1rem;
-  color:#79a736 !important;
-  background: -webkit-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-  background: -moz-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-  background: -o-linear-gradient(right, #FFFFFF 86%, #ECE9E6 92%);
-  background: linear-gradient(to right, #FFFFFF 86%, #ECE9E6 92%);
+/*keyboard icon inside sidebar / borders seperate icons above and below */
+#devSidebar > a{
+  border-bottom: .1px solid black; 
+  border-top: .1px solid black; 
 }
 
 .tooltip-inner {    /* prevent line breaks for tooltip at this width */

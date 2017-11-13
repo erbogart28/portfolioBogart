@@ -1,7 +1,8 @@
-<%= render 'landing' %>
-<%= render 'aboutme' %>
-<!-- renders fill div with UI/UX and/or dev work. Allows for filter options with  -->
-<%= render 'sidebar' %>
-	<div id="fill-in"></div>
-	<a href="#" class="arrow-scroll-up hidden"  id="scrollup"></a>
-<%= render 'footer' %>
+<%= render 'landing' %><!-- landing page section -->
+<%= render 'aboutme' %><!-- about me/contact section -->
+<%= render 'sidebar' %><!-- sidebar / visible on all sections besides landing page. Not visible on secodary pages. -->
+
+<div id="fill-in"></div><!--  div fills with rendered UI/UX and/or dev work sections.  -->
+
+<%= link_to '', '/', :class => 'arrow-scroll-up hidden sectionScroll', :id => 'scrollup' %><!--  scroll to top arrow visible throughout all sections besides landing page section  -->
+<%= render 'footer' %><!-- renders footer -->

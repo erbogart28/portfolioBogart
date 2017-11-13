@@ -6,18 +6,18 @@
             <section class=" col-sm-pull-2 col-sm-6 col-md-5 hidden-xs filter-buttons" id="dev-filter">
                 <%= label_tag 'btn-group', 'Filter By:' %>
                 <div class="btn-group">
-                    <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-                    <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-success', :id => 'filter-option' %>
-                    <button class="btn btn-md btn-success" onclick="fillboth()" id="filter-option">Both</button>
+                    <%= link_to "Development Work", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-primary', :id => 'filter-option' %>
+                    <%= link_to "UI/UX Work", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-md btn-primary', :id => 'filter-option' %>
+                    <button class="btn btn-md btn-primary" onclick="fillboth()" id="filter-option">Both</button>
                 </div><!-- end btn group -->
             </section><!-- end filter buttons section -->
         </section>
         <!-- hidden filter buttons for mobile view // located beneath page-header -->
         <section class=" col-xs-12 hidden-sm hidden-lg hidden-md" style="margin-bottom:3rem" id="dev-filter">
                 <%= label_tag 'btn-group', 'Filter By:' %>
-                <%= link_to "Dev", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-success col-md-4', :id => 'filter-option' %>
-                <%= link_to "UI/UX", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-success col-md-4', :id => 'filter-option' %>
-                <button class="btn btn-sm btn-success col-md-4" onclick="fillboth()" id="filter-option">Both</button>
+                <%= link_to "Dev", static_pages_render_dev_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-primary col-md-4', :id => 'filter-option' %>
+                <%= link_to "UI/UX", static_pages_render_design_path, :remote => true, data: { turbolinks: false }, :class => 'btn btn-sm btn-primary col-md-4', :id => 'filter-option' %>
+                <button class="btn btn-sm btn-primary col-md-4" onclick="fillboth()" id="filter-option">Both</button>
         </section><!-- end filter buttons section -->
     </div>
     <div class="container" id="devcards"><!-- Development Cards Container/Article of section dev content -->

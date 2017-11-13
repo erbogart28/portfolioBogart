@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>.ERB Portfolio</title>
     <%= csrf_meta_tags %>
@@ -32,7 +33,7 @@
           // add sidebar when user is outside of landing page section
           $(function showSideBar() {
             var sidebar = $('#sidebar');
-            var landingpage_end  = $('#landingPageSection').offset().top +$('#landingPageSection').height()-52; //meausre height of landing page -- red next line for -25 reasoning
+            var landingpage_end  = $('#landingPageSection').offset().top +$('#landingPageSection').height()-41; //meausre height of landing page -- red next line for -25 reasoning
             //landingpage_end equation is giving correct screen height results, BUT would sometimes show sidebar too far down in aboutme section (maybe due to scrolldown below landing section - having a hidden height to landing page ?). Added -25 for some cushion, and all mobile screen sizes show the sidebar fine now.
               $(window).scroll(function() {  //pixels from top
                 var scroll2 = $(window).scrollTop();
@@ -42,8 +43,7 @@
       
                 } else {
                     sidebar.removeClass('hidden'), //show sidebar once scrolled outside of landing page section completely
-                      $('#scrollup').removeClass('hidden'),
-                    $('a.landingRowButton').blur(); //ADDED TO REMOVE green FOCUS when LANDINGROWBUTTON link is CLICKED, so if users travel back to top now row text is focused on
+                      $('#scrollup').removeClass('hidden');
                   }
               });
           });//end show sidebar
@@ -56,11 +56,10 @@
                 $('[data-toggle="tooltip"]').tooltip({trigger:'hover'}); // basic hover for toolbar
             }
           });
-      
+     
           // smooth scrolling to sections // adds ACTIVE class to sidebar depending on sections
           $(function smoothScroll() {
       		  $('.sectionScroll a[href*="#"]:not([href="#"])').click(function() {  //only section scroll links. NO empty links
-      		  
       			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {  // On-page links
       			  var target = $(this.hash);
       			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -74,18 +73,21 @@
       		  });
       		});// end smoothScroll function
       		//Load both partials on page load - allows for sections to be filtered out properly by rendering on page load
-      	  $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs'); 
+        $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs'); 
       });   // end turbolinks on load  
-      // function for BOTH filter button click - renders partials in div id fill-in when button is clicked. Design filter buttons toggled to hidden to avoid both sections having the same filter choices
+    </script>
+    
+    <script>      // function for BOTH filter button click - renders partials in div id fill-in when button is clicked. Design filter buttons toggled to hidden to avoid both sections having the same filter choices
       function fillboth() {
         $('#fill-in').html("<%= escape_javascript(render :partial => 'devWork') %>").append("<%= escape_javascript(render :partial => 'design') %>") && $('#design-filter').toggleClass('hidden') && $('#design-filter-xs').toggleClass('hidden-xs');
       } 
     </script>
   </head>
-<body class="scroll-area" data-spy="scroll" data-target="#sidebar">
-<%= yield %>
-<!-- required jquery/JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
+  
+  <body class="scroll-area" data-spy="scroll" data-target="#sidebar">
+  <%= yield %>
+    <!-- required jquery/JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
 </html>
