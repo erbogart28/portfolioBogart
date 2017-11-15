@@ -2,50 +2,51 @@
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">About Me</h1>
     </div>
-    
     <section class="container" id="aboutme-txt-pic">
-        <div class="row-fluid">
-            <div class="col-md-3 col-sm-push-1 col-md-offset-1 col-sm-3  col-xs-7"> 
+        <div class="row">
+            <div class="col-sm-10 col-sm-push-1 col-md-12 col-md-push-0">
+
+            <div class="col-xs-7 col-md-5"> 
                 <%= image_tag("headshot1.jpg", class: "img-responsive center-block", :id => "headshot" )%>
             </div>
-            <div class="col-md-6 col-sm-push-1 col-sm-7" id="aboutMeText">
+            <div class="" id="aboutMeText">
                 <p id="aboutMeText">Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
                 <p id="aboutMeText">As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM taught me a lot about modern UI/UX design principles and heuristics. I've found this to be beyond useful when evaulating, designing, or developing a site or web application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, JavaScript, and jQuery. My current MVC framework of choice is Ruby-on-Rails.</p> 
             </div>
         </div>
+        </div>
     </section><!-- end aboutme article -- content pertaining to me -->
     
-    <section id="contactCards">
+    <section class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-8 col-sm-push-2">
+            <div class="col-sm-10 col-sm-push-1 col-md-12 col-md-push-0">
+
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-content">
                         <h2 class="page-header" style="margin-bottom:.5rem;margin-top:1rem">  Contact Me </h2>
-                          <div id="contact">
+                          <div id="contact" class="">
                             <%= render 'contact_form' %>
                           </div>
                         <!--<p><i>Check out my linkedin</i><a type="button" class="btn btn-block btn-lg btn-linkedin" target="blank_"><i class="fa fa-linkedin"></i></a></p>-->
                     </div><!-- END card content -->
                 </div><!--end card -->
             </div><!-- end column div -->
-            <div class="col-md-4 col-sm-8 col-sm-push-2">
+                <div class="col-md-5 col-md-push-1">
                 <div class="card">
                     <div class="card-content">
                         <h3 class="page-header" style="margin-bottom:1.5rem;margin-top:1rem"> View My Resume</h3>
-                        <p class="cardTxt">My resume can be viewed here. Please feel free to right click the link and save a copy for yourself if you're interested.</p>
+                        <p class="cardTxt">My resume can be viewed here. Please feel free to download a copy.</p>
                     </div><!-- END card content -->
                     <div class="card-read-more">
                         <%= link_to "View Resume", image_path("EvanBogartResume.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
                     </div><!-- end read more -->
                 </div><!--end card -->
-                <div class="card">
-                    <div class="card-content">    
-                        <h3 class="page-header"  style="margin-bottom:1.5rem;margin-top:1rem;">Check out my GitHub</h3>
-                        <p class="cardTxt">I try to code as much as I can. As of recently I've been working on this site everyday and trying to find areas of improvement that I could develop. Some weeks I don't commit to repos as much as I should, but I always make sure to get code I developed out there when I feel it's appropriate to do so!</p>
-                        <p class="cardTxt"><a href="https://github.com/erbogart28" type="button" class="btn btn-block btn-lg btn-github" target="blank_"><i class="fa fa-github"></i></a></p>
-                    </div>
-                </div><!-- end github card -->
-            </div><!-- end column div -->
+                
+                <!--<div class="col-md-4">-->
+                <!--        <a href="https://github.com/erbogart28" type="button" class="btn btn-social-icon  btn-github" target="blank_"><i class="fa fa-github"></i></a>-->
+                <!--</div>--><!-- end github card -->
+        </div>
         </div><!--end row -->
     </section> <!-- end homepage cards article within aboutme-content section -->
 </section><!-- end aboutme-content section -->
