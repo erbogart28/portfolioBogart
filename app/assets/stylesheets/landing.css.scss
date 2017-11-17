@@ -207,8 +207,6 @@
 }
 
 .scroll-down {
-  border-radius: 50%;
-  border:1px solid #eeeeee;
   text-align: center;
   display: block;
   left: 50%;
@@ -219,11 +217,6 @@
   line-height: 100px;
   width: 100px;
     /* section down button animations */
-    -webkit-animation:scroll-down-popup 2.5s 2 !important;
-    -moz-animation: scroll-down-popup 2.5s 2 !important; 
-    -o-animation: scroll-down-popup 2.5s 2 !important; 
-    animation: scroll-down-popup 2.5s 2 !important;
-    
     -webkit-transition: bottom 1s ease-in !important;
     -moz-transition: bottom 1s ease-in !important;
     -o-transition: bottom 1s ease-in !important;
@@ -291,15 +284,6 @@
 @media screen and (max-width:768px){
   .arrow-scroll-btn { 
     opacity:.5;   /* removes faint line only visible on mobile */
-  }
-}
-
-@media(min-width: 768px){
-  .scroll-down.visible{
-    background-image: -webkit-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
-    background-image: -moz-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
-    background-image: -o-linear-gradient(30deg, #fdfbfb 0%, #ebedee 100%);
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   }
 }
 
@@ -450,36 +434,3 @@ cloud animation webkit keyframes / start / end positioning */
   }
 }
 
-/*scrolldown button keyframes defined | show from bottom */
-@-webkit-keyframes scroll-down-popup {
-  0%   { opacity: .3; }
-  50%   { opacity: .55; }
-  100% { opacity: .85; }
-}
-
-@-moz-keyframes scroll-down-popup {
-  0%   { opacity: .3; }
-  50%   { opacity: .55; }
-  100% { opacity: .85; }
-}
-
-@-o-keyframes scroll-down-popup {
-  0%   { opacity: .3; }
-  50%   { opacity: .55; }
-  100% { opacity: .85; }
-}
-
-@keyframes scroll-down-popup {
-  0%   { opacity: .3; }
-  50%   { opacity: .55; }
-  100% { opacity: .85; }
-  0%   { border-color:  #555; }
-  50%   { border-color: #555; }
-  100% { border-color: #eee; }
-}
-
-/*  start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
