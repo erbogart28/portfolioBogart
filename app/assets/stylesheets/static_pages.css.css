@@ -87,7 +87,3 @@ Backtrace:
 /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
 /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$fadeIn\".\A         on line 109 of /home/ubuntu/workspace/app/assets/stylesheets/static_pages.css.scss, in `animation'\A         from line 289 of /home/ubuntu/workspace/app/assets/stylesheets/static_pages.css.scss\A \A 104: .img-responsive{\A 105:   border: 1px solid #eeeeee !important\A 106: }\A 107:  /*fade in elements */\A 108: @mixin animation($fade-in){\A 109:     -webkit-animation: #{$fadeIn} ease-in 1; \A 110:     -moz-animation: #{$fadeIn} ease-in 1;\A 111:     animation: #{$fadeIn} ease-in 1;\A 112:     \A 113:     -webkit-animation-fill-mode: forwards; \A 114:     -moz-animation-fill-mode: forwards;"; }
