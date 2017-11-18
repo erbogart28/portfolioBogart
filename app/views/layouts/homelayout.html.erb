@@ -3,10 +3,8 @@
   <head>
     <title>.ERB Portfolio</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <style>
     
 .rightbar{
@@ -39,7 +37,21 @@
 .rightbar a{
     color:white;
 }
-</style>    
+</style>        
+
+</head>
+
+<body>
+<%= yield %>
+ 
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">© 2017 .ERB Portfolio <%= link_to "Back to Top", root_path, :class => "btn-link pull-right" %></p>
+      </div>
+</footer>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+
 
 <script>
   $(document).on("turbolinks:load", function() {
@@ -107,33 +119,7 @@
   }); //end .on turobolinks load
 </script>
 
-</head>
-
-<section class="rightbar">
-    <div class="item">
-      <li id="aboutSidebar"><%= link_to "", root_path, :class => "scroll-button fa fa-2x fa-info-circle" %></li>
-    </div>
-    
-    <div class="item">
-      <li id="devSidebar"><%= link_to "", root_path, :class => "scroll-button3 fa fa-2x fa-keyboard-o" %></li>
-    </div> 
-    
-    <div class="item">
-       <li id="designSidebar"><%= link_to "", root_path, :class => "scroll-button2 fa fa-2x fa-universal-access" %></li>
-    </div>  
-</section>
-
-<body>
-<%= yield %>
- 
-<footer class="footer">
-      <div class="container">
-        <p class="text-muted">© 2017 .ERB Portfolio <%= link_to "Back to Top", root_path, :class => "btn-link pull-right" %></p>
-      </div>
-</footer>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <!--  script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
