@@ -130,11 +130,6 @@ h1.heading {
     margin-bottom:2rem;
   }
 }
-
-/* temp fix to hide sass errors from loading content onto page */
-body:before {
-    content: "" !important;
-}
 /*#######################################
 #  /* SECTION STYLES|  Beneath landing page 
 ########################################*/
