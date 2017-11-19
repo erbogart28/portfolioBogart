@@ -25,3 +25,5 @@
 Procfile
 
 /config/environments/*development
+
+.idea
