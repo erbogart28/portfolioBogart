@@ -1,19 +1,5 @@
 /*
-Error: Undefined variable: "$fadeIn".
-        on line 109 of /home/ubuntu/workspace/app/assets/stylesheets/static_pages.css.scss, in `animation'
-        from line 289 of /home/ubuntu/workspace/app/assets/stylesheets/static_pages.css.scss
-
-104: .img-responsive{
-105:   border: 1px solid #eeeeee !important
-106: }
-107:  /*fade in elements *\/
-108: @mixin animation($fade-in){
-109:     -webkit-animation: #{$fadeIn} ease-in 1; 
-110:     -moz-animation: #{$fadeIn} ease-in 1;
-111:     animation: #{$fadeIn} ease-in 1;
-112:     
-113:     -webkit-animation-fill-mode: forwards; 
-114:     -moz-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
 
 Backtrace:
 /home/ubuntu/workspace/app/assets/stylesheets/static_pages.css.scss:109:in `animation'

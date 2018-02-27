@@ -2,23 +2,35 @@
     <div class="page-header container"> <!-- page header | heading class adds font styles -->
         <h1 class="heading">About Me</h1>
     </div>
-    <section class="container" id="aboutme-txt-pic">
-        <div class="row">
-            <div class="col-sm-10 col-sm-push-1 col-md-12 col-md-push-0">
+    <!--<section class="container">-->
+    <!--    <div class="row">-->
+    <!--        <div class="col-md-12 col-md-push-0">-->
+                <!-- NEW CARD TEST START -->
+    <!--            <div class="mdl-card mdl-shadow--2dp mdl-card--horizontal">-->
 
-            <div class="col-xs-7 col-md-4"> 
-                <%= image_tag("headshot1.jpg", class: "img-responsive", :id => "headshot" )%>
-            </div>
-            <div class="" id="aboutMeText">
-                <p id="aboutMeText">Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.</p>
-                <p id="aboutMeText">As an ISM major with a Development Concentration, I focused a lot on the front-end. ISM taught me a lot about modern UI/UX design principles and heuristics. I've found this to be beyond useful when evaulating, designing, or developing a site or web application. I am very comfortable developing front-end solutions and fully responsive websites using HTML5, CSS3, JavaScript, and jQuery. My current MVC framework of choice is Ruby-on-Rails.</p> 
-            </div>
-        </div>
-        </div>
-    </section><!-- end aboutme article -- content pertaining to me -->
+    <!--                <div class="mdl-card__media">-->
+    <!--                    </%= image_tag('headshot1.jpg', class: 'img-responsive', :id => 'headshot', alt: 'Evan Bogart Headshot' )%>  </div>-->
+    <!--                <div class="mdl-card__title">-->
+    <!--                  <h2 class="mdl-card__title-text">Welcome</h2>-->
+    <!--                </div>-->
+    <!--                <div class="mdl-card__supporting-text">-->
+    <!--                    Hello World! My name is Evan R Bogart. I'm a recent DePaul University graduate, where I majored in Interactive and Social Media w/ a Development Concentration. Most of my work on this site will be comprised of projects I worked on throughout my 2 &frac12; years at DePaul University. I consider myself a fun-loving coder, and an admirer of design - specifically web/application/software design! Besides coding I enjoy playing video games, watching esports/sports in general, hiking, fishing, and hanging out with friends and family.-->
+    <!--                </div>-->
+    <!--                <div class="mdl-card__actions mdl-card--border">-->
+    <!--                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">Get Started</a>-->
+    <!--                </div>-->
+    <!--                <div class="mdl-card__menu">-->
+    <!--                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">share</i></button>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--    </div>-->
+    <!--    </div>-->
+    <!--</section><!-- end aboutme article -- content pertaining to me -->
+    
+
     
     <section class="container">
-        <div class="row">
+        <div class="row-new">
             <div class="col-sm-10 col-sm-push-1 col-md-12 col-md-push-0">
 
             <div class="col-md-6">
@@ -39,7 +51,7 @@
                         <p class="cardTxt">My resume can be viewed here. Please feel free to download a copy.</p>
                     </div><!-- END card content -->
                     <div class="card-read-more">
-                        <%= link_to "View Resume", image_path("EvanBogartResume.pdf"), :target => "_blank", :class => "btn btn-link btn-block" %>
+                        <%= link_to 'View Resume', image_path("EvanBogartResume.pdf"), :target => '_blank', :class => 'btn btn-link btn-block'%>
                     </div><!-- end read more -->
                 </div><!--end card -->
                 <!--<div class="col-md-4">-->
@@ -48,4 +60,7 @@
         </div>
         </div><!--end row -->
     </section> <!-- end homepage cards article within aboutme-content section -->
+    
+    
+        
 </section><!-- end aboutme-content section -->
