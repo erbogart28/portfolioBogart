@@ -35,7 +35,6 @@
                     </div>
                 </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
-            
             <div class="col-xs-12 col-sm-4">
                 <div class="card accordion-panel" id="card-accordion" style="padding:0 !important;background:white !important"><!-- CARD 2 | Firefly -->
                     <%= image_tag "fireflyLogo.png", :class => 'img-card' %>
@@ -55,16 +54,22 @@
                 </div><!-- END CARD 2 -->
             </div>  <!-- END col placement -->
             <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 3 | Athens Redesign -->
+                <div class="card accordion-panel" id="card-accordion" style="padding:0 !important;background:white !important"><!-- CARD 3 | Athens Redesign -->
                     <%= image_tag "bulldoghead.png", :class => 'img-card' %>
-                    <div class="card-content">
-                        <h4 class="card-title">Athens Bulldogs Redesign</h4>
-                        <p class="cardTxt">This project is from my first web design class around 4 years back - the class that peaked my interest in web design, and eventually web development. This was a group project in which we were assigned to research and redesign the Athens Bulldogs school website.</p> 
-                        <p class="cardTxt">I had the task of redesigning the desktop and mobile homepage. I did some quick wireframes with general layout ideas (could not locate these unfortunately), and I created multiple iterations with different designs and colors based off my original wireframes.</p>
-                        <p class="cardTxt">New iterations were altered based off the group feedback and collaboration regarding color schemes, element choices, and content choices. These designs were created with Photoshop; this was before I, nor my group members, knew of prototyping software. Designs were partially interactive by hiding/showing layers, to mimic what a click would look like.</p>
+                    <div class="accordion-heading" id="headingBulldog">
+                        <span data-toggle="collapse" class="accordion-title" aria-expanded="false" data-parent="#accordion" href="#collapseBulldog" aria-controls="collapseBulldog" role="button" tabindex="0">
+                            <h4 class="card-title" style="padding-top:1.75rem">Athens Bulldogs Redesign<span class="pull-right"><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h4>
+                        </span>
+                    </div><!--END ACCORDION HEADER -->
+                    <div class="card-content" style="padding:0 !important">
+                        <div id="collapseBulldog" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBulldog" style="padding:0 !important;margin-bottom:0 !important">
+                            <p class="cardTxt">This project is from my first web design class around 4 years back - the class that peaked my interest in web design, and eventually web development. This was a group project in which we were assigned to research and redesign the Athens Bulldogs school website.</p> 
+                            <p class="cardTxt">I had the task of redesigning the desktop and mobile homepage. I did some quick wireframes with general layout ideas (could not locate these unfortunately), and I created multiple iterations with different designs and colors based off my original wireframes.</p>
+                            <p class="cardTxt">New iterations were altered based off the group feedback and collaboration regarding color schemes, element choices, and content choices. These designs were created with Photoshop; this was before I, nor my group members, knew of prototyping software. Designs were partially interactive by hiding/showing layers, to mimic what a click would look like.</p>
+                        </div>
                     </div>
                     <div class="card-read-more"><!-- view redesigns using modal slideshow -->
-                        <a href="/#lightbox" data-toggle="modal"  class="btn btn-link btn-block">View Prototype Designs</a>
+                        <a href="/#lightbox" data-toggle="modal" class="btn btn-link center-block" data-toggle="modal" targe="blank_"><i class="fa fa-2x fa-universal-access"></i></a>
                     </div>
                     <!-- MODAL / SLIDESHOW LIGHTBOX EFFECT USING BOOTSTRAP ELEMENTS -->
                     <div class="modal fade and carousel slide" id="lightbox">
@@ -111,12 +116,10 @@
                         </span>
                     </div><!--END ACCORDION HEADER -->
                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="padding:0 !important;margin-bottom:0 !important">
-                        <div class="card" style="padding:0 !important;margin-bottom:0 !important">
-                            <div class="card-content" style="padding:0 !important">
-                                <h4 style="padding-left:1rem !important">Ordering Process Redesign</h4>
-                                <p style="margin-bottom:0 !important">I designed screens for this ordering process that provided feedback - feedback using indicators required for constraints/requirements while ordering - success alert colors/icons, and warning colors/icons used for indicators to users. Added page indicators when users had a multi-page process for one meal type.</p>
-                                <p style="margin-bottom:0 !important">You can read my full analysis with research, evaluations and objectives, or you can simply view the final redesigned prototypes below!</p><br />
-                            </div>
+                        <div class="card-content" style="padding:0 !important">
+                            <h4 style="padding-left:1rem !important">Ordering Process Redesign</h4>
+                            <p style="margin-bottom:0 !important">I designed screens for this ordering process that provided feedback - feedback using indicators required for constraints/requirements while ordering - success alert colors/icons, and warning colors/icons used for indicators to users. Added page indicators when users had a multi-page process for one meal type.</p>
+                            <p style="margin-bottom:0 !important">You can read my full analysis with research, evaluations and objectives, or you can simply view the final redesigned prototypes below!</p><br />
                         </div><!-- END ACCORDION content -->
                     </div><!-- end tabpanel collapse wrap -->
                     <div class="card-read-more col-sm-12" style="background-color:white !important;padding-left:0;padding-right:0"><!-- view redesigns using modal slideshow -->
