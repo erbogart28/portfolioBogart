@@ -23,15 +23,20 @@
     <div class="container" id="designCards"><!-- design cards section article / container -->
         <div class="row"><!-- START row 1 | Design Cards -->
             <div class="col-xs-12 col-sm-4">
-                <div class="card"><!-- CARD 4 | Greatmoods Work -->
+                <div class="card accordion-panel" id="card-accordion" style="padding:0 !important;background:white !important"><!-- CARD 4 | Greatmoods Work -->
                     <%= image_tag "GMlogo.png", :class => 'img-card', :style => 'padding-left:20px' %>
-                    <div class="card-content">
-                        <h4 class="card-title">GreatMoods Internship Work </h4>
+                    <div class="accordion-heading" id="headingDesignGM">
+                        <span data-toggle="collapse" class="accordion-title" aria-expanded="false" data-parent="#accordion" href="#collapseDesignGM" aria-controls="collapseDesignGM" role="button" tabindex="0">
+                        <h4 class="card-title" style="padding-top:1.75rem">GreatMoods Internship Work<span class="pull-right"><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h4>
+                    </div><!--END ACCORDION HEADER -->
+                    <div id="collapseDesignGM" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDesignGM" style="padding:0 !important;margin-bottom:0 !important">
                         <p class="cardTxt"> Before really diving into this internship, I did a lot of research, evaluations, and redesigns in my classes for GreatMoods. There was plenty to critique as this site looked pretty ancient before I started interning there. You can view my redesign ideas, my original site evaluation/analysis, explanations on what I developed and why, and before and after pictures of the developed site. </p>
                     </div>
                     <div class="card-read-more">
                         <!-- explaination page link. Turbolinks false allows for accordions to properly collapse  - avoids turbolinks from firing twice -->
-                        <%= link_to "Evaluation / Redesigns / Redevelopment ", static_pages_greatmoods_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' %>
+                        <%= link_to static_pages_greatmoods_path, data: { turbolinks: false }, :class => 'btn btn-link btn-block' do %>
+                            <i class="fa fa-2x fa-universal-access"></i>
+                        <% end %>
                     </div>
                 </div><!-- END CARD 4 -->
             </div><!-- END col placement -->
